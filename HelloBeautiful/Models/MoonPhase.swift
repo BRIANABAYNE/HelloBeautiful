@@ -9,7 +9,7 @@ import Foundation
 
 struct TopLevelDictionary: Decodable {
     let datestamp: String
-    let moon: [Moon]
+    let moon: Moon
     
 }
 
@@ -21,12 +21,11 @@ struct Moon: Decodable {
         case zodiacSign = "zodiac_sign"
         case moonrise
         case moonDistance = "moon_distance"
-        
     }
     
     let illumination: String
     let moonPhase: String
-    let zodaicSign: String
+    let zodiacSign: String
     let moonrise: String
     let moonDistance: Double
     

@@ -16,6 +16,9 @@
 		3A5892CC2A7019BE00E208BC /* Diary .swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892CB2A7019BE00E208BC /* Diary .swift */; };
 		3A5892CE2A701A6D00E208BC /* MoonPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892CD2A701A6D00E208BC /* MoonPhase.swift */; };
 		3A5892D02A701E0F00E208BC /* Horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892CF2A701E0F00E208BC /* Horoscope.swift */; };
+		3A5892FF2A70704500E208BC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892FE2A70704500E208BC /* NetworkError.swift */; };
+		3A5893032A7070CE00E208BC /* MoonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5893022A7070CE00E208BC /* MoonService.swift */; };
+		3A5893052A70879600E208BC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5893042A70879600E208BC /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		3A5892CB2A7019BE00E208BC /* Diary .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Diary .swift"; sourceTree = "<group>"; };
 		3A5892CD2A701A6D00E208BC /* MoonPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonPhase.swift; sourceTree = "<group>"; };
 		3A5892CF2A701E0F00E208BC /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
+		3A5892FE2A70704500E208BC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		3A5893022A7070CE00E208BC /* MoonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonService.swift; sourceTree = "<group>"; };
+		3A5893042A70879600E208BC /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,9 @@
 		3A2B1F532A6C67FB00CCA3FB /* HelloBeautiful */ = {
 			isa = PBXGroup;
 			children = (
+				3A5893002A70709000E208BC /* UI */,
+				3A5893012A70709700E208BC /* Moon */,
+				3A5892FD2A70700B00E208BC /* Services */,
 				3A2B1F682A6C688700CCA3FB /* SupportingFiles */,
 				3A5892C72A70185700E208BC /* Models */,
 				3A2B1F5A2A6C67FB00CCA3FB /* Main.storyboard */,
@@ -98,6 +107,30 @@
 			children = (
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3A5892FD2A70700B00E208BC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3A5892FE2A70704500E208BC /* NetworkError.swift */,
+				3A5893042A70879600E208BC /* APIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3A5893002A70709000E208BC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3A5893012A70709700E208BC /* Moon */ = {
+			isa = PBXGroup;
+			children = (
+				3A5893022A7070CE00E208BC /* MoonService.swift */,
+			);
+			path = Moon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,10 +205,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A5892CE2A701A6D00E208BC /* MoonPhase.swift in Sources */,
+				3A5892FF2A70704500E208BC /* NetworkError.swift in Sources */,
 				3A5892CC2A7019BE00E208BC /* Diary .swift in Sources */,
 				3A5892D02A701E0F00E208BC /* Horoscope.swift in Sources */,
 				3A2B1F552A6C67FB00CCA3FB /* AppDelegate.swift in Sources */,
 				3A2B1F572A6C67FB00CCA3FB /* SceneDelegate.swift in Sources */,
+				3A5893032A7070CE00E208BC /* MoonService.swift in Sources */,
+				3A5893052A70879600E208BC /* APIService.swift in Sources */,
 				3A5892CA2A70189700E208BC /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
