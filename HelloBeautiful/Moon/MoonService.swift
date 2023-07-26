@@ -7,7 +7,7 @@
 
 import Foundation
 
-//https://moon-phase.p.rapidapi.com/advanced
+
 struct MoonService {
     
     
@@ -28,7 +28,7 @@ struct MoonService {
             }
             guard let moonData = data else {
                 print("There was an error checking for Data")
-                completion(.failure(.invalidURL))
+                completion(.failure(.noData))
                 return
             }
             do {
@@ -45,7 +45,7 @@ struct MoonService {
     
     
     
-    func fetchHoroscope(completion: @escaping(Result<Horoscope,NetworkingError>) -> Void) {
+    func fetchHoroscope(sunSign:String,completion: @escaping(Result<Horoscope,NetworkingError>) -> Void) {
         
         guard let baseURL = URL(string:"https://horoscope-astrology.p.rapidapi.com") else { return }
         var request = URLRequest(url: baseURL)
@@ -53,8 +53,8 @@ struct MoonService {
         request.httpMethod = "GET"
         request.url?.append(path:"horoscope")
         let apiQueryItem = URLQueryItem(name:"day", value:"week")
-        let apiQuerySecondItem = URLQueryItem(name:"sunsign", value:"leo")
-        
+        let apiQuerySecondItem = URLQueryItem(name:"sunsign", value: sunSign)
+        request.url?.append(queryItems: [apiQueryItem,apiQuerySecondItem])
         print(request.url)
         
         URLSession.shared.dataTask(with: request) { data, _, error in
@@ -65,7 +65,7 @@ struct MoonService {
             }
             guard let horoscopeData = data else {
                 print("There was an error checking for Data")
-                completion(.failure(.invalidURL))
+                completion(.failure(.noData))
                 return
             }
             do {

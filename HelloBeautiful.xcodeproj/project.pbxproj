@@ -18,7 +18,8 @@
 		3A5892D02A701E0F00E208BC /* Horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892CF2A701E0F00E208BC /* Horoscope.swift */; };
 		3A5892FF2A70704500E208BC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892FE2A70704500E208BC /* NetworkError.swift */; };
 		3A5893032A7070CE00E208BC /* MoonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5893022A7070CE00E208BC /* MoonService.swift */; };
-		3A5893052A70879600E208BC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5893042A70879600E208BC /* APIService.swift */; };
+		3A5A89732A716E8F009169B5 /* MoonHoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A89722A716E8F009169B5 /* MoonHoroscopeViewController.swift */; };
+		3A5A89752A7172D8009169B5 /* MoonHoroscopeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A89742A7172D8009169B5 /* MoonHoroscopeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +36,8 @@
 		3A5892CF2A701E0F00E208BC /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
 		3A5892FE2A70704500E208BC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		3A5893022A7070CE00E208BC /* MoonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonService.swift; sourceTree = "<group>"; };
-		3A5893042A70879600E208BC /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		3A5A89722A716E8F009169B5 /* MoonHoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonHoroscopeViewController.swift; sourceTree = "<group>"; };
+		3A5A89742A7172D8009169B5 /* MoonHoroscopeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonHoroscopeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				3A5892FE2A70704500E208BC /* NetworkError.swift */,
-				3A5893042A70879600E208BC /* APIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -121,6 +122,8 @@
 		3A5893002A70709000E208BC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3A5A89722A716E8F009169B5 /* MoonHoroscopeViewController.swift */,
+				3A5A89742A7172D8009169B5 /* MoonHoroscopeViewModel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -209,9 +212,10 @@
 				3A5892CC2A7019BE00E208BC /* Diary .swift in Sources */,
 				3A5892D02A701E0F00E208BC /* Horoscope.swift in Sources */,
 				3A2B1F552A6C67FB00CCA3FB /* AppDelegate.swift in Sources */,
+				3A5A89732A716E8F009169B5 /* MoonHoroscopeViewController.swift in Sources */,
+				3A5A89752A7172D8009169B5 /* MoonHoroscopeViewModel.swift in Sources */,
 				3A2B1F572A6C67FB00CCA3FB /* SceneDelegate.swift in Sources */,
 				3A5893032A7070CE00E208BC /* MoonService.swift in Sources */,
-				3A5893052A70879600E208BC /* APIService.swift in Sources */,
 				3A5892CA2A70189700E208BC /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

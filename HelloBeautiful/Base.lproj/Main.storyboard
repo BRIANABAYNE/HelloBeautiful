@@ -251,7 +251,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Nak-hM-qer">
-                                <rect key="frame" x="28" y="159" width="106.33333333333331" height="345.66666666666663"/>
+                                <rect key="frame" x="28" y="159.00000000000003" width="106.33333333333331" height="345.66666666666674"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dr3-4P-JtB">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="20.333333333333332"/>
@@ -377,13 +377,19 @@
         <!--Moon-->
         <scene sceneID="Q6D-Q1-EcB">
             <objects>
-                <viewController id="YZA-id-qbk" sceneMemberID="viewController">
+                <viewController id="YZA-id-qbk" customClass="MoonHoroscopeViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Si4-qP-EfK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Horoscope" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFJ-4r-y5f">
                                 <rect key="frame" x="127" y="99" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zodiac Sign" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5p-2p-2vt">
+                                <rect key="frame" x="145" y="146" width="90" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -401,6 +407,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moon Phase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXC-eO-lk5">
+                                <rect key="frame" x="143" y="409" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrg-gs-clB">
                                 <rect key="frame" x="178" y="448" width="36" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -413,25 +425,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moonset" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Q3-wE-L2Y">
-                                <rect key="frame" x="292" y="557" width="67" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zodiac Sign" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5p-2p-2vt">
-                                <rect key="frame" x="145" y="146" width="90" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moon Phase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXC-eO-lk5">
-                                <rect key="frame" x="143" y="409" width="95" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moonrise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns8-nb-S8u">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Moonrise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns8-nb-S8u">
                                 <rect key="frame" x="288" y="516" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -443,8 +437,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Illumination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxS-qo-5Jp">
-                                <rect key="frame" x="153" y="620" width="87" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Illumination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxS-qo-5Jp">
+                                <rect key="frame" x="280" y="557" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -460,7 +454,6 @@
                             <constraint firstItem="Hb0-zy-qss" firstAttribute="trailing" secondItem="jFJ-4r-y5f" secondAttribute="trailing" constant="140" id="B7f-J8-dA6"/>
                             <constraint firstItem="PbI-Ru-eHA" firstAttribute="leading" secondItem="Hb0-zy-qss" secondAttribute="leading" constant="28" id="BPq-ZT-ChC"/>
                             <constraint firstItem="Hb0-zy-qss" firstAttribute="trailing" secondItem="Vrg-gs-clB" secondAttribute="trailing" constant="179" id="Bwj-y2-JPD"/>
-                            <constraint firstItem="Hb0-zy-qss" firstAttribute="trailing" secondItem="9Q3-wE-L2Y" secondAttribute="trailing" constant="34" id="CEq-fs-FLU"/>
                             <constraint firstItem="T5p-2p-2vt" firstAttribute="top" secondItem="jFJ-4r-y5f" secondAttribute="bottom" constant="26" id="ERF-B4-Jgt"/>
                             <constraint firstItem="3aY-HH-TeV" firstAttribute="top" secondItem="PbI-Ru-eHA" secondAttribute="bottom" constant="20" id="EyO-A9-by9"/>
                             <constraint firstItem="Vrg-gs-clB" firstAttribute="leading" secondItem="Hb0-zy-qss" secondAttribute="leading" constant="178" id="HDB-mB-aPK"/>
@@ -469,22 +462,17 @@
                             <constraint firstItem="ZXC-eO-lk5" firstAttribute="top" secondItem="Wby-wK-ghR" secondAttribute="bottom" constant="19" id="IbY-hq-OrL"/>
                             <constraint firstItem="Hb0-zy-qss" firstAttribute="bottom" secondItem="fxS-qo-5Jp" secondAttribute="bottom" constant="128" id="KqW-AP-sGU"/>
                             <constraint firstItem="fxS-qo-5Jp" firstAttribute="top" secondItem="Vrg-gs-clB" secondAttribute="bottom" constant="151" id="PEP-CN-yPK"/>
-                            <constraint firstItem="Hb0-zy-qss" firstAttribute="bottom" secondItem="9Q3-wE-L2Y" secondAttribute="bottom" constant="191" id="PmB-QY-deh"/>
                             <constraint firstItem="IKC-Xm-S3G" firstAttribute="top" secondItem="T5p-2p-2vt" secondAttribute="bottom" constant="100" id="QFX-5x-RPM"/>
                             <constraint firstItem="Ns8-nb-S8u" firstAttribute="leading" secondItem="PbI-Ru-eHA" secondAttribute="trailing" constant="145" id="QRW-hf-DWB"/>
-                            <constraint firstItem="9Q3-wE-L2Y" firstAttribute="top" secondItem="Ns8-nb-S8u" secondAttribute="bottom" constant="20" id="S41-6i-wYc"/>
-                            <constraint firstItem="9Q3-wE-L2Y" firstAttribute="top" secondItem="Ns8-nb-S8u" secondAttribute="bottom" constant="20" id="SLl-K8-ZXP"/>
                             <constraint firstItem="ZXC-eO-lk5" firstAttribute="leading" secondItem="Hb0-zy-qss" secondAttribute="leading" constant="143" id="UHR-Rm-0gd"/>
                             <constraint firstItem="Wby-wK-ghR" firstAttribute="top" secondItem="IKC-Xm-S3G" secondAttribute="bottom" constant="54" id="ViP-Si-i3s"/>
                             <constraint firstItem="Hb0-zy-qss" firstAttribute="trailing" secondItem="fxS-qo-5Jp" secondAttribute="trailing" constant="153" id="WCV-K4-KfB"/>
                             <constraint firstItem="fxS-qo-5Jp" firstAttribute="leading" secondItem="Hb0-zy-qss" secondAttribute="leading" constant="153" id="WOH-Qi-eoE"/>
                             <constraint firstItem="ZXC-eO-lk5" firstAttribute="top" secondItem="Wby-wK-ghR" secondAttribute="bottom" constant="19" id="YuU-eO-N19"/>
-                            <constraint firstItem="9Q3-wE-L2Y" firstAttribute="leading" secondItem="3aY-HH-TeV" secondAttribute="trailing" constant="174" id="buR-mJ-uUL"/>
                             <constraint firstItem="T5p-2p-2vt" firstAttribute="top" secondItem="jFJ-4r-y5f" secondAttribute="bottom" constant="26" id="c8W-I8-fp0"/>
                             <constraint firstItem="jFJ-4r-y5f" firstAttribute="leading" secondItem="Hb0-zy-qss" secondAttribute="leading" constant="127" id="d08-hM-EAi"/>
                             <constraint firstItem="Hb0-zy-qss" firstAttribute="trailing" secondItem="T5p-2p-2vt" secondAttribute="trailing" constant="158" id="eeo-sC-Q6m"/>
                             <constraint firstItem="IKC-Xm-S3G" firstAttribute="leading" secondItem="Hb0-zy-qss" secondAttribute="leading" constant="76" id="fsD-M0-0in"/>
-                            <constraint firstItem="9Q3-wE-L2Y" firstAttribute="leading" secondItem="3aY-HH-TeV" secondAttribute="trailing" constant="174" id="i21-jw-Ipf"/>
                             <constraint firstItem="Hb0-zy-qss" firstAttribute="trailing" secondItem="Wby-wK-ghR" secondAttribute="trailing" constant="159" id="jq7-7c-8xc"/>
                             <constraint firstItem="Hb0-zy-qss" firstAttribute="trailing" secondItem="Ns8-nb-S8u" secondAttribute="trailing" constant="34" id="n8M-9M-UZx"/>
                             <constraint firstItem="Hb0-zy-qss" firstAttribute="trailing" secondItem="IKC-Xm-S3G" secondAttribute="trailing" constant="77" id="nPf-Vq-MRT"/>
@@ -497,6 +485,16 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Moon" image="moon.stars.fill" catalog="system" id="2EW-id-azy"/>
+                    <connections>
+                        <outlet property="illuminationLabel" destination="fxS-qo-5Jp" id="GWU-SJ-Efc"/>
+                        <outlet property="lunarCycleLabel" destination="3aY-HH-TeV" id="Mt2-aE-BVQ"/>
+                        <outlet property="moonDateLabel" destination="Vrg-gs-clB" id="vLV-J6-Ifq"/>
+                        <outlet property="moonDistanceLabel" destination="PbI-Ru-eHA" id="cFm-Ai-pDQ"/>
+                        <outlet property="moonPhaseLabel" destination="ZXC-eO-lk5" id="kVp-fB-P0R"/>
+                        <outlet property="moonriseLabel" destination="Ns8-nb-S8u" id="m7t-2c-P00"/>
+                        <outlet property="weeklyHoroscopeLabel" destination="IKC-Xm-S3G" id="CUv-EZ-ieh"/>
+                        <outlet property="zodiacSignLabel" destination="T5p-2p-2vt" id="oWv-ti-iQm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AKT-tn-ml6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
