@@ -13,7 +13,6 @@ struct Horoscope: Decodable {
         case horoscope
         case sunSign = "sunsign"
         case week
-        
     }
 
     let horoscope: String
