@@ -23,6 +23,8 @@
 		3A5A89772A71840C009169B5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A89762A71840C009169B5 /* APIService.swift */; };
 		3A5A897A2A71850C009169B5 /* MoonHoroscopeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A89792A71850C009169B5 /* MoonHoroscopeService.swift */; };
 		3A5A897E2A71FBBA009169B5 /* CreateUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A897D2A71FBBA009169B5 /* CreateUserDetailViewController.swift */; };
+		3AF6E24C2A720F5A00461137 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF6E24B2A720F5A00461137 /* FirebaseFirestore */; };
+		3AF6E24E2A72BDFB00461137 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6E24D2A72BDFB00461137 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,7 @@
 		3A5A89762A71840C009169B5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		3A5A89792A71850C009169B5 /* MoonHoroscopeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonHoroscopeService.swift; sourceTree = "<group>"; };
 		3A5A897D2A71FBBA009169B5 /* CreateUserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserDetailViewController.swift; sourceTree = "<group>"; };
+		3AF6E24D2A72BDFB00461137 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AF6E24C2A720F5A00461137 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +80,7 @@
 		3A2B1F532A6C67FB00CCA3FB /* HelloBeautiful */ = {
 			isa = PBXGroup;
 			children = (
+				3AF6E24D2A72BDFB00461137 /* GoogleService-Info.plist */,
 				3A5A897B2A71FB6A009169B5 /* New Group */,
 				3A5893012A70709700E208BC /* Moon */,
 				3A5892FD2A70700B00E208BC /* Services */,
@@ -185,6 +190,9 @@
 			dependencies = (
 			);
 			name = HelloBeautiful;
+			packageProductDependencies = (
+				3AF6E24B2A720F5A00461137 /* FirebaseFirestore */,
+			);
 			productName = HelloBeautiful;
 			productReference = 3A2B1F512A6C67FB00CCA3FB /* HelloBeautiful.app */;
 			productType = "com.apple.product-type.application";
@@ -213,6 +221,9 @@
 				Base,
 			);
 			mainGroup = 3A2B1F482A6C67FB00CCA3FB;
+			packageReferences = (
+				3AF6E24A2A720F5A00461137 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 3A2B1F522A6C67FB00CCA3FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -228,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A2B1F612A6C67FB00CCA3FB /* LaunchScreen.storyboard in Resources */,
+				3AF6E24E2A72BDFB00461137 /* GoogleService-Info.plist in Resources */,
 				3A2B1F5E2A6C67FB00CCA3FB /* Assets.xcassets in Resources */,
 				3A2B1F5C2A6C67FB00CCA3FB /* Main.storyboard in Resources */,
 			);
@@ -470,6 +482,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3AF6E24A2A720F5A00461137 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3AF6E24B2A720F5A00461137 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AF6E24A2A720F5A00461137 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3A2B1F492A6C67FB00CCA3FB /* Project object */;
 }

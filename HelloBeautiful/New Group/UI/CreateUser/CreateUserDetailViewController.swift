@@ -52,9 +52,6 @@ class CreateUserDetailViewController: UIViewController {
         periodLengthTextField.text = user.lastCycle
     }
     
-    
-    
-    
     // MARK: - Extension
 
 }
