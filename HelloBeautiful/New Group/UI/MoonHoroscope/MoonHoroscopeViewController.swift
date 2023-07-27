@@ -33,7 +33,7 @@ class MoonHoroscopeViewController: UIViewController {
     }
     
     // MARK: - Functions
-     // set horocsope will need to access current user saved data from firebase and will update that when I get to that. This will always be dependant on the user create page, UI being finished. 
+     // set horocsope will need to access current user saved data from firebase and will update that when I get to that. This will always be dependant on the user create page, UI being finished.
     func setHoroscope() {
         guard let user = userData,
               let horoscope = viewModel.horoscopeData else { return }

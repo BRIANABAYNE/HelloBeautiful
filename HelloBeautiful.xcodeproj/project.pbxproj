@@ -22,6 +22,7 @@
 		3A5A89752A7172D8009169B5 /* MoonHoroscopeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A89742A7172D8009169B5 /* MoonHoroscopeViewModel.swift */; };
 		3A5A89772A71840C009169B5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A89762A71840C009169B5 /* APIService.swift */; };
 		3A5A897A2A71850C009169B5 /* MoonHoroscopeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A89792A71850C009169B5 /* MoonHoroscopeService.swift */; };
+		3A5A897E2A71FBBA009169B5 /* CreateUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A897D2A71FBBA009169B5 /* CreateUserDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		3A5A89742A7172D8009169B5 /* MoonHoroscopeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonHoroscopeViewModel.swift; sourceTree = "<group>"; };
 		3A5A89762A71840C009169B5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		3A5A89792A71850C009169B5 /* MoonHoroscopeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonHoroscopeService.swift; sourceTree = "<group>"; };
+		3A5A897D2A71FBBA009169B5 /* CreateUserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +76,7 @@
 		3A2B1F532A6C67FB00CCA3FB /* HelloBeautiful */ = {
 			isa = PBXGroup;
 			children = (
-				3A5893002A70709000E208BC /* UI */,
+				3A5A897B2A71FB6A009169B5 /* New Group */,
 				3A5893012A70709700E208BC /* Moon */,
 				3A5892FD2A70700B00E208BC /* Services */,
 				3A2B1F682A6C688700CCA3FB /* SupportingFiles */,
@@ -127,6 +129,7 @@
 		3A5893002A70709000E208BC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3A5A897C2A71FB80009169B5 /* CreateUser */,
 				3A5A89782A7184DD009169B5 /* MoonHoroscope */,
 			);
 			path = UI;
@@ -148,6 +151,22 @@
 				3A5A89792A71850C009169B5 /* MoonHoroscopeService.swift */,
 			);
 			path = MoonHoroscope;
+			sourceTree = "<group>";
+		};
+		3A5A897B2A71FB6A009169B5 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				3A5893002A70709000E208BC /* UI */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		3A5A897C2A71FB80009169B5 /* CreateUser */ = {
+			isa = PBXGroup;
+			children = (
+				3A5A897D2A71FBBA009169B5 /* CreateUserDetailViewController.swift */,
+			);
+			path = CreateUser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +251,7 @@
 				3A5A89752A7172D8009169B5 /* MoonHoroscopeViewModel.swift in Sources */,
 				3A2B1F572A6C67FB00CCA3FB /* SceneDelegate.swift in Sources */,
 				3A5893032A7070CE00E208BC /* MoonService.swift in Sources */,
+				3A5A897E2A71FBBA009169B5 /* CreateUserDetailViewController.swift in Sources */,
 				3A5892CA2A70189700E208BC /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

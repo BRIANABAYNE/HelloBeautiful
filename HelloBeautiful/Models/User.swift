@@ -11,8 +11,9 @@ struct User: Decodable {
     let firstName: String
     let lastName: String
     let email: String
+    let password: String 
     let zodiacSign: String
-    let lastCycle: Date
+    let lastCycle: String
     let uuid: UUID
 
 }
