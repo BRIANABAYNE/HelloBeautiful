@@ -25,6 +25,14 @@
 		3A5A897E2A71FBBA009169B5 /* CreateUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A897D2A71FBBA009169B5 /* CreateUserDetailViewController.swift */; };
 		3AF6E24C2A720F5A00461137 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF6E24B2A720F5A00461137 /* FirebaseFirestore */; };
 		3AF6E24E2A72BDFB00461137 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6E24D2A72BDFB00461137 /* GoogleService-Info.plist */; };
+		3AF6E2512A72D7B500461137 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF6E2502A72D7B500461137 /* FirebaseDatabaseSwift */; };
+		3AF6E2532A72D7CF00461137 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF6E2522A72D7CF00461137 /* FirebaseStorage */; };
+		3AF6E2552A72D7E000461137 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF6E2542A72D7E000461137 /* FirebaseAuth */; };
+		3AF6E2572A72D9E700461137 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E2562A72D9E700461137 /* FirebaseService.swift */; };
+		3AF6E2592A72DC4700461137 /* FirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E2582A72DC4700461137 /* FirebaseError.swift */; };
+		3AF6E25B2A72DCD700461137 /* CreateAccountError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E25A2A72DCD700461137 /* CreateAccountError.swift */; };
+		3AF6E25D2A72DE8500461137 /* CreateUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E25C2A72DE8500461137 /* CreateUserViewModel.swift */; };
+		3AF6E25F2A72E47900461137 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E25E2A72E47900461137 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +55,11 @@
 		3A5A89792A71850C009169B5 /* MoonHoroscopeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonHoroscopeService.swift; sourceTree = "<group>"; };
 		3A5A897D2A71FBBA009169B5 /* CreateUserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserDetailViewController.swift; sourceTree = "<group>"; };
 		3AF6E24D2A72BDFB00461137 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3AF6E2562A72D9E700461137 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		3AF6E2582A72DC4700461137 /* FirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseError.swift; sourceTree = "<group>"; };
+		3AF6E25A2A72DCD700461137 /* CreateAccountError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountError.swift; sourceTree = "<group>"; };
+		3AF6E25C2A72DE8500461137 /* CreateUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewModel.swift; sourceTree = "<group>"; };
+		3AF6E25E2A72E47900461137 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +67,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AF6E2512A72D7B500461137 /* FirebaseDatabaseSwift in Frameworks */,
 				3AF6E24C2A720F5A00461137 /* FirebaseFirestore in Frameworks */,
+				3AF6E2532A72D7CF00461137 /* FirebaseStorage in Frameworks */,
+				3AF6E2552A72D7E000461137 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +82,7 @@
 			children = (
 				3A2B1F532A6C67FB00CCA3FB /* HelloBeautiful */,
 				3A2B1F522A6C67FB00CCA3FB /* Products */,
+				3AF6E24F2A72D7B500461137 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +144,10 @@
 			children = (
 				3A5892FE2A70704500E208BC /* NetworkError.swift */,
 				3A5A89762A71840C009169B5 /* APIService.swift */,
+				3AF6E2562A72D9E700461137 /* FirebaseService.swift */,
+				3AF6E2582A72DC4700461137 /* FirebaseError.swift */,
+				3AF6E25A2A72DCD700461137 /* CreateAccountError.swift */,
+				3AF6E25E2A72E47900461137 /* Constants.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -161,7 +182,7 @@
 		3A5A897B2A71FB6A009169B5 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
-				3A5893002A70709000E208BC /* UI */,
+				3AF6E2602A72E8FE00461137 /* New Group */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -170,8 +191,32 @@
 			isa = PBXGroup;
 			children = (
 				3A5A897D2A71FBBA009169B5 /* CreateUserDetailViewController.swift */,
+				3AF6E25C2A72DE8500461137 /* CreateUserViewModel.swift */,
 			);
 			path = CreateUser;
+			sourceTree = "<group>";
+		};
+		3AF6E24F2A72D7B500461137 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3AF6E2602A72E8FE00461137 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				3AF6E2612A72E92400461137 /* New Group */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		3AF6E2612A72E92400461137 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				3A5893002A70709000E208BC /* UI */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +237,9 @@
 			name = HelloBeautiful;
 			packageProductDependencies = (
 				3AF6E24B2A720F5A00461137 /* FirebaseFirestore */,
+				3AF6E2502A72D7B500461137 /* FirebaseDatabaseSwift */,
+				3AF6E2522A72D7CF00461137 /* FirebaseStorage */,
+				3AF6E2542A72D7E000461137 /* FirebaseAuth */,
 			);
 			productName = HelloBeautiful;
 			productReference = 3A2B1F512A6C67FB00CCA3FB /* HelloBeautiful.app */;
@@ -256,15 +304,20 @@
 				3A5A897A2A71850C009169B5 /* MoonHoroscopeService.swift in Sources */,
 				3A5892FF2A70704500E208BC /* NetworkError.swift in Sources */,
 				3A5892CC2A7019BE00E208BC /* Diary .swift in Sources */,
+				3AF6E2572A72D9E700461137 /* FirebaseService.swift in Sources */,
 				3A5892D02A701E0F00E208BC /* Horoscope.swift in Sources */,
 				3A5A89772A71840C009169B5 /* APIService.swift in Sources */,
 				3A2B1F552A6C67FB00CCA3FB /* AppDelegate.swift in Sources */,
 				3A5A89732A716E8F009169B5 /* MoonHoroscopeViewController.swift in Sources */,
+				3AF6E2592A72DC4700461137 /* FirebaseError.swift in Sources */,
+				3AF6E25D2A72DE8500461137 /* CreateUserViewModel.swift in Sources */,
 				3A5A89752A7172D8009169B5 /* MoonHoroscopeViewModel.swift in Sources */,
 				3A2B1F572A6C67FB00CCA3FB /* SceneDelegate.swift in Sources */,
 				3A5893032A7070CE00E208BC /* MoonService.swift in Sources */,
 				3A5A897E2A71FBBA009169B5 /* CreateUserDetailViewController.swift in Sources */,
+				3AF6E25B2A72DCD700461137 /* CreateAccountError.swift in Sources */,
 				3A5892CA2A70189700E208BC /* User.swift in Sources */,
+				3AF6E25F2A72E47900461137 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +552,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3AF6E24A2A720F5A00461137 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		3AF6E2502A72D7B500461137 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AF6E24A2A720F5A00461137 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		3AF6E2522A72D7CF00461137 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AF6E24A2A720F5A00461137 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		3AF6E2542A72D7E000461137 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AF6E24A2A720F5A00461137 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

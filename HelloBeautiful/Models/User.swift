@@ -6,15 +6,18 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
 
-struct User: Decodable {
+struct User: Codable {
+    @DocumentID var id: String?
     let firstName: String
     let lastName: String
     let email: String
     let password: String 
     let zodiacSign: String
     let lastCycle: String
-    let uuid: UUID
+    let collectionType: String 
+    let uuid: UUID = UUID()
 
 }
 extension User: Equatable {

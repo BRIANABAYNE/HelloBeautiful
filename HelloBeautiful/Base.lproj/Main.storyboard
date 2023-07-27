@@ -66,7 +66,7 @@
             </objects>
             <point key="canvasLocation" x="202" y="-61"/>
         </scene>
-        <!--Item-->
+        <!--Log In View Controller-->
         <scene sceneID="rd2-KE-JWP">
             <objects>
                 <viewController id="kTg-Uv-Ccv" customClass="LogInViewController" sceneMemberID="viewController">
@@ -82,11 +82,6 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ye5-7I-8e0">
                                 <rect key="frame" x="100" y="332" width="193" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uou-gW-kwc">
-                                <rect key="frame" x="100" y="468" width="193" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -113,6 +108,11 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Log In"/>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uou-gW-kwc">
+                                <rect key="frame" x="99" y="425" width="193" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-sV-Amh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -136,12 +136,11 @@
                             <constraint firstItem="ClK-OZ-83B" firstAttribute="top" secondItem="4qk-sV-Amh" secondAttribute="top" constant="100" id="ymr-WE-5J3"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="JWo-32-XPm"/>
                     <navigationItem key="navigationItem" id="nib-kl-lcS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JUW-fO-lLE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1924.4274809160304" y="-61.267605633802823"/>
+            <point key="canvasLocation" x="2851.1450381679388" y="-61.267605633802823"/>
         </scene>
         <!--Create User Detail View Controller-->
         <scene sceneID="lCY-E5-ltc">
@@ -236,6 +235,7 @@
                             <constraint firstItem="fK7-BI-Io8" firstAttribute="leading" secondItem="zpd-ma-EMl" secondAttribute="leading" id="v1r-nr-K9T"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="4Z0-03-Y3h"/>
                     <connections>
                         <outlet property="confirmPasswordTextField" destination="IAV-0b-c9i" id="tOo-l6-g8Y"/>
                         <outlet property="emailTextField" destination="crS-zg-NHh" id="Dep-qU-nnh"/>
@@ -248,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCm-qe-hJW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2689.3129770992364" y="-61.267605633802823"/>
+            <point key="canvasLocation" x="3630" y="-61"/>
         </scene>
         <!--Settings-->
         <scene sceneID="vdn-qX-dD6">
