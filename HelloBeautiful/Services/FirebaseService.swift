@@ -8,10 +8,14 @@
 import Foundation
 import FirebaseAuth
 
+protocol FirebaseServiceable {
+    func createAccount(with email: String, password: String, handler: @escaping(Result<Bool, CreateAccountError>) -> Void)
+    func signIn(with email: String, password: String, handler: @escaping(Result<Bool, CreateAccountError>) -> Void)
+    func signOut()
+}
 
-
-struct FirebaseService:  {
-        
+struct FirebaseService: FirebaseServiceable {
+  
         func createAccount(with email: String, password: String, confirmPassword: String, completion: @escaping(Result<Bool, CreateAccountError>) -> Void) {
            
                 Auth.auth().createUser(withEmail:email, password: password) { authResult, fireBaseError in
