@@ -25,6 +25,7 @@
 		3A5A897E2A71FBBA009169B5 /* CreateUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A897D2A71FBBA009169B5 /* CreateUserDetailViewController.swift */; };
 		3A84A19A2A743A4A00376FD0 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3A84A1992A743A4A00376FD0 /* FirebaseFirestoreSwift */; };
 		3A84A19C2A743A6E00376FD0 /* CreateUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84A19B2A743A6E00376FD0 /* CreateUserViewModel.swift */; };
+		3A84A1A02A7444F300376FD0 /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84A19F2A7444F300376FD0 /* UserDetailsViewModel.swift */; };
 		3AF6E24C2A720F5A00461137 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF6E24B2A720F5A00461137 /* FirebaseFirestore */; };
 		3AF6E24E2A72BDFB00461137 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6E24D2A72BDFB00461137 /* GoogleService-Info.plist */; };
 		3AF6E2512A72D7B500461137 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF6E2502A72D7B500461137 /* FirebaseDatabaseSwift */; };
@@ -59,6 +60,7 @@
 		3A5A89792A71850C009169B5 /* MoonHoroscopeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonHoroscopeService.swift; sourceTree = "<group>"; };
 		3A5A897D2A71FBBA009169B5 /* CreateUserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserDetailViewController.swift; sourceTree = "<group>"; };
 		3A84A19B2A743A6E00376FD0 /* CreateUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewModel.swift; sourceTree = "<group>"; };
+		3A84A19F2A7444F300376FD0 /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
 		3AF6E24D2A72BDFB00461137 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3AF6E2562A72D9E700461137 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		3AF6E2582A72DC4700461137 /* FirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseError.swift; sourceTree = "<group>"; };
@@ -107,7 +109,7 @@
 			children = (
 				3AF6E24D2A72BDFB00461137 /* GoogleService-Info.plist */,
 				3A5892C82A70187E00E208BC /* Storyboards */,
-				3A5893002A70709000E208BC /* UI */,
+				3A84A19D2A74449800376FD0 /* New Group */,
 				3AF6E2612A72E92400461137 /* LogIn */,
 				3A5893012A70709700E208BC /* Moon */,
 				3A5892FD2A70700B00E208BC /* Services */,
@@ -165,6 +167,7 @@
 		3A5893002A70709000E208BC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3A84A19E2A7444B900376FD0 /* UserDetails */,
 				3A5A897C2A71FB80009169B5 /* CreateUser */,
 				3A5A89782A7184DD009169B5 /* MoonHoroscope */,
 			);
@@ -196,6 +199,22 @@
 				3A84A19B2A743A6E00376FD0 /* CreateUserViewModel.swift */,
 			);
 			path = CreateUser;
+			sourceTree = "<group>";
+		};
+		3A84A19D2A74449800376FD0 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				3A5893002A70709000E208BC /* UI */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		3A84A19E2A7444B900376FD0 /* UserDetails */ = {
+			isa = PBXGroup;
+			children = (
+				3A84A19F2A7444F300376FD0 /* UserDetailsViewModel.swift */,
+			);
+			path = UserDetails;
 			sourceTree = "<group>";
 		};
 		3AF6E24F2A72D7B500461137 /* Frameworks */ = {
@@ -304,6 +323,7 @@
 				3A5892D02A701E0F00E208BC /* Horoscope.swift in Sources */,
 				3A5A89772A71840C009169B5 /* APIService.swift in Sources */,
 				3AF6E2682A73553B00461137 /* CrudFunctions.swift in Sources */,
+				3A84A1A02A7444F300376FD0 /* UserDetailsViewModel.swift in Sources */,
 				3A2B1F552A6C67FB00CCA3FB /* AppDelegate.swift in Sources */,
 				3A5A89732A716E8F009169B5 /* MoonHoroscopeViewController.swift in Sources */,
 				3AF6E2592A72DC4700461137 /* FirebaseError.swift in Sources */,
