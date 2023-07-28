@@ -47,24 +47,24 @@ struct CreateUserViewModel {
         }
         
         
-        func signIn(with email: String, password: String, confirmPassword: String ) {
-            
-            if password == confirmPassword {
-                service.signIn(email: email, password: password) { result  in
-                    switch result {
-                    case .success(_):
-                        print("User was created successfully")
-                    case .failure(let failure):
-                        delegate?.encountered(failure)
-                    }
-                    
-                }
-                
-                
-            }
-            delegate?.encountered(CreateAccountError.passwordMismatch)
-            
-        } // sign in
+//        func signIn(with email: String, password: String, confirmPassword: String ) {
+//
+//            if password == confirmPassword {
+//                service.signIn(email: email, password: password) { result  in
+//                    switch result {
+//                    case .success(_):
+//                        print("User was created successfully")
+//                    case .failure(let failure):
+//                        delegate?.encountered(failure)
+//                    }
+//
+//                }
+//
+//
+//            }
+//            delegate?.encountered(CreateAccountError.passwordMismatch)
+//
+//        } // sign in
         
         
     }

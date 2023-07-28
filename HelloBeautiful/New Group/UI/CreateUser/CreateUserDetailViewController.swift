@@ -11,13 +11,9 @@ class CreateUserDetailViewController: UIViewController {
 
     // MARK: - Outlets
     
-    @IBOutlet weak var firstNameTextField: UITextField!
-    @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
-    @IBOutlet weak var periodLengthTextField: UITextField!
-    @IBOutlet weak var sunSignPicker: UIPickerView!
     
     // MARK: -  Properties
     let data = ["Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capicorn","Aquarius","Pisces"]
