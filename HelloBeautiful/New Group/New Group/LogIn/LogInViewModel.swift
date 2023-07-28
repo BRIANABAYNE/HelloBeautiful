@@ -10,25 +10,27 @@ import Foundation
 struct LogInViewModel {
     
     
-   // MARK: - Properties
+    // MARK: - Properties
     
     
     
     
-    
-    func createAccount(with email: String, password: String, confirmPassword: String) {
-        if password == confirmPassword {
-            createAccount(with: email, password: password) { result in
-                switch result {
-                case.success(_):
-                    print("User was created successfully")
-                case.failure(let failure): 
-                    
-                }
-            }
-           
-        }
-        
-    }
-    
+    //
+    //    func createAccount(with email: String, password: String, confirmPassword: String) {
+    //        if password == confirmPassword {
+    //            createAccount(with: email, password: password) { result in
+    //                switch result {
+    //                case.success(_):
+    //                    print("User was created successfully")
+    //                case.failure(let failure):
+    //
+    //
+    //                }
+    //            }
+    //
+    //        }
+    //
+    //    }
+    //
+    //}
 }

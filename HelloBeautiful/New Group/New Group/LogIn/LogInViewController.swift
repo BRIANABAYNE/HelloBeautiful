@@ -23,13 +23,16 @@ class LogInViewController: UIViewController {
     
     
     @IBAction func logInButtonTapped(_ sender: Any) {
-        
-    }
-    
-    @IBAction func createAccountButtonTapped(_ sender: Any) {
         guard let email = logInEmailLabel.text,
               let password = logInPasswordLabel.text,
-              let confirmPassword = logInConfirmPassword.text else { return }
+              let confirmPassword = logInConfirmPassword.text else { return }    }
+    
+    @IBAction func createAccountButtonTapped(_ sender: Any) {
+        
+        // this needs to go to the create account page
+//        guard let email = logInEmailLabel.text,
+//              let password = logInPasswordLabel.text,
+//              let confirmPassword = logInConfirmPassword.text else { return }
     }
     
     /*

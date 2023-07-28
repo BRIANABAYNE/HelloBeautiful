@@ -21,8 +21,9 @@ class CreateUserDetailViewController: UIViewController {
     
     // MARK: -  Properties
     let data = ["Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capicorn","Aquarius","Pisces"]
-    
+   
     var user: User?
+    var viewModel:CreateUserViewModel!
     
     // MARK: - LifeCycles
     override func viewDidLoad() {
@@ -37,11 +38,15 @@ class CreateUserDetailViewController: UIViewController {
     // MARK: - Actions
     @IBAction func cancelButtonTapped(_ sender: Any) {
     }
-    
+    // auth result error in
     @IBAction func createButtonTapped(_ sender: Any) {
-    }
+        guard let email = emailTextField.text,!email.isEmpty,
+             let password = passwordTextField.text,!password.isEmpty,
+              let confirmPassword = confirmPasswordTextField.text,!confirmPassword.isEmpty else { return }
+        viewModel.createAccount(with: email, password: password, confirmPassword: confirmPassword)
+     
+        }
     
-
   // MARK: - Methods
     private func configureView() {
         guard let user = user else { return }

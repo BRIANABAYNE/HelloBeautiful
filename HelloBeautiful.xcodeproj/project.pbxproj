@@ -35,6 +35,7 @@
 		3AF6E25F2A72E47900461137 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E25E2A72E47900461137 /* Constants.swift */; };
 		3AF6E2642A72EA0700461137 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E2632A72EA0700461137 /* LogInViewController.swift */; };
 		3AF6E2662A72EC5F00461137 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E2652A72EC5F00461137 /* LogInViewModel.swift */; };
+		3AF6E2682A73553B00461137 /* CrudFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E2672A73553B00461137 /* CrudFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		3AF6E25E2A72E47900461137 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3AF6E2632A72EA0700461137 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		3AF6E2652A72EC5F00461137 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
+		3AF6E2672A73553B00461137 /* CrudFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrudFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				3AF6E2582A72DC4700461137 /* FirebaseError.swift */,
 				3AF6E25A2A72DCD700461137 /* CreateAccountError.swift */,
 				3AF6E25E2A72E47900461137 /* Constants.swift */,
+				3AF6E2672A73553B00461137 /* CrudFunctions.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				3AF6E2572A72D9E700461137 /* FirebaseService.swift in Sources */,
 				3A5892D02A701E0F00E208BC /* Horoscope.swift in Sources */,
 				3A5A89772A71840C009169B5 /* APIService.swift in Sources */,
+				3AF6E2682A73553B00461137 /* CrudFunctions.swift in Sources */,
 				3A2B1F552A6C67FB00CCA3FB /* AppDelegate.swift in Sources */,
 				3A5A89732A716E8F009169B5 /* MoonHoroscopeViewController.swift in Sources */,
 				3AF6E2592A72DC4700461137 /* FirebaseError.swift in Sources */,
