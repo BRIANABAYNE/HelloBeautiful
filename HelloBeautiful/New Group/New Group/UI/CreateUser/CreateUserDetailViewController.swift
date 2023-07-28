@@ -28,6 +28,7 @@ class CreateUserDetailViewController: UIViewController {
     // MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureView()
         
         sunSignPicker.dataSource = self
         sunSignPicker.delegate = self

@@ -9,7 +9,7 @@ import Foundation
 import FirebaseAuth
 
 protocol FirebaseServiceable {
-    func createAccount(with email: String, password: String, confirmPassword: String, completion: @escaping(Result<Bool, CreateAccountError>) -> Void)
+    func createAccount( with email: String, password: String, confirmPassword: String, completion: @escaping(Result<Bool, CreateAccountError>) -> Void)
     func signIn(email: String, password: String, completion: @escaping(Result<Bool, CreateAccountError>) -> Void)
     func signOut()
 }
@@ -19,7 +19,7 @@ struct FirebaseService: FirebaseServiceable {
 
         func createAccount(with email: String, password: String, confirmPassword: String, completion: @escaping(Result<Bool, CreateAccountError>) -> Void) {
            
-                Auth.auth().createUser(Email:email, password: password) { authResult, error in
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                     if let error {
                         completion(.failure(.firebaseError(error)))
                     }
@@ -29,7 +29,7 @@ struct FirebaseService: FirebaseServiceable {
                                
         
         func signIn(email: String, password: String, completion: @escaping(Result<Bool, CreateAccountError>) -> Void) {
-            Auth.auth().signIn(email: email, password: password) { authResult, error in
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if let error {
                     completion(.failure(.firebaseError(error)))
                 }

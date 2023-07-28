@@ -1,8 +1,8 @@
 //
-//  CreateUserViewModel.swift
+//  CreateUserViewModel...swift
 //  HelloBeautiful
 //
-//  Created by Briana Bayne on 7/27/23.
+//  Created by Briana Bayne on 7/28/23.
 //
 
 import Foundation
@@ -59,37 +59,9 @@ struct CreateUserViewModel {
         } // sign in
         
         
-    } // end of ViewModel
-}
+    }
+} // end of viewModel
     
-    
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //    func create(firstName: String, lastName: String, email: String, password: String, lastCycle: String, periodLength: Int, zodiacSign: String, completion: @escaping(Result<String,FirebaseError>) -> Void) {
 //        let user = User(firstName: firstName, lastName: lastName, email: email, password: password, zodiacSign: zodiacSign, lastCycle: lastCycle , collectionType: Constants.User.userCollectionPath)
 //    }
@@ -128,4 +100,3 @@ struct CreateUserViewModel {
 //
     
     
-
