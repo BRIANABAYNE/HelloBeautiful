@@ -28,24 +28,18 @@ struct LogInViewModel {
     }
     
   
-    func signIn(with email: String, password: String, confirmPassword: String ) {
+    func signIn(with email: String, password: String) {
  
-             if password == confirmPassword {
                  service.signIn(email: email, password: password) { result  in
                      switch result {
                      case .success(_):
-                         print("User was created successfully")
+                         print("User was logged in")
                      case .failure(let failure):
                          delegate?.encountered(failure)
                      }
- 
                  }
- 
- 
-             }
-             delegate?.encountered(CreateAccountError.passwordMismatch)
- 
-         } // sign in
-         
-   
-} // LogIn
+
+             } // sign in
+        
+         } // log in
+        

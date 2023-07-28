@@ -106,7 +106,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Don't have an account? "/>
                                 <connections>
                                     <action selector="createAccountButtonTapped:" destination="kTg-Uv-Ccv" eventType="touchUpInside" id="gCR-a8-htk"/>
-                                    <segue destination="MYf-iT-R6P" kind="show" id="ZX9-sP-peX"/>
+                                    <segue destination="MYf-iT-R6P" kind="show" identifier="CreateUser" id="ZX9-sP-peX"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uou-gW-kwc">
@@ -159,6 +159,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Next"/>
                                 <connections>
+                                    <action selector="nextButtonTapped:" destination="MYf-iT-R6P" eventType="touchUpInside" id="821-tZ-Pbw"/>
                                     <segue destination="mfw-ps-f1K" kind="show" id="eqU-kf-3HT"/>
                                 </connections>
                             </button>
@@ -202,10 +203,10 @@
             </objects>
             <point key="canvasLocation" x="3538" y="-61"/>
         </scene>
-        <!--View Controller-->
+        <!--User Details View Controller-->
         <scene sceneID="AZV-hO-lLX">
             <objects>
-                <viewController id="mfw-ps-f1K" sceneMemberID="viewController">
+                <viewController id="mfw-ps-f1K" customClass="UserDetailsViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9DN-fJ-ZjL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -256,6 +257,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="300-1R-xmp"/>
+                    <connections>
+                        <outlet property="sunSignPicker" destination="Ano-vo-1Lg" id="1xk-Yv-svC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="26g-QN-izu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -277,7 +281,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Nak-hM-qer">
-                                <rect key="frame" x="28" y="159" width="106.33333333333331" height="345.66666666666669"/>
+                                <rect key="frame" x="28" y="159" width="106.33333333333331" height="345.66666666666663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dr3-4P-JtB">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="20.333333333333332"/>

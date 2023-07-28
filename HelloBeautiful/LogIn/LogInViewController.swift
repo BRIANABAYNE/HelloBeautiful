@@ -8,41 +8,41 @@
 import UIKit
 
 class LogInViewController: UIViewController {
-
-   
-  
+    
+    
+    
     @IBOutlet weak var logInEmailLabel: UITextField!
     @IBOutlet weak var logInPasswordLabel: UITextField!
-    @IBOutlet weak var logInConfirmPassword: UITextField!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
+    
+    var viewModel:LogInViewModel!
     
     @IBAction func logInButtonTapped(_ sender: Any) {
         guard let email = logInEmailLabel.text,
               let password = logInPasswordLabel.text,
-              let confirmPassword = logInConfirmPassword.text else { return }    }
+              viewModel.signIn(with: email, password: password)
+        else { return }
+    }
     
     @IBAction func createAccountButtonTapped(_ sender: Any) {
         
-        // this needs to go to the create account page
-//        guard let email = logInEmailLabel.text,
-//              let password = logInPasswordLabel.text,
-//              let confirmPassword = logInConfirmPassword.text else { return }
+       
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  
+     // MARK: - Navigation
+   
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if segue.identifier == "CreateUser" {
+             guard let destinationVC = segue.destination as?
+                    CreateUserDetailViewController else { return }
+             destinationVC.
+         }
 }

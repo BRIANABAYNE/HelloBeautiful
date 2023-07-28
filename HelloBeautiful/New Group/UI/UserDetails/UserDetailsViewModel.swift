@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct UserDetailsViewModel {
+    
+    
+    // MARK: - Properties
+    
+    let data = ["Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capicorn","Aquarius","Pisces"]
+
+    
+}
