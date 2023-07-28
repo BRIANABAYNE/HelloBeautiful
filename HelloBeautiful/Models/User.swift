@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseFirestoreSwift
 
+
 // This is the user data to the user after they are logged in on firebase and it not important information to be an auth user
 struct User: Codable {
     @DocumentID var id: String?
