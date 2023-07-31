@@ -6,14 +6,20 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
 
-struct User: Decodable {
+
+// This is the user data to the user after they are logged in on firebase and it not important information to be an auth user
+struct User: Codable {
+    @DocumentID var id: String?
     let firstName: String
     let lastName: String
     let email: String
+    let password: String 
     let zodiacSign: String
-    let lastCycle: Date
-    let uuid: UUID
+    let lastCycle: String
+    let collectionType: String 
+    let uuid: UUID = UUID()
 
 }
 extension User: Equatable {
