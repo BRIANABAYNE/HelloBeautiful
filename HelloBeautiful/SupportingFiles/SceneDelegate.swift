@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -16,24 +17,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        MoonService().fetchMoonDetails { moonDetails in
-            switch moonDetails {
-            case .success(let success):
-                print(success)
-            case .failure(let failure):
-                print(failure)
-            }
+//        MoonService().fetchMoonDetails { moonDetails in
+//            switch moonDetails {
+//            case .success(let success):
+//                print(success)
+//            case .failure(let failure):
+//                print(failure)
+//            }
+        guard let _ = (scene as? UIWindowScene) else { return }
         }
         
-        MoonService().fetchHoroscope(sunSign: "virgo") { result in
-            switch result {
-            case .success(let success):
-                print(success)
-            case .failure(let failure):
-                print(failure)
-            }
-        }
-        guard let _ = (scene as? UIWindowScene) else { return }
+//        MoonService().fetchHoroscope(sunSign: "virgo") { result in
+//            switch result {
+//            case .success(let success):
+//                print(success)
+//            case .failure(let failure):
+//                print(failure)
+//            }
+//        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -65,5 +66,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 
-}
+
 
