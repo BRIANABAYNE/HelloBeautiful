@@ -6,16 +6,35 @@
 //
 
 import UIKit
+import SwiftUI
 
 class UserDetailsViewController: UIViewController {
+    
+    let datePicker: UIDatePicker = {
+        let datePicker = UIDatePicker()
+        datePicker.locale = .current
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.tintColor = .systemPink
+        return datePicker
+    }()
 
-
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var periodLengthTextField: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
        sunSignPicker.dataSource = self
         sunSignPicker.delegate = self
+        
+        view.addSubview(datePicker)
+        datePicker.center = view.center
     }
     
     
@@ -23,9 +42,19 @@ class UserDetailsViewController: UIViewController {
     
     @IBOutlet weak var sunSignPicker: UIPickerView!
     
+    @IBAction func datePicker(_ sender: Any) {
+    }
+    @IBAction func buttonTapped(_ sender: Any) {
+    }
+    
+    
     
 // MARK: - Properties
     var viewModel: UserDetailsViewModel!
+    
+    
+    
+// MARK: - Navigation
     
 
 } // end of ViewC

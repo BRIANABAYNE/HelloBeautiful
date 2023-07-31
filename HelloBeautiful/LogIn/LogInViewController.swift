@@ -15,34 +15,43 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var logInPasswordLabel: UITextField!
     
     
+    var viewModel:LogInViewModel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        viewModel = LogInViewModel(delegate: self)
     }
     
-    
-    var viewModel:LogInViewModel!
     
     @IBAction func logInButtonTapped(_ sender: Any) {
         guard let email = logInEmailLabel.text,
-              let password = logInPasswordLabel.text,
-              viewModel.signIn(with: email, password: password)
-        else { return }
+              let password = logInPasswordLabel.text  else { return }
+        viewModel.signIn(with: email, password: password)
     }
     
     @IBAction func createAccountButtonTapped(_ sender: Any) {
-        
        
+        
     }
     
-  
-     // MARK: - Navigation
-   
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         if segue.identifier == "CreateUser" {
-             guard let destinationVC = segue.destination as?
-                    CreateUserDetailViewController else { return }
-             destinationVC.
-         }
+    
+    // MARK: - Navigation
+    
+    //     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //         if segue.identifier == "CreateUser" {
+    //             guard let destinationVC = segue.destination as?
+    //                    CreateUserDetailViewController else { return }
+    //             destinationVC.
+    //         }
+    //}
+}
+
+
+extension LogInViewController: LogInViewModelDelegate {
+    func encountered(_ error: Error) {
+        // present alert
+    }
+    
+    
 }

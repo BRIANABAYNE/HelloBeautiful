@@ -27,6 +27,7 @@
 		3A84A19C2A743A6E00376FD0 /* CreateUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84A19B2A743A6E00376FD0 /* CreateUserViewModel.swift */; };
 		3A84A1A02A7444F300376FD0 /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84A19F2A7444F300376FD0 /* UserDetailsViewModel.swift */; };
 		3A84A1A22A74476700376FD0 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84A1A12A74476700376FD0 /* UserDetailsViewController.swift */; };
+		3A84A1A42A756C6900376FD0 /* CAGradientLayer+ListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84A1A32A756C6900376FD0 /* CAGradientLayer+ListStyle.swift */; };
 		3AF6E24C2A720F5A00461137 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF6E24B2A720F5A00461137 /* FirebaseFirestore */; };
 		3AF6E24E2A72BDFB00461137 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6E24D2A72BDFB00461137 /* GoogleService-Info.plist */; };
 		3AF6E2512A72D7B500461137 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF6E2502A72D7B500461137 /* FirebaseDatabaseSwift */; };
@@ -63,6 +64,7 @@
 		3A84A19B2A743A6E00376FD0 /* CreateUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewModel.swift; sourceTree = "<group>"; };
 		3A84A19F2A7444F300376FD0 /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
 		3A84A1A12A74476700376FD0 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		3A84A1A32A756C6900376FD0 /* CAGradientLayer+ListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+ListStyle.swift"; sourceTree = "<group>"; };
 		3AF6E24D2A72BDFB00461137 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3AF6E2562A72D9E700461137 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		3AF6E2582A72DC4700461137 /* FirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseError.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				3A5892CB2A7019BE00E208BC /* Diary .swift */,
 				3A5892CD2A701A6D00E208BC /* MoonPhase.swift */,
 				3A5892CF2A701E0F00E208BC /* Horoscope.swift */,
+				3A84A1A32A756C6900376FD0 /* CAGradientLayer+ListStyle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A5892CE2A701A6D00E208BC /* MoonPhase.swift in Sources */,
+				3A84A1A42A756C6900376FD0 /* CAGradientLayer+ListStyle.swift in Sources */,
 				3A5A897A2A71850C009169B5 /* MoonHoroscopeService.swift in Sources */,
 				3A5892FF2A70704500E208BC /* NetworkError.swift in Sources */,
 				3A5892CC2A7019BE00E208BC /* Diary .swift in Sources */,

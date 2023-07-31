@@ -41,6 +41,20 @@ class CreateUserDetailViewController: UIViewController {
         
     }
     
+    
+ // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "UserDetails" {
+            let destinationVC = segue.destination as? UserDetailsViewController
+            if let email = emailTextField.text,
+                let password = passwordTextField.text,
+                let confirmPassword = passwordTextField.text {
+                
+            }
+        }
+    }
+    
     // MARK: - Methods
     //    private func configureView() {
     //        guard let user = user else { return }
