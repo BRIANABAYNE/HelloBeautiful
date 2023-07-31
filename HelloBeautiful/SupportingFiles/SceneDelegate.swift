@@ -6,35 +6,38 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var handle: AuthStateDidChangeListenerHandle?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-//        MoonService().fetchMoonDetails { moonDetails in
-//            switch moonDetails {
-//            case .success(let success):
-//                print(success)
-//            case .failure(let failure):
-//                print(failure)
-//            }
+      
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        handle = Auth.auth().addStateDidChangeListener( { auth, user in
+            
+            if Auth.auth().currentUser != nil {
+                let storyboard = UIStoryboard(name:"Main", bundle: nil)
+                let navigation = storyboard.instantiateViewController(identifier:"Navigation")
+                self.window?.rootViewController = navigation
+            } else {
+                let storyboard = UIStoryboard(name: "LogIn", bundle: nil)
+                let logIn = storyboard.instantiateViewController(identifier: "LogIn")
+                self.window?.rootViewController = logIn
+            }
+            
+        }
+        )
+        
+        
         }
         
-//        MoonService().fetchHoroscope(sunSign: "virgo") { result in
-//            switch result {
-//            case .success(let success):
-//                print(success)
-//            case .failure(let failure):
-//                print(failure)
-//            }
-//        }
+    
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

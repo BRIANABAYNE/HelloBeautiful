@@ -33,7 +33,7 @@ struct LogInViewModel {
                  service.signIn(email: email, password: password) { result  in
                      switch result {
                      case .success(_):
-                         print("User was logged in")
+                         print("User logged in")
                      case .failure(let failure):
                          delegate?.encountered(failure)
                      }
