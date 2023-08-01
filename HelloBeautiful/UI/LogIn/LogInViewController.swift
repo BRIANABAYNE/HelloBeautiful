@@ -11,8 +11,8 @@ class LogInViewController: UIViewController {
     
     
     
-    @IBOutlet weak var logInEmailLabel: UITextField!
-    @IBOutlet weak var logInPasswordLabel: UITextField!
+    @IBOutlet weak var logInEmaiTextField: UITextField!
+    @IBOutlet weak var logInPasswordTextField: UITextField!
     
     // MARK: - Properties
     
@@ -26,8 +26,8 @@ class LogInViewController: UIViewController {
     
     
     @IBAction func logInButtonTapped(_ sender: Any) {
-        guard let email = logInEmailLabel.text,
-              let password = logInPasswordLabel.text  else { return }
+        guard let email = logInEmaiTextField.text,
+              let password = logInPasswordTextField.text  else { return }
         viewModel.signIn(with: email, password: password)
     }
     

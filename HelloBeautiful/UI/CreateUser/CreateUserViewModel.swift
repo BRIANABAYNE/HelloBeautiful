@@ -5,16 +5,10 @@
 //  Created by Briana Bayne on 7/28/23.
 //
 
-import Foundation
-//
-//  CreateUserViewModel...swift
-//  HelloBeautiful
-//
-//  Created by Briana Bayne on 7/28/23.
-//
+
 
 import Foundation
-import FirebaseAuth
+
 
 protocol CreateUserViewModelDelegate: CreateUserDetailViewController {
     func encountered(_ error: Error)
@@ -30,7 +24,6 @@ struct CreateUserViewModel {
         self.service = service
         self.delegate = delegate
     }
-    
     
     func createAccount(with email: String, password: String, confirmPassword: String) {
         if password == confirmPassword {

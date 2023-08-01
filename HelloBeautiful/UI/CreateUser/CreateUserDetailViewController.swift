@@ -3,7 +3,6 @@
 //  HelloBeautiful
 //
 //  Created by Briana Bayne on 7/26/23.
-//
 
 import UIKit
 
@@ -11,8 +10,7 @@ class CreateUserDetailViewController: UIViewController, CreateUserViewModelDeleg
     func encountered(_ error: Error) {
         //
     }
-    
-    
+
     // MARK: - Outlets
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -20,9 +18,7 @@ class CreateUserDetailViewController: UIViewController, CreateUserViewModelDeleg
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
     // MARK: -  Properties
-    //    let data = ["Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capicorn","Aquarius","Pisces"]
-    //
-    var user: User?
+ 
     var viewModel:CreateUserViewModel!
     
     // MARK: - LifeCycles
@@ -41,22 +37,20 @@ class CreateUserDetailViewController: UIViewController, CreateUserViewModelDeleg
               let password = passwordTextField.text,!password.isEmpty,
               let confirmPassword = confirmPasswordTextField.text,!confirmPassword.isEmpty else { return }
         viewModel.createAccount(with: email, password: password, confirmPassword: confirmPassword)
-        
     }
-    
-    
+
  // MARK: - Navigation
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "UserDetails" {
-            let destinationVC = segue.destination as? UserDetailsViewController
-            if let email = emailTextField.text,
-               let password = passwordTextField.text,
-               let confirmPassword = passwordTextField.text {
-                viewModel.createAccount(with: email, password: password, confirmPassword: confirmPassword)
-            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "UserDetails" {
+//            let destinationVC = segue.destination as? UserDetailsViewController
+//            if let email = emailTextField.text,
+//               let password = passwordTextField.text,
+//               let confirmPassword = passwordTextField.text {
+//                viewModel.createAccount(with: email, password: password, confirmPassword: confirmPassword)
+//            }
+//        }
+//    }
     
     // MARK: - Methods
     //    private func configureView() {

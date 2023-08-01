@@ -12,6 +12,7 @@
 		3A2B1F5C2A6C67FB00CCA3FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2B1F5A2A6C67FB00CCA3FB /* Main.storyboard */; };
 		3A2B1F5E2A6C67FB00CCA3FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2B1F5D2A6C67FB00CCA3FB /* Assets.xcassets */; };
 		3A2B1F612A6C67FB00CCA3FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2B1F5F2A6C67FB00CCA3FB /* LaunchScreen.storyboard */; };
+		3A5420DB2A796CCE0049FC4E /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5420DA2A796CCE0049FC4E /* UserDetails.swift */; };
 		3A5892CA2A70189700E208BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892C92A70189700E208BC /* User.swift */; };
 		3A5892CC2A7019BE00E208BC /* Diary .swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892CB2A7019BE00E208BC /* Diary .swift */; };
 		3A5892CE2A701A6D00E208BC /* MoonPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892CD2A701A6D00E208BC /* MoonPhase.swift */; };
@@ -59,6 +60,7 @@
 		3A2B1F5D2A6C67FB00CCA3FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A2B1F602A6C67FB00CCA3FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A2B1F622A6C67FB00CCA3FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A5420DA2A796CCE0049FC4E /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		3A5892C92A70189700E208BC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3A5892CB2A7019BE00E208BC /* Diary .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Diary .swift"; sourceTree = "<group>"; };
 		3A5892CD2A701A6D00E208BC /* MoonPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonPhase.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				3A5892C92A70189700E208BC /* User.swift */,
+				3A5420DA2A796CCE0049FC4E /* UserDetails.swift */,
 				3A5892CB2A7019BE00E208BC /* Diary .swift */,
 				3A5892CD2A701A6D00E208BC /* MoonPhase.swift */,
 				3A5892CF2A701E0F00E208BC /* Horoscope.swift */,
@@ -383,6 +386,7 @@
 				3A5892CE2A701A6D00E208BC /* MoonPhase.swift in Sources */,
 				3A84A1A42A756C6900376FD0 /* CAGradientLayer+ListStyle.swift in Sources */,
 				3A5A897A2A71850C009169B5 /* MoonHoroscopeService.swift in Sources */,
+				3A5420DB2A796CCE0049FC4E /* UserDetails.swift in Sources */,
 				3A5892FF2A70704500E208BC /* NetworkError.swift in Sources */,
 				3A5892CC2A7019BE00E208BC /* Diary .swift in Sources */,
 				3A6F28DA2A78201F0046AF14 /* FeelingViewController.swift in Sources */,

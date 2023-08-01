@@ -16,20 +16,18 @@ protocol FirebaseServiceable {
 
 struct FirebaseService: FirebaseServiceable {
   
-
         func createAccount(with email: String, password: String, confirmPassword: String, completion: @escaping(Result<Bool, CreateAccountError>) -> Void) {
             if password == confirmPassword {
                 Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                    
                     if let error {
                         completion(.failure(.firebaseError(error)))
                     }
-                    completion(.success(true))
-                
+                   completion(.success(true))
             }
          }
         } // created
                                
-        
         func signIn(email: String, password: String, completion: @escaping(Result<Bool, CreateAccountError>) -> Void) {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if let error {
@@ -48,4 +46,3 @@ struct FirebaseService: FirebaseServiceable {
             }
         } // end of sign out
     } // end of struct
-

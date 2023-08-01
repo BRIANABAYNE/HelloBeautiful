@@ -39,10 +39,10 @@
                                     <action selector="logInButtonTapped:" destination="kTg-Uv-Ccv" eventType="touchUpInside" id="kbd-6r-d5y"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjG-i0-Whk" userLabel="Don't have an account?">
-                                <rect key="frame" x="99" y="678" width="207" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjG-i0-Whk" userLabel="Don't have an account?">
+                                <rect key="frame" x="43.666666666666657" y="618" width="300" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="a1G-NE-3dy"/>
+                                    <constraint firstAttribute="width" constant="300" id="a1G-NE-3dy"/>
                                     <constraint firstAttribute="height" constant="50" id="v0T-2i-oNe"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -67,10 +67,11 @@
                             <constraint firstItem="4qk-sV-Amh" firstAttribute="trailing" secondItem="6uw-Mj-RM3" secondAttribute="trailing" constant="161" id="Iqg-VT-JN5"/>
                             <constraint firstItem="ye5-7I-8e0" firstAttribute="leading" secondItem="4qk-sV-Amh" secondAttribute="leading" constant="100" id="PVk-WT-OFp"/>
                             <constraint firstItem="4qk-sV-Amh" firstAttribute="trailing" secondItem="Uou-gW-kwc" secondAttribute="trailing" constant="100" id="Vh4-nW-00r"/>
-                            <constraint firstItem="BjG-i0-Whk" firstAttribute="top" secondItem="6uw-Mj-RM3" secondAttribute="bottom" constant="100" id="YBh-d3-6HB"/>
+                            <constraint firstItem="BjG-i0-Whk" firstAttribute="top" secondItem="6uw-Mj-RM3" secondAttribute="bottom" constant="40" id="YBh-d3-6HB"/>
                             <constraint firstItem="Uou-gW-kwc" firstAttribute="leading" secondItem="4qk-sV-Amh" secondAttribute="leading" constant="100" id="dWA-no-MZx"/>
                             <constraint firstItem="4qk-sV-Amh" firstAttribute="trailing" secondItem="ClK-OZ-83B" secondAttribute="trailing" constant="155.33000000000001" id="gSj-Yi-5L9"/>
                             <constraint firstItem="4qk-sV-Amh" firstAttribute="trailing" secondItem="ye5-7I-8e0" secondAttribute="trailing" constant="100" id="mRD-hy-Kvs"/>
+                            <constraint firstItem="4qk-sV-Amh" firstAttribute="trailing" secondItem="BjG-i0-Whk" secondAttribute="trailing" constant="50" id="sBI-4A-iao"/>
                             <constraint firstItem="6uw-Mj-RM3" firstAttribute="leading" secondItem="4qk-sV-Amh" secondAttribute="leading" constant="161" id="u6p-cR-Wl0"/>
                             <constraint firstItem="Uou-gW-kwc" firstAttribute="top" secondItem="ye5-7I-8e0" secondAttribute="bottom" constant="50" id="wYa-5Z-ozf"/>
                             <constraint firstItem="ClK-OZ-83B" firstAttribute="top" secondItem="4qk-sV-Amh" secondAttribute="top" constant="100" id="ymr-WE-5J3"/>
@@ -78,8 +79,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="nib-kl-lcS"/>
                     <connections>
-                        <outlet property="logInEmailLabel" destination="ye5-7I-8e0" id="Ruy-fU-3GE"/>
-                        <outlet property="logInPasswordLabel" destination="Uou-gW-kwc" id="BVM-8m-SLC"/>
+                        <outlet property="logInEmaiTextField" destination="ye5-7I-8e0" id="Ruy-fU-3GE"/>
+                        <outlet property="logInPasswordTextField" destination="Uou-gW-kwc" id="BVM-8m-SLC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JUW-fO-lLE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

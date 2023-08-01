@@ -9,7 +9,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ZTT-Ab-Z7Q">
             <objects>
-                <tabBarController id="bp3-Pp-1he" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="bp3-Pp-1he" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="GM1-by-Hfc"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tlh-ON-QuR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
