@@ -13,6 +13,7 @@ struct User: Codable {
     let email: String
     let password: String
     let confirimPassword: String
+    let zodiacSign: String
     let collectionType: String
     
 }

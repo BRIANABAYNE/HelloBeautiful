@@ -6,47 +6,86 @@
 //
 
 import UIKit
-import SwiftUI
+
 
 class UserDetailsViewController: UIViewController {
-    
-    let datePicker: UIDatePicker = {
-        let datePicker = UIDatePicker()
-        datePicker.locale = .current
-        datePicker.datePickerMode = .date
-        datePicker.preferredDatePickerStyle = .wheels
-        datePicker.tintColor = .systemPink
-        return datePicker
-    }()
+
+
     // MARK: - Outlets
+    @IBOutlet weak var lastCycleTextField: UITextField!
     
     @IBOutlet weak var periodLengthTextField: UITextField!
     
     
+    // MARK: - Properties
     
+    let datePicker = UIDatePicker()
+    var viewModel: UserDetailsViewModel!
+    
+    
+    // MARK: - Lifecyles
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = UserDetailsViewModel()
         
         sunSignPicker.dataSource = self
         sunSignPicker.delegate = self
-        
-        view.addSubview(datePicker)
-        datePicker.center = view.center
+        lastCycleDatePicker()
+        viewModel = UserDetailsViewModel()
+//        view.addSubview(datePicker)
+//        datePicker.center = view.center
     }
+    
+    // MARK: - Functions
+    
+    
+    func lastCycleDatePicker() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+//        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneButtonPressed))
+       
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneButtonPressed))
+        toolbar.setItems([doneButton], animated: true)
+            lastCycleTextField.inputView = datePicker
+            lastCycleTextField.inputAccessoryView = toolbar
+            datePicker.locale = .current
+            datePicker.datePickerMode = .date
+            datePicker.preferredDatePickerStyle = .wheels
+            datePicker.tintColor = .systemPink
+    }
+    @objc func doneButtonPressed() {
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .none
+        lastCycleTextField.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+    }
+    
+    
+    
+    
+//    let datePicker: UIDatePicker = {
+//        let datePicker = UIDatePicker()
+////        let toolbar = UIToolbar()
+//        datePicker.inputAccessoryView = toolbar
+//            return datePicker
+//        }
+//
+//
+//    }()
+//
     // MARK: - Action
     
     @IBOutlet weak var sunSignPicker: UIPickerView!
     
     // When a user hits this button, it saves the information and creats the account. Then the user is directed to the mainstoryboard.
     @IBAction func buttonTapped(_ sender: Any) {
-//        var storyboard = UIStoryboard(name:"Main", bundle: nil)
-//        var navigation = storyboard.instantiateViewController(identifier:"tabBar")
-//        self.viewModel.window.rootViewController = navigation
-    }
     
-    // MARK: - Properties
-    var viewModel: UserDetailsViewModel!
+    let storyboard = UIStoryboard(name:"Main", bundle: nil)
+    let navigation = storyboard.instantiateViewController(identifier:"tabBar")
+    self.viewModel.window?.rootViewController = navigation
+    }
 
     // MARK: - Navigation
 

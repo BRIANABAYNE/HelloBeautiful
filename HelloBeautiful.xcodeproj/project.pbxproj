@@ -13,6 +13,8 @@
 		3A2B1F5E2A6C67FB00CCA3FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2B1F5D2A6C67FB00CCA3FB /* Assets.xcassets */; };
 		3A2B1F612A6C67FB00CCA3FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2B1F5F2A6C67FB00CCA3FB /* LaunchScreen.storyboard */; };
 		3A5420DB2A796CCE0049FC4E /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5420DA2A796CCE0049FC4E /* UserDetails.swift */; };
+		3A5420DD2A7984E90049FC4E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5420DC2A7984E90049FC4E /* DateExtension.swift */; };
+		3A5420DF2A79A63F0049FC4E /* UserSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5420DE2A79A63F0049FC4E /* UserSettingsViewModel.swift */; };
 		3A5892CA2A70189700E208BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892C92A70189700E208BC /* User.swift */; };
 		3A5892CC2A7019BE00E208BC /* Diary .swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892CB2A7019BE00E208BC /* Diary .swift */; };
 		3A5892CE2A701A6D00E208BC /* MoonPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892CD2A701A6D00E208BC /* MoonPhase.swift */; };
@@ -61,6 +63,8 @@
 		3A2B1F602A6C67FB00CCA3FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A2B1F622A6C67FB00CCA3FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A5420DA2A796CCE0049FC4E /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		3A5420DC2A7984E90049FC4E /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		3A5420DE2A79A63F0049FC4E /* UserSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewModel.swift; sourceTree = "<group>"; };
 		3A5892C92A70189700E208BC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3A5892CB2A7019BE00E208BC /* Diary .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Diary .swift"; sourceTree = "<group>"; };
 		3A5892CD2A701A6D00E208BC /* MoonPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonPhase.swift; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 				3AF6E25A2A72DCD700461137 /* CreateAccountError.swift */,
 				3AF6E25E2A72E47900461137 /* Constants.swift */,
 				3AF6E2672A73553B00461137 /* CrudFunctions.swift */,
+				3A5420DC2A7984E90049FC4E /* DateExtension.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				3A84A1DA2A781EB100376FD0 /* UserSettings.storyboard */,
+				3A5420DE2A79A63F0049FC4E /* UserSettingsViewModel.swift */,
 			);
 			path = UserSettings;
 			sourceTree = "<group>";
@@ -390,6 +396,7 @@
 				3A5892FF2A70704500E208BC /* NetworkError.swift in Sources */,
 				3A5892CC2A7019BE00E208BC /* Diary .swift in Sources */,
 				3A6F28DA2A78201F0046AF14 /* FeelingViewController.swift in Sources */,
+				3A5420DD2A7984E90049FC4E /* DateExtension.swift in Sources */,
 				3AF6E2572A72D9E700461137 /* FirebaseService.swift in Sources */,
 				3A5892D02A701E0F00E208BC /* Horoscope.swift in Sources */,
 				3A5A89772A71840C009169B5 /* APIService.swift in Sources */,
@@ -400,6 +407,7 @@
 				3AF6E2592A72DC4700461137 /* FirebaseError.swift in Sources */,
 				3A84A1A22A74476700376FD0 /* UserDetailsViewController.swift in Sources */,
 				3A84A19C2A743A6E00376FD0 /* CreateUserViewModel.swift in Sources */,
+				3A5420DF2A79A63F0049FC4E /* UserSettingsViewModel.swift in Sources */,
 				3A5A89752A7172D8009169B5 /* MoonHoroscopeViewModel.swift in Sources */,
 				3A2B1F572A6C67FB00CCA3FB /* SceneDelegate.swift in Sources */,
 				3A5893032A7070CE00E208BC /* MoonService.swift in Sources */,

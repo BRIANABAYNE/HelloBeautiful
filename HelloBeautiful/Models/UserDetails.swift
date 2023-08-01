@@ -11,10 +11,11 @@ import Foundation
 struct UserDetails: Codable {
     let zodiacSign: String
     let cycleLength: Int
-    let lastCycle: Date
+    let lastCycle: String
     var uuid: UUID = UUID()
     
 }
+
 
 
 extension UserDetails: Equatable {
