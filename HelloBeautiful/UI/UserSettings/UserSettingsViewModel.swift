@@ -18,6 +18,8 @@ struct UserSettingsViewModel {
     
     // MARK: - Properties
     var window: UIWindow?
+    var userDetails: UserDetails?
+    var user: User?
     private let service: FirebaseServiceable
     weak var delegate: UserSettingsViewModelDelegate?
     

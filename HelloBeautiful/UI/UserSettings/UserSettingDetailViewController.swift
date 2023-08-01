@@ -18,7 +18,7 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
     @IBOutlet weak var periodLengthTextField: UITextField!
     
     // MARK: - Properties
-    
+   
     var viewModel: UserSettingsViewModel!
 
     override func viewDidLoad() {
@@ -39,9 +39,15 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
     let navigation = storyboard.instantiateViewController(identifier:"tabBar")
         self.viewModel.window?.rootViewController = navigation
     }
-    
-    
-    
+    func updateUI {
+        guard let user = viewModel.user,
+                let userDetails = viewModel.userDetails else { return }
+        self.zodiacSignTextField.text = userDetails.zodiacSign
+        self.userEmailTextField.text = user.email
+        self.cycleLengthTextField.text = userDetails.cycleLength
+        self.periodLengthTextField.
+        
+    }
     
     /*
     // MARK: - Navigation
