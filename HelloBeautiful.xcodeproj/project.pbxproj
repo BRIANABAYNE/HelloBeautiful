@@ -26,6 +26,7 @@
 		3A5A89772A71840C009169B5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A89762A71840C009169B5 /* APIService.swift */; };
 		3A5A897A2A71850C009169B5 /* MoonHoroscopeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A89792A71850C009169B5 /* MoonHoroscopeService.swift */; };
 		3A5A897E2A71FBBA009169B5 /* CreateUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A897D2A71FBBA009169B5 /* CreateUserDetailViewController.swift */; };
+		3A6C1A6A2A79A97400F3513E /* UserSettingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C1A692A79A97400F3513E /* UserSettingDetailViewController.swift */; };
 		3A6F28DA2A78201F0046AF14 /* FeelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6F28D92A78201F0046AF14 /* FeelingViewController.swift */; };
 		3A6F28DD2A7820400046AF14 /* Feelings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F28DB2A7820400046AF14 /* Feelings.storyboard */; };
 		3A6F28E12A7820B20046AF14 /* UserCycle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F28DF2A7820B20046AF14 /* UserCycle.storyboard */; };
@@ -76,6 +77,7 @@
 		3A5A89762A71840C009169B5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		3A5A89792A71850C009169B5 /* MoonHoroscopeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonHoroscopeService.swift; sourceTree = "<group>"; };
 		3A5A897D2A71FBBA009169B5 /* CreateUserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserDetailViewController.swift; sourceTree = "<group>"; };
+		3A6C1A692A79A97400F3513E /* UserSettingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingDetailViewController.swift; sourceTree = "<group>"; };
 		3A6F28D92A78201F0046AF14 /* FeelingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingViewController.swift; sourceTree = "<group>"; };
 		3A6F28DC2A7820400046AF14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloBeautiful/Base.lproj/Feelings.storyboard; sourceTree = "<group>"; };
 		3A6F28E02A7820B20046AF14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloBeautiful/Base.lproj/UserCycle.storyboard; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 			children = (
 				3A84A1DA2A781EB100376FD0 /* UserSettings.storyboard */,
 				3A5420DE2A79A63F0049FC4E /* UserSettingsViewModel.swift */,
+				3A6C1A692A79A97400F3513E /* UserSettingDetailViewController.swift */,
 			);
 			path = UserSettings;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				3A84A1A22A74476700376FD0 /* UserDetailsViewController.swift in Sources */,
 				3A84A19C2A743A6E00376FD0 /* CreateUserViewModel.swift in Sources */,
 				3A5420DF2A79A63F0049FC4E /* UserSettingsViewModel.swift in Sources */,
+				3A6C1A6A2A79A97400F3513E /* UserSettingDetailViewController.swift in Sources */,
 				3A5A89752A7172D8009169B5 /* MoonHoroscopeViewModel.swift in Sources */,
 				3A2B1F572A6C67FB00CCA3FB /* SceneDelegate.swift in Sources */,
 				3A5893032A7070CE00E208BC /* MoonService.swift in Sources */,
