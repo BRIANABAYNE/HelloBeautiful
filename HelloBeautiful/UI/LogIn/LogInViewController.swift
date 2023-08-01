@@ -14,10 +14,11 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var logInEmailLabel: UITextField!
     @IBOutlet weak var logInPasswordLabel: UITextField!
     
+    // MARK: - Properties
     
     var viewModel:LogInViewModel!
-    
-    
+   
+    // MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = LogInViewModel(delegate: self)

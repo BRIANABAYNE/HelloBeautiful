@@ -189,13 +189,14 @@
 		3A5893002A70709000E208BC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3AF6E2612A72E92400461137 /* LogIn */,
+				3A5A89782A7184DD009169B5 /* MoonHoroscope */,
 				3A6F28E22A7820C70046AF14 /* DetailMain */,
 				3A6F28DE2A7820830046AF14 /* UserCycle */,
 				3A84A1D02A781D7600376FD0 /* Feelings */,
 				3A84A1CE2A781D4100376FD0 /* UserSettings */,
 				3A84A19E2A7444B900376FD0 /* UserDetails */,
 				3A5A897C2A71FB80009169B5 /* CreateUser */,
-				3A5A89782A7184DD009169B5 /* MoonHoroscope */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -211,7 +212,6 @@
 		3A5A89782A7184DD009169B5 /* MoonHoroscope */ = {
 			isa = PBXGroup;
 			children = (
-				3AF6E2612A72E92400461137 /* LogIn */,
 				3A8FBA482A78247400CCBDF6 /* Moon.storyboard */,
 				3A5A89722A716E8F009169B5 /* MoonHoroscopeViewController.swift */,
 				3A5A89742A7172D8009169B5 /* MoonHoroscopeViewModel.swift */,

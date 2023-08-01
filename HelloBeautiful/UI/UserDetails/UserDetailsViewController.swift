@@ -28,7 +28,7 @@ class UserDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewModel = UserDetailsViewModel()
         
        sunSignPicker.dataSource = self
         sunSignPicker.delegate = self

@@ -7,7 +7,11 @@
 
 import UIKit
 
-class CreateUserDetailViewController: UIViewController {
+class CreateUserDetailViewController: UIViewController, CreateUserViewModelDelegate {
+    func encountered(_ error: Error) {
+        //
+    }
+    
     
     // MARK: - Outlets
     
@@ -24,9 +28,8 @@ class CreateUserDetailViewController: UIViewController {
     // MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+        viewModel = CreateUserViewModel(delegate: self)
+    
         // Do any additional setup after loading the view.
     }
     
@@ -48,9 +51,9 @@ class CreateUserDetailViewController: UIViewController {
         if segue.identifier == "UserDetails" {
             let destinationVC = segue.destination as? UserDetailsViewController
             if let email = emailTextField.text,
-                let password = passwordTextField.text,
-                let confirmPassword = passwordTextField.text {
-                
+               let password = passwordTextField.text,
+               let confirmPassword = passwordTextField.text {
+                viewModel.createAccount(with: email, password: password, confirmPassword: confirmPassword)
             }
         }
     }

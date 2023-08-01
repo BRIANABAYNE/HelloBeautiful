@@ -20,9 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         
         FirebaseApp.configure()
-        
-    
-       return true
+
+        return true
+//        Auth.auth().createUser(withEmail:"brianabayne1@gmail.com", password:"password") { authResult, error in
+//            print(authResult?.user.email)
+            
+        }
     }
 
     // MARK: UISceneSession Lifecycle
@@ -40,5 +43,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
-}
+
 

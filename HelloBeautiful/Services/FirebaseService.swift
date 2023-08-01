@@ -18,12 +18,14 @@ struct FirebaseService: FirebaseServiceable {
   
 
         func createAccount(with email: String, password: String, confirmPassword: String, completion: @escaping(Result<Bool, CreateAccountError>) -> Void) {
-           
-            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            if password == confirmPassword {
+                Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                     if let error {
                         completion(.failure(.firebaseError(error)))
                     }
                     completion(.success(true))
+                
+            }
          }
         } // created
                                

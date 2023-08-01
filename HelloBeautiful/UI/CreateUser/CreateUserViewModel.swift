@@ -39,6 +39,7 @@ struct CreateUserViewModel {
                 case .success(_):
                     print("User was created successfully")
                 case .failure(let failure):
+                    print("User was not created")
                     delegate?.encountered(failure)
                 }
             }

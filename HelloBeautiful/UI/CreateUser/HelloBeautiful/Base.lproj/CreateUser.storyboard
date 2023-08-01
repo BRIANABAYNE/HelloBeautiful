@@ -28,7 +28,7 @@
                                     <segue destination="tjR-sH-PWn" kind="show" identifier="UserDetails" id="eqU-kf-3HT"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="e2c-Yf-Lgj">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="e2c-Yf-Lgj">
                                 <rect key="frame" x="123" y="241" width="146" height="174"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crS-zg-NHh">
@@ -47,6 +47,12 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="crS-zg-NHh" secondAttribute="trailing" id="4Gw-pY-4Uz"/>
+                                    <constraint firstItem="crS-zg-NHh" firstAttribute="top" secondItem="e2c-Yf-Lgj" secondAttribute="top" constant="150" id="DJ3-1a-daj"/>
+                                    <constraint firstItem="4WU-ez-grD" firstAttribute="top" secondItem="crS-zg-NHh" secondAttribute="bottom" constant="36" id="bne-Qm-g2e"/>
+                                    <constraint firstItem="crS-zg-NHh" firstAttribute="leading" secondItem="e2c-Yf-Lgj" secondAttribute="leading" id="jO8-jF-Kpk"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zpd-ma-EMl"/>
