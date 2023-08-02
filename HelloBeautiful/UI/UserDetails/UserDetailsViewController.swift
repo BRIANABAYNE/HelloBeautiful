@@ -34,7 +34,7 @@ class UserDetailsViewController: UIViewController {
         viewModel = UserDetailsViewModel()
     }
     
-    // MARK: - Functions
+    // MARK: - Functions / Methods
 
     func lastCycleDatePicker() {
         let toolbar = UIToolbar()
@@ -58,11 +58,13 @@ class UserDetailsViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    
+    
+    
     // MARK: - Actions
     
     @IBOutlet weak var sunSignPicker: UIPickerView!
-    
-    // When a user hits this button, it saves the information and creats the account. Then the user is directed to the mainstoryboard.
+ 
     @IBAction func buttonTapped(_ sender: Any) {
     
     let storyboard = UIStoryboard(name:"Main", bundle: nil)

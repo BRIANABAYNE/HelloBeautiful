@@ -18,8 +18,6 @@ protocol FirebaseUserDetailServiceable {
 
 struct FirebaseUerDetailsService: FirebaseUserDetailServiceable {
     
-    
-    
     func userDetails(zodiacSign: String, cycleLength:String, lastCycle: String, completion: @escaping(Result<String, Error>) -> Void) {
         let userDetails = UserDetails(zodiacSign: zodiacSign, cycleLength: cycleLength, lastCycle: lastCycle, collectionType: Constants.UserDetails.userDetailsCollectionPath)
         

@@ -15,14 +15,9 @@ struct UserDetails: Codable {
     let cycleLength: String
     let lastCycle: String
     let collectionType: String
-//    var uuid: UUID = UUID()
-    
+
 }
 
 
-//
-//extension UserDetails: Equatable {
-//    static func == (lhs: UserDetails, rhs: UserDetails) -> Bool {
-//        return lhs.uuid == rhs.uuid
-//    }
+
 

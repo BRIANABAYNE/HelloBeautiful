@@ -13,15 +13,10 @@ struct UserDetailsViewModel {
     
     // MARK: - Properties
     
-//    var window: UIWindow?
+
     var userDetails: UserDetails?
 
     let data = ["Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capicorn","Aquarius","Pisces"]
 
     }
     
-    
-    
-    
-    
-

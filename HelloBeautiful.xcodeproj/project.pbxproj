@@ -35,7 +35,6 @@
 		3A84A19C2A743A6E00376FD0 /* CreateUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84A19B2A743A6E00376FD0 /* CreateUserViewModel.swift */; };
 		3A84A1A02A7444F300376FD0 /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84A19F2A7444F300376FD0 /* UserDetailsViewModel.swift */; };
 		3A84A1A22A74476700376FD0 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84A1A12A74476700376FD0 /* UserDetailsViewController.swift */; };
-		3A84A1A42A756C6900376FD0 /* CAGradientLayer+ListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84A1A32A756C6900376FD0 /* CAGradientLayer+ListStyle.swift */; };
 		3A84A1D32A781DF900376FD0 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A84A1D12A781DF900376FD0 /* LogIn.storyboard */; };
 		3A84A1D62A781E4B00376FD0 /* CreateUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A84A1D42A781E4B00376FD0 /* CreateUser.storyboard */; };
 		3A84A1D92A781E7700376FD0 /* UserDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A84A1D72A781E7700376FD0 /* UserDetails.storyboard */; };
@@ -85,7 +84,6 @@
 		3A84A19B2A743A6E00376FD0 /* CreateUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewModel.swift; sourceTree = "<group>"; };
 		3A84A19F2A7444F300376FD0 /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
 		3A84A1A12A74476700376FD0 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
-		3A84A1A32A756C6900376FD0 /* CAGradientLayer+ListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+ListStyle.swift"; sourceTree = "<group>"; };
 		3A84A1D22A781DF900376FD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloBeautiful/Base.lproj/LogIn.storyboard; sourceTree = "<group>"; };
 		3A84A1D52A781E4B00376FD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloBeautiful/Base.lproj/CreateUser.storyboard; sourceTree = "<group>"; };
 		3A84A1D82A781E7700376FD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloBeautiful/Base.lproj/UserDetails.storyboard; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 				3A5892CB2A7019BE00E208BC /* Diary .swift */,
 				3A5892CD2A701A6D00E208BC /* MoonPhase.swift */,
 				3A5892CF2A701E0F00E208BC /* Horoscope.swift */,
-				3A84A1A32A756C6900376FD0 /* CAGradientLayer+ListStyle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -393,7 +390,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A5892CE2A701A6D00E208BC /* MoonPhase.swift in Sources */,
-				3A84A1A42A756C6900376FD0 /* CAGradientLayer+ListStyle.swift in Sources */,
 				3A5A897A2A71850C009169B5 /* MoonHoroscopeService.swift in Sources */,
 				3A5420DB2A796CCE0049FC4E /* UserDetails.swift in Sources */,
 				3A5892FF2A70704500E208BC /* NetworkError.swift in Sources */,
