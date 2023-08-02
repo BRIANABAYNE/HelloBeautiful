@@ -18,13 +18,13 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
     @IBOutlet weak var periodLengthTextField: UITextField!
     
     // MARK: - Properties
-   
+    
     var viewModel: UserSettingsViewModel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel = UserSettingsViewModel(delegate: self)
-      
+        
     }
     
     
@@ -35,28 +35,31 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
     }
     
     @IBAction func logOutButtonTapped(_ sender: Any) {
-    let storyboard = UIStoryboard(name:"Main", bundle: nil)
-    let navigation = storyboard.instantiateViewController(identifier:"tabBar")
-        self.viewModel.window?.rootViewController = navigation
+        
+        viewModel.signOut()
+        let storyboard = UIStoryboard(name:"LogIn", bundle: nil)
+        let login = storyboard.instantiateViewController(identifier:"LogIn")
+        self.view.window?.rootViewController = login
     }
-    func updateUI {
+    
+    func updateUI() {
         guard let user = viewModel.user,
-                let userDetails = viewModel.userDetails else { return }
+              let userDetails = viewModel.userDetails else { return }
         self.zodiacSignTextField.text = userDetails.zodiacSign
         self.userEmailTextField.text = user.email
         self.cycleLengthTextField.text = userDetails.cycleLength
-        self.periodLengthTextField.
+        self.periodLengthTextField.text = userDetails.lastCycle
         
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

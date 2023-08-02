@@ -84,7 +84,12 @@ class UserDetailsViewController: UIViewController {
     
     let storyboard = UIStoryboard(name:"Main", bundle: nil)
     let navigation = storyboard.instantiateViewController(identifier:"tabBar")
-    self.viewModel.window?.rootViewController = navigation
+    self.view.window?.rootViewController = navigation
+  
+        
+//        let appDelegate = UIApplication.shared.delegate
+//        appDelegate?.window??.rootViewController = navigation
+    
     }
 
     // MARK: - Navigation

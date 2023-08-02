@@ -30,13 +30,20 @@ struct UserSettingsViewModel {
     }
     
     func signOut() {
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-        } catch let signoutError as NSError {
-            print("Error signing out", signoutError)
-        }
+        service.signOut()
     }
+    
+    
+    // Delete User 
+//    let userDetails = Auth.auth().currentUser
+//
+//    userDetails?.delete { error in
+//      if let error = error {
+//        // An error happened.
+//      } else {
+//        // Account deleted.
+//      }
+//    }
     
     
     

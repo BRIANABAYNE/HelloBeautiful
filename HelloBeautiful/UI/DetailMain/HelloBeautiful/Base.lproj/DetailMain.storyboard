@@ -11,7 +11,7 @@
         <!--Home-->
         <scene sceneID="J8L-NV-8xm">
             <objects>
-                <collectionViewController id="mO3-Hv-a52" customClass="HomeScreenCollectionViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="mO3-Hv-a52" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fSD-ck-e29">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

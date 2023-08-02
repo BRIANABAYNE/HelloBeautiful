@@ -6,20 +6,23 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
 
 
 struct UserDetails: Codable {
+    @DocumentID var id: String?
     let zodiacSign: String
-    let cycleLength: Int
+    let cycleLength: String
     let lastCycle: String
-    var uuid: UUID = UUID()
+    let collectionType: String
+//    var uuid: UUID = UUID()
     
 }
 
 
+//
+//extension UserDetails: Equatable {
+//    static func == (lhs: UserDetails, rhs: UserDetails) -> Bool {
+//        return lhs.uuid == rhs.uuid
+//    }
 
-extension UserDetails: Equatable {
-    static func == (lhs: UserDetails, rhs: UserDetails) -> Bool {
-        return lhs.uuid == rhs.uuid
-    }
-}

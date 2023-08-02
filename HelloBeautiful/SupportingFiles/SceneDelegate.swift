@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 //                let navigation = storyboard.instantiateViewController(identifier:"tabBar")
                 //                self.window?.rootViewController = navigation
                 let storyboard = UIStoryboard(name: "LogIn", bundle: nil)
-                let logIn = storyboard.instantiateViewController(identifier: "LogIn")
+                let logIn = storyboard.instantiateViewController(identifier:"LogIn")
                 self.window?.rootViewController = logIn
             }
         })

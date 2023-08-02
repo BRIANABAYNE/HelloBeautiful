@@ -11,7 +11,7 @@
         <!--Settings-->
         <scene sceneID="vdn-qX-dD6">
             <objects>
-                <viewController id="Y68-KU-d4z" customClass="UserSettingDetailViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y68-KU-d4z" customClass="UserSettingDetailViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wg4-WC-FyD">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,8 +78,8 @@
                                     <action selector="deleteAccountButtonTapped:" destination="Y68-KU-d4z" eventType="touchUpInside" id="ICe-5D-att"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUS-8Y-cPj">
-                                <rect key="frame" x="44" y="718" width="85" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUS-8Y-cPj">
+                                <rect key="frame" x="44" y="709" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="20o-Vv-QZt"/>
                                     <constraint firstAttribute="width" constant="44" id="a7c-kG-ymg"/>
@@ -131,6 +131,8 @@
                             <constraint firstItem="aK2-Ky-oYb" firstAttribute="top" secondItem="ocT-0t-MRZ" secondAttribute="top" constant="100" id="cyk-k0-kXb"/>
                             <constraint firstItem="ocT-0t-MRZ" firstAttribute="trailing" secondItem="QPM-iY-T2e" secondAttribute="trailing" constant="157" id="lkg-wa-GPZ"/>
                             <constraint firstItem="jke-jT-s4r" firstAttribute="top" secondItem="JHz-ec-enZ" secondAttribute="bottom" constant="147" id="m5d-ID-gwh"/>
+                            <constraint firstItem="yUS-8Y-cPj" firstAttribute="leading" secondItem="ocT-0t-MRZ" secondAttribute="leading" constant="44" id="r5g-dH-3bK"/>
+                            <constraint firstItem="ocT-0t-MRZ" firstAttribute="bottom" secondItem="yUS-8Y-cPj" secondAttribute="bottom" constant="65" id="rQJ-CJ-Ztl"/>
                             <constraint firstItem="jke-jT-s4r" firstAttribute="leading" secondItem="ocT-0t-MRZ" secondAttribute="leading" constant="163" id="v5p-xk-b2G"/>
                             <constraint firstItem="ocT-0t-MRZ" firstAttribute="trailing" secondItem="aK2-Ky-oYb" secondAttribute="trailing" constant="100" id="x5p-6m-aVZ"/>
                             <constraint firstItem="QPM-iY-T2e" firstAttribute="leading" secondItem="ocT-0t-MRZ" secondAttribute="leading" constant="156" id="znM-ev-3hE"/>
