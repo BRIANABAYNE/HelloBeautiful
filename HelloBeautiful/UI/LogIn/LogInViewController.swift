@@ -36,19 +36,7 @@ class LogInViewController: UIViewController {
         
     }
     
-    
-    // MARK: - Navigation
-    
-    //     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //         if segue.identifier == "CreateUser" {
-    //             guard let destinationVC = segue.destination as?
-    //                    CreateUserDetailViewController else { return }
-    //             destinationVC.
-    //         }
-    //}
 }
-
-
 extension LogInViewController: LogInViewModelDelegate {
     func encountered(_ error: Error) {
         // present alert

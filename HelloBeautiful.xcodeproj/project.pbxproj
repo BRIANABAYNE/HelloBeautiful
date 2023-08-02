@@ -46,13 +46,13 @@
 		3AF6E2512A72D7B500461137 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF6E2502A72D7B500461137 /* FirebaseDatabaseSwift */; };
 		3AF6E2532A72D7CF00461137 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF6E2522A72D7CF00461137 /* FirebaseStorage */; };
 		3AF6E2552A72D7E000461137 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF6E2542A72D7E000461137 /* FirebaseAuth */; };
-		3AF6E2572A72D9E700461137 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E2562A72D9E700461137 /* FirebaseService.swift */; };
+		3AF6E2572A72D9E700461137 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E2562A72D9E700461137 /* FirebaseAuthService.swift */; };
 		3AF6E2592A72DC4700461137 /* FirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E2582A72DC4700461137 /* FirebaseError.swift */; };
 		3AF6E25B2A72DCD700461137 /* CreateAccountError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E25A2A72DCD700461137 /* CreateAccountError.swift */; };
 		3AF6E25F2A72E47900461137 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E25E2A72E47900461137 /* Constants.swift */; };
 		3AF6E2642A72EA0700461137 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E2632A72EA0700461137 /* LogInViewController.swift */; };
 		3AF6E2662A72EC5F00461137 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E2652A72EC5F00461137 /* LogInViewModel.swift */; };
-		3AF6E2682A73553B00461137 /* FirebaseUserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E2672A73553B00461137 /* FirebaseUserDetails.swift */; };
+		3AF6E2682A73553B00461137 /* FirebaseUserDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E2672A73553B00461137 /* FirebaseUserDetailsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,13 +92,13 @@
 		3A84A1DB2A781EB100376FD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloBeautiful/Base.lproj/UserSettings.storyboard; sourceTree = "<group>"; };
 		3A8FBA492A78247400CCBDF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloBeautiful/Base.lproj/Moon.storyboard; sourceTree = "<group>"; };
 		3AF6E24D2A72BDFB00461137 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3AF6E2562A72D9E700461137 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		3AF6E2562A72D9E700461137 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
 		3AF6E2582A72DC4700461137 /* FirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseError.swift; sourceTree = "<group>"; };
 		3AF6E25A2A72DCD700461137 /* CreateAccountError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountError.swift; sourceTree = "<group>"; };
 		3AF6E25E2A72E47900461137 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3AF6E2632A72EA0700461137 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		3AF6E2652A72EC5F00461137 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
-		3AF6E2672A73553B00461137 /* FirebaseUserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserDetails.swift; sourceTree = "<group>"; };
+		3AF6E2672A73553B00461137 /* FirebaseUserDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserDetailsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,11 +186,11 @@
 			children = (
 				3A5892FE2A70704500E208BC /* NetworkError.swift */,
 				3A5A89762A71840C009169B5 /* APIService.swift */,
-				3AF6E2562A72D9E700461137 /* FirebaseService.swift */,
+				3AF6E2562A72D9E700461137 /* FirebaseAuthService.swift */,
 				3AF6E2582A72DC4700461137 /* FirebaseError.swift */,
 				3AF6E25A2A72DCD700461137 /* CreateAccountError.swift */,
 				3AF6E25E2A72E47900461137 /* Constants.swift */,
-				3AF6E2672A73553B00461137 /* FirebaseUserDetails.swift */,
+				3AF6E2672A73553B00461137 /* FirebaseUserDetailsService.swift */,
 				3A5420DC2A7984E90049FC4E /* DateExtension.swift */,
 			);
 			path = Services;
@@ -400,10 +400,10 @@
 				3A5892CC2A7019BE00E208BC /* Diary .swift in Sources */,
 				3A6F28DA2A78201F0046AF14 /* FeelingViewController.swift in Sources */,
 				3A5420DD2A7984E90049FC4E /* DateExtension.swift in Sources */,
-				3AF6E2572A72D9E700461137 /* FirebaseService.swift in Sources */,
+				3AF6E2572A72D9E700461137 /* FirebaseAuthService.swift in Sources */,
 				3A5892D02A701E0F00E208BC /* Horoscope.swift in Sources */,
 				3A5A89772A71840C009169B5 /* APIService.swift in Sources */,
-				3AF6E2682A73553B00461137 /* FirebaseUserDetails.swift in Sources */,
+				3AF6E2682A73553B00461137 /* FirebaseUserDetailsService.swift in Sources */,
 				3A84A1A02A7444F300376FD0 /* UserDetailsViewModel.swift in Sources */,
 				3A2B1F552A6C67FB00CCA3FB /* AppDelegate.swift in Sources */,
 				3A5A89732A716E8F009169B5 /* MoonHoroscopeViewController.swift in Sources */,

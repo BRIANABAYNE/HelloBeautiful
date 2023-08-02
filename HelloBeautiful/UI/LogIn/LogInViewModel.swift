@@ -18,11 +18,11 @@ struct LogInViewModel {
     
     // MARK: - Properties
     
-    private let service: FirebaseServiceable
+    private let service: FirebaseAuthServiceable
     weak var delegate: LogInViewModelDelegate?
     
    // MARK: - Dependency Injection
-    init(service: FirebaseServiceable = FirebaseService(), delegate: LogInViewModelDelegate) {
+    init(service: FirebaseAuthServiceable = FirebaseAuthService(), delegate: LogInViewModelDelegate) {
         self.service = service
         self.delegate = delegate
     }
@@ -41,6 +41,4 @@ struct LogInViewModel {
 
              } // sign in
  
-        
          } // log in
-        

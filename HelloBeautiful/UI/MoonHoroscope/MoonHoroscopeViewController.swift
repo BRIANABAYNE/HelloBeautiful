@@ -44,25 +44,6 @@ class MoonHoroscopeViewController: UIViewController {
         }
     }
     
-//    func updateUI() {
-//        guard let tld = viewModel.tld,
-//              let moon = viewModel.moonData else { return }
-//        DispatchQueue.main.async {
-//            self.zodiacSignLabel.text = moon.zodiacSign
-//            self.moonPhaseLabel.text = moon.moonPhase
-//            self.moonDateLabel.text = tld.datestamp
-//            self.moonDistanceLabel.text = "\(moon.moonDistance)"
-//            self.moonriseLabel.text = moon.moonrise
-//            self.illuminationLabel.text = moon.illumination
-//
-//        }
-//
-//    }
-    
-    
-    
-    
-    
 }
 extension MoonHoroscopeViewController: MoonHororscopeViewModelDelegate {
     func updateUI() {

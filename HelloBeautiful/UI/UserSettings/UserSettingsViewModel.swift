@@ -17,34 +17,25 @@ struct UserSettingsViewModel {
     
     
     // MARK: - Properties
-    var window: UIWindow?
+
     var userDetails: UserDetails?
     var user: User?
-    private let service: FirebaseServiceable
+    private let authService: FirebaseAuthServiceable
+    private let userDetailsService: FirebaseUserDetailServiceable
     weak var delegate: UserSettingsViewModelDelegate?
     
     // MARK: - Dependenct Injections
-    init(service:FirebaseServiceable = FirebaseService(), delegate: UserSettingsViewModelDelegate) {
-        self.service = service
+    init(authService:FirebaseAuthServiceable = FirebaseAuthService(), userDetailsService:FirebaseUserDetailServiceable = FirebaseUerDetailsService(), delegate: UserSettingsViewModelDelegate) {
+        self.authService = authService
+        self.userDetailsService = userDetailsService
         self.delegate = delegate
     }
     
     func signOut() {
-        service.signOut()
+        authService.signOut()
     }
-    
-    
-    // Delete User 
-//    let userDetails = Auth.auth().currentUser
-//
-//    userDetails?.delete { error in
-//      if let error = error {
-//        // An error happened.
-//      } else {
-//        // Account deleted.
-//      }
-//    }
-    
-    
-    
+        
+    func delete() {
+        authService.delete()
+    }
 }

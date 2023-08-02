@@ -10,9 +10,13 @@ import Foundation
 import FirebaseStorage
 import FirebaseFirestoreSwift
 
+protocol FirebaseUserDetailServiceable {
+    func userDetails(zodiacSign: String, cycleLength:String, lastCycle: String, completion: @escaping(Result<String, Error>) -> Void)
+    func save(userDetails: UserDetails, completion: @escaping(Result<String, FirebaseError>) -> Void)
+    func updateUser(newZodiacSign: String, newCycleLength: String, newLastCycle: String)
+}
 
-
-struct FirebaseUerDetailsService {
+struct FirebaseUerDetailsService: FirebaseUserDetailServiceable {
     
     
     

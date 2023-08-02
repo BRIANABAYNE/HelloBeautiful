@@ -9,7 +9,7 @@ import UIKit
 
 class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDelegate {
     
-    
+
     // MARK: - Outlets
     
     @IBOutlet weak var zodiacSignTextField: UITextField!
@@ -26,16 +26,16 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
         self.viewModel = UserSettingsViewModel(delegate: self)
         
     }
-    
-    
+
     // MARK: - Actions
     
     @IBAction func deleteAccountButtonTapped(_ sender: Any) {
-        
-    }
+        viewModel.delete()
+        let storyboard = UIStoryboard(name:"LogIn", bundle: nil)
+        let login = storyboard.instantiateViewController(identifier:"LogIn")
+        self.view.window?.rootViewController = login    }
     
     @IBAction func logOutButtonTapped(_ sender: Any) {
-        
         viewModel.signOut()
         let storyboard = UIStoryboard(name:"LogIn", bundle: nil)
         let login = storyboard.instantiateViewController(identifier:"LogIn")
@@ -51,15 +51,4 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
         self.periodLengthTextField.text = userDetails.lastCycle
         
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }

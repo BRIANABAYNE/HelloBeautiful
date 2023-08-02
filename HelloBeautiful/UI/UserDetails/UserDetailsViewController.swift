@@ -32,18 +32,14 @@ class UserDetailsViewController: UIViewController {
         sunSignPicker.delegate = self
         lastCycleDatePicker()
         viewModel = UserDetailsViewModel()
-//        view.addSubview(datePicker)
-//        datePicker.center = view.center
     }
     
     // MARK: - Functions
-    
-    
+
     func lastCycleDatePicker() {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
-//        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneButtonPressed))
-       
+
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneButtonPressed))
         toolbar.setItems([doneButton], animated: true)
             lastCycleTextField.inputView = datePicker
@@ -62,20 +58,7 @@ class UserDetailsViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    
-    
-    
-//    let datePicker: UIDatePicker = {
-//        let datePicker = UIDatePicker()
-////        let toolbar = UIToolbar()
-//        datePicker.inputAccessoryView = toolbar
-//            return datePicker
-//        }
-//
-//
-//    }()
-//
-    // MARK: - Action
+    // MARK: - Actions
     
     @IBOutlet weak var sunSignPicker: UIPickerView!
     
@@ -85,10 +68,6 @@ class UserDetailsViewController: UIViewController {
     let storyboard = UIStoryboard(name:"Main", bundle: nil)
     let navigation = storyboard.instantiateViewController(identifier:"tabBar")
     self.view.window?.rootViewController = navigation
-  
-        
-//        let appDelegate = UIApplication.shared.delegate
-//        appDelegate?.window??.rootViewController = navigation
     
     }
 

@@ -8,13 +8,14 @@
 import Foundation
 import FirebaseAuth
 
-protocol FirebaseServiceable {
+protocol FirebaseAuthServiceable {
     func createAccount( with email: String, password: String, confirmPassword: String, completion: @escaping(Result<Bool, CreateAccountError>) -> Void)
     func signIn(email: String, password: String, completion: @escaping(Result<Bool, CreateAccountError>) -> Void)
     func signOut()
+    func delete()
 }
 
-struct FirebaseService: FirebaseServiceable {
+struct FirebaseAuthService: FirebaseAuthServiceable {
   
         func createAccount(with email: String, password: String, confirmPassword: String, completion: @escaping(Result<Bool, CreateAccountError>) -> Void) {
             if password == confirmPassword {
@@ -45,4 +46,17 @@ struct FirebaseService: FirebaseServiceable {
                 print("Error signing out", signoutError)
             }
         } // end of sign out
+    
+    
+    func delete() {
+        let userDetails = Auth.auth().currentUser
+        userDetails?.delete { error in
+            if let error = error {
+                // An error happened.
+            } else {
+              
+            }
+        }
+    } // end of delete
+    
     } // end of struct

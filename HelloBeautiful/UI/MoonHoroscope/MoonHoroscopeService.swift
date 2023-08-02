@@ -35,8 +35,6 @@ struct MoonHoroscopeService: APIDataProvidable, MoonHoroscopeServiceable {
             }
         }
     }
-    
-    
     func fetchHoroscope(sunSign:String,completion: @escaping(Result<Horoscope,NetworkingError>) -> Void) {
         
         guard let baseURL = URL(string:"https://horoscope-astrology.p.rapidapi.com") else { return }
