@@ -7,6 +7,7 @@
 
 import Foundation
 
+#warning("Trust yourself.")
 
 struct MoonService {
 

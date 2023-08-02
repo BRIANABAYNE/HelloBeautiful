@@ -12,6 +12,7 @@ struct User: Codable {
     @DocumentID var id: String?
     let email: String
     let password: String
+    #warning("Remove confirmPassword")
     let confirimPassword: String
     let zodiacSign: String
     let collectionType: String

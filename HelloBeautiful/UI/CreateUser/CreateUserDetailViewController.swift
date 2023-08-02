@@ -8,9 +8,9 @@ import UIKit
 
 class CreateUserDetailViewController: UIViewController, CreateUserViewModelDelegate {
     func encountered(_ error: Error) {
-        //
+#warning("Rest of the Owl")
     }
-
+    
     // MARK: - Outlets
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -18,7 +18,7 @@ class CreateUserDetailViewController: UIViewController, CreateUserViewModelDeleg
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
     // MARK: -  Properties
- 
+    
     var viewModel:CreateUserViewModel!
     
     // MARK: - LifeCycles
@@ -28,14 +28,12 @@ class CreateUserDetailViewController: UIViewController, CreateUserViewModelDeleg
     }
     
     // MARK: - Actions
-    
-    // auth result error in
+
     @IBAction func nextButtonTapped(_ sender: Any) {
         guard let email = emailTextField.text,!email.isEmpty,
               let password = passwordTextField.text,!password.isEmpty,
               let confirmPassword = confirmPasswordTextField.text,!confirmPassword.isEmpty else { return }
         viewModel.createAccount(with: email, password: password, confirmPassword: confirmPassword)
     }
-
 }
 

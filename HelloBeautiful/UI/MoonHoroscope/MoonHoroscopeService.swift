@@ -9,7 +9,8 @@ import Foundation
 
 protocol MoonHoroscopeServiceable {
     func fetchMoonDetails(completion: @escaping(Result<TopLevelDictionary,NetworkingError>) -> Void)
-    func fetchHoroscope(sunSign:String,completion: @escaping(Result<Horoscope,NetworkingError>) -> Void) }
+    func fetchHoroscope(sunSign:String,completion: @escaping(Result<Horoscope,NetworkingError>) -> Void)
+}
     
 struct MoonHoroscopeService: APIDataProvidable, MoonHoroscopeServiceable {
     func fetchMoonDetails(completion: @escaping(Result<TopLevelDictionary,NetworkingError>) -> Void) {
@@ -35,6 +36,7 @@ struct MoonHoroscopeService: APIDataProvidable, MoonHoroscopeServiceable {
             }
         }
     }
+
     func fetchHoroscope(sunSign:String,completion: @escaping(Result<Horoscope,NetworkingError>) -> Void) {
         
         guard let baseURL = URL(string:"https://horoscope-astrology.p.rapidapi.com") else { return }

@@ -12,11 +12,9 @@ struct UserDetailsViewModel {
     
     
     // MARK: - Properties
-    
-
     var userDetails: UserDetails?
-
-    let data = ["Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capicorn","Aquarius","Pisces"]
-
-    }
     
+    let data = ["Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capicorn","Aquarius","Pisces"]
+    
+}
+

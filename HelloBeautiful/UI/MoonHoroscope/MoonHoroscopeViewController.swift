@@ -23,38 +23,39 @@ class MoonHoroscopeViewController: UIViewController {
     // MARK: - Properties
     var viewModel: MoonHoroscopeViewModel!
     // User property reciever
+#warning("Remove userData. Make it more MVVM")
     var userData: User?
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel = MoonHoroscopeViewModel(injectedDelegate: self)
-//        setHoroscope()
-
+        // TODO: Call setHorisope() Once the user is ready. Think through _when_ to do this
+        
     }
     
     // MARK: - Functions
-     // set horocsope will need to access current user saved data from firebase and will update that when I get to that. This will always be dependant on the user create page, UI being finished.
+    // set horocsope will need to access current user saved data from firebase and will update that when I get to that. This will always be dependant on the user create page, UI being finished.
     func setHoroscope() {
         guard let user = userData,
               let horoscope = viewModel.horoscopeData else { return }
         viewModel.fetchHoroscope(userSign: user.zodiacSign)
         DispatchQueue.main.async {
             self.weeklyHoroscopeLabel.text = horoscope.horoscope
-            
         }
     }
-    
 }
+
+// MARK: - Extensions
 extension MoonHoroscopeViewController: MoonHororscopeViewModelDelegate {
     func updateUI() {
         guard let tld = viewModel.tld,
               let moon = viewModel.moonData else { return }
-            self.zodiacSignLabel.text = moon.zodiacSign
-            self.moonPhaseLabel.text = moon.moonPhase
-            self.moonDateLabel.text = tld.datestamp
-            self.moonDistanceLabel.text = "\(moon.moonDistance)"
-            self.moonriseLabel.text = moon.moonrise
-            self.illuminationLabel.text = moon.illumination
-  
+        self.zodiacSignLabel.text = moon.zodiacSign
+        self.moonPhaseLabel.text = moon.moonPhase
+        self.moonDateLabel.text = tld.datestamp
+        self.moonDistanceLabel.text = "\(moon.moonDistance)"
+        self.moonriseLabel.text = moon.moonrise
+        self.illuminationLabel.text = moon.illumination
+        
     }
 }

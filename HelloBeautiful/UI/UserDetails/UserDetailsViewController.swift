@@ -9,48 +9,41 @@ import UIKit
 
 
 class UserDetailsViewController: UIViewController {
-
-
+    
     // MARK: - Outlets
     @IBOutlet weak var lastCycleTextField: UITextField!
-    
     @IBOutlet weak var periodLengthTextField: UITextField!
-    
+    @IBOutlet weak var sunSignPicker: UIPickerView!
     
     // MARK: - Properties
-    
     let datePicker = UIDatePicker()
     var viewModel: UserDetailsViewModel!
-    
     
     // MARK: - Lifecyles
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = UserDetailsViewModel()
-        
         sunSignPicker.dataSource = self
         sunSignPicker.delegate = self
-        lastCycleDatePicker()
-        viewModel = UserDetailsViewModel()
+        configureLastCycleDatePicker()
     }
     
     // MARK: - Functions / Methods
-
-    func lastCycleDatePicker() {
+    func configureLastCycleDatePicker() {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
-
+        
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneButtonPressed))
         toolbar.setItems([doneButton], animated: true)
-            lastCycleTextField.inputView = datePicker
-            lastCycleTextField.inputAccessoryView = toolbar
-            datePicker.locale = .current
-            datePicker.datePickerMode = .date
-            datePicker.preferredDatePickerStyle = .wheels
-            datePicker.tintColor = .systemPink
+        lastCycleTextField.inputView = datePicker
+        lastCycleTextField.inputAccessoryView = toolbar
+        datePicker.locale = .current
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.tintColor = .systemPink
     }
+    
     @objc func doneButtonPressed() {
-        
         let formatter = DateFormatter()
         formatter.dateStyle = .long
         formatter.timeStyle = .none
@@ -58,26 +51,17 @@ class UserDetailsViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    
-    
-    
     // MARK: - Actions
     
-    @IBOutlet weak var sunSignPicker: UIPickerView!
- 
     @IBAction func buttonTapped(_ sender: Any) {
-    
-    let storyboard = UIStoryboard(name:"Main", bundle: nil)
-    let navigation = storyboard.instantiateViewController(identifier:"tabBar")
-    self.view.window?.rootViewController = navigation
-    
+        let storyboard = UIStoryboard(name:"Main", bundle: nil)
+        let navigation = storyboard.instantiateViewController(identifier:"tabBar")
+        self.view.window?.rootViewController = navigation
     }
-
-    // MARK: - Navigation
-
+    
 } // end of ViewC
 
-// MARK: - Extension
+// MARK: - Extensions
 extension UserDetailsViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

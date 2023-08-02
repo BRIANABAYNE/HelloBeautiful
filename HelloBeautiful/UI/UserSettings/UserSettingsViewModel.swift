@@ -10,7 +10,7 @@ import FirebaseAuth
 import UIKit
 
 protocol UserSettingsViewModelDelegate: UserSettingDetailViewController {
-    
+    // TODO: - Finish this
 }
 
 struct UserSettingsViewModel {
@@ -33,9 +33,11 @@ struct UserSettingsViewModel {
     
     func signOut() {
         authService.signOut()
+        #warning("Should we only change the UI if sigbning out was sucessful?")
     }
         
     func delete() {
+        #warning("Should we present an alert to confirm the user wants to delete their account and there is no going back?")
         authService.delete()
     }
 }
