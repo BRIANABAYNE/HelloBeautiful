@@ -142,8 +142,6 @@
 				3A5892FD2A70700B00E208BC /* Services */,
 				3A2B1F682A6C688700CCA3FB /* SupportingFiles */,
 				3A5892C72A70185700E208BC /* Models */,
-				3A2B1F5A2A6C67FB00CCA3FB /* Main.storyboard */,
-				3A2B1F5F2A6C67FB00CCA3FB /* LaunchScreen.storyboard */,
 			);
 			path = HelloBeautiful;
 			sourceTree = "<group>";
@@ -174,6 +172,8 @@
 		3A5892C82A70187E00E208BC /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				3A2B1F5A2A6C67FB00CCA3FB /* Main.storyboard */,
+				3A2B1F5F2A6C67FB00CCA3FB /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";

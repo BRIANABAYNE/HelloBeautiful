@@ -22,7 +22,6 @@ class MoonHoroscopeViewModel {
     var tld: TopLevelDictionary?
     var moonData: Moon?
     var horoscopeData: Horoscope?
-    
     private let service: MoonHoroscopeServiceable
     
     // MARK: - Dependency Injection

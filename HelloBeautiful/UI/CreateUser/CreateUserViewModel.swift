@@ -13,6 +13,7 @@ import Foundation
 protocol CreateUserViewModelDelegate: CreateUserDetailViewController {
     func encountered(_ error: Error)
 }
+
 struct CreateUserViewModel {
     
     // MARK: - Properties
@@ -31,6 +32,7 @@ struct CreateUserViewModel {
                 switch result {
                 case .success(_):
                     print("User was created successfully")
+                    #warning("Should we only change the UI if signing in was successful??")
                 case .failure(let failure):
                     print("User was not created")
                     delegate?.encountered(failure)
@@ -39,10 +41,6 @@ struct CreateUserViewModel {
         } else {
             delegate?.encountered(CreateAccountError.passwordMismatch)
         }
-    } // end of create 
+    } // end of create
+    
 } // end of viewModel
-    
-
-
-    
-    

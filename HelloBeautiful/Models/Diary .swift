@@ -15,3 +15,6 @@ struct Diary: Decodable {
     var symptoms: String
     var notes: String
 }
+
+
+//TEACHING NOTE: - BEcuase you are using segemented controll to chose the feels and such.. each `segment` has an Integer associated to it. I wouls save the INT, not the emoji

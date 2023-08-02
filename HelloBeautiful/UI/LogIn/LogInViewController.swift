@@ -9,13 +9,11 @@ import UIKit
 
 class LogInViewController: UIViewController {
     
-    
-    
+    //MARk: - Outlets
     @IBOutlet weak var logInEmaiTextField: UITextField!
     @IBOutlet weak var logInPasswordTextField: UITextField!
     
     // MARK: - Properties
-    
     var viewModel:LogInViewModel!
    
     // MARK: - Lifecycles
@@ -24,7 +22,7 @@ class LogInViewController: UIViewController {
         viewModel = LogInViewModel(delegate: self)
     }
     
-    
+    // MARK: - Actions
     @IBAction func logInButtonTapped(_ sender: Any) {
         guard let email = logInEmaiTextField.text,
               let password = logInPasswordTextField.text  else { return }
@@ -32,15 +30,15 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func createAccountButtonTapped(_ sender: Any) {
-       
+       //TODO: - FINISH THIS
         
     }
     
 }
+
+// MARK: Extensions
 extension LogInViewController: LogInViewModelDelegate {
     func encountered(_ error: Error) {
-        // present alert
+        // TODO: - Present Alert
     }
-    
-    
 }
