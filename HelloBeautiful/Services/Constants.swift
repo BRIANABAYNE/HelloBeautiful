@@ -12,4 +12,8 @@ struct Constants {
     struct User {
         static let userCollectionPath = "User"
     }
+    
+    struct UserDetails {
+        static let userDetailsCollectionPath = "UserDetails"
+    }
 }

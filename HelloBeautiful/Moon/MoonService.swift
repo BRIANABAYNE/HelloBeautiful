@@ -9,8 +9,7 @@ import Foundation
 
 
 struct MoonService {
-    
-    
+
     func fetchMoonDetails(completion: @escaping(Result<TopLevelDictionary,NetworkingError>) -> Void) {
         
         guard let baseURL = URL(string:"https://moon-phase.p.rapidapi.com") else { return }
@@ -37,13 +36,10 @@ struct MoonService {
             } catch {
                 completion(.failure(.unableToDecode)); return
             }
-            
-            
+        
         }.resume()
         
         }
-    
-    
     
     func fetchHoroscope(sunSign:String,completion: @escaping(Result<Horoscope,NetworkingError>) -> Void) {
         
@@ -61,7 +57,6 @@ struct MoonService {
             if let error {
                 print("Oh no! Something went wrong.", error.localizedDescription)
                 completion(.failure(.thrownError(error))); return
-                
             }
             guard let horoscopeData = data else {
                 print("There was an error checking for Data")
@@ -74,10 +69,8 @@ struct MoonService {
             } catch {
                 completion(.failure(.unableToDecode)); return
             }
-            
-            
+        
         }.resume()
     }
-    
-    
+
 }

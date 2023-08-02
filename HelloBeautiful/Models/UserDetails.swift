@@ -1,19 +1,23 @@
 //
-//  User.swift
+//  UserDetails.swift
 //  HelloBeautiful
 //
-//  Created by Briana Bayne on 7/25/23.
+//  Created by Briana Bayne on 8/1/23.
 //
 
 import Foundation
 import FirebaseFirestoreSwift
 
-struct User: Codable {
+
+struct UserDetails: Codable {
     @DocumentID var id: String?
-    let email: String
-    let password: String
-    let confirimPassword: String
     let zodiacSign: String
+    let cycleLength: String
+    let lastCycle: String
     let collectionType: String
-    
+
 }
+
+
+
+

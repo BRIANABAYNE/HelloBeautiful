@@ -20,21 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         
         FirebaseApp.configure()
-        
-        
-        let db = Firestore.firestore()
-        db.collection("cities").document("LA").setData([
-            "name": "Los Angeles",
-            "state": "CA",
-            "country": "USA"
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
+     // FirebaseAuthService().signOut()
         return true
+//        Auth.auth().createUser(withEmail:"brianabayne1@gmail.com", password:"password") { authResult, error in
+//            print(authResult?.user.email)
+            
+        }
     }
 
     // MARK: UISceneSession Lifecycle
@@ -52,5 +43,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
-}
+
 

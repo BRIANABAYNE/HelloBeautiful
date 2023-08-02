@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct Horoscope: Decodable {
     private enum CodingKeys: String, CodingKey {
         case horoscope

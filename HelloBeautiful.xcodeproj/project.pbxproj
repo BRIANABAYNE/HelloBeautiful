@@ -12,6 +12,9 @@
 		3A2B1F5C2A6C67FB00CCA3FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2B1F5A2A6C67FB00CCA3FB /* Main.storyboard */; };
 		3A2B1F5E2A6C67FB00CCA3FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2B1F5D2A6C67FB00CCA3FB /* Assets.xcassets */; };
 		3A2B1F612A6C67FB00CCA3FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2B1F5F2A6C67FB00CCA3FB /* LaunchScreen.storyboard */; };
+		3A5420DB2A796CCE0049FC4E /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5420DA2A796CCE0049FC4E /* UserDetails.swift */; };
+		3A5420DD2A7984E90049FC4E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5420DC2A7984E90049FC4E /* DateExtension.swift */; };
+		3A5420DF2A79A63F0049FC4E /* UserSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5420DE2A79A63F0049FC4E /* UserSettingsViewModel.swift */; };
 		3A5892CA2A70189700E208BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892C92A70189700E208BC /* User.swift */; };
 		3A5892CC2A7019BE00E208BC /* Diary .swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892CB2A7019BE00E208BC /* Diary .swift */; };
 		3A5892CE2A701A6D00E208BC /* MoonPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892CD2A701A6D00E208BC /* MoonPhase.swift */; };
@@ -23,23 +26,32 @@
 		3A5A89772A71840C009169B5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A89762A71840C009169B5 /* APIService.swift */; };
 		3A5A897A2A71850C009169B5 /* MoonHoroscopeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A89792A71850C009169B5 /* MoonHoroscopeService.swift */; };
 		3A5A897E2A71FBBA009169B5 /* CreateUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A897D2A71FBBA009169B5 /* CreateUserDetailViewController.swift */; };
+		3A6C1A6A2A79A97400F3513E /* UserSettingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C1A692A79A97400F3513E /* UserSettingDetailViewController.swift */; };
+		3A6F28DA2A78201F0046AF14 /* FeelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6F28D92A78201F0046AF14 /* FeelingViewController.swift */; };
+		3A6F28DD2A7820400046AF14 /* Feelings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F28DB2A7820400046AF14 /* Feelings.storyboard */; };
+		3A6F28E12A7820B20046AF14 /* UserCycle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F28DF2A7820B20046AF14 /* UserCycle.storyboard */; };
+		3A6F28E52A7821430046AF14 /* DetailMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F28E32A7821420046AF14 /* DetailMain.storyboard */; };
 		3A84A19A2A743A4A00376FD0 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3A84A1992A743A4A00376FD0 /* FirebaseFirestoreSwift */; };
 		3A84A19C2A743A6E00376FD0 /* CreateUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84A19B2A743A6E00376FD0 /* CreateUserViewModel.swift */; };
 		3A84A1A02A7444F300376FD0 /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84A19F2A7444F300376FD0 /* UserDetailsViewModel.swift */; };
 		3A84A1A22A74476700376FD0 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84A1A12A74476700376FD0 /* UserDetailsViewController.swift */; };
-		3A84A1A42A756C6900376FD0 /* CAGradientLayer+ListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84A1A32A756C6900376FD0 /* CAGradientLayer+ListStyle.swift */; };
+		3A84A1D32A781DF900376FD0 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A84A1D12A781DF900376FD0 /* LogIn.storyboard */; };
+		3A84A1D62A781E4B00376FD0 /* CreateUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A84A1D42A781E4B00376FD0 /* CreateUser.storyboard */; };
+		3A84A1D92A781E7700376FD0 /* UserDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A84A1D72A781E7700376FD0 /* UserDetails.storyboard */; };
+		3A84A1DC2A781EB100376FD0 /* UserSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A84A1DA2A781EB100376FD0 /* UserSettings.storyboard */; };
+		3A8FBA4A2A78247400CCBDF6 /* Moon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8FBA482A78247400CCBDF6 /* Moon.storyboard */; };
 		3AF6E24C2A720F5A00461137 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF6E24B2A720F5A00461137 /* FirebaseFirestore */; };
 		3AF6E24E2A72BDFB00461137 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6E24D2A72BDFB00461137 /* GoogleService-Info.plist */; };
 		3AF6E2512A72D7B500461137 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF6E2502A72D7B500461137 /* FirebaseDatabaseSwift */; };
 		3AF6E2532A72D7CF00461137 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF6E2522A72D7CF00461137 /* FirebaseStorage */; };
 		3AF6E2552A72D7E000461137 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF6E2542A72D7E000461137 /* FirebaseAuth */; };
-		3AF6E2572A72D9E700461137 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E2562A72D9E700461137 /* FirebaseService.swift */; };
+		3AF6E2572A72D9E700461137 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E2562A72D9E700461137 /* FirebaseAuthService.swift */; };
 		3AF6E2592A72DC4700461137 /* FirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E2582A72DC4700461137 /* FirebaseError.swift */; };
 		3AF6E25B2A72DCD700461137 /* CreateAccountError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E25A2A72DCD700461137 /* CreateAccountError.swift */; };
 		3AF6E25F2A72E47900461137 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E25E2A72E47900461137 /* Constants.swift */; };
 		3AF6E2642A72EA0700461137 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E2632A72EA0700461137 /* LogInViewController.swift */; };
 		3AF6E2662A72EC5F00461137 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E2652A72EC5F00461137 /* LogInViewModel.swift */; };
-		3AF6E2682A73553B00461137 /* CrudFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E2672A73553B00461137 /* CrudFunctions.swift */; };
+		3AF6E2682A73553B00461137 /* FirebaseUserDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6E2672A73553B00461137 /* FirebaseUserDetailsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +62,9 @@
 		3A2B1F5D2A6C67FB00CCA3FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A2B1F602A6C67FB00CCA3FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A2B1F622A6C67FB00CCA3FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A5420DA2A796CCE0049FC4E /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		3A5420DC2A7984E90049FC4E /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		3A5420DE2A79A63F0049FC4E /* UserSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewModel.swift; sourceTree = "<group>"; };
 		3A5892C92A70189700E208BC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3A5892CB2A7019BE00E208BC /* Diary .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Diary .swift"; sourceTree = "<group>"; };
 		3A5892CD2A701A6D00E208BC /* MoonPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonPhase.swift; sourceTree = "<group>"; };
@@ -61,18 +76,27 @@
 		3A5A89762A71840C009169B5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		3A5A89792A71850C009169B5 /* MoonHoroscopeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonHoroscopeService.swift; sourceTree = "<group>"; };
 		3A5A897D2A71FBBA009169B5 /* CreateUserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserDetailViewController.swift; sourceTree = "<group>"; };
+		3A6C1A692A79A97400F3513E /* UserSettingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingDetailViewController.swift; sourceTree = "<group>"; };
+		3A6F28D92A78201F0046AF14 /* FeelingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingViewController.swift; sourceTree = "<group>"; };
+		3A6F28DC2A7820400046AF14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloBeautiful/Base.lproj/Feelings.storyboard; sourceTree = "<group>"; };
+		3A6F28E02A7820B20046AF14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloBeautiful/Base.lproj/UserCycle.storyboard; sourceTree = "<group>"; };
+		3A6F28E42A7821430046AF14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloBeautiful/Base.lproj/DetailMain.storyboard; sourceTree = "<group>"; };
 		3A84A19B2A743A6E00376FD0 /* CreateUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewModel.swift; sourceTree = "<group>"; };
 		3A84A19F2A7444F300376FD0 /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
 		3A84A1A12A74476700376FD0 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
-		3A84A1A32A756C6900376FD0 /* CAGradientLayer+ListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+ListStyle.swift"; sourceTree = "<group>"; };
+		3A84A1D22A781DF900376FD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloBeautiful/Base.lproj/LogIn.storyboard; sourceTree = "<group>"; };
+		3A84A1D52A781E4B00376FD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloBeautiful/Base.lproj/CreateUser.storyboard; sourceTree = "<group>"; };
+		3A84A1D82A781E7700376FD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloBeautiful/Base.lproj/UserDetails.storyboard; sourceTree = "<group>"; };
+		3A84A1DB2A781EB100376FD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloBeautiful/Base.lproj/UserSettings.storyboard; sourceTree = "<group>"; };
+		3A8FBA492A78247400CCBDF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloBeautiful/Base.lproj/Moon.storyboard; sourceTree = "<group>"; };
 		3AF6E24D2A72BDFB00461137 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3AF6E2562A72D9E700461137 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		3AF6E2562A72D9E700461137 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
 		3AF6E2582A72DC4700461137 /* FirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseError.swift; sourceTree = "<group>"; };
 		3AF6E25A2A72DCD700461137 /* CreateAccountError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountError.swift; sourceTree = "<group>"; };
 		3AF6E25E2A72E47900461137 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3AF6E2632A72EA0700461137 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		3AF6E2652A72EC5F00461137 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
-		3AF6E2672A73553B00461137 /* CrudFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrudFunctions.swift; sourceTree = "<group>"; };
+		3AF6E2672A73553B00461137 /* FirebaseUserDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserDetailsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +137,7 @@
 			children = (
 				3AF6E24D2A72BDFB00461137 /* GoogleService-Info.plist */,
 				3A5892C82A70187E00E208BC /* Storyboards */,
-				3A84A19D2A74449800376FD0 /* New Group */,
-				3AF6E2612A72E92400461137 /* LogIn */,
+				3A5893002A70709000E208BC /* UI */,
 				3A5893012A70709700E208BC /* Moon */,
 				3A5892FD2A70700B00E208BC /* Services */,
 				3A2B1F682A6C688700CCA3FB /* SupportingFiles */,
@@ -140,10 +163,10 @@
 			isa = PBXGroup;
 			children = (
 				3A5892C92A70189700E208BC /* User.swift */,
+				3A5420DA2A796CCE0049FC4E /* UserDetails.swift */,
 				3A5892CB2A7019BE00E208BC /* Diary .swift */,
 				3A5892CD2A701A6D00E208BC /* MoonPhase.swift */,
 				3A5892CF2A701E0F00E208BC /* Horoscope.swift */,
-				3A84A1A32A756C6900376FD0 /* CAGradientLayer+ListStyle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -160,11 +183,12 @@
 			children = (
 				3A5892FE2A70704500E208BC /* NetworkError.swift */,
 				3A5A89762A71840C009169B5 /* APIService.swift */,
-				3AF6E2562A72D9E700461137 /* FirebaseService.swift */,
+				3AF6E2562A72D9E700461137 /* FirebaseAuthService.swift */,
 				3AF6E2582A72DC4700461137 /* FirebaseError.swift */,
 				3AF6E25A2A72DCD700461137 /* CreateAccountError.swift */,
 				3AF6E25E2A72E47900461137 /* Constants.swift */,
-				3AF6E2672A73553B00461137 /* CrudFunctions.swift */,
+				3AF6E2672A73553B00461137 /* FirebaseUserDetailsService.swift */,
+				3A5420DC2A7984E90049FC4E /* DateExtension.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -172,9 +196,14 @@
 		3A5893002A70709000E208BC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3AF6E2612A72E92400461137 /* LogIn */,
+				3A5A89782A7184DD009169B5 /* MoonHoroscope */,
+				3A6F28E22A7820C70046AF14 /* DetailMain */,
+				3A6F28DE2A7820830046AF14 /* UserCycle */,
+				3A84A1D02A781D7600376FD0 /* Feelings */,
+				3A84A1CE2A781D4100376FD0 /* UserSettings */,
 				3A84A19E2A7444B900376FD0 /* UserDetails */,
 				3A5A897C2A71FB80009169B5 /* CreateUser */,
-				3A5A89782A7184DD009169B5 /* MoonHoroscope */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -190,6 +219,7 @@
 		3A5A89782A7184DD009169B5 /* MoonHoroscope */ = {
 			isa = PBXGroup;
 			children = (
+				3A8FBA482A78247400CCBDF6 /* Moon.storyboard */,
 				3A5A89722A716E8F009169B5 /* MoonHoroscopeViewController.swift */,
 				3A5A89742A7172D8009169B5 /* MoonHoroscopeViewModel.swift */,
 				3A5A89792A71850C009169B5 /* MoonHoroscopeService.swift */,
@@ -200,27 +230,56 @@
 		3A5A897C2A71FB80009169B5 /* CreateUser */ = {
 			isa = PBXGroup;
 			children = (
+				3A84A1D42A781E4B00376FD0 /* CreateUser.storyboard */,
 				3A5A897D2A71FBBA009169B5 /* CreateUserDetailViewController.swift */,
 				3A84A19B2A743A6E00376FD0 /* CreateUserViewModel.swift */,
 			);
 			path = CreateUser;
 			sourceTree = "<group>";
 		};
-		3A84A19D2A74449800376FD0 /* New Group */ = {
+		3A6F28DE2A7820830046AF14 /* UserCycle */ = {
 			isa = PBXGroup;
 			children = (
-				3A5893002A70709000E208BC /* UI */,
+				3A6F28DF2A7820B20046AF14 /* UserCycle.storyboard */,
 			);
-			path = "New Group";
+			path = UserCycle;
+			sourceTree = "<group>";
+		};
+		3A6F28E22A7820C70046AF14 /* DetailMain */ = {
+			isa = PBXGroup;
+			children = (
+				3A6F28E32A7821420046AF14 /* DetailMain.storyboard */,
+			);
+			path = DetailMain;
 			sourceTree = "<group>";
 		};
 		3A84A19E2A7444B900376FD0 /* UserDetails */ = {
 			isa = PBXGroup;
 			children = (
+				3A84A1D72A781E7700376FD0 /* UserDetails.storyboard */,
 				3A84A19F2A7444F300376FD0 /* UserDetailsViewModel.swift */,
 				3A84A1A12A74476700376FD0 /* UserDetailsViewController.swift */,
 			);
 			path = UserDetails;
+			sourceTree = "<group>";
+		};
+		3A84A1CE2A781D4100376FD0 /* UserSettings */ = {
+			isa = PBXGroup;
+			children = (
+				3A84A1DA2A781EB100376FD0 /* UserSettings.storyboard */,
+				3A5420DE2A79A63F0049FC4E /* UserSettingsViewModel.swift */,
+				3A6C1A692A79A97400F3513E /* UserSettingDetailViewController.swift */,
+			);
+			path = UserSettings;
+			sourceTree = "<group>";
+		};
+		3A84A1D02A781D7600376FD0 /* Feelings */ = {
+			isa = PBXGroup;
+			children = (
+				3A6F28DB2A7820400046AF14 /* Feelings.storyboard */,
+				3A6F28D92A78201F0046AF14 /* FeelingViewController.swift */,
+			);
+			path = Feelings;
 			sourceTree = "<group>";
 		};
 		3AF6E24F2A72D7B500461137 /* Frameworks */ = {
@@ -233,6 +292,7 @@
 		3AF6E2612A72E92400461137 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
+				3A84A1D12A781DF900376FD0 /* LogIn.storyboard */,
 				3AF6E2632A72EA0700461137 /* LogInViewController.swift */,
 				3AF6E2652A72EC5F00461137 /* LogInViewModel.swift */,
 			);
@@ -308,9 +368,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A2B1F612A6C67FB00CCA3FB /* LaunchScreen.storyboard in Resources */,
+				3A84A1D62A781E4B00376FD0 /* CreateUser.storyboard in Resources */,
+				3A8FBA4A2A78247400CCBDF6 /* Moon.storyboard in Resources */,
 				3AF6E24E2A72BDFB00461137 /* GoogleService-Info.plist in Resources */,
+				3A6F28E12A7820B20046AF14 /* UserCycle.storyboard in Resources */,
+				3A6F28E52A7821430046AF14 /* DetailMain.storyboard in Resources */,
 				3A2B1F5E2A6C67FB00CCA3FB /* Assets.xcassets in Resources */,
 				3A2B1F5C2A6C67FB00CCA3FB /* Main.storyboard in Resources */,
+				3A84A1D32A781DF900376FD0 /* LogIn.storyboard in Resources */,
+				3A6F28DD2A7820400046AF14 /* Feelings.storyboard in Resources */,
+				3A84A1DC2A781EB100376FD0 /* UserSettings.storyboard in Resources */,
+				3A84A1D92A781E7700376FD0 /* UserDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,20 +390,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A5892CE2A701A6D00E208BC /* MoonPhase.swift in Sources */,
-				3A84A1A42A756C6900376FD0 /* CAGradientLayer+ListStyle.swift in Sources */,
 				3A5A897A2A71850C009169B5 /* MoonHoroscopeService.swift in Sources */,
+				3A5420DB2A796CCE0049FC4E /* UserDetails.swift in Sources */,
 				3A5892FF2A70704500E208BC /* NetworkError.swift in Sources */,
 				3A5892CC2A7019BE00E208BC /* Diary .swift in Sources */,
-				3AF6E2572A72D9E700461137 /* FirebaseService.swift in Sources */,
+				3A6F28DA2A78201F0046AF14 /* FeelingViewController.swift in Sources */,
+				3A5420DD2A7984E90049FC4E /* DateExtension.swift in Sources */,
+				3AF6E2572A72D9E700461137 /* FirebaseAuthService.swift in Sources */,
 				3A5892D02A701E0F00E208BC /* Horoscope.swift in Sources */,
 				3A5A89772A71840C009169B5 /* APIService.swift in Sources */,
-				3AF6E2682A73553B00461137 /* CrudFunctions.swift in Sources */,
+				3AF6E2682A73553B00461137 /* FirebaseUserDetailsService.swift in Sources */,
 				3A84A1A02A7444F300376FD0 /* UserDetailsViewModel.swift in Sources */,
 				3A2B1F552A6C67FB00CCA3FB /* AppDelegate.swift in Sources */,
 				3A5A89732A716E8F009169B5 /* MoonHoroscopeViewController.swift in Sources */,
 				3AF6E2592A72DC4700461137 /* FirebaseError.swift in Sources */,
 				3A84A1A22A74476700376FD0 /* UserDetailsViewController.swift in Sources */,
 				3A84A19C2A743A6E00376FD0 /* CreateUserViewModel.swift in Sources */,
+				3A5420DF2A79A63F0049FC4E /* UserSettingsViewModel.swift in Sources */,
+				3A6C1A6A2A79A97400F3513E /* UserSettingDetailViewController.swift in Sources */,
 				3A5A89752A7172D8009169B5 /* MoonHoroscopeViewModel.swift in Sources */,
 				3A2B1F572A6C67FB00CCA3FB /* SceneDelegate.swift in Sources */,
 				3A5893032A7070CE00E208BC /* MoonService.swift in Sources */,
@@ -365,6 +437,70 @@
 				3A2B1F602A6C67FB00CCA3FB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3A6F28DB2A7820400046AF14 /* Feelings.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A6F28DC2A7820400046AF14 /* Base */,
+			);
+			name = Feelings.storyboard;
+			sourceTree = "<group>";
+		};
+		3A6F28DF2A7820B20046AF14 /* UserCycle.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A6F28E02A7820B20046AF14 /* Base */,
+			);
+			name = UserCycle.storyboard;
+			sourceTree = "<group>";
+		};
+		3A6F28E32A7821420046AF14 /* DetailMain.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A6F28E42A7821430046AF14 /* Base */,
+			);
+			name = DetailMain.storyboard;
+			sourceTree = "<group>";
+		};
+		3A84A1D12A781DF900376FD0 /* LogIn.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A84A1D22A781DF900376FD0 /* Base */,
+			);
+			name = LogIn.storyboard;
+			sourceTree = "<group>";
+		};
+		3A84A1D42A781E4B00376FD0 /* CreateUser.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A84A1D52A781E4B00376FD0 /* Base */,
+			);
+			name = CreateUser.storyboard;
+			sourceTree = "<group>";
+		};
+		3A84A1D72A781E7700376FD0 /* UserDetails.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A84A1D82A781E7700376FD0 /* Base */,
+			);
+			name = UserDetails.storyboard;
+			sourceTree = "<group>";
+		};
+		3A84A1DA2A781EB100376FD0 /* UserSettings.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A84A1DB2A781EB100376FD0 /* Base */,
+			);
+			name = UserSettings.storyboard;
+			sourceTree = "<group>";
+		};
+		3A8FBA482A78247400CCBDF6 /* Moon.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A8FBA492A78247400CCBDF6 /* Base */,
+			);
+			name = Moon.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
