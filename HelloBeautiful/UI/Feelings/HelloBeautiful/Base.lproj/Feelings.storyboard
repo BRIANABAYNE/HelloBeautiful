@@ -254,10 +254,10 @@
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PUq-u7-Baf">
                                                 <rect key="frame" x="0.0" y="36" width="353" height="32"/>
                                                 <segments>
-                                                    <segment title="First"/>
-                                                    <segment title="Second"/>
-                                                    <segment title="3rd"/>
-                                                    <segment title="4th"/>
+                                                    <segment title="Light"/>
+                                                    <segment title="Medium"/>
+                                                    <segment title="Heavy"/>
+                                                    <segment title="Super +"/>
                                                 </segments>
                                                 <connections>
                                                     <action selector="flowSegmentControlAction:" destination="CuA-bp-sCH" eventType="valueChanged" id="bmd-gQ-gHe"/>
@@ -281,10 +281,10 @@
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TwP-xY-YSD">
                                                 <rect key="frame" x="0.0" y="36" width="353" height="32"/>
                                                 <segments>
-                                                    <segment title="First"/>
-                                                    <segment title="Second"/>
-                                                    <segment title="3rd"/>
-                                                    <segment title="4th"/>
+                                                    <segment title="Watery"/>
+                                                    <segment title="Thick"/>
+                                                    <segment title="Sticky"/>
+                                                    <segment title="Dry"/>
                                                 </segments>
                                                 <connections>
                                                     <action selector="mucusSegmentControlAction:" destination="CuA-bp-sCH" eventType="valueChanged" id="6Uf-cn-paW"/>
@@ -308,10 +308,10 @@
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bHF-95-EMc">
                                                 <rect key="frame" x="0.0" y="36" width="353" height="32"/>
                                                 <segments>
-                                                    <segment title="First"/>
-                                                    <segment title="Second"/>
-                                                    <segment title="3rd"/>
-                                                    <segment title="4th"/>
+                                                    <segment title="Happy"/>
+                                                    <segment title="Horney"/>
+                                                    <segment title="Sad"/>
+                                                    <segment title="Lonely"/>
                                                 </segments>
                                                 <connections>
                                                     <action selector="feelsSegmentControlAction:" destination="CuA-bp-sCH" eventType="valueChanged" id="Kf1-XZ-K0f"/>
@@ -335,10 +335,10 @@
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sq6-78-OOF">
                                                 <rect key="frame" x="0.0" y="36" width="353" height="32"/>
                                                 <segments>
-                                                    <segment title="First"/>
-                                                    <segment title="Second"/>
-                                                    <segment title="3rd"/>
-                                                    <segment title="4th"/>
+                                                    <segment title="Sweets"/>
+                                                    <segment title="Fats"/>
+                                                    <segment title="Carbs"/>
+                                                    <segment title="Greens"/>
                                                 </segments>
                                                 <connections>
                                                     <action selector="cravingSegmentControlAction:" destination="CuA-bp-sCH" eventType="valueChanged" id="xWZ-4W-FLF"/>
@@ -362,10 +362,10 @@
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="onW-UJ-Z2k">
                                                 <rect key="frame" x="0.0" y="35.999999999999943" width="353" height="32"/>
                                                 <segments>
-                                                    <segment title="First"/>
-                                                    <segment title="Second"/>
-                                                    <segment title="3rd"/>
-                                                    <segment title="4th"/>
+                                                    <segment title="Cramps"/>
+                                                    <segment title="Tender Breast"/>
+                                                    <segment title="Bloated"/>
+                                                    <segment title="Extreme Fatigue"/>
                                                 </segments>
                                                 <connections>
                                                     <action selector="symptomsSegmentControlAction:" destination="CuA-bp-sCH" eventType="valueChanged" id="83B-PA-P4e"/>
