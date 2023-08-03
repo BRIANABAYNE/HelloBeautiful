@@ -259,6 +259,9 @@
                                                     <segment title="3rd"/>
                                                     <segment title="4th"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="flowSegmentControlAction:" destination="CuA-bp-sCH" eventType="valueChanged" id="bmd-gQ-gHe"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                         <constraints>
@@ -283,6 +286,9 @@
                                                     <segment title="3rd"/>
                                                     <segment title="4th"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="mucusSegmentControlAction:" destination="CuA-bp-sCH" eventType="valueChanged" id="6Uf-cn-paW"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                         <constraints>
@@ -307,6 +313,9 @@
                                                     <segment title="3rd"/>
                                                     <segment title="4th"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="feelsSegmentControlAction:" destination="CuA-bp-sCH" eventType="valueChanged" id="Kf1-XZ-K0f"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                         <constraints>
@@ -331,6 +340,9 @@
                                                     <segment title="3rd"/>
                                                     <segment title="4th"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="cravingSegmentControlAction:" destination="CuA-bp-sCH" eventType="valueChanged" id="xWZ-4W-FLF"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                         <constraints>
@@ -355,6 +367,9 @@
                                                     <segment title="3rd"/>
                                                     <segment title="4th"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="symptomsSegmentControlAction:" destination="CuA-bp-sCH" eventType="valueChanged" id="83B-PA-P4e"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                         <constraints>
