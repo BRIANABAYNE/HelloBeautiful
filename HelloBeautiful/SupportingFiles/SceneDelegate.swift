@@ -24,9 +24,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 //                let storyboard = UIStoryboard(name:"Main", bundle: nil)
                 //                let navigation = storyboard.instantiateViewController(identifier:"tabBar")
                 //                self.window?.rootViewController = navigation
+//                let storyboard = UIStoryboard(name: "Feelings", bundle: nil)
+//                let logIn = storyboard.instantiateViewController(identifier:"Symptoms")
+//                self.window?.rootViewController = logIn
                 let storyboard = UIStoryboard(name: "LogIn", bundle: nil)
                 let logIn = storyboard.instantiateViewController(identifier:"LogIn")
                 self.window?.rootViewController = logIn
+            } else {
+                
             }
         })
     }

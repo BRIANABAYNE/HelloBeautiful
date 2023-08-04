@@ -234,7 +234,7 @@
         <!--Symptoms-->
         <scene sceneID="tm8-Ug-hYG">
             <objects>
-                <viewController title="Symptoms" id="CuA-bp-sCH" customClass="FeelingsViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Symptoms" title="Symptoms" id="CuA-bp-sCH" customClass="FeelingsViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fvb-Tb-n6n">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -427,7 +427,6 @@
                     <connections>
                         <outlet property="cravingsSegmentControl" destination="sq6-78-OOF" id="rQD-Se-FPS"/>
                         <outlet property="feelingsSegmentControl" destination="bHF-95-EMc" id="gaw-qZ-7e9"/>
-                        <outlet property="feelsSegmentControl" destination="bHF-95-EMc" id="Irw-Wi-dUc"/>
                         <outlet property="flowSegmentControl" destination="PUq-u7-Baf" id="vdX-AV-m9k"/>
                         <outlet property="mucusSegmentControl" destination="TwP-xY-YSD" id="Zvw-JH-T5q"/>
                         <outlet property="notesTextField" destination="gXk-Lg-obM" id="7l3-BL-qpA"/>

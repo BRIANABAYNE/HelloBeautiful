@@ -10,9 +10,7 @@ import UIKit
 class FeelingsViewController: UIViewController {
     
     // MARK: - Outlets
-    
-    
-    
+
     @IBOutlet weak var flowSegmentControl: UISegmentedControl!
     @IBOutlet weak var mucusSegmentControl: UISegmentedControl!
     @IBOutlet weak var feelingsSegmentControl: UISegmentedControl!
@@ -21,19 +19,24 @@ class FeelingsViewController: UIViewController {
     @IBOutlet weak var notesTextField: UITextField!
     
     // MARK: - Properties
-    // model objects
-    var model = Diary()
-    // date property passed from calendar
-    var selectedDate: Date?
-    
+
+var viewModel: FeelingsViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // segment control
         // this not connected to a date - we want each date to have its own diary model object.
+//        feelingsSegmentControl.setTitleTextAttributes(<#T##attributes: [NSAttributedString.Key : Any]?##[NSAttributedString.Key : Any]?#>, for: <#T##UIControl.State#>)
+        configureFeelingsSegmentedControl()
     }
     
-    
+    func configureFeelingsSegmentedControl() {
+        feelingsSegmentControl.setTitle("\u{e008}", forSegmentAt: 0)
+        feelingsSegmentControl.setTitle("\u{e008}", forSegmentAt: 1)
+        feelingsSegmentControl.setTitle("\u{e008}", forSegmentAt: 2)
+        feelingsSegmentControl.setTitle("\u{e008}", forSegmentAt: 3)
+        feelingsSegmentControl.setTitle("\u{e008}", forSegmentAt: 4)
+    }
     
     // MARK: - Methods
     
@@ -50,61 +53,62 @@ class FeelingsViewController: UIViewController {
     @IBAction func saveButtonTapped(_ sender: Any) {
         // This is where they will call a save function from the view model, that will save the model object to the date that they selected. Save everything from the segment controlls - this button will also go back to the calendar view page. Will need a place holder property for the date.
         
-        // Notes - get the text from the textfield
+     
+        
+           let notes = notesTextField.text
+//        notesTextField.text = diary.notes
         if let notesText = notesTextField.text {
             // setp 2 save the notes to the model object notes property
-            model.notes = notesText
+            viewModel.model.notes
             // flow segment
             let flowString = flowSegmentControl.titleForSegment(at: flowSegmentControl.selectedSegmentIndex) ?? ""
-                    model.flow = flowString
+            viewModel.model.flow = flowString
             // mucus segment
             let mucusString = mucusSegmentControl.titleForSegment(at: mucusSegmentControl.selectedSegmentIndex) ?? ""
-                    model.cervicalMucus = mucusString
+            viewModel.model.cervicalMucus = mucusString
             //feelings segment
             let feelingsString = feelingsSegmentControl.titleForSegment(at: feelingsSegmentControl.selectedSegmentIndex) ?? ""
-                    model.flow = feelingsString
+            viewModel.model.flow = feelingsString
             // craving segment
             let cravingsString = cravingsSegmentControl.titleForSegment(at: cravingsSegmentControl.selectedSegmentIndex) ?? ""
-                    model.cravings = cravingsString
+            viewModel.model.cravings = cravingsString
             // symptoms segment
             let symptomsString = symptomsSegmentControl.titleForSegment(at: symptomsSegmentControl.selectedSegmentIndex) ?? ""
-                    model.symptoms = symptomsString
+            viewModel.model.symptoms = symptomsString
   // Check if the data is selected
-            if let selectedDate = selectedDate {
-                let diaryEntry = DateEntry(date: selectedDate, model: model)
-                
-                // Need to save this entry to firebase, so i'll be calling a save function that i created on viewmodel, that saves this model object to firebase for each selected day.
-            }
-        }
-        
-        
+//            if let selectedDate = selectedDate {
+//                let diaryEntry = DateEntry(date: selectedDate, model: viewModel.model)
+//
+//                // Need to save this entry to firebase, so i'll be calling a save function that i created on viewmodel, that saves this model object to firebase for each selected day.
+//            } // end of selectedDate
+        } // end of notes
     }
     
     @IBAction func flowSegmentControlAction(_ sender: UISegmentedControl) {
         let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
-        model.flow = selectedTitle
-        print("Selected option: \(model.flow)")
+        viewModel.model.flow = selectedTitle
+        print("Selected option: \(viewModel.model.flow)")
     }
 
     @IBAction func mucusSegmentControlAction(_ sender: UISegmentedControl) {
         let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
-        model.cervicalMucus = selectedTitle
-        print("Selected option: \(model.cervicalMucus)")    }
+        viewModel.model.cervicalMucus = selectedTitle
+        print("Selected option: \(viewModel.model.cervicalMucus)")    }
     
     @IBAction func feelsSegmentControlAction(_ sender: UISegmentedControl) {
         let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
-        model.feels = selectedTitle
-        print("Selected option: \(model.feels)")    }
+        viewModel.model.feels = selectedTitle
+        print("Selected option: \(viewModel.model.feels)")    }
     
     @IBAction func cravingSegmentControlAction(_ sender: UISegmentedControl) {
         let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
-        model.cravings = selectedTitle
-        print("Selected option: \(model.cravings)")    }
+        viewModel.model.cravings = selectedTitle
+        print("Selected option: \(viewModel.model.cravings)")    }
     
     @IBAction func symptomsSegmentControlAction(_ sender: UISegmentedControl) {
         let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
-        model.symptoms = selectedTitle
-        print("Selected option: \(model.symptoms)")    }
+        viewModel.model.symptoms = selectedTitle
+        print("Selected option: \(viewModel.model.symptoms)")    }
     
     
     
