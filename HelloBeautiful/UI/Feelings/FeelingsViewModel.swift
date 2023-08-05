@@ -13,11 +13,7 @@ struct FeelingsViewModel {
     // MARK: - Properties
     // model ojects
     var model = Diary()
-    var selectedDate: Date
-    let sparklingHeart = "😃"
-    
-    var myText: String = "\u{e008}"
-    
-//    var flowString: String = "\u{e008}","\u{e008}","\u{e008}"
+   // var selectedDate: Date
+   
     
 }
