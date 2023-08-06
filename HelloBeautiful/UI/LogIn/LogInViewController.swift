@@ -27,6 +27,10 @@ class LogInViewController: UIViewController {
         guard let email = logInEmaiTextField.text,
               let password = logInPasswordTextField.text  else { return }
         viewModel.signIn(with: email, password: password)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let logIn = storyboard.instantiateViewController(identifier:"tabBar")
+        self.view.window?.rootViewController = logIn
+        
     }
     
     @IBAction func createAccountButtonTapped(_ sender: Any) {

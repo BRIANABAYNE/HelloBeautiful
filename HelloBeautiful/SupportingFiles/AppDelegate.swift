@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         
         FirebaseApp.configure()
-     // FirebaseAuthService().signOut()
+        FirebaseAuthService().signOut()
         return true
 //        Auth.auth().createUser(withEmail:"brianabayne1@gmail.com", password:"password") { authResult, error in
 //            print(authResult?.user.email)

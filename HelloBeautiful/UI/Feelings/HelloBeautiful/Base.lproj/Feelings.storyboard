@@ -259,10 +259,6 @@
                                                     <segment title="Heavy🩸"/>
                                                     <segment title="Super + 🩸🩸"/>
                                                 </segments>
-                                                <connections>
-                                                    <action selector="flowAction:" destination="CuA-bp-sCH" eventType="valueChanged" id="5sb-8J-fsz"/>
-                                                    <action selector="flowSegmentControlAction:" destination="CuA-bp-sCH" eventType="valueChanged" id="bmd-gQ-gHe"/>
-                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                         <constraints>
@@ -429,7 +425,7 @@
                     <connections>
                         <outlet property="cravingsSegmentControl" destination="sq6-78-OOF" id="rQD-Se-FPS"/>
                         <outlet property="feelingsSegmentControl" destination="bHF-95-EMc" id="gaw-qZ-7e9"/>
-                        <outlet property="flowSegmentControl" destination="PUq-u7-Baf" id="vdX-AV-m9k"/>
+                        <outlet property="flowSegmentControl" destination="PUq-u7-Baf" id="RY4-CX-F0U"/>
                         <outlet property="mucusSegmentControl" destination="TwP-xY-YSD" id="Zvw-JH-T5q"/>
                         <outlet property="notesTextField" destination="gXk-Lg-obM" id="7l3-BL-qpA"/>
                         <outlet property="symptomsSegmentControl" destination="onW-UJ-Z2k" id="i1v-sZ-Q4Q"/>

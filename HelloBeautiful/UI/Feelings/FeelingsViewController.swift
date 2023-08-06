@@ -30,43 +30,15 @@ var viewModel: FeelingsViewModel!
     }
     
     
-    
-    
-    func configureFeelingsSegmentedControl() {
-//        feelingsSegmentControl.setTitle("\u{e008}", forSegmentAt: 0)
-//        feelingsSegmentControl.setTitle("\u{e008}", forSegmentAt: 1)
-//        feelingsSegmentControl.setTitle("\u{e008}", forSegmentAt: 2)
-//        feelingsSegmentControl.setTitle("\u{e008}", forSegmentAt: 3)
-//        feelingsSegmentControl.setTitle("\u{e008}", forSegmentAt: 4)
-    }
-    
     // MARK: - Methods
-    
-//    func segmentsSetup() {
-//        flowSegmentControl.addTarget(self, action: #selector(flowSegmentControlAction(_:)), for: .valueChanged)
-//        flowSegmentControl.addTarget(self, action: #selector(mucusSegmentControlAction(_:)), for: .valueChanged)
-//        flowSegmentControl.addTarget(self, action: #selector(feelsSegmentControlAction(_:)), for: .valueChanged)
-//        flowSegmentControl.addTarget(self, action: #selector(cravingSegmentControlAction(_:)), for: .valueChanged)
-//        flowSegmentControl.addTarget(self, action: #selector(symptomsSegmentControlAction(_:)), for: .valueChanged)
-//    }
     
     
     // MARK: - Actions
-    
-    
-//    @IBAction func flowAction(_ sender: UISegmentedControl) {
-//        switch sender.selectedSegmentIndex {
-//        case 0:
-//            flowSegmentControl.
-//        default:
-//            <#code#>
-//        }
-//    }
-    
-    
-    
     @IBAction func saveButtonTapped(_ sender: Any) {
         // This is where they will call a save function from the view model, that will save the model object to the date that they selected. Save everything from the segment controlls - this button will also go back to the calendar view page. Will need a place holder property for the date.
+        let storyboard = UIStoryboard(name:"UserCycle", bundle: nil)
+        let calenderCycle = storyboard.instantiateViewController(identifier:"calenderCycle")
+        self.view.window?.rootViewController = calenderCycle
         
      
         
@@ -108,34 +80,29 @@ var viewModel: FeelingsViewModel!
     @IBAction func mucusSegmentControlAction(_ sender: UISegmentedControl) {
         let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
         viewModel.model.cervicalMucus = selectedTitle
-        print("Selected option: \(viewModel.model.cervicalMucus)")    }
+        print("Selected option: \(viewModel.model.cervicalMucus)")
+        
+    }
     
     @IBAction func feelsSegmentControlAction(_ sender: UISegmentedControl) {
         let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
         viewModel.model.feels = selectedTitle
-        print("Selected option: \(viewModel.model.feels)")    }
+        print("Selected option: \(viewModel.model.feels)")
+        
+    }
     
     @IBAction func cravingSegmentControlAction(_ sender: UISegmentedControl) {
         let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
         viewModel.model.cravings = selectedTitle
-        print("Selected option: \(viewModel.model.cravings)")    }
+        print("Selected option: \(viewModel.model.cravings)")
+        
+    }
     
     @IBAction func symptomsSegmentControlAction(_ sender: UISegmentedControl) {
         let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
         viewModel.model.symptoms = selectedTitle
-        print("Selected option: \(viewModel.model.symptoms)")    }
-    
-    
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+        print("Selected option: \(viewModel.model.symptoms)")
+        
+    }
     
 }
