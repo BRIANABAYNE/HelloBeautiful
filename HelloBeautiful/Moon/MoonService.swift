@@ -59,6 +59,7 @@ struct MoonService {
                 print("Oh no! Something went wrong.", error.localizedDescription)
                 completion(.failure(.thrownError(error))); return
             }
+        
             guard let horoscopeData = data else {
                 print("There was an error checking for Data")
                 completion(.failure(.noData))
