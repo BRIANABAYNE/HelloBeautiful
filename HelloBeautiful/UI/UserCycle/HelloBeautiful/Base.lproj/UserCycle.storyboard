@@ -11,10 +11,21 @@
         <!--Cycle-->
         <scene sceneID="JXU-Z5-RuI">
             <objects>
-                <viewController storyboardIdentifier="calenderCycle" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OgP-lV-TWL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="calenderCycle" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OgP-lV-TWL" customClass="CalendarViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BTT-j3-Q7c">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8P-7h-aOG">
+                                <rect key="frame" x="146" y="723" width="101" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Edit Cycle"/>
+                                <connections>
+                                    <action selector="editCycleButtonTapped:" destination="OgP-lV-TWL" eventType="touchUpInside" id="oNY-og-dbO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3rD-8L-HDP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
