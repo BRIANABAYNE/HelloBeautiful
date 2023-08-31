@@ -36,28 +36,32 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="aK2-Ky-oYb">
-                                <rect key="frame" x="175" y="159" width="118" height="271"/>
+                                <rect key="frame" x="191.33333333333334" y="159" width="101.66666666666666" height="216.33333333333337"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zodiac Sign" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CkR-Kc-yAH">
-                                        <rect key="frame" x="13.66666666666665" y="0.0" width="104.33333333333331" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kgb-Yd-Fi2">
-                                        <rect key="frame" x="55.333333333333343" y="79" width="62.666666666666657" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cycle Length" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PbZ-GN-24m">
-                                        <rect key="frame" x="5.3333333333333428" y="158" width="112.66666666666667" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Period Length" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IgU-KJ-bTA">
-                                        <rect key="frame" x="0.0" y="237" width="118" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zodiacSign" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOw-se-Kkc">
+                                        <rect key="frame" x="18" y="0.0" width="83.666666666666671" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiG-x4-zd2">
+                                        <rect key="frame" x="61.333333333333314" y="65.333333333333343" width="40.333333333333343" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cycleLength" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tev-4c-aQg">
+                                        <rect key="frame" x="9" y="130.66666666666669" width="92.666666666666671" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="periodLength" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaY-Wc-SQT">
+                                        <rect key="frame" x="0.0" y="196" width="101.66666666666667" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My cycle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHz-ec-enZ">
@@ -91,7 +95,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Nak-hM-qer">
-                                <rect key="frame" x="22" y="159" width="106.33333333333331" height="264.33333333333331"/>
+                                <rect key="frame" x="22" y="158.99999999999997" width="106.33333333333331" height="264.33333333333326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zodiac Sign" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOE-bC-Xbb">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="20.333333333333332"/>
@@ -147,10 +151,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" selectedImage="mouth.fill" catalog="system" id="LBJ-EW-e7i"/>
                     <connections>
-                        <outlet property="cycleLengthTextField" destination="PbZ-GN-24m" id="Ew9-it-gD9"/>
-                        <outlet property="periodLengthTextField" destination="IgU-KJ-bTA" id="3VB-gg-21E"/>
-                        <outlet property="userEmailTextField" destination="Kgb-Yd-Fi2" id="1UB-hK-kk2"/>
-                        <outlet property="zodiacSignTextField" destination="CkR-Kc-yAH" id="NcE-f3-Mda"/>
+                        <outlet property="userCycleLength" destination="Tev-4c-aQg" id="zud-cK-Dh4"/>
+                        <outlet property="userEmailLabel" destination="aiG-x4-zd2" id="9CB-bz-QHx"/>
+                        <outlet property="userPeriodLength" destination="DaY-Wc-SQT" id="1qk-o7-a9h"/>
+                        <outlet property="zodiacSignLabel" destination="VOw-se-Kkc" id="8tK-gX-jYb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vmd-1Y-YPk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

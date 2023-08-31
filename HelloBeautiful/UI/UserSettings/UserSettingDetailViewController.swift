@@ -12,10 +12,10 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
     
     // MARK: - Outlets
     
-    @IBOutlet weak var zodiacSignTextField: UITextField!
-    @IBOutlet weak var userEmailTextField: UITextField!
-    @IBOutlet weak var cycleLengthTextField: UITextField!
-    @IBOutlet weak var periodLengthTextField: UITextField!
+    @IBOutlet weak var zodiacSignLabel: UILabel!
+    @IBOutlet weak var userEmailLabel: UILabel!
+    @IBOutlet weak var userCycleLength: UILabel!
+    @IBOutlet weak var userPeriodLength: UILabel!
     
     // MARK: - Properties
     var viewModel: UserSettingsViewModel!
@@ -48,10 +48,10 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
     func updateUI() {
         guard let user = viewModel.user,
               let userDetails = viewModel.userDetails else { return }
-        self.zodiacSignTextField.text = userDetails.zodiacSign
-        self.userEmailTextField.text = user.email
-        self.cycleLengthTextField.text = userDetails.cycleLength
-        self.periodLengthTextField.text = userDetails.lastCycle
+        self.zodiacSignLabel.text = userDetails.zodiacSign
+        self.userEmailLabel.text = user.email
+        self.userCycleLength.text = userDetails.cycleLength
+        self.userPeriodLength.text = userDetails.lastCycle
         
     }
 }
