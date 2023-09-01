@@ -22,6 +22,7 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
     let datePicker = UIDatePicker()
     var viewModel: UserDetailsViewModel!
     var zodiacSignString: String?
+    static var completionHandler: ((String?) -> Void)?
     
     // MARK: - Lifecyles
     override func viewDidLoad() {
@@ -30,7 +31,18 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
         sunSignPicker.dataSource = self
         sunSignPicker.delegate = self
         configureLastCycleDatePicker()
+        
+        
+//        NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: Notification.Name("text"), object: nil)
+        
     }
+    
+//    @objc func didGetNotification( _ notification: Notification) {
+//        let text = notification.object as! String?
+//        lastCycleTextField.text = text
+//    }
+//
+    
     
     // MARK: - Functions / Methods
     func configureLastCycleDatePicker() {
@@ -69,10 +81,25 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
               let zodiacSign = zodiacSignString,
               let cycleLength = periodLengthTextField.text else { return }
         viewModel.saveUser(zodiacSign: zodiacSign, cycleLength: cycleLength, lastCycle: lastCycle)
+        
+        
+//        completionHandler?(field.text)
+//        dismiss(animated: true, completion: nil)
+        
+        let userSettingStoryboard = UIStoryboard(name:"UserSettings", bundle: nil)
+        
+        
+        let userSettings = userSettingStoryboard.instantiateViewController(identifier:"Settings") as! UserSettingDetailViewController
+        userSettings.modalPresentationStyle = .fullScreen
+        present(userSettings,animated: true)
+        
+        NotificationCenter.default.post(name: Notification.Name("text"), object: periodLengthTextField.text)
+        dismiss(animated: true, completion: nil)
+        
+        
+        }
  
-    }
-    
-} // end of ViewC
+    }// end of VC
 
 // MARK: - Extensions
 extension UserDetailsViewController: UIPickerViewDataSource {

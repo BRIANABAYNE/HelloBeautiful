@@ -23,7 +23,20 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel = UserSettingsViewModel(delegate: self)
+        updateUI()
+        
+        
+  NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: Notification.Name("text"), object: nil)
+        
     }
+    
+    @objc func didGetNotification( _ notification: Notification) {
+        let text = notification.object as! String?
+//        zodiacSignLabel.text = text
+//        userCycleLength.text = text
+        userPeriodLength.text = text
+    }
+
     
     // MARK: - Actions
     
@@ -43,15 +56,19 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
         let login = storyboard.instantiateViewController(identifier:"LogIn")
         self.view.window?.rootViewController = login
     }
+//    NotificationCenter.default.post(name: Notification.Name("text"), object: field.text)
+//    dismiss(animated: true, completion: nil)
     
-    #warning("You are not calling this func at this time. Think through _when_ you should update the UI with the Users information")
+#warning("You are not calling this func at this time. Think through _when_ you should update the UI with the Users information")
     func updateUI() {
         guard let user = viewModel.user,
               let userDetails = viewModel.userDetails else { return }
-        self.zodiacSignLabel.text = userDetails.zodiacSign
-        self.userEmailLabel.text = user.email
-        self.userCycleLength.text = userDetails.cycleLength
-        self.userPeriodLength.text = userDetails.lastCycle
-        
+        DispatchQueue.main.async {
+            self.zodiacSignLabel.text = userDetails.zodiacSign
+            self.userEmailLabel.text = user.email
+            self.userCycleLength.text = userDetails.cycleLength
+            self.userPeriodLength.text = userDetails.lastCycle
+            
+        }
     }
 }
