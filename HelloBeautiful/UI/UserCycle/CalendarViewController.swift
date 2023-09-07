@@ -48,6 +48,16 @@ class CalendarViewController: UIViewController {
     
     
     
+    @IBAction func allTheFeelsButtonTapped(_ sender: Any) {
+
+        let storyboard =  UIStoryboard(name:"Main", bundle: nil) 
+        let navigation = storyboard.instantiateViewController(identifier:"Symptoms")
+        self.view.window?.rootViewController = navigation
+        
+    }
+    
+    
+    
     func setupUI() {
         
         view.addSubview(calendarView)

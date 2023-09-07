@@ -17,12 +17,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8P-7h-aOG">
-                                <rect key="frame" x="146" y="723" width="101" height="35"/>
+                                <rect key="frame" x="55" y="724" width="101" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Edit Cycle"/>
                                 <connections>
                                     <action selector="editCycleButtonTapped:" destination="OgP-lV-TWL" eventType="touchUpInside" id="oNY-og-dbO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRo-1y-X7V">
+                                <rect key="frame" x="214" y="724" width="117" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="All the Feels"/>
+                                <connections>
+                                    <action selector="allTheFeelsButtonTapped:" destination="OgP-lV-TWL" eventType="touchUpInside" id="J7R-72-4Am"/>
                                 </connections>
                             </button>
                         </subviews>
