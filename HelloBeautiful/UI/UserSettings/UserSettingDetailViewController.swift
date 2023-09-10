@@ -62,7 +62,7 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
     // MARK: - Alert
     
     func presentNewMessageAlert() {
-        let alertController = UIAlertController(title: "Delete Account?" , message: "Are you sure you want to delete your account? These actions cannot be undone!", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Delete Account?" , message: "Are you sure you want to delete your account? This action cannot be undone!", preferredStyle: .alert)
         let noAction = UIAlertAction(title: "Dismiss", style: .default)
         print("Action Taken: Dissmiss") // .default = blue // .destructive = red
         let yesAction = UIAlertAction(title: "Delete Account", style: .destructive) { [self] _ in
