@@ -59,6 +59,5 @@ struct FirebaseAuthService: FirebaseAuthServiceable {
             }
         }
     } // end of delete
-    
 
 } // end of struct
