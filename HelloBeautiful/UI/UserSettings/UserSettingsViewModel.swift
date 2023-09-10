@@ -10,7 +10,7 @@ import FirebaseAuth
 import UIKit
 
 protocol UserSettingsViewModelDelegate: UserSettingDetailViewController {
-    // TODO: - Finish this
+  
 }
 
 struct UserSettingsViewModel {

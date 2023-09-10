@@ -10,7 +10,6 @@ import FirebaseAuth
 
 
 protocol LogInViewModelDelegate: LogInViewController {
-   
 }
 
 struct LogInViewModel {
@@ -28,8 +27,7 @@ struct LogInViewModel {
     
     // MARK: - Methods
     func signIn(with email: String, password: String) {
-        
-        
+    
         service.signIn(email: email, password: password) { result  in
             switch result {
             case .success(_):
