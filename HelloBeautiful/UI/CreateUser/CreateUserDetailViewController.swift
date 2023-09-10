@@ -6,10 +6,13 @@
 
 import UIKit
 
-class CreateUserDetailViewController: UIViewController, CreateUserViewModelDelegate {
-    func encountered(_ error: Error) {
-#warning("Rest of the Owl")
-    }
+class CreateUserDetailViewController: UIViewController, AlertPresentable {
+ 
+    
+//                                        CreateUserViewModelDelegate {
+//    func encountered(_ error: Error) {
+//#warning("Rest of the Owl")
+//    }
     
     // MARK: - Outlets
     
@@ -37,3 +40,11 @@ class CreateUserDetailViewController: UIViewController, CreateUserViewModelDeleg
     }
 }
 
+
+// MARK: - Extension
+
+extension CreateUserDetailViewController: CreateUserViewModelDelegate {
+    func encountered(_ error: Error) {
+        presentAlert(message: error.localizedDescription, title: "Oh no!")
+    }
+}
