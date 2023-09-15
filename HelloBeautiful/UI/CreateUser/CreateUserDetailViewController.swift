@@ -8,12 +8,6 @@ import UIKit
 
 class CreateUserDetailViewController: UIViewController, AlertPresentable {
  
-    
-//                                        CreateUserViewModelDelegate {
-//    func encountered(_ error: Error) {
-//#warning("Rest of the Owl")
-//    }
-    
     // MARK: - Outlets
     
     @IBOutlet weak var emailTextField: UITextField!

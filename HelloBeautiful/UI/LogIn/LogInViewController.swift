@@ -16,24 +16,39 @@ class LogInViewController: UIViewController {
     //MARk: - Outlets
     @IBOutlet weak var logInEmaiTextField: UITextField!
     @IBOutlet weak var logInPasswordTextField: UITextField!
+    @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
     
     // MARK: - Properties
     var viewModel:LogInViewModel!
-    
+    var activityView: UIActivityIndicatorView?
+    let backgroundImageView = UIImageView()
     fileprivate var currentNonce: String?
+    
     
     // MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
+//      activitySpinner.startAnimating()
         viewModel = LogInViewModel(delegate: self)
         signInWithApple()
-        
+        setBackGround()
         // call the function appleIDStateRevoked if user revoke the sign in in Settings app
         
         NotificationCenter.default.addObserver(self, selector: #selector(appleIDStateRevoked), name: ASAuthorizationAppleIDProvider.credentialRevokedNotification, object: nil)
     }
     
+    
     // MARK: - Method
+    func setBackGround() {
+        view.addSubview(backgroundImageView)
+        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        backgroundImageView.image = UIImage(named: "Brianab")
+        view.sendSubviewToBack(backgroundImageView)
+    }
+
     
     func signInWithApple() {
         let siwaButton = ASAuthorizationAppleIDButton()
@@ -134,10 +149,19 @@ class LogInViewController: UIViewController {
     @IBAction func logInButtonTapped(_ sender: Any) {
         guard let email = logInEmaiTextField.text,
               let password = logInPasswordTextField.text  else { return }
-        viewModel.signIn(with: email, password: password)
+             if(!email.isEmpty && !password.isEmpty) {
+            showActivityIndicator()
+            viewModel.signIn(with: email, password: password)
+        } else{
+            showAlert(message:"Enter both Email and Password")
+        }
+        
+        self.hideActivityIndicator()
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let logIn = storyboard.instantiateViewController(identifier:"tabBar")
         self.view.window?.rootViewController = logIn
+        
         
     }
     
@@ -145,9 +169,29 @@ class LogInViewController: UIViewController {
         //TODO: - FINISH THIS
         
     }
+    // MARK: - Functions
     
-}
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "Warning!", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showActivityIndicator() {
+        activityView = UIActivityIndicatorView(style: .large)
+        activityView?.center = self.view.center
+        self.view.addSubview(activityView!)
+        activityView?.startAnimating()
+    }
+    
+    func hideActivityIndicator() {
+        if (activityView != nil){
+            activityView?.startAnimating()
+        }
+    }
+    
 
+}
 // MARK: Extensions
 extension LogInViewController: LogInViewModelDelegate {
     func encountered(_ error: Error) {
