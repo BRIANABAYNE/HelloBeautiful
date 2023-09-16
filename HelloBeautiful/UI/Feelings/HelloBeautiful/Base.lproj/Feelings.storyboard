@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mainstay.ttf">
+            <string>Mainstay</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Symptoms-->
         <scene sceneID="tm8-Ug-hYG">
@@ -20,16 +25,16 @@
                                 <rect key="frame" x="20" y="109.00000000000003" width="353" height="443.66666666666674"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Zq0-xu-aRy">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="67"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="63"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCd-aI-GZe">
-                                                <rect key="frame" x="0.0" y="0.0" width="41" height="24"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="20"/>
+                                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
+                                                <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PUq-u7-Baf">
-                                                <rect key="frame" x="0.0" y="36" width="353" height="32"/>
+                                                <rect key="frame" x="0.0" y="32" width="353" height="32"/>
                                                 <segments>
                                                     <segment title="Light💧"/>
                                                     <segment title="Medium"/>
@@ -44,16 +49,16 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Scf-7Y-keR">
-                                        <rect key="frame" x="0.0" y="94" width="353" height="67"/>
+                                        <rect key="frame" x="0.0" y="95" width="353" height="63"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cervical Mucus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1a-en-IdL">
-                                                <rect key="frame" x="0.0" y="0.0" width="135" height="24"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="148" height="20"/>
+                                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
+                                                <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TwP-xY-YSD">
-                                                <rect key="frame" x="0.0" y="36" width="353" height="32"/>
+                                                <rect key="frame" x="0.0" y="32" width="353" height="32"/>
                                                 <segments>
                                                     <segment title="Watery🔫"/>
                                                     <segment title="Thick🥚"/>
@@ -71,16 +76,16 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="GKY-R3-9kC">
-                                        <rect key="frame" x="0.0" y="188.33333333333331" width="353" height="67"/>
+                                        <rect key="frame" x="0.0" y="190.33333333333331" width="353" height="63"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHJ-tG-oeW">
-                                                <rect key="frame" x="0.0" y="0.0" width="46.333333333333336" height="24"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="47.666666666666664" height="20"/>
+                                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
+                                                <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bHF-95-EMc">
-                                                <rect key="frame" x="0.0" y="36" width="353" height="32"/>
+                                                <rect key="frame" x="0.0" y="32" width="353" height="32"/>
                                                 <segments>
                                                     <segment title="Happy 😍"/>
                                                     <segment title="Horney🫦"/>
@@ -98,16 +103,16 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gvy-zi-9jy">
-                                        <rect key="frame" x="0.0" y="282.33333333333331" width="353" height="67"/>
+                                        <rect key="frame" x="0.0" y="285.33333333333331" width="353" height="63"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cravings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgw-Wv-F8o">
-                                                <rect key="frame" x="0.0" y="0.0" width="77.333333333333329" height="24"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="83.333333333333329" height="20"/>
+                                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
+                                                <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sq6-78-OOF">
-                                                <rect key="frame" x="0.0" y="36" width="353" height="32"/>
+                                                <rect key="frame" x="0.0" y="32" width="353" height="32"/>
                                                 <segments>
                                                     <segment title="Sweets🧁"/>
                                                     <segment title="Fats🍟"/>
@@ -125,16 +130,16 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="dL3-hX-bSL">
-                                        <rect key="frame" x="0.0" y="376.66666666666669" width="353" height="67"/>
+                                        <rect key="frame" x="0.0" y="380.66666666666669" width="353" height="63"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symptoms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOt-XX-MvJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="94.333333333333329" height="24"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="95.666666666666671" height="20"/>
+                                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
+                                                <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="onW-UJ-Z2k">
-                                                <rect key="frame" x="0.0" y="35.999999999999943" width="353" height="32"/>
+                                                <rect key="frame" x="0.0" y="31.999999999999943" width="353" height="32"/>
                                                 <segments>
                                                     <segment title="Cramps🔪"/>
                                                     <segment title="Tender Breast🍒"/>
@@ -171,14 +176,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgd-81-Pzd">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgd-81-Pzd" customClass="BBButton" customModule="HelloBeautiful" customModuleProvider="target">
                                 <rect key="frame" x="159" y="783" width="75" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="NU8-3H-SIe"/>
                                     <constraint firstAttribute="width" constant="88" id="zfD-kR-eot"/>
                                 </constraints>
+                                <color key="tintColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="CuA-bp-sCH" eventType="touchUpInside" id="FfS-X3-KJ6"/>
                                 </connections>
