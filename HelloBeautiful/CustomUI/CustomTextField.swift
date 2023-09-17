@@ -31,7 +31,7 @@ class BBTextField: UITextField {
         clipsToBounds         = true
         
         let placeholder       = self.placeholder != nil ? self.placeholder! : ""
-        let placeholderFont   = UIFont(name: Constants.Fonts.mainstay, size: 18)!
+        let placeholderFont   = UIFont(name: Constants.Fonts.mainstay, size: 15)!
         attributedPlaceholder = NSAttributedString(string: placeholder, attributes:
                                                     [NSAttributedString.Key.foregroundColor: UIColor.white,
              NSAttributedString.Key.font: placeholderFont])

@@ -18,7 +18,7 @@ class MoonHoroscopeViewController: UIViewController {
     @IBOutlet weak var moonDistanceLabel: UILabel!
     @IBOutlet weak var moonriseLabel: UILabel!
     @IBOutlet weak var illuminationLabel: UILabel!
-    
+    @IBOutlet weak var moonImage: UIImageView!
     
     // MARK: - Properties
     var viewModel: MoonHoroscopeViewModel!

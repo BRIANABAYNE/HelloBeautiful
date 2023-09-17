@@ -161,8 +161,7 @@ class LogInViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let logIn = storyboard.instantiateViewController(identifier:"tabBar")
         self.view.window?.rootViewController = logIn
-        
-        
+
     }
 
     @IBAction func createAccountButtonTapped(_ sender: Any) {

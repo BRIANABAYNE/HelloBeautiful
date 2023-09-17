@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,7 +11,7 @@
         <scene sceneID="lCY-E5-ltc">
             <objects>
                 <viewController storyboardIdentifier="UIViewController-MYf-iT-R6P" id="MYf-iT-R6P" customClass="CreateUserDetailViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qY8-j2-6pb">
+                    <view key="view" contentMode="scaleToFill" id="qY8-j2-6pb" customClass="GradientView" customModule="HelloBeautiful" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -28,40 +27,47 @@
                                     <segue destination="tjR-sH-PWn" kind="show" identifier="UserDetails" id="eqU-kf-3HT"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="e2c-Yf-Lgj">
-                                <rect key="frame" x="123" y="241" width="146" height="174"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crS-zg-NHh" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="146" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4WU-ez-grD" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="70" width="146" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAV-0b-c9i" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="140" width="146" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="crS-zg-NHh" secondAttribute="trailing" id="4Gw-pY-4Uz"/>
-                                    <constraint firstItem="crS-zg-NHh" firstAttribute="top" secondItem="e2c-Yf-Lgj" secondAttribute="top" constant="150" id="DJ3-1a-daj"/>
-                                    <constraint firstItem="4WU-ez-grD" firstAttribute="top" secondItem="crS-zg-NHh" secondAttribute="bottom" constant="36" id="bne-Qm-g2e"/>
-                                    <constraint firstItem="crS-zg-NHh" firstAttribute="leading" secondItem="e2c-Yf-Lgj" secondAttribute="leading" id="jO8-jF-Kpk"/>
-                                </constraints>
-                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crS-zg-NHh" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
+                                <rect key="frame" x="30" y="241" width="333" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4WU-ez-grD" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
+                                <rect key="frame" x="30" y="311" width="333" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAV-0b-c9i" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
+                                <rect key="frame" x="30" y="420" width="333" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zpd-ma-EMl"/>
-                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="HRe-gH-gKU" firstAttribute="top" secondItem="IAV-0b-c9i" secondAttribute="bottom" constant="200" id="7YH-CB-cIT"/>
+                            <constraint firstItem="IAV-0b-c9i" firstAttribute="leading" secondItem="zpd-ma-EMl" secondAttribute="leading" constant="30" id="EzM-NG-9dw"/>
+                            <constraint firstItem="zpd-ma-EMl" firstAttribute="trailing" secondItem="IAV-0b-c9i" secondAttribute="trailing" constant="30" id="JQr-JP-Rcf"/>
+                            <constraint firstItem="crS-zg-NHh" firstAttribute="leading" secondItem="zpd-ma-EMl" secondAttribute="leading" constant="30" id="WJo-69-RsO"/>
+                            <constraint firstItem="IAV-0b-c9i" firstAttribute="top" secondItem="4WU-ez-grD" secondAttribute="bottom" constant="25" id="azh-Rn-iKa"/>
+                            <constraint firstItem="zpd-ma-EMl" firstAttribute="trailing" secondItem="crS-zg-NHh" secondAttribute="trailing" constant="30" id="bpC-bb-A0n"/>
+                            <constraint firstItem="zpd-ma-EMl" firstAttribute="trailing" secondItem="4WU-ez-grD" secondAttribute="trailing" constant="30" id="eCV-2h-gFO"/>
                             <constraint firstItem="zpd-ma-EMl" firstAttribute="bottom" secondItem="HRe-gH-gKU" secondAttribute="bottom" constant="20" id="ei1-ec-94G"/>
+                            <constraint firstItem="4WU-ez-grD" firstAttribute="top" secondItem="crS-zg-NHh" secondAttribute="bottom" constant="36" id="h4g-5p-lBl"/>
+                            <constraint firstItem="crS-zg-NHh" firstAttribute="top" secondItem="zpd-ma-EMl" secondAttribute="top" constant="50" id="hJf-dh-UEg"/>
                             <constraint firstItem="HRe-gH-gKU" firstAttribute="centerX" secondItem="zpd-ma-EMl" secondAttribute="centerX" id="hZZ-0m-a20"/>
+                            <constraint firstItem="4WU-ez-grD" firstAttribute="leading" secondItem="zpd-ma-EMl" secondAttribute="leading" constant="30" id="mJS-wF-eJG"/>
                             <constraint firstItem="HRe-gH-gKU" firstAttribute="width" secondItem="qY8-j2-6pb" secondAttribute="width" multiplier="0.8" id="sg3-Ke-tjt"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                <color key="value" red="0.73590630292892456" green="0.47093661374238088" blue="0.6785717602172936" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="4Z0-03-Y3h"/>
                     <connections>
@@ -72,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCm-qe-hJW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3538" y="-61"/>
+            <point key="canvasLocation" x="3536.6412213740455" y="-61.267605633802823"/>
         </scene>
         <!--UIViewController-mfw-ps-f1K-->
         <scene sceneID="YxU-v9-mBn">
@@ -83,9 +89,4 @@
             <point key="canvasLocation" x="4376" y="-61"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>
