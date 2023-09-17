@@ -24,7 +24,7 @@ class BBTextField: UITextField {
     private func setUpField() {
         tintColor             = .systemPink
         textColor             = .white
-        font                  = UIFont(name: Constants.Fonts.mainstay, size: 18)
+        font                  = UIFont(name: Constants.Fonts.mainstay, size: 10)
         backgroundColor       = UIColor(white: 1.0, alpha: 0.5)
         autocorrectionType    = .no
         layer.cornerRadius    = 25.0
@@ -36,7 +36,7 @@ class BBTextField: UITextField {
                                                     [NSAttributedString.Key.foregroundColor: UIColor.white,
              NSAttributedString.Key.font: placeholderFont])
         
-        let indentView        = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        let indentView        = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
         leftView              = indentView
         leftViewMode          = .always
     }

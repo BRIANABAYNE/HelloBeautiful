@@ -16,9 +16,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRe-gH-gKU" customClass="BBButton" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="39.333333333333343" y="754" width="314.33333333333326" height="44"/>
+                                <rect key="frame" x="30" y="615" width="333" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="0mQ-h0-zrB"/>
+                                    <constraint firstAttribute="height" constant="50" id="0mQ-h0-zrB"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next"/>
@@ -27,18 +27,27 @@
                                     <segue destination="tjR-sH-PWn" kind="show" identifier="UserDetails" id="eqU-kf-3HT"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crS-zg-NHh" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="30" y="241" width="333" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crS-zg-NHh" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
+                                <rect key="frame" x="30" y="241" width="333" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WyG-7S-IrO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4WU-ez-grD" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4WU-ez-grD" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
                                 <rect key="frame" x="30" y="311" width="333" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Cvp-8V-vt4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAV-0b-c9i" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="30" y="420" width="333" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAV-0b-c9i" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
+                                <rect key="frame" x="30" y="365" width="333" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="35S-4Z-hSh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -46,19 +55,19 @@
                         <viewLayoutGuide key="safeArea" id="zpd-ma-EMl"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="HRe-gH-gKU" firstAttribute="top" secondItem="IAV-0b-c9i" secondAttribute="bottom" constant="200" id="7YH-CB-cIT"/>
-                            <constraint firstItem="IAV-0b-c9i" firstAttribute="leading" secondItem="zpd-ma-EMl" secondAttribute="leading" constant="30" id="EzM-NG-9dw"/>
-                            <constraint firstItem="zpd-ma-EMl" firstAttribute="trailing" secondItem="IAV-0b-c9i" secondAttribute="trailing" constant="30" id="JQr-JP-Rcf"/>
-                            <constraint firstItem="crS-zg-NHh" firstAttribute="leading" secondItem="zpd-ma-EMl" secondAttribute="leading" constant="30" id="WJo-69-RsO"/>
-                            <constraint firstItem="IAV-0b-c9i" firstAttribute="top" secondItem="4WU-ez-grD" secondAttribute="bottom" constant="25" id="azh-Rn-iKa"/>
-                            <constraint firstItem="zpd-ma-EMl" firstAttribute="trailing" secondItem="crS-zg-NHh" secondAttribute="trailing" constant="30" id="bpC-bb-A0n"/>
-                            <constraint firstItem="zpd-ma-EMl" firstAttribute="trailing" secondItem="4WU-ez-grD" secondAttribute="trailing" constant="30" id="eCV-2h-gFO"/>
-                            <constraint firstItem="zpd-ma-EMl" firstAttribute="bottom" secondItem="HRe-gH-gKU" secondAttribute="bottom" constant="20" id="ei1-ec-94G"/>
-                            <constraint firstItem="4WU-ez-grD" firstAttribute="top" secondItem="crS-zg-NHh" secondAttribute="bottom" constant="36" id="h4g-5p-lBl"/>
-                            <constraint firstItem="crS-zg-NHh" firstAttribute="top" secondItem="zpd-ma-EMl" secondAttribute="top" constant="50" id="hJf-dh-UEg"/>
-                            <constraint firstItem="HRe-gH-gKU" firstAttribute="centerX" secondItem="zpd-ma-EMl" secondAttribute="centerX" id="hZZ-0m-a20"/>
-                            <constraint firstItem="4WU-ez-grD" firstAttribute="leading" secondItem="zpd-ma-EMl" secondAttribute="leading" constant="30" id="mJS-wF-eJG"/>
-                            <constraint firstItem="HRe-gH-gKU" firstAttribute="width" secondItem="qY8-j2-6pb" secondAttribute="width" multiplier="0.8" id="sg3-Ke-tjt"/>
+                            <constraint firstItem="IAV-0b-c9i" firstAttribute="top" secondItem="4WU-ez-grD" secondAttribute="bottom" constant="20" id="0Bm-YJ-yJH"/>
+                            <constraint firstItem="zpd-ma-EMl" firstAttribute="trailing" secondItem="4WU-ez-grD" secondAttribute="trailing" constant="30" id="4ro-pJ-K9a"/>
+                            <constraint firstItem="crS-zg-NHh" firstAttribute="leading" secondItem="zpd-ma-EMl" secondAttribute="leading" constant="30" id="Bdw-dC-tf4"/>
+                            <constraint firstItem="crS-zg-NHh" firstAttribute="top" secondItem="zpd-ma-EMl" secondAttribute="top" constant="182" id="HUZ-PT-XS1"/>
+                            <constraint firstItem="4WU-ez-grD" firstAttribute="top" secondItem="crS-zg-NHh" secondAttribute="bottom" constant="20" id="PCm-oi-5GF"/>
+                            <constraint firstItem="zpd-ma-EMl" firstAttribute="trailing" secondItem="crS-zg-NHh" secondAttribute="trailing" constant="30" id="Pxz-0B-T8j"/>
+                            <constraint firstAttribute="trailing" secondItem="HRe-gH-gKU" secondAttribute="trailing" constant="30" id="TKa-ju-7YM"/>
+                            <constraint firstItem="zpd-ma-EMl" firstAttribute="trailing" secondItem="IAV-0b-c9i" secondAttribute="trailing" constant="30" id="Tkf-Rh-rz1"/>
+                            <constraint firstItem="HRe-gH-gKU" firstAttribute="top" secondItem="IAV-0b-c9i" secondAttribute="bottom" constant="200" id="VTH-Iw-Kj9"/>
+                            <constraint firstItem="HRe-gH-gKU" firstAttribute="leading" secondItem="qY8-j2-6pb" secondAttribute="leading" constant="30" id="cQi-t2-fC4"/>
+                            <constraint firstItem="4WU-ez-grD" firstAttribute="leading" secondItem="zpd-ma-EMl" secondAttribute="leading" constant="30" id="jrs-7E-Bld"/>
+                            <constraint firstAttribute="bottom" secondItem="HRe-gH-gKU" secondAttribute="bottom" constant="155" id="qzj-p3-s48"/>
+                            <constraint firstItem="IAV-0b-c9i" firstAttribute="leading" secondItem="zpd-ma-EMl" secondAttribute="leading" constant="30" id="vy2-NZ-OzD"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">

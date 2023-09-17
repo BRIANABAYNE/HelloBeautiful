@@ -21,19 +21,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ye5-7I-8e0" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="30" y="293" width="336" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email.." textAlignment="center" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ye5-7I-8e0" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
+                                <rect key="frame" x="30" y="184" width="317" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="VTY-1Y-OIc"/>
+                                    <constraint firstAttribute="height" constant="50" id="sf3-Fy-142"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjG-i0-Whk" userLabel="Don't have an account?" customClass="BBButton" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="45" y="563" width="300" height="50"/>
+                                <rect key="frame" x="46" y="362" width="301" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="a1G-NE-3dy"/>
-                                    <constraint firstAttribute="height" constant="50" id="v0T-2i-oNe"/>
+                                    <constraint firstAttribute="height" constant="44" id="BB6-Yq-xPU"/>
                                 </constraints>
                                 <color key="tintColor" red="0.79607843140000001" green="0.25882352939999997" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
@@ -43,11 +42,10 @@
                                     <segue destination="ynN-Qh-TbO" kind="show" identifier="CreateUser" id="ZX9-sP-peX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uw-Mj-RM3" customClass="BBButton" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="116" y="490" width="74" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uw-Mj-RM3" customClass="BBButton" customModule="HelloBeautiful" customModuleProvider="target">
+                                <rect key="frame" x="30" y="308" width="333" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="SDR-Kt-gow"/>
-                                    <constraint firstAttribute="width" constant="44" id="y6V-4y-O8t"/>
+                                    <constraint firstAttribute="height" constant="44" id="I6C-nU-rRx"/>
                                 </constraints>
                                 <color key="tintColor" red="0.79607843140000001" green="0.25882352939999997" blue="0.66584289965986398" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
@@ -56,15 +54,19 @@
                                     <action selector="logInButtonTapped:" destination="kTg-Uv-Ccv" eventType="touchUpInside" id="kbd-6r-d5y"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uou-gW-kwc" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="30" y="390" width="336" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password.." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uou-gW-kwc" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
+                                <rect key="frame" x="30" y="244" width="317" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Aww-KX-dmC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello Beautiful" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClK-OZ-83B">
-                                <rect key="frame" x="63" y="137" width="248" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Beautiful" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClK-OZ-83B">
+                                <rect key="frame" x="30" y="79" width="333" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="Ib6-ev-Wta"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="30"/>
                                 <color key="textColor" red="0.79607843140000001" green="0.25882352939999997" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -73,13 +75,22 @@
                         <viewLayoutGuide key="safeArea" id="4qk-sV-Amh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6uw-Mj-RM3" firstAttribute="leading" secondItem="4qk-sV-Amh" secondAttribute="leading" constant="116" id="Ewh-JY-L6b"/>
-                            <constraint firstItem="BjG-i0-Whk" firstAttribute="leading" secondItem="4qk-sV-Amh" secondAttribute="leading" constant="45" id="Gdc-G9-Q0l"/>
-                            <constraint firstItem="4qk-sV-Amh" firstAttribute="trailing" secondItem="6uw-Mj-RM3" secondAttribute="trailing" constant="137.33000000000001" id="Qw4-Ou-WJd"/>
-                            <constraint firstItem="4qk-sV-Amh" firstAttribute="bottom" secondItem="BjG-i0-Whk" secondAttribute="bottom" constant="205" id="Sod-qg-TPu"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BjG-i0-Whk" secondAttribute="trailing" constant="32" id="tEh-9q-HWE"/>
-                            <constraint firstItem="4qk-sV-Amh" firstAttribute="trailing" secondItem="6uw-Mj-RM3" secondAttribute="trailing" constant="137.33000000000001" id="wH6-J6-2Mo"/>
-                            <constraint firstItem="6uw-Mj-RM3" firstAttribute="leading" secondItem="4qk-sV-Amh" secondAttribute="leading" constant="116" id="zpi-fJ-o3C"/>
+                            <constraint firstItem="4qk-sV-Amh" firstAttribute="trailing" secondItem="ClK-OZ-83B" secondAttribute="trailing" constant="30" id="0C4-AS-fMX"/>
+                            <constraint firstItem="BjG-i0-Whk" firstAttribute="top" secondItem="6uw-Mj-RM3" secondAttribute="bottom" constant="10" id="6Av-MD-LBf"/>
+                            <constraint firstItem="6uw-Mj-RM3" firstAttribute="top" secondItem="Uou-gW-kwc" secondAttribute="bottom" constant="30" id="8Vd-Vy-RUa"/>
+                            <constraint firstItem="BjG-i0-Whk" firstAttribute="leading" secondItem="69r-EX-fMN" secondAttribute="leadingMargin" constant="30" id="Iha-nO-x41"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BjG-i0-Whk" secondAttribute="trailing" constant="30" id="IwZ-QD-zaU"/>
+                            <constraint firstItem="ClK-OZ-83B" firstAttribute="leading" secondItem="4qk-sV-Amh" secondAttribute="leading" constant="30" id="Nji-0U-NTo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uou-gW-kwc" secondAttribute="trailing" constant="30" id="PqP-Ii-bfe"/>
+                            <constraint firstItem="Uou-gW-kwc" firstAttribute="leading" secondItem="69r-EX-fMN" secondAttribute="leadingMargin" constant="14" id="QGc-Dd-56X"/>
+                            <constraint firstItem="ye5-7I-8e0" firstAttribute="top" secondItem="ClK-OZ-83B" secondAttribute="bottom" constant="10" id="Xac-i4-g1x"/>
+                            <constraint firstItem="ye5-7I-8e0" firstAttribute="leading" secondItem="69r-EX-fMN" secondAttribute="leadingMargin" constant="14" id="bEf-AQ-t42"/>
+                            <constraint firstItem="6uw-Mj-RM3" firstAttribute="leading" secondItem="4qk-sV-Amh" secondAttribute="leading" constant="30" id="dGc-X2-RuE"/>
+                            <constraint firstItem="ClK-OZ-83B" firstAttribute="top" secondItem="4qk-sV-Amh" secondAttribute="top" constant="20" id="dpS-VL-C25"/>
+                            <constraint firstItem="4qk-sV-Amh" firstAttribute="trailing" secondItem="6uw-Mj-RM3" secondAttribute="trailing" constant="30" id="lD2-si-14t"/>
+                            <constraint firstItem="4qk-sV-Amh" firstAttribute="bottom" secondItem="BjG-i0-Whk" secondAttribute="bottom" constant="200" id="ma4-hr-5co"/>
+                            <constraint firstItem="Uou-gW-kwc" firstAttribute="top" secondItem="ye5-7I-8e0" secondAttribute="bottom" constant="10" id="tPr-kn-5If"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ye5-7I-8e0" secondAttribute="trailing" constant="30" id="wo2-g3-hBN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nib-kl-lcS"/>
