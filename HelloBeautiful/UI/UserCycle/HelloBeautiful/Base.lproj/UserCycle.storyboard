@@ -11,8 +11,8 @@
         <!--Cycle-->
         <scene sceneID="JXU-Z5-RuI">
             <objects>
-                <viewController storyboardIdentifier="calenderCycle" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OgP-lV-TWL" customClass="CalendarViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="BTT-j3-Q7c">
+                <viewController storyboardIdentifier="calenderCycle" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OgP-lV-TWL" customClass="ViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BTT-j3-Q7c" customClass="GradientView" customModule="HelloBeautiful" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -37,6 +37,14 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3rD-8L-HDP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                <color key="value" red="0.79607843140000001" green="0.39620535714285715" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cycle" image="drop.fill" catalog="system" selectedImage="drop.fill" id="kcx-3H-cMH"/>
                 </viewController>
