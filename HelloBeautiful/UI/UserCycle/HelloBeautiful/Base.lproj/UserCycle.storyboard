@@ -31,7 +31,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="All the Feels"/>
                                 <connections>
-                                    <action selector="allTheFeelsButtonTapped:" destination="OgP-lV-TWL" eventType="touchUpInside" id="J7R-72-4Am"/>
+                                    <action selector="allTheFeelsButtonTapped:" destination="OgP-lV-TWL" eventType="touchUpInside" id="T7F-rj-jOm"/>
                                 </connections>
                             </button>
                         </subviews>

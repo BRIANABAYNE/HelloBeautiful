@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     
     // MARK: - Actions
     
-    @IBAction func addCycleButtonTapped(_ sender: Any) {
+    @IBAction func allTheFeelsButtonTapped(_ sender: Any) {
         
     }
     

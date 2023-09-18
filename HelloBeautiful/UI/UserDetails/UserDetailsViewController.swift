@@ -23,6 +23,7 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
     var viewModel: UserDetailsViewModel!
     var zodiacSignString: String?
     static var completionHandler: ((String?) -> Void)?
+    var disclosurePopUP: PopUp!
     
     // MARK: - Lifecyles
     override func viewDidLoad() {
@@ -33,9 +34,23 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
         configureLastCycleDatePicker()
         
         
-//        NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: Notification.Name("text"), object: nil)
+        //        NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: Notification.Name("text"), object: nil)
         
     }
+    
+    
+    // MARK: - Actions
+    
+    @IBAction func disclaimerButtonTapped(_ sender: Any) {
+        self.disclosurePopUP = PopUp(frame: self.view.frame)
+        self.disclosurePopUP.closeButtonTapped.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
+        self.view.addSubview(disclosurePopUP)
+        
+    }
+    @objc func closeButtonTapped() {
+        self.disclosurePopUP.removeFromSuperview()
+    }
+
     
 //    @objc func didGetNotification( _ notification: Notification) {
 //        let text = notification.object as! String?
