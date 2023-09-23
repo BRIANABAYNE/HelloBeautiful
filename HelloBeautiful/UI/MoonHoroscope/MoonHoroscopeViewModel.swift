@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 protocol MoonHororscopeViewModelDelegate: MoonHoroscopeViewController {
     func updateUI ()
@@ -23,6 +24,8 @@ class MoonHoroscopeViewModel {
     var moonData: Moon?
     var horoscopeData: Horoscope?
     var userData: User?
+    var userDetail: UserDetails?
+    var id: String?
     private let service: MoonHoroscopeServiceable
     
     // MARK: - Dependency Injection
@@ -30,6 +33,7 @@ class MoonHoroscopeViewModel {
         self.delegate = injectedDelegate
         self.service = injectedMoonHoroscopeService
         fetchMoonDetails()
+        fetchUser()
     }
     
     
@@ -49,11 +53,30 @@ class MoonHoroscopeViewModel {
         }
     }
     
+    func fetchUser() {
+        let defaultStore = Firestore.firestore()
+         defaultStore.collection("UserDetails")
+            .document((self.userData?.id)!).getDocument { snapshot, error in
+                do {
+                    let user = try (snapshot?.data(as: UserDetails.self))
+                    self.fetchHoroscope(userSign: (user?.zodiacSign.lowercased())!)
+                    self.userDetail = user
+                    
+                } catch {
+                    print("print error")
+                }
+        
+                }
+            }
+    
     func fetchHoroscope(userSign: String) {
         service.fetchHoroscope(sunSign: userSign) { result in
             switch result {
             case .success(let horoscope):
                 self.horoscopeData = horoscope
+                DispatchQueue.main.async {
+                    self.delegate?.updateUI()
+                }
             case .failure(let failure):
                 print(failure.localizedDescription)
             }

@@ -149,12 +149,15 @@ class LogInViewController: UIViewController {
     @IBAction func logInButtonTapped(_ sender: Any) {
         guard let email = logInEmaiTextField.text,
               let password = logInPasswordTextField.text  else { return }
-             if(!email.isEmpty && !password.isEmpty) {
+        if(!email.isEmpty && !password.isEmpty) {
             showActivityIndicator()
             viewModel.signIn(with: email, password: password)
+            
         } else{
             showAlert(message:"Enter both Email and Password")
         }
+    }
+    func success(user: User) {
         
         self.hideActivityIndicator()
         
