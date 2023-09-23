@@ -28,6 +28,8 @@ struct MoonHoroscopeService: APIDataProvidable, MoonHoroscopeServiceable {
                 do {
                     let topLevelDictionary = try JSONDecoder().decode(TopLevelDictionary.self, from: moonData)
                     completion(.success(topLevelDictionary)); return
+                    print("sucessful getting data")
+                    
                 } catch {
                     completion(.failure(.thrownError(error))); return
                 }
@@ -54,6 +56,8 @@ struct MoonHoroscopeService: APIDataProvidable, MoonHoroscopeServiceable {
                 do {
                    let Horoscope = try JSONDecoder().decode(Horoscope.self, from: horoscopeData)
                             completion(.success(Horoscope)); return
+                    print("sucessful getting a horocope")
+                    
                 } catch {
                     completion(.failure(.thrownError(error))); return
                 }

@@ -23,37 +23,44 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NkR-2J-4Iq">
-                    <rect key="frame" x="16" y="158" width="413" height="660"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NkR-2J-4Iq">
+                    <rect key="frame" x="-10" y="132" width="413" height="660"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Brianab" translatesAutoresizingMaskIntoConstraints="NO" id="azo-2D-Pzm">
-                            <rect key="frame" x="-60" y="-212" width="575" height="963"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Brianab" translatesAutoresizingMaskIntoConstraints="NO" id="eXl-Az-ICd">
+                            <rect key="frame" x="-81" y="0.0" width="575" height="660"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AD2-1t-myS">
-                            <rect key="frame" x="109" y="283.66666666666669" width="67" height="40"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No matter where you are in the world, Hello Beautiful will never allow your private health data to be used against you." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" id="aMR-zQ-4SG">
+                            <rect key="frame" x="37" y="68" width="328" height="382"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AD2-1t-myS">
+                            <rect key="frame" x="173" y="562" width="67" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="Ezd-CN-64T"/>
                             </constraints>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Close"/>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="No matter where you are in the world, Hello Beautiful will never allow your private health data to be used against you." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMR-zQ-4SG">
-                            <rect key="frame" x="41" y="67" width="280" height="318"/>
-                            <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="AD2-1t-myS" firstAttribute="top" secondItem="aMR-zQ-4SG" secondAttribute="bottom" constant="218" id="MNb-UL-3as"/>
+                        <constraint firstAttribute="trailing" secondItem="AD2-1t-myS" secondAttribute="trailing" constant="173" id="KvC-0n-Gri"/>
+                        <constraint firstItem="AD2-1t-myS" firstAttribute="leading" secondItem="NkR-2J-4Iq" secondAttribute="leading" constant="173" id="VAv-Nx-rfp"/>
+                        <constraint firstItem="AD2-1t-myS" firstAttribute="top" secondItem="aMR-zQ-4SG" secondAttribute="bottom" constant="112" id="tZa-2i-9Zp"/>
+                        <constraint firstAttribute="bottom" secondItem="AD2-1t-myS" secondAttribute="bottom" constant="58" id="xC1-G1-qlc"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="0.79607843140000001" green="0.25882352939999997" blue="0.42264562074829931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NkR-2J-4Iq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="-10" id="65r-6W-B2x"/>
+                <constraint firstItem="NkR-2J-4Iq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="73" id="GtH-cK-gHK"/>
+            </constraints>
             <connections>
                 <outlet property="closeButtonTapped" destination="AD2-1t-myS" id="UXX-VS-LHG"/>
             </connections>

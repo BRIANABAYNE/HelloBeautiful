@@ -12,13 +12,12 @@ class MoonHoroscopeViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var zodiacSignLabel: UILabel!
-    @IBOutlet weak var weeklyHoroscopeLabel: UITextView!
     @IBOutlet weak var moonPhaseLabel: UILabel!
-    @IBOutlet weak var moonDateLabel: UILabel!
     @IBOutlet weak var moonDistanceLabel: UILabel!
     @IBOutlet weak var moonriseLabel: UILabel!
     @IBOutlet weak var illuminationLabel: UILabel!
     @IBOutlet weak var moonImage: UIImageView!
+    @IBOutlet weak var horoscopeLable: UILabel!
     
     // MARK: - Properties
     var viewModel: MoonHoroscopeViewModel!
@@ -38,7 +37,7 @@ class MoonHoroscopeViewController: UIViewController {
               let horoscope = viewModel.horoscopeData else { return }
         viewModel.fetchHoroscope(userSign: user.zodiacSign)
         DispatchQueue.main.async {
-            self.weeklyHoroscopeLabel.text = horoscope.horoscope
+            self.horoscopeLable.text = horoscope.horoscope
         }
     }
 }
@@ -50,7 +49,7 @@ extension MoonHoroscopeViewController: MoonHororscopeViewModelDelegate {
               let moon = viewModel.moonData else { return }
         self.zodiacSignLabel.text = moon.zodiacSign
         self.moonPhaseLabel.text = moon.moonPhase
-        self.moonDateLabel.text = tld.datestamp
+//        self.moonDateLabel.text = tld.datestamp
         self.moonDistanceLabel.text = "\(moon.moonDistance)"
         self.moonriseLabel.text = moon.moonrise
         self.illuminationLabel.text = moon.illumination

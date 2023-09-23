@@ -17,6 +17,8 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
     // MARK: -  Properties
     
     var viewModel:CreateUserViewModel!
+    static let notificationSendUserDetails = Notification.Name("")
+   
     
     // MARK: - LifeCycles
     override func viewDidLoad() {
@@ -31,6 +33,20 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
               let password = passwordTextField.text,!password.isEmpty,
               let confirmPassword = confirmPasswordTextField.text,!confirmPassword.isEmpty else { return }
         viewModel.createAccount(with: email, password: password, confirmPassword: confirmPassword)
+        
+        
+//        let createUserDetailsVC = CreateUserDetailViewController()
+//        createUserDetailsVC.text =
+
+        let createUserDeailsVC = storyboard?.instantiateViewController(identifier: "UserSettingDetailViewController") as! UserSettingDetailViewController
+        createUserDeailsVC.text = emailTextField.text
+//        let createUserDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "UserSettingDetailViewController") as! UserSettingDetailViewController
+//        createUserDetailViewController.text = emailTextField.text
+//        createUserDetailViewController.userEmail = emailTextField.text!
+//        createUserDetailViewController.password = passwordTextField.text!
+//        self.navigationController?.pushViewController(createUserDetailViewController, animated: true)
+        createUserDeailsVC.modalPresentationStyle = .fullScreen
+        present(createUserDeailsVC, animated: true, completion: nil)
     }
 }
 

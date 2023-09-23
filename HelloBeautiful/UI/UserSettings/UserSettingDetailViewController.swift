@@ -19,17 +19,22 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
     
     // MARK: - Properties
     var viewModel: UserSettingsViewModel!
+      var text: String?
+//    var userEmail: String = ""
+//    var text: String = ""
+    
+    //    var password: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel = UserSettingsViewModel(delegate: self)
-        updateUI()
         
-        
-  NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: Notification.Name("text"), object: nil)
-        
+        if text != nil {
+            userEmailLabel.text = text
+        }
+//        userEmailLabel?.text = userEmail
     }
-    
+
     @objc func didGetNotification( _ notification: Notification) {
         let text = notification.object as! String?
 //        zodiacSignLabel.text = text
@@ -76,8 +81,6 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
             
         }
     
-    
-    
     func presentLogOutAlert() {
         let alertController = UIAlertController(title: "Log Out?" , message: "Are you sure you want to log out?", preferredStyle: .alert)
         let noAction = UIAlertAction(title: "Dismiss", style: .default)
@@ -91,20 +94,20 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
             alertController.addAction(noAction)
             alertController.addAction(yesAction)
             self.present(alertController, animated: true)
-            
+        
         }
-    
-    
 #warning("You are not calling this func at this time. Think through _when_ you should update the UI with the Users information")
-    func updateUI() {
-        guard let user = viewModel.user,
-              let userDetails = viewModel.userDetails else { return }
-        DispatchQueue.main.async {
-            self.zodiacSignLabel.text = userDetails.zodiacSign
-            self.userEmailLabel.text = user.email
-            self.userCycleLength.text = userDetails.cycleLength
-            self.userPeriodLength.text = userDetails.lastCycle
-            
-        }
-    }
+//    func updateUI() {
+//              let userDetails = viewModel.userDetails else { return }
+//        DispatchQueue.main.async {
+//            self.zodiacSignLabel.text = userDetails.zodiacSign
+//            self.userEmailLabel.text = user.email
+//            self.userCycleLength.text = userDetails.cycleLength
+//            self.userPeriodLength.text = userDetails.lastCycle
+//
+//        }
+//    }
+    
+    
+
 }

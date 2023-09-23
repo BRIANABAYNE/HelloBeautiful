@@ -24,6 +24,7 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
     var zodiacSignString: String?
     static var completionHandler: ((String?) -> Void)?
     var disclosurePopUP: PopUp!
+  
     
     // MARK: - Lifecyles
     override func viewDidLoad() {
@@ -32,7 +33,7 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
         sunSignPicker.dataSource = self
         sunSignPicker.delegate = self
         configureLastCycleDatePicker()
-        
+       
         
         //        NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: Notification.Name("text"), object: nil)
         
@@ -101,15 +102,15 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
 //        completionHandler?(field.text)
 //        dismiss(animated: true, completion: nil)
         
-        let userSettingStoryboard = UIStoryboard(name:"UserSettings", bundle: nil)
-        
-        
-        let userSettings = userSettingStoryboard.instantiateViewController(identifier:"Settings") as! UserSettingDetailViewController
-        userSettings.modalPresentationStyle = .fullScreen
-        present(userSettings,animated: true)
-        
-        NotificationCenter.default.post(name: Notification.Name("text"), object: periodLengthTextField.text)
-        dismiss(animated: true, completion: nil)
+//        let userSettingStoryboard = UIStoryboard(name:"UserSettings", bundle: nil)
+//        
+//        
+//        let userSettings = userSettingStoryboard.instantiateViewController(identifier:"Settings") as! UserSettingDetailViewController
+//        userSettings.modalPresentationStyle = .fullScreen
+//        present(userSettings,animated: true)
+//        
+//        NotificationCenter.default.post(name: Notification.Name("text"), object: periodLengthTextField.text)
+//        dismiss(animated: true, completion: nil)
         
         
         }

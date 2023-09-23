@@ -19,6 +19,7 @@ class UserDetailsViewModel {
     // MARK: - Properties
     var userDetails: UserDetails?
     
+  
     let data = ["Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capicorn","Aquarius","Pisces"]
     
     // created the position. This is their empolyee number when they are hired.
