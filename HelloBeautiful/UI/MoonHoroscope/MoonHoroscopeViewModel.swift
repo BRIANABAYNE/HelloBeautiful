@@ -33,7 +33,7 @@ class MoonHoroscopeViewModel {
         self.delegate = injectedDelegate
         self.service = injectedMoonHoroscopeService
         fetchMoonDetails()
-        fetchUser()
+        fetchUserZodiacSign()
     }
     
     
@@ -53,7 +53,7 @@ class MoonHoroscopeViewModel {
         }
     }
     
-    func fetchUser() {
+    func fetchUserZodiacSign() {
         let defaultStore = Firestore.firestore()
          defaultStore.collection("UserDetails")
             .document((self.userData?.id)!).getDocument { snapshot, error in
