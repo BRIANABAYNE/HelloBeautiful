@@ -66,6 +66,10 @@ class UserDetailsViewModel {
         
     }
     
+    
+    
+    
+    
 } // end of ViewModel
 
 

@@ -69,6 +69,7 @@ class MoonHoroscopeViewModel {
                 }
             }
     
+
     func fetchHoroscope(userSign: String) {
         service.fetchHoroscope(sunSign: userSign) { result in
             switch result {

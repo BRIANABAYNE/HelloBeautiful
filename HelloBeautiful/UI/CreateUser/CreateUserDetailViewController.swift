@@ -38,15 +38,15 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
 //        let createUserDetailsVC = CreateUserDetailViewController()
 //        createUserDetailsVC.text =
 
-        let createUserDeailsVC = storyboard?.instantiateViewController(identifier: "UserSettingDetailViewController") as! UserSettingDetailViewController
-        createUserDeailsVC.text = emailTextField.text
+//        let createUserDeailsVC = storyboard?.instantiateViewController(identifier: "UserSettingDetailViewController") as! UserSettingDetailViewController
+//        createUserDeailsVC.text = emailTextField.text
 //        let createUserDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "UserSettingDetailViewController") as! UserSettingDetailViewController
 //        createUserDetailViewController.text = emailTextField.text
 //        createUserDetailViewController.userEmail = emailTextField.text!
 //        createUserDetailViewController.password = passwordTextField.text!
 //        self.navigationController?.pushViewController(createUserDetailViewController, animated: true)
-        createUserDeailsVC.modalPresentationStyle = .fullScreen
-        present(createUserDeailsVC, animated: true, completion: nil)
+//        createUserDeailsVC.modalPresentationStyle = .fullScreen
+//        present(createUserDeailsVC, animated: true, completion: nil)
     }
 }
 

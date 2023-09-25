@@ -9,13 +9,22 @@ import Foundation
 import FirebaseFirestoreSwift
 
 
-#warning("Combine this with USER")
+
 struct UserDetails: Codable {
-    @DocumentID var id: String?
+    var id: String?
     let zodiacSign: String
     let cycleLength: String
     let lastCycle: String
     let collectionType: String
+    
+//
+//    init(uid: String, dictionary: [String: Any]) {
+//        self.uid = uid
+//        self.zodiacSign = dictionary["zodiacSign"] as? String ?? ""
+//        self.cycleLength = dictionary["cycleLength"] as? String ?? ""
+//        self.lastCycle = dictionary["lastCycle"] as? String ?? ""
+//        self.collectionType = dictionary["collectionType"] as? String ?? ""
+//    }
 
 }
 

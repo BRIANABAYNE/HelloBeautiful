@@ -17,10 +17,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="JcA-Rp-saP" kind="relationship" relationship="viewControllers" id="ny3-TR-Ziv"/>
                         <segue destination="mbr-KY-cNh" kind="relationship" relationship="viewControllers" id="Xcp-2b-fdu"/>
                         <segue destination="i2i-zu-h1i" kind="relationship" relationship="viewControllers" id="exv-8a-DFq"/>
                         <segue destination="rcT-Y2-iVp" kind="relationship" relationship="viewControllers" id="9JK-0j-d6e"/>
+                        <segue destination="JcA-Rp-saP" kind="relationship" relationship="viewControllers" id="QwJ-kL-2gY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e3S-qg-4PQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -107,7 +107,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qDw-do-ofe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="250" y="82"/>
+            <point key="canvasLocation" x="237" y="-303"/>
         </scene>
         <!--Moon-->
         <scene sceneID="dUE-8E-30s">
