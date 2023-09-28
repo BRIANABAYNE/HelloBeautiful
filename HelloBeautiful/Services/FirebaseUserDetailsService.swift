@@ -38,6 +38,8 @@ struct FirebaseUerDetailsService: FirebaseUserDetailServiceable {
             let documentRef = try ref.collection(Constants.UserDetails.userDetailsCollectionPath).addDocument(from: userDetails, completion: { _ in
                 
             })
+            // How do I save this document ID to then use for other network calls.
+            UserDefaults.standard.set(documentRef.documentID, forKey: "UserDocumentID")
             completion(.success(documentRef.documentID))
         } catch {
             print("Oh no, something went wrong with the save", error.localizedDescription)
