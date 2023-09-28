@@ -7,6 +7,7 @@
 
 import UIKit
 
+@IBDesignable // allows to show on the storyboard
 class FeelingsViewController: UIViewController {
     
     // MARK: - Outlets
@@ -27,6 +28,17 @@ var viewModel: FeelingsViewModel!
 
     viewModel = FeelingsViewModel()
    
+////       flowSegmentControl.selectionViewFillType = .fillSegment
+////        flowSegmentControl.titleDistribution = .equalSpacing
+//        segmentedControl.isDragEnabled = true
+//        segmentedControl.isSizeAdjustEnabled = true
+//        segmentedControl.isSwitchBehaviorEnabled = false
+//        flowSegmentControl.containerBackgroundColor = .white
+//        segmentedControl.cornerRadius = .constant(value: 15)
+//        segmentedControl.cornerCurve = .continous
+//        segmentedControl.padding = .init(width: 2, height: 2)
+//
+        
     }
     
     
@@ -75,6 +87,7 @@ var viewModel: FeelingsViewModel!
        let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
                 viewModel.model.flow = selectedTitle
                 print("Selected option: \(viewModel.model.flow)")
+        
     }
 
     @IBAction func mucusSegmentControlAction(_ sender: UISegmentedControl) {

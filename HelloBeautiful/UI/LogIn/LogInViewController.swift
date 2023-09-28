@@ -16,7 +16,7 @@ class LogInViewController: UIViewController {
     //MARk: - Outlets
     @IBOutlet weak var logInEmaiTextField: UITextField!
     @IBOutlet weak var logInPasswordTextField: UITextField!
-    @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
+
     
     // MARK: - Properties
     var viewModel:LogInViewModel!
@@ -35,6 +35,8 @@ class LogInViewController: UIViewController {
         // call the function appleIDStateRevoked if user revoke the sign in in Settings app
         
         NotificationCenter.default.addObserver(self, selector: #selector(appleIDStateRevoked), name: ASAuthorizationAppleIDProvider.credentialRevokedNotification, object: nil)
+
+        
     }
     
     

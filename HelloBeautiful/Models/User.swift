@@ -12,8 +12,8 @@ struct User: Codable {
     var id: String?
     var email: String
     var password: String
-//    let zodiacSign: String
     var collectionType: String
+//    let zodiacSign: String
     
 //    
 //    init(UID: String, dictionary: [String: Any]) {

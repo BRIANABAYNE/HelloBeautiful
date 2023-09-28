@@ -9,6 +9,7 @@ import Foundation
 import FirebaseAuth
 
 
+
 protocol LogInViewModelDelegate: LogInViewController {
 }
 
@@ -32,7 +33,7 @@ class LogInViewModel {
         service.signIn(email: email, password: password) { result  in
             switch result {
             case .success(_):
-              self.user = User(id: "id", email: email, password: password, collectionType: "" )
+                self.user = User(email: email, password: password, collectionType: "")
                 self.delegate?.success(user: self.user!)
                 print("User logged in")
                 #warning("Perhapes we should only change the screen if logging in was successful... Which means you'll need a way to communciate that it was successful to the VC")
