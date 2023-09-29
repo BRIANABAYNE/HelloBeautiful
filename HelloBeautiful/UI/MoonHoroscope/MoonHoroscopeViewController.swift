@@ -27,9 +27,6 @@ class MoonHoroscopeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel = MoonHoroscopeViewModel(injectedDelegate: self)
-        // TODO: Call setHorisope() Once the user is ready. Think through _when_ to do this
-        //        setHoroscope()
-      
     }
     
     // MARK: - Functions
@@ -47,15 +44,14 @@ class MoonHoroscopeViewController: UIViewController {
 extension MoonHoroscopeViewController: MoonHororscopeViewModelDelegate {
     func updateUI() {
         guard let tld = viewModel.tld,
-              let moon = viewModel.moonData else { return }
-//              let horoscope = viewModel.horoscopeData,
+              let moon = viewModel.moonData,
+        let horoscope = viewModel.horoscopeData else { return }
         self.zodiacSignLabel.text = moon.zodiacSign
         self.moonPhaseLabel.text = moon.moonPhase
-//        self.moonDateLabel.text = tld.datestamp
         self.moonDistanceLabel.text = "\(moon.moonDistance)"
         self.moonriseLabel.text = moon.moonrise
         self.illuminationLabel.text = moon.illumination
-//        self.horoscopeLable.text = horoscope.horoscope
+       self.horoscopeLable.text = horoscope.horoscope
         
     }
 }
