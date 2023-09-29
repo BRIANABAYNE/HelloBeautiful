@@ -21,8 +21,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Zodiac Sign" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5p-2p-2vt">
-                                <rect key="frame" x="149" y="151" width="105" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Weekly Horoscope" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFJ-4r-y5f">
+                                <rect key="frame" x="107" y="351" width="180" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Qsb-Nm-ztt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zodiac Sign" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5p-2p-2vt">
+                                <rect key="frame" x="143" y="128" width="105" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9Da-Tr-Qsb"/>
                                 </constraints>
@@ -47,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Illumination Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxS-qo-5Jp">
-                                <rect key="frame" x="150" y="789" width="93" height="17"/>
+                                <rect key="frame" x="149" y="810" width="93" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -61,7 +70,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Current Moon llumination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcF-Zt-VB3">
-                                <rect key="frame" x="93" y="756" width="221" height="25"/>
+                                <rect key="frame" x="91" y="777" width="221" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Rlp-P9-Dv6"/>
                                 </constraints>
@@ -78,8 +87,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="“In astrology, the moon represents our emotions, intuition, and subconscious.” " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wby-wK-ghR">
-                                <rect key="frame" x="32" y="51" width="329" height="78"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“In astrology, the moon represents our emotions, intuition, and subconscious.” " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wby-wK-ghR">
+                                <rect key="frame" x="48" y="51" width="329" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="81B-hN-mRh"/>
                                 </constraints>
@@ -87,11 +96,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Moon 1" translatesAutoresizingMaskIntoConstraints="NO" id="F9X-bo-NmZ">
-                                <rect key="frame" x="125" y="189" width="129" height="153"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Current Moon Zodiac Sign" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00i-Gr-tEe">
-                                <rect key="frame" x="82" y="118" width="238" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Moon Zodiac Sign" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00i-Gr-tEe">
+                                <rect key="frame" x="76" y="102" width="238" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="vP5-bm-bjN"/>
                                 </constraints>
@@ -108,15 +114,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Weekly Horoscope Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAu-7p-vnw">
-                                <rect key="frame" x="26" y="405" width="351" height="146"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="410" id="5oI-tr-FHL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbI-Ru-eHA">
                                 <rect key="frame" x="22.000000000000007" y="713" width="115.66666666666669" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -124,10 +121,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Weekly Horoscope" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFJ-4r-y5f">
-                                <rect key="frame" x="106" y="339" width="180" height="25"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Moon 1" translatesAutoresizingMaskIntoConstraints="NO" id="F9X-bo-NmZ">
+                                <rect key="frame" x="118" y="59" width="155" height="408"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Weekly Horoscope Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAu-7p-vnw">
+                                <rect key="frame" x="22" y="260" width="351" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="Qsb-Nm-ztt"/>
+                                    <constraint firstAttribute="height" constant="300" id="Xos-v8-gOs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -138,10 +138,23 @@
                         <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                         <color key="tintColor" red="0.89990442991256714" green="0.078122563660144806" blue="0.95671302080154419" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="CAu-7p-vnw" firstAttribute="leading" secondItem="Hb0-zy-qss" secondAttribute="leading" constant="22" id="56h-bM-q3J"/>
-                            <constraint firstItem="CAu-7p-vnw" firstAttribute="top" secondItem="F9X-bo-NmZ" secondAttribute="bottom" id="HRe-Jc-SIV"/>
-                            <constraint firstItem="DA3-HK-v4z" firstAttribute="top" secondItem="CAu-7p-vnw" secondAttribute="bottom" constant="20" id="Q4S-Zm-l1r"/>
-                            <constraint firstAttribute="trailing" secondItem="CAu-7p-vnw" secondAttribute="trailing" constant="20" id="TS9-8N-7fs"/>
+                            <constraint firstItem="jFJ-4r-y5f" firstAttribute="top" secondItem="CAu-7p-vnw" secondAttribute="bottom" constant="26" id="4Pc-ER-KOw"/>
+                            <constraint firstItem="00i-Gr-tEe" firstAttribute="leading" secondItem="Hb0-zy-qss" secondAttribute="leading" constant="76" id="Dvx-Bp-UKQ"/>
+                            <constraint firstItem="Hb0-zy-qss" firstAttribute="trailing" secondItem="Wby-wK-ghR" secondAttribute="trailing" constant="16" id="Id0-9d-kXY"/>
+                            <constraint firstItem="Hb0-zy-qss" firstAttribute="trailing" secondItem="F9X-bo-NmZ" secondAttribute="trailing" constant="132" id="Ngi-Af-c91"/>
+                            <constraint firstItem="Hb0-zy-qss" firstAttribute="trailing" secondItem="CAu-7p-vnw" secondAttribute="trailing" constant="16" id="QEb-nk-361"/>
+                            <constraint firstItem="Hb0-zy-qss" firstAttribute="trailing" secondItem="T5p-2p-2vt" secondAttribute="trailing" constant="145" id="RlO-xr-5xN"/>
+                            <constraint firstItem="Wby-wK-ghR" firstAttribute="leading" secondItem="Hb0-zy-qss" secondAttribute="leading" constant="48" id="Rx4-ub-qLe"/>
+                            <constraint firstItem="Wby-wK-ghR" firstAttribute="top" secondItem="Si4-qP-EfK" secondAttribute="top" constant="51" id="SKk-DH-4Vz"/>
+                            <constraint firstItem="Hb0-zy-qss" firstAttribute="trailing" secondItem="00i-Gr-tEe" secondAttribute="trailing" constant="79" id="VKc-UT-iMc"/>
+                            <constraint firstItem="F9X-bo-NmZ" firstAttribute="leading" secondItem="Hb0-zy-qss" secondAttribute="leading" constant="106" id="ZJh-jK-vRP"/>
+                            <constraint firstItem="F9X-bo-NmZ" firstAttribute="top" secondItem="00i-Gr-tEe" secondAttribute="bottom" constant="-75" id="eIm-EF-eH7"/>
+                            <constraint firstItem="00i-Gr-tEe" firstAttribute="top" secondItem="Wby-wK-ghR" secondAttribute="bottom" constant="1" id="gnd-kg-xfg"/>
+                            <constraint firstItem="T5p-2p-2vt" firstAttribute="leading" secondItem="Hb0-zy-qss" secondAttribute="leading" constant="143" id="hoR-vm-UA2"/>
+                            <constraint firstItem="CAu-7p-vnw" firstAttribute="top" secondItem="T5p-2p-2vt" secondAttribute="bottom" constant="247" id="l00-WQ-PNB"/>
+                            <constraint firstItem="T5p-2p-2vt" firstAttribute="top" secondItem="00i-Gr-tEe" secondAttribute="bottom" constant="1" id="qcE-In-f6a"/>
+                            <constraint firstItem="T5p-2p-2vt" firstAttribute="top" secondItem="00i-Gr-tEe" secondAttribute="bottom" constant="1" id="w2c-Gn-ix9"/>
+                            <constraint firstItem="CAu-7p-vnw" firstAttribute="leading" secondItem="Hb0-zy-qss" secondAttribute="leading" constant="26" id="yNg-cX-iLd"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
@@ -152,7 +165,9 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Moon" image="moon.stars.fill" catalog="system" id="2EW-id-azy"/>
+                    <tabBarItem key="tabBarItem" title="Moon" image="moon.stars.fill" catalog="system" id="2EW-id-azy">
+                        <color key="badgeColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="horoscopeLable" destination="CAu-7p-vnw" id="cUB-vZ-l3u"/>
                         <outlet property="illuminationLabel" destination="fxS-qo-5Jp" id="GWU-SJ-Efc"/>

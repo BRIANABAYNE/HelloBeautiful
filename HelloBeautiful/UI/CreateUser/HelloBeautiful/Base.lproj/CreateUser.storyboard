@@ -11,12 +11,12 @@
         <scene sceneID="lCY-E5-ltc">
             <objects>
                 <viewController storyboardIdentifier="UIViewController-MYf-iT-R6P" id="MYf-iT-R6P" customClass="CreateUserDetailViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qY8-j2-6pb" customClass="GradientView" customModule="HelloBeautiful" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="qY8-j2-6pb" customClass="GradientView" customModule="HelloBeautiful" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRe-gH-gKU" customClass="BBButton" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="30" y="615" width="333" height="44"/>
+                                <rect key="frame" x="30" y="631" width="333" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0mQ-h0-zrB"/>
                                 </constraints>
@@ -36,7 +36,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4WU-ez-grD" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="30" y="311" width="333" height="34"/>
+                                <rect key="frame" x="30" y="311" width="333" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Cvp-8V-vt4"/>
                                 </constraints>
@@ -44,7 +44,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAV-0b-c9i" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="30" y="365" width="333" height="50"/>
+                                <rect key="frame" x="30" y="381" width="333" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="35S-4Z-hSh"/>
                                 </constraints>
@@ -71,7 +71,7 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
-                                <color key="value" red="0.73590630292892456" green="0.47093661374238088" blue="0.6785717602172936" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="value" red="0.81176470588235294" green="0.62352941176470589" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

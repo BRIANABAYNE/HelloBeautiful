@@ -72,13 +72,13 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
         
         let imageView = UIImageView(frame: cell.frame)
         if (indexPath.item == 0) {
-            imageView.image = UIImage(named: "Blood")
+            imageView.image = UIImage(named: "Period Positivity")
         }
         else if (indexPath.item == 1) {
-             imageView.image = UIImage(named: "Feelings")
+             imageView.image = UIImage(named: "Moon")
             }
         else if (indexPath.item == 2 ) {
-            imageView.image = UIImage(named: "Moon")
+            imageView.image = UIImage(named: "Feelings")
         }
         imageView.contentMode = .scaleToFill
         cell.add(view: imageView, left: 0, right: 0, top: 0, bottom: 0)

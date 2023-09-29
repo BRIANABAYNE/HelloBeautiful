@@ -17,7 +17,7 @@
         <scene sceneID="tm8-Ug-hYG">
             <objects>
                 <viewController storyboardIdentifier="Symptoms" title="Symptoms" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CuA-bp-sCH" customClass="FeelingsViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Fvb-Tb-n6n">
+                    <view key="view" contentMode="scaleToFill" id="Fvb-Tb-n6n" customClass="GradientView" customModule="HelloBeautiful" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -219,6 +219,14 @@
                             <constraint firstItem="9FQ-F4-uAH" firstAttribute="trailing" secondItem="gXk-Lg-obM" secondAttribute="trailing" constant="25" id="ium-b5-61s"/>
                             <constraint firstItem="Qgd-81-Pzd" firstAttribute="leading" secondItem="9FQ-F4-uAH" secondAttribute="leading" constant="159" id="lIQ-hC-Ic2"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                <color key="value" red="0.81176470588235294" green="0.62352941176470589" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feelings" image="heart.fill" catalog="system" id="tJV-Aa-hqU"/>
                     <navigationItem key="navigationItem" id="Uxr-qR-uyX"/>
