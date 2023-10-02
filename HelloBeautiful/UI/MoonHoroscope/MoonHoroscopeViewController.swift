@@ -34,7 +34,7 @@ class MoonHoroscopeViewController: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
+
         let scrollView = UIScrollView(frame: CGRect(x: 10, y: 10, width: view.frame.size.width - 20, height: view.frame.size.height - 20 ))
         scrollView.backgroundColor = .gray
         view.addSubview(scrollView)
@@ -52,7 +52,6 @@ class MoonHoroscopeViewController: UIViewController {
     //        }
     //    }
 }
-
 // MARK: - Extensions
 extension MoonHoroscopeViewController: MoonHororscopeViewModelDelegate {
     func updateUI() {

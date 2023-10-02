@@ -8,9 +8,8 @@
 import Foundation
 import FirebaseAuth
 
-
-
 protocol LogInViewModelDelegate: LogInViewController {
+    
 }
 
 class LogInViewModel {
