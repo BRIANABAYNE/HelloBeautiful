@@ -15,5 +15,14 @@ struct FeelingsViewModel {
     var model = Diary()
    // var selectedDate: Date
    
+    var dairy: Diary?
+    
+    
+    // MARK: - Properties
+    var feelingsSOT: [Diary]?
+    
+    
+    
+    
     
 }

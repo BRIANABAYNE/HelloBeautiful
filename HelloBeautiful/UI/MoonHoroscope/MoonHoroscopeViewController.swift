@@ -29,18 +29,22 @@ class MoonHoroscopeViewController: UIViewController {
         super.viewDidLoad()
         self.viewModel = MoonHoroscopeViewModel(injectedDelegate: self)
         
-        view.backgroundColor = .white
+        //view.backgroundColor = .white
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-
-        let scrollView = UIScrollView(frame: CGRect(x: 10, y: 10, width: view.frame.size.width - 20, height: view.frame.size.height - 20 ))
-        scrollView.backgroundColor = .gray
-        view.addSubview(scrollView)
-        scrollView.contentSize = CGSize(width: view.frame.size.width, height: 3000)
-        view.sendSubviewToBack(scrollView)
-    }
+    // MARK: - ScrollView
+    
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//
+//        let scrollView = UIScrollView(frame: CGRect(x: 5, y: 5, width: view.frame.size.width - 5, height: view.frame.size.height - 5 ))
+//        scrollView.backgroundColor = .gray
+//        view.addSubview(scrollView)
+//        scrollView.contentSize = CGSize(width: view.frame.size.width, height: 4000)
+//        view.sendSubviewToBack(scrollView)
+//
+//
+//    }
 
     // MARK: - Functions
     // set horocsope will need to access current user saved data from firebase and will update that when I get to that. This will always be dependant on the user create page, UI being finished.

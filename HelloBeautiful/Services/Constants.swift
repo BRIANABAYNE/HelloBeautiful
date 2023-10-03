@@ -27,6 +27,10 @@ struct Constants {
     struct Fonts {
         static let mainstay = "Mainstay"
     }
+    
+    struct Diary {
+        static let diaryCollectionPath = "Diary"
+    }
 
     
 }
