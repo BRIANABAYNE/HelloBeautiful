@@ -53,7 +53,7 @@ class UserDetailsViewModel {
             case .success(_):
                 print("User Deatils Were Created")
             case .failure(let failure):
-                print("There was an error")
+                print("There was an error creating the user.")
              self.delegate?.encountered(failure)
             }
         })
