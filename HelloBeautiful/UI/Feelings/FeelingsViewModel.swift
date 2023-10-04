@@ -17,15 +17,15 @@ struct FeelingsViewModel {
     
     // MARK: - Properties
     // model ojects
-    var model: Diary
+  //  var model: Diary
    // var selectedDate: Date
 //    
-//    var model: Diary() 
+    var model = Diary()
 //   
     var userDiary: Diary?
     
 
-    var feelingsSOT: [Diary]?
+   // var feelingsSOT: [Diary]?
     
     private let feelingsService: FirebaseDiaryServicable
     weak var feelingsDelegate: FeelingsViewModelDelegate?
@@ -52,7 +52,7 @@ struct FeelingsViewModel {
     func createDiary(flow: String, cervicalMucus: String, feels: String, cravings: String, symptoms: String, notes: String, date: Date) {
         
         let diaryDetails = Diary(flow: flow, cervicalMucus: cervicalMucus, feels: feels, cravings: cravings, symptoms: symptoms, notes: notes, date: date, feelingsCollectionType: Constants.Diary.diaryCollectionPath)
-        feelingsService.saveDiary(userDiary: diaryDetails) { result in
+        feelingsService.saveDiary(userDiary: diaryDetails, completion: { result in
             switch result {
             case.success(_):
                 print("User Diary was created")
@@ -60,12 +60,12 @@ struct FeelingsViewModel {
                 print("There was an error creating the Diary")
                 self.feelingsDelegate?.encountered(failure)
             }
-        }
+        })
     }
     
     func updateDiary(newFlow: String, newCervicalMucus: String, newFeels: String, newCravings: String, newSymptoms: String, newNotes: String) {
         guard let diaryToUpdate = self.userDiary else { return }
-        let updatedDiary = Diary(flow: newFlow, cervicalMucus: newCervicalMucus, feels: newFeels, cravings: newCravings, symptoms: newSymptoms, notes: newNotes, diaryID: diaryToUpdate.diaryID, feelingsCollectionType: Constants.Diary.diaryCollectionPath)
+        let updatedDiary = Diary(diaryID:diaryToUpdate.diaryID, flow: newFlow, cervicalMucus: newCervicalMucus, feels: newFeels, cravings: newCravings, symptoms: newSymptoms, notes: newNotes,feelingsCollectionType: Constants.Diary.diaryCollectionPath)
                 feelingsService.updateDiary(userDiary: updatedDiary)
     }
 

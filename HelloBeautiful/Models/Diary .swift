@@ -24,6 +24,7 @@ struct FeelingsEntry: Encodable {
 struct Diary: Encodable  {
     // Int becasue we are using the index but it might be possible to keep as a string.
    // var sfSymbol: UIImage?
+    var diaryID: String?
     var flow: String = ""
     var cervicalMucus: String = ""
     var feels: String = ""
@@ -32,8 +33,7 @@ struct Diary: Encodable  {
     var notes: String = ""
     var uuid: UUID = UUID()
     var date: Date = Date()
-    var diaryID: String?
-    var feelingsCollectionType: String 
+    var feelingsCollectionType: String?
 }
 
 //TEACHING NOTE: - BEcuase you are using segemented controll to chose the feels and such.. each `segment` has an Integer associated to it. I wouls save the INT, not the emoji
@@ -49,7 +49,7 @@ extension Diary: Equatable {
 
 extension Date {
 
-    func asString() -> String {
+      func asString() -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = .long
         formatter.timeStyle = .long

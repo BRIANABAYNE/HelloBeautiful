@@ -240,6 +240,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cravingsSegmentControl" destination="sq6-78-OOF" id="rQD-Se-FPS"/>
+                        <outlet property="feelingsDateLabel" destination="8ag-IQ-b6C" id="AC1-zk-AOp"/>
                         <outlet property="feelingsSegmentControl" destination="bHF-95-EMc" id="gaw-qZ-7e9"/>
                         <outlet property="flowSegmentControl" destination="PUq-u7-Baf" id="RY4-CX-F0U"/>
                         <outlet property="mucusSegmentControl" destination="TwP-xY-YSD" id="Zvw-JH-T5q"/>

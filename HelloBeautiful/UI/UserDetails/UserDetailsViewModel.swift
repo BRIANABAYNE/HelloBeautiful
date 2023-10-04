@@ -59,8 +59,7 @@ class UserDetailsViewModel {
         })
     }
   
-    
-    
+
     func updateUser(newZodiacSign: String, newCycleLength: String, newLastCycle: String) {
         guard let userToUpdate = self.userDetails else { return }
         let updatedUser = UserDetails(id: userToUpdate.id, zodiacSign: newZodiacSign, cycleLength: newCycleLength, lastCycle: newLastCycle, collectionType: Constants.UserDetails.userDetailsCollectionPath)
