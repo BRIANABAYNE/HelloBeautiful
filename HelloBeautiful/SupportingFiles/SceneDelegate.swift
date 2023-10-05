@@ -37,6 +37,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 let logIn = storyboard.instantiateViewController(identifier:"LogIn")
                 self.window?.rootViewController = logIn
             } else {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                let tabBar = storyboard.instantiateViewController(identifier:"tabBar")
+                                self.window?.rootViewController = tabBar
+                
             }
         })
     }

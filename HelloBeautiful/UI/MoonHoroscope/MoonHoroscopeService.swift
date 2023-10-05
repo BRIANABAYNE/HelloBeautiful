@@ -47,7 +47,7 @@ struct MoonHoroscopeService: APIDataProvidable, MoonHoroscopeServiceable {
         request.httpMethod = "GET"
         request.url?.append(path:"horoscope")
         let apiQueryItem = URLQueryItem(name:"day", value:"week")
-        let apiQuerySecondItem = URLQueryItem(name:"sunsign", value: sunSign)
+        let apiQuerySecondItem = URLQueryItem(name:"sunsign", value: sunSign.lowercased())
         request.url?.append(queryItems: [apiQueryItem,apiQuerySecondItem])
         print(request.url)
         perform(request) { result in

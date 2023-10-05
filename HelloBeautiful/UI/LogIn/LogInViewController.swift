@@ -159,15 +159,6 @@ class LogInViewController: UIViewController {
             showAlert(message:"Enter both Email and Password")
         }
     }
-    func success(user: User) {
-        
-        self.hideActivityIndicator()
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let logIn = storyboard.instantiateViewController(identifier:"tabBar")
-        self.view.window?.rootViewController = logIn
-
-    }
 
     @IBAction func createAccountButtonTapped(_ sender: Any) {
         //TODO: - FINISH THIS
@@ -200,6 +191,16 @@ class LogInViewController: UIViewController {
 extension LogInViewController: LogInViewModelDelegate {
     func encountered(_ error: Error) {
         // TODO: - Present Alert
+        showAlert(message: error.localizedDescription)
+    }
+    func success() {
+        
+        self.hideActivityIndicator()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let logIn = storyboard.instantiateViewController(identifier:"tabBar")
+        self.view.window?.rootViewController = logIn
+        
     }
 }
 // MARK: - Extension

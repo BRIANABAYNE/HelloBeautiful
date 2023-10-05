@@ -35,9 +35,7 @@ class MoonHoroscopeViewModel {
         self.delegate = injectedDelegate
         self.service = injectedMoonHoroscopeService
         fetchMoonDetails()
-        fetchUserZodiacSign()
-//      fetchUserZodiacSign()
-//        fetchHoroscope(userSign: lowercaseZodiac)
+        fetchHoroscope()
     }
     
     
@@ -83,28 +81,30 @@ class MoonHoroscopeViewModel {
 //        }
 //    
 //
-    func fetchUserZodiacSign(){
-        
-        let userID = UserDefaults.standard.value(forKey: "UserDocumentID") as! String
-        let defaultStore = Firestore.firestore()
-        defaultStore.collection("UserDetails").document(userID).getDocument(as: UserDetails.self) { result in
-            print(result)
-            // Use the result to fetch the zodiac sign
-            
-        }
-        defaultStore.collection("UserDetails")
-            .document(userID).getDocument { snapshot, error in
-                do {
-                    let user = try (snapshot?.data(as: UserDetails.self))
-                    self.fetchHoroscope(userSign: (user?.zodiacSign.lowercased())!)
-                    self.userDetail = user
-                    
-                } catch {
-                    print("print error")
-                }
-                
-            }
-    }
+//    func fetchUserZodiacSign(){
+//
+//        let userID = UserDefaults.standard.value(forKey: "UserDocumentID") as! String
+//
+//        service.fetchHoroscope(sunSign: <#T##String#>, completion: <#T##(Result<Horoscope, NetworkingError>) -> Void#>)
+//        let defaultStore = Firestore.firestore()
+//        defaultStore.collection("UserDetails").document(userID).getDocument(as: UserDetails.self) { result in
+//            print(result)
+//            // Use the result to fetch the zodiac sign
+//
+//        }
+//        defaultStore.collection("UserDetails")
+//            .document(userID).getDocument { snapshot, error in
+//                do {
+//                    let user = try (snapshot?.data(as: UserDetails.self))
+//                    self.fetchHoroscope(userSign: (user?.zodiacSign.lowercased())!)
+//                    self.userDetail = user
+//
+//                } catch {
+//                    print("print error")
+//                }
+//
+//            }
+//    }
     
     
     //    func fetchUserZodiacSign() {
@@ -121,9 +121,9 @@ class MoonHoroscopeViewModel {
     //}
     
     
-    func fetchHoroscope(userSign: String) {
+    func fetchHoroscope() {
         
-//        let sign = UserDefaults.standard.string(forKey: "UserZodiacSign")
+        guard let userSign = UserDefaults.standard.string(forKey: "UserZodiacSign") else {print("SHOOT! SOMETHING WENT WRONG WITH THE USER DEFAULTS ZODIAK");return}
         service.fetchHoroscope(sunSign: userSign) { result in
             switch result {
             case .success(let horoscope):

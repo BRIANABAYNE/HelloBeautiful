@@ -17,8 +17,9 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
     // MARK: -  Properties
     
     var viewModel:CreateUserViewModel!
+    // Notifications and listener is 1:Many
     static let notificationSendUserDetails = Notification.Name("")
-   
+   // Protocol and Delegate is for 1:1
     
     // MARK: - LifeCycles
     override func viewDidLoad() {

@@ -20,10 +20,11 @@ struct FirebaseAuthService: FirebaseAuthServiceable {
     func createAccount(with email: String, password: String, confirmPassword: String, completion: @escaping(Result<Bool, CreateAccountError>) -> Void) {
         if password == confirmPassword {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                
                 if let error {
                     completion(.failure(.firebaseError(error)))
                 }
+                let userAuthID = authResult?.user.uid
+                UserDefaults.standard.set(userAuthID, forKey: "UserAuthID")
                 completion(.success(true))
             }
         }
@@ -34,6 +35,8 @@ struct FirebaseAuthService: FirebaseAuthServiceable {
             if let error {
                 completion(.failure(.firebaseError(error)))
             }
+            let userAuthID = authResult?.user.uid
+            UserDefaults.standard.set(userAuthID, forKey: "UserAuthID")
             completion(.success(true))
         }
     } // end of sing in
@@ -41,6 +44,7 @@ struct FirebaseAuthService: FirebaseAuthServiceable {
     func signOut() {
         let firebaseAuth = Auth.auth()
         do {
+            UserDefaults.standard.removeObject(forKey: "UserAuthID")
             try firebaseAuth.signOut()
         } catch let signoutError as NSError {
             print("Error signing out", signoutError)
@@ -59,5 +63,5 @@ struct FirebaseAuthService: FirebaseAuthServiceable {
             }
         }
     } // end of delete
-
+    
 } // end of struct

@@ -11,46 +11,43 @@ import FirebaseStorage
 import FirebaseFirestoreSwift
 
 protocol FirebaseDiaryServicable {
-    func updateDiary(userDiary: Diary)
-    
+   
+    func updateDiary(userDiary: Diary, handler: @escaping (Result<Bool, FirebaseError>) -> Void)
     func saveDiary(userDiary: Diary, completion: @escaping(Result<String, FirebaseError>) -> Void)
 }
 
 struct FirebaseDiaryService: FirebaseDiaryServicable {
-
+    
     func saveDiary(userDiary: Diary, completion: @escaping (Result<String, FirebaseError>)-> Void) {
         let firebaseRef = Firestore.firestore()
         do {
+            let userDocID = UserDefaults.standard.string(forKey: "UserDocumentID")
             let documentFeelingsRef = try
-            firebaseRef.collection(Constants.Diary.diaryCollectionPath).addDocument(from: userDiary, completion: { _ in
-
+            firebaseRef.collection(Constants.UserDetails.userDetailsCollectionPath).document(userDocID!).collection(Constants.Diary.diaryCollectionPath).addDocument(from: userDiary, completion: { _ in
+                
             })
-
-            UserDefaults.standard.set(documentFeelingsRef, forKey: "DiaryDocumentID")
+            
             completion(.success(documentFeelingsRef.documentID))
         } catch {
             print("Oh no, something went wrong with the saving the Diary", error.localizedDescription)
             return
         }
     } // end of save
-
-    func updateDiary(userDiary: Diary) {
-        if let documentDiaryID = userDiary.diaryID {
-            let firebaseRef = Firestore.firestore()
-            let docRef =
-            firebaseRef.collection(Constants.Diary.diaryCollectionPath)
-            .document(documentDiaryID)
-
-            do {
-                try docRef.setData(from: userDiary)
-            } catch {
-                print(error)
-            }
-
-        }
-    } // end of update
-
     
+
+    func updateDiary(userDiary: Diary, handler: @escaping (Result<Bool, FirebaseError>) -> Void) {
+        let firebaseRef = Firestore.firestore()
+          if let documentID = userDiary.id {
+            let userDocID = UserDefaults.standard.string(forKey: "UserDocumentID")
+            let docref = firebaseRef.collection(Constants.UserDetails.userDetailsCollectionPath).document(userDocID!).collection(Constants.Diary.diaryCollectionPath).document(documentID)
+            do {
+                try docref.setData(from: userDiary)
+                handler(.success(true))
+            } catch {
+                handler(.failure(.firebaseError(error)))
+            }
+        }
+    } // Update
     
     
     

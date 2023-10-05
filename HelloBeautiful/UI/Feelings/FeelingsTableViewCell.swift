@@ -26,7 +26,4 @@ class FeelingsTableViewCell: UITableViewCell {
         feelingsNotesLabel.text = diary.notes
         feelingSymptomsLabel.text = diary.symptoms
     }
-
-
-
 }

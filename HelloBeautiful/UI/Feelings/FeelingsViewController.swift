@@ -28,10 +28,12 @@ class FeelingsViewController: UIViewController, FeelingsViewModelDelegate {
     // MARK: - Properties
     
     var viewModel: FeelingsViewModel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // TODO: - Update this to use the date from FB if the user came via segue
+        feelingsDateLabel.text = Date().stringValue()
+        // ^^^
         viewModel = FeelingsViewModel(injectedDelegate: self)
         
         ////       flowSegmentControl.selectionViewFillType = .fillSegment
@@ -54,12 +56,12 @@ class FeelingsViewController: UIViewController, FeelingsViewModelDelegate {
     // MARK: - Actions
     @IBAction func saveButtonTapped(_ sender: Any) {
         // This is where they will call a save function from the view model, that will save the model object to the date that they selected. Save everything from the segment controlls - this button will also go back to the calendar view page. Will need a place holder property for the date.
-        let storyboard = UIStoryboard(name:"UserCycle", bundle: nil)
-        let calenderCycle = storyboard.instantiateViewController(identifier:"calenderCycle")
-        self.view.window?.rootViewController = calenderCycle
+//        let storyboard = UIStoryboard(name:"UserCycle", bundle: nil)
+//        let calenderCycle = storyboard.instantiateViewController(identifier:"calenderCycle")
+//        self.view.window?.rootViewController = calenderCycle
         
-       guard let date = feelingsDateLabel.text,
-             let notes = notesTextField.text else { return }
+    
+        guard let notes = notesTextField.text else { return }
         notesTextField.text = "" // will make the test box empty once information is saved.
         //        notesTextField.text = diary.notes
         //        if let notesText = notesTextField.text
@@ -80,15 +82,8 @@ class FeelingsViewController: UIViewController, FeelingsViewModelDelegate {
         // symptoms segment
         let symptomsString = symptomsSegmentControl.titleForSegment(at: symptomsSegmentControl.selectedSegmentIndex) ?? ""
         viewModel.model.symptoms = symptomsString
-        // Check if the data is selected
-        //            if let selectedDate = selectedDate {
-        //                let diaryEntry = DateEntry(date: selectedDate, model: viewModel.model)
-        //
-        //                // Need to save this entry to firebase, so i'll be calling a save function that i created on viewmodel, that saves this model object to firebase for each selected day.
-        //            } // end of selectedDate
-        
-        
-        viewModel.saveDairy(flow: flowString , cervicalMucus: mucusString, feels: feelingsString, cravings: cravingsString, symptoms: symptomsString, notes: notes, date: date)
+      
+        viewModel.saveDiary(flow: flowString , cervicalMucus: mucusString, feels: feelingsString, cravings: cravingsString, symptoms: symptomsString, notes: notes, date: Date())
     }
     
     @IBAction func flowSegmentControlAction(_ sender: UISegmentedControl) {

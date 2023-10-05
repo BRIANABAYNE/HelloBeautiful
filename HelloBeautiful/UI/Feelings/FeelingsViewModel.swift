@@ -40,7 +40,7 @@ struct FeelingsViewModel {
     
     
     // MARK: - Function Crud
-    func saveDairy(flow: String, cervicalMucus: String, feels: String, cravings: String, symptoms: String, notes: String, date: Date) {
+    func saveDiary(flow: String, cervicalMucus: String, feels: String, cravings: String, symptoms: String, notes: String, date: Date) {
         if userDiary != nil {
             updateDiary(newFlow: flow, newCervicalMucus: cervicalMucus, newFeels: feels, newCravings: cravings, newSymptoms: symptoms, newNotes: notes)
 
@@ -65,8 +65,11 @@ struct FeelingsViewModel {
     
     func updateDiary(newFlow: String, newCervicalMucus: String, newFeels: String, newCravings: String, newSymptoms: String, newNotes: String) {
         guard let diaryToUpdate = self.userDiary else { return }
-        let updatedDiary = Diary(diaryID:diaryToUpdate.diaryID, flow: newFlow, cervicalMucus: newCervicalMucus, feels: newFeels, cravings: newCravings, symptoms: newSymptoms, notes: newNotes,feelingsCollectionType: Constants.Diary.diaryCollectionPath)
-                feelingsService.updateDiary(userDiary: updatedDiary)
+        let updatedDiary = Diary(id: diaryToUpdate.id, flow: newFlow, cervicalMucus: newCervicalMucus, feels: newFeels, cravings: newCravings, symptoms: newSymptoms, notes: newNotes,feelingsCollectionType: Constants.Diary.diaryCollectionPath)
+        feelingsService.updateDiary(userDiary: updatedDiary) { result in
+            //
+        }
+        
     }
 
 } // end of VM

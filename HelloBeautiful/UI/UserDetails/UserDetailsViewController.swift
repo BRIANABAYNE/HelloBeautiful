@@ -34,7 +34,7 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
         sunSignPicker.delegate = self
         configureLastCycleDatePicker()
        
-        
+        /// KARLS NOTE: Notificaitons and Listeners is for a 1:Many. Is that your goal?
         //        NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: Notification.Name("text"), object: nil)
         
     }

@@ -45,9 +45,9 @@ class UserDetailsViewModel {
     
     func createUser(zodiacSign: String, cycleLength:String, lastCycle: String) {
         
-//         UserDefaults.standard.set(zodiacSign, forKey: "UserZodiacSign")
-        
-        let details = UserDetails(zodiacSign: zodiacSign, cycleLength: cycleLength, lastCycle: lastCycle, collectionType: Constants.UserDetails.userDetailsCollectionPath)
+       let userAuthID = UserDefaults.standard.string(forKey: "UserAuthID")
+        UserDefaults.standard.set(zodiacSign, forKey: "UserZodiacSign")
+        let details = UserDetails(zodiacSign: zodiacSign, cycleLength: cycleLength, lastCycle: lastCycle, collectionType: Constants.UserDetails.userDetailsCollectionPath, userAuthID: userAuthID)
         service.save(userDetails: details, completion: { result in
             switch result {
             case .success(_):
@@ -62,7 +62,8 @@ class UserDetailsViewModel {
 
     func updateUser(newZodiacSign: String, newCycleLength: String, newLastCycle: String) {
         guard let userToUpdate = self.userDetails else { return }
-        let updatedUser = UserDetails(id: userToUpdate.id, zodiacSign: newZodiacSign, cycleLength: newCycleLength, lastCycle: newLastCycle, collectionType: Constants.UserDetails.userDetailsCollectionPath)
+        let userAuthID = UserDefaults.standard.string(forKey: "UserAuthID")
+        let updatedUser = UserDetails(id: userToUpdate.id, zodiacSign: newZodiacSign, cycleLength: newCycleLength, lastCycle: newLastCycle, collectionType: Constants.UserDetails.userDetailsCollectionPath, userAuthID: userAuthID)
         
         service.update(userDetails: updatedUser)
         

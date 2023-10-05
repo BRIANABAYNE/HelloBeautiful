@@ -16,7 +16,7 @@ struct UserDetails: Codable {
     let cycleLength: String
     let lastCycle: String
     let collectionType: String
-    
+    let userAuthID: String?
 //
 //    init(uid: String, dictionary: [String: Any]) {
 //        self.uid = uid
