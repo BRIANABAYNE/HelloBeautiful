@@ -10,23 +10,15 @@ import Foundation
 
 // MARK: - Protocol
 protocol FeelingsViewModelDelegate: FeelingsViewController {
+    func successfullyLoadedData()
     func encountered(_ error: Error)
 }
 
 struct FeelingsViewModel {
     
     // MARK: - Properties
-    // model ojects
-  //  var model: Diary
-   // var selectedDate: Date
-//    
-    var model = Diary()
-//   
+//    var model = Diary()
     var userDiary: Diary?
-    
-
-   // var feelingsSOT: [Diary]?
-    
     private let feelingsService: FirebaseDiaryServicable
     weak var feelingsDelegate: FeelingsViewModelDelegate?
     
@@ -54,6 +46,7 @@ struct FeelingsViewModel {
         feelingsService.saveDiary(userDiary: diaryDetails, completion: { result in
             switch result {
             case.success(_):
+                feelingsDelegate?.successfullyLoadedData()
                 print("User Diary was created")
             case.failure(let failure):
                 print("There was an error creating the Diary")
@@ -70,5 +63,6 @@ struct FeelingsViewModel {
         }
         
     }
+
 
 } // end of VM

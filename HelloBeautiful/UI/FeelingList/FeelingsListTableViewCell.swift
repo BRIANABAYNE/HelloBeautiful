@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FeelingsTableViewCell: UITableViewCell {
+class FeelingsListTableViewCell: UITableViewCell {
     
     // MARK: - Outlets
     

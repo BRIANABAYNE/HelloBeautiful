@@ -8,10 +8,10 @@
 import UIKit
 
 @IBDesignable // allows to show on the storyboard
-class FeelingsViewController: UIViewController, FeelingsViewModelDelegate {
-    func encountered(_ error: Error) {
-        
-    }
+class FeelingsViewController: UIViewController  {
+//    func encountered(_ error: Error) {
+//
+//    }
     
     
     // MARK: - Outlets
@@ -63,59 +63,71 @@ class FeelingsViewController: UIViewController, FeelingsViewModelDelegate {
         guard let notes = notesTextField.text else { return }
         notesTextField.text = ""
 
-        viewModel.model.notes = notes
+//        viewModel.model.notes = notes
         // flow segment
         let flowString = flowSegmentControl.titleForSegment(at: flowSegmentControl.selectedSegmentIndex) ?? ""
-        viewModel.model.flow = flowString
+//        viewModel.model.flow = flowString
         // mucus segment
         let mucusString = mucusSegmentControl.titleForSegment(at: mucusSegmentControl.selectedSegmentIndex) ?? ""
-        viewModel.model.cervicalMucus = mucusString
+//        viewModel.model.cervicalMucus = mucusString
         //feelings segment
         let feelingsString = feelingsSegmentControl.titleForSegment(at: feelingsSegmentControl.selectedSegmentIndex) ?? ""
-        viewModel.model.flow = feelingsString
+//        viewModel.model.flow = feelingsString
         // craving segment
         let cravingsString = cravingsSegmentControl.titleForSegment(at: cravingsSegmentControl.selectedSegmentIndex) ?? ""
-        viewModel.model.cravings = cravingsString
+//        viewModel.model.cravings = cravingsString
         // symptoms segment
         let symptomsString = symptomsSegmentControl.titleForSegment(at: symptomsSegmentControl.selectedSegmentIndex) ?? ""
-        viewModel.model.symptoms = symptomsString
+//        viewModel.model.symptoms = symptomsString
       
         viewModel.saveDiary(flow: flowString , cervicalMucus: mucusString, feels: feelingsString, cravings: cravingsString, symptoms: symptomsString, notes: notes, date: Date())
     }
     
     @IBAction func flowSegmentControlAction(_ sender: UISegmentedControl) {
         let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
-        viewModel.model.flow = selectedTitle
-        print("Selected option: \(viewModel.model.flow)")
+//        viewModel.model.flow = selectedTitle
+//        print("Selected option: \(viewModel.model.flow)")
         
     }
     
     @IBAction func mucusSegmentControlAction(_ sender: UISegmentedControl) {
         let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
-        viewModel.model.cervicalMucus = selectedTitle
-        print("Selected option: \(viewModel.model.cervicalMucus)")
+//        viewModel.model.cervicalMucus = selectedTitle
+//        print("Selected option: \(viewModel.model.cervicalMucus)")
         
     }
     
     @IBAction func feelsSegmentControlAction(_ sender: UISegmentedControl) {
         let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
-        viewModel.model.feels = selectedTitle
-        print("Selected option: \(viewModel.model.feels)")
+//        viewModel.model.feels = selectedTitle
+//        print("Selected option: \(viewModel.model.feels)")
         
     }
     
     @IBAction func cravingSegmentControlAction(_ sender: UISegmentedControl) {
         let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
-        viewModel.model.cravings = selectedTitle
-        print("Selected option: \(viewModel.model.cravings)")
+//        viewModel.model.cravings = selectedTitle
+//        print("Selected option: \(viewModel.model.cravings)")
         
     }
     
     @IBAction func symptomsSegmentControlAction(_ sender: UISegmentedControl) {
         let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
-        viewModel.model.symptoms = selectedTitle
-        print("Selected option: \(viewModel.model.symptoms)")
+//        viewModel.model.symptoms = selectedTitle
+//        print("Selected option: \(viewModel.model.symptoms)")
         
     }
+    
+}
+
+extension FeelingsViewController: FeelingsViewModelDelegate {
+    func successfullyLoadedData() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func encountered(_ error: Error) {
+        // present alert
+    }
+    
     
 }

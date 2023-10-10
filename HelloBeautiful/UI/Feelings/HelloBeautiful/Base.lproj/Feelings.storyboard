@@ -34,7 +34,7 @@
                                         <rect key="frame" x="0.0" y="71.666666666666657" width="353" height="67.666666666666657"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flow" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCd-aI-GZe">
-                                                <rect key="frame" x="0.0" y="0.0" width="48" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="42.666666666666664" height="32"/>
                                                 <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
                                                 <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -57,7 +57,7 @@
                                         <rect key="frame" x="0.0" y="143.33333333333331" width="353" height="67.666666666666686"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cervical Mucus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1a-en-IdL">
-                                                <rect key="frame" x="0.0" y="0.0" width="148" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="138.33333333333334" height="32"/>
                                                 <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
                                                 <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -111,7 +111,7 @@
                                         <rect key="frame" x="0.0" y="286.66666666666669" width="353" height="67.666666666666686"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cravings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgw-Wv-F8o">
-                                                <rect key="frame" x="0.0" y="0.0" width="83.333333333333329" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="79" height="32"/>
                                                 <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
                                                 <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -138,7 +138,7 @@
                                         <rect key="frame" x="0.0" y="358.33333333333331" width="353" height="67.666666666666686"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symptoms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOt-XX-MvJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="95.666666666666671" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="97" height="32"/>
                                                 <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
                                                 <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -229,16 +229,16 @@
             </objects>
             <point key="canvasLocation" x="3821" y="-820"/>
         </scene>
-        <!--Feelings Table View Controller-->
+        <!--Feelings List Table View Controller-->
         <scene sceneID="4uj-Co-fLs">
             <objects>
-                <tableViewController id="f4n-SU-4VX" customClass="FeelingsTableViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="f4n-SU-4VX" customClass="FeelingsListTableViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="f7Y-3B-Cw5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="feelingsCell" rowHeight="112" id="S8n-4S-f2w" customClass="FeelingsTableViewCell" customModule="HelloBeautiful" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="feelingsCell" rowHeight="112" id="S8n-4S-f2w" customClass="FeelingsListTableViewCell" customModule="HelloBeautiful" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="112"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S8n-4S-f2w" id="FUc-g6-9hq">
