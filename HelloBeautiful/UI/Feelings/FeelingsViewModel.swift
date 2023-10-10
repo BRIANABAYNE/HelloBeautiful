@@ -38,7 +38,6 @@ struct FeelingsViewModel {
         self.feelingsDelegate = injectedDelegate
     }
     
-    
     // MARK: - Function Crud
     func saveDiary(flow: String, cervicalMucus: String, feels: String, cravings: String, symptoms: String, notes: String, date: Date) {
         if userDiary != nil {

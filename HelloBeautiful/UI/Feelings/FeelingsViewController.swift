@@ -60,12 +60,9 @@ class FeelingsViewController: UIViewController, FeelingsViewModelDelegate {
 //        let calenderCycle = storyboard.instantiateViewController(identifier:"calenderCycle")
 //        self.view.window?.rootViewController = calenderCycle
         
-    
         guard let notes = notesTextField.text else { return }
-        notesTextField.text = "" // will make the test box empty once information is saved.
-        //        notesTextField.text = diary.notes
-        //        if let notesText = notesTextField.text
-        // setp 2 save the notes to the model object notes property
+        notesTextField.text = ""
+
         viewModel.model.notes = notes
         // flow segment
         let flowString = flowSegmentControl.titleForSegment(at: flowSegmentControl.selectedSegmentIndex) ?? ""
@@ -120,6 +117,5 @@ class FeelingsViewController: UIViewController, FeelingsViewModelDelegate {
         print("Selected option: \(viewModel.model.symptoms)")
         
     }
-    
     
 }

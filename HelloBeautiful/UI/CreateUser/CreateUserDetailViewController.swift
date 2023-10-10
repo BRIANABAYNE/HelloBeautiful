@@ -17,10 +17,7 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
     // MARK: -  Properties
     
     var viewModel:CreateUserViewModel!
-    // Notifications and listener is 1:Many
-    static let notificationSendUserDetails = Notification.Name("")
-   // Protocol and Delegate is for 1:1
-    
+
     // MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,22 +32,18 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
               let confirmPassword = confirmPasswordTextField.text,!confirmPassword.isEmpty else { return }
         viewModel.createAccount(with: email, password: password, confirmPassword: confirmPassword)
         
-        
-//        let createUserDetailsVC = CreateUserDetailViewController()
-//        createUserDetailsVC.text =
-
-//        let createUserDeailsVC = storyboard?.instantiateViewController(identifier: "UserSettingDetailViewController") as! UserSettingDetailViewController
-//        createUserDeailsVC.text = emailTextField.text
-//        let createUserDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "UserSettingDetailViewController") as! UserSettingDetailViewController
-//        createUserDetailViewController.text = emailTextField.text
-//        createUserDetailViewController.userEmail = emailTextField.text!
-//        createUserDetailViewController.password = passwordTextField.text!
-//        self.navigationController?.pushViewController(createUserDetailViewController, animated: true)
-//        createUserDeailsVC.modalPresentationStyle = .fullScreen
-//        present(createUserDeailsVC, animated: true, completion: nil)
     }
-}
-
+    
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//       if segue.identifier == "helloBeautiful" {
+//           guard let destinationVC = segue.destination as? UserDetailsViewController? else { return }
+//           destinationVC.email = emailTextField.text,
+//           password.passwordTextField.text
+           
+//    }
+    
+} // end of VC
 
 // MARK: - Extension
 

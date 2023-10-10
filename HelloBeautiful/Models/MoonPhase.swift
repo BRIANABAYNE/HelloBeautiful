@@ -10,11 +10,9 @@ import Foundation
 struct TopLevelDictionary: Decodable {
     let datestamp: String
     let moon: Moon
-    
 }
 
 struct Moon: Decodable {
-    
     private enum CodingKeys: String, CodingKey {
         case illumination
         case moonPhase = "phase_name"
@@ -28,5 +26,4 @@ struct Moon: Decodable {
     let zodiacSign: String
     let moonrise: String
     let moonDistance: Double
-    
 }

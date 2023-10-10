@@ -35,19 +35,19 @@ class UserDetailsViewModel {
     }
     
     
-    func saveUser(zodiacSign: String, cycleLength: String, lastCycle: String) {
+    func saveUser(zodiacSign: String, cycleLength: String, lastCycle: String, email: String, password: String) {
         if userDetails != nil {
-            updateUser(newZodiacSign: zodiacSign, newCycleLength: cycleLength, newLastCycle: lastCycle)
+            updateUser(newZodiacSign: zodiacSign, newCycleLength: cycleLength, newLastCycle: lastCycle, email: email, password: password)
         } else {
-            createUser(zodiacSign: zodiacSign, cycleLength: cycleLength, lastCycle: lastCycle)
+            createUser(zodiacSign: zodiacSign, cycleLength: cycleLength, lastCycle: lastCycle, email: email, password: password)
         }
     }
     
-    func createUser(zodiacSign: String, cycleLength:String, lastCycle: String) {
+    func createUser(zodiacSign: String, cycleLength:String, lastCycle: String, email: String, password: String) {
         
        let userAuthID = UserDefaults.standard.string(forKey: "UserAuthID")
         UserDefaults.standard.set(zodiacSign, forKey: "UserZodiacSign")
-        let details = UserDetails(zodiacSign: zodiacSign, cycleLength: cycleLength, lastCycle: lastCycle, collectionType: Constants.UserDetails.userDetailsCollectionPath, userAuthID: userAuthID)
+        let details = UserDetails(zodiacSign: zodiacSign, cycleLength: cycleLength, lastCycle: lastCycle, email: email, password: password, collectionType: Constants.UserDetails.userDetailsCollectionPath, userAuthID: userAuthID)
         service.save(userDetails: details, completion: { result in
             switch result {
             case .success(_):
@@ -58,21 +58,15 @@ class UserDetailsViewModel {
             }
         })
     }
-  
 
-    func updateUser(newZodiacSign: String, newCycleLength: String, newLastCycle: String) {
+    func updateUser(newZodiacSign: String, newCycleLength: String, newLastCycle: String, email: String, password: String) {
         guard let userToUpdate = self.userDetails else { return }
         let userAuthID = UserDefaults.standard.string(forKey: "UserAuthID")
-        let updatedUser = UserDetails(id: userToUpdate.id, zodiacSign: newZodiacSign, cycleLength: newCycleLength, lastCycle: newLastCycle, collectionType: Constants.UserDetails.userDetailsCollectionPath, userAuthID: userAuthID)
+        let updatedUser = UserDetails(id: userToUpdate.id, zodiacSign: newZodiacSign, cycleLength: newCycleLength, lastCycle: newLastCycle, email: email, password: password, collectionType: Constants.UserDetails.userDetailsCollectionPath, userAuthID: userAuthID)
         
         service.update(userDetails: updatedUser)
-        
     }
-    
-    
-    
-    
-    
+
 } // end of ViewModel
 
 

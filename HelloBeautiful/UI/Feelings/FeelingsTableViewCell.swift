@@ -22,7 +22,7 @@ class FeelingsTableViewCell: UITableViewCell {
     
     func configureCell(with diary: Diary?) {
         guard let diary else { return }
-        feelingDateLabel.text = diary.date.asString()
+       // feelingDateLabel.text = diary.date.asString()
         feelingsNotesLabel.text = diary.notes
         feelingSymptomsLabel.text = diary.symptoms
     }

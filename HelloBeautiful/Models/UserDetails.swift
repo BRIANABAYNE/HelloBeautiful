@@ -8,26 +8,13 @@
 import Foundation
 import FirebaseFirestoreSwift
 
-
-
 struct UserDetails: Codable {
-    var id: String?
+    @DocumentID var id: String?
     let zodiacSign: String
     let cycleLength: String
     let lastCycle: String
+    var email: String
+    var password: String
     let collectionType: String
     let userAuthID: String?
-//
-//    init(uid: String, dictionary: [String: Any]) {
-//        self.uid = uid
-//        self.zodiacSign = dictionary["zodiacSign"] as? String ?? ""
-//        self.cycleLength = dictionary["cycleLength"] as? String ?? ""
-//        self.lastCycle = dictionary["lastCycle"] as? String ?? ""
-//        self.collectionType = dictionary["collectionType"] as? String ?? ""
-//    }
-
 }
-
-
-
-
