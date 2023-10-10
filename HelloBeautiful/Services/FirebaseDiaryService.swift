@@ -14,11 +14,13 @@ protocol FirebaseDiaryServicable {
    
     func updateDiary(userDiary: Diary, handler: @escaping (Result<Bool, FirebaseError>) -> Void)
     func saveDiary(userDiary: Diary, completion: @escaping(Result<String, FirebaseError>) -> Void)
+    func deleteDiary(userDeleteDiary: Diary, completion: @escaping(Result<Bool, FirebaseError>) -> Void)
+    
 }
 
 struct FirebaseDiaryService: FirebaseDiaryServicable {
-    
-    func saveDiary(userDiary: Diary, completion: @escaping (Result<String, FirebaseError>)-> Void) {
+ 
+    func saveDiary(userDiary: Diary, completion: @escaping (Result<String, FirebaseError>) -> Void) {
         let firebaseRef = Firestore.firestore()
         do {
             let userDocID = UserDefaults.standard.string(forKey: "UserDocumentID")
@@ -50,12 +52,18 @@ struct FirebaseDiaryService: FirebaseDiaryServicable {
     } // Update
     
     
-    
-    
-    
-    
-    
-    
-    
-    
+    func deleteDiary(userDeleteDiary: Diary, completion: @escaping(Result<Bool, FirebaseError>) -> Void) {
+        let firebaseRef = Firestore.firestore()
+        if let documentDiaryID = userDeleteDiary.id {
+            let userDiaryID = UserDefaults.standard.string(forKey: "UserDocumendID")
+            let documentRef = firebaseRef.collection(Constants.UserDetails.userDetailsCollectionPath).document(userDiaryID!).collection(Constants.Diary.diaryCollectionPath).document(documentDiaryID).delete { error in
+                if let error {
+                    completion(.failure(.firebaseError(error)))
+                }
+                completion(.success(true))
+            }
+        }
+        
+    } // end of delete
+
 } //end of struct

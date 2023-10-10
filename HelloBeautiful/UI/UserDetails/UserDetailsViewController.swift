@@ -24,8 +24,8 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
     var zodiacSignString: String?
     static var completionHandler: ((String?) -> Void)?
     var disclosurePopUP: PopUp!
-//    var email: String
-//    var password: String
+    var email: String = ""
+    var password: String = ""
 //    var confirmPassword: String
   
     // MARK: - Lifecyles
@@ -86,7 +86,7 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
         guard let lastCycle = lastCycleTextField.text,
               let zodiacSign = zodiacSignString,
               let cycleLength = periodLengthTextField.text else { return }
-        viewModel.saveUser(zodiacSign: zodiacSign, cycleLength: cycleLength, lastCycle: lastCycle)
+        viewModel.saveUser(zodiacSign: zodiacSign, cycleLength: cycleLength, lastCycle: lastCycle, email: email, password: password)
     
         }
  
