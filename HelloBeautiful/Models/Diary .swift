@@ -9,10 +9,10 @@
 import UIKit
 import FirebaseFirestoreSwift
 
-struct FeelingsEntry: Encodable {
-
-  var model: Diary
-}
+//struct FeelingsEntry: Encodable {
+//
+//  var model: Diary
+//}
 
 struct Diary: Encodable  {
  

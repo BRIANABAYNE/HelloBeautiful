@@ -21,7 +21,6 @@ class FeelingsListTableViewController: UITableViewController, AlertPresentable {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 1
     }
     
@@ -29,11 +28,9 @@ class FeelingsListTableViewController: UITableViewController, AlertPresentable {
         
         return viewModel.feelingsSOT?.count ?? 0
     }
-    
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "feelinsgCell", for: indexPath) as! FeelingsListTableViewCell
-        
         let feelings = viewModel.feelingsSOT?[indexPath.row]
         cell.configureCell(with: feelings)
         
@@ -48,13 +45,9 @@ class FeelingsListTableViewController: UITableViewController, AlertPresentable {
                     
                     
                     tableView.deleteRows(at: [indexPath], with: .fade)
-                    
                 }
-                
             }
-            
         }
-        
     }
     
     //     MARK: - Navigation
@@ -69,7 +62,7 @@ class FeelingsListTableViewController: UITableViewController, AlertPresentable {
             destination.viewModel = FeelingsViewModel(userDiary: userDiary, injectedDelegate: destination)
         } else {
             destination.viewModel = FeelingsViewModel(injectedDelegate: destination)
-        }
+         }
     }
 }
 // MARK: - Extension
@@ -83,5 +76,4 @@ extension FeelingsListTableViewController: FeelingsListViewModelDelegate {
     func encountered(_ error: Error) {
         presentAlert(message: error.localizedDescription, title: "Oh no!")
     }
-    
 }

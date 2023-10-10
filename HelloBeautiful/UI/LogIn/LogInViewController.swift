@@ -24,7 +24,6 @@ class LogInViewController: UIViewController {
     let backgroundImageView = UIImageView()
     fileprivate var currentNonce: String?
     
-    
     // MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +34,6 @@ class LogInViewController: UIViewController {
         // call the function appleIDStateRevoked if user revoke the sign in in Settings app
         
         NotificationCenter.default.addObserver(self, selector: #selector(appleIDStateRevoked), name: ASAuthorizationAppleIDProvider.credentialRevokedNotification, object: nil)
-
-        
     }
     
     
