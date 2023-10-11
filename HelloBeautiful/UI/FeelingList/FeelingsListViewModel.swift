@@ -14,8 +14,6 @@ protocol FeelingsListViewModelDelegate: FeelingsListTableViewController {
 
 class FeelingListViewModel  {
     
-    
-    
     // MARK: - Properties
     
     var feelingsSOT: [Diary]?
@@ -31,6 +29,17 @@ class FeelingListViewModel  {
     
     // MARK: - Functions
     
+    
+    func fetchDiaryEntries() {
+        
+    }
+   
+    
+    
+    
+    
+    
+    
     func delete(indexPath: IndexPath, completion: @escaping() -> Void) {
         guard let diary = feelingsSOT?[indexPath.row] else { return }
         service.deleteDiary(userDeleteDiary: diary) { result in
@@ -42,5 +51,13 @@ class FeelingListViewModel  {
                 self.delegate?.encountered(failure)
             }
         }
+        
     }
-}
+    
+    
+    
+    
+    
+    
+    
+} // end of VC

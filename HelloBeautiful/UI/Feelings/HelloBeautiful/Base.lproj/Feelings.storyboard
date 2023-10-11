@@ -282,7 +282,7 @@
                                     <outlet property="feelingDateLabel" destination="2wr-M8-hjf" id="vhO-KT-YRG"/>
                                     <outlet property="feelingSymptomsLabel" destination="976-4f-WRy" id="74v-55-EVv"/>
                                     <outlet property="feelingsNotesLabel" destination="Xfx-YW-5xp" id="rBs-zD-MIU"/>
-                                    <segue destination="CuA-bp-sCH" kind="show" id="Pd4-BR-5Qh"/>
+                                    <segue destination="CuA-bp-sCH" kind="show" identifier="toDetailVC" id="Pd4-BR-5Qh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

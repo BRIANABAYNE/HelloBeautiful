@@ -13,7 +13,6 @@ class FeelingsViewController: UIViewController  {
 //
 //    }
     
-    
     // MARK: - Outlets
     
     @IBOutlet weak var flowSegmentControl: UISegmentedControl!
@@ -48,8 +47,7 @@ class FeelingsViewController: UIViewController  {
         //
         
     }
-    
-    
+
     // MARK: - Methods
     
     

@@ -12,6 +12,7 @@ import FirebaseFirestoreSwift
 
 protocol FirebaseDiaryServicable {
    
+    func fetchDiaryEntries(completion: @escaping(Result<[Diary], FirebaseError>) -> Void)
     func updateDiary(userDiary: Diary, handler: @escaping (Result<Bool, FirebaseError>) -> Void)
     func saveDiary(userDiary: Diary, completion: @escaping(Result<String, FirebaseError>) -> Void)
     func deleteDiary(userDeleteDiary: Diary, completion: @escaping(Result<Bool, FirebaseError>) -> Void)
@@ -19,6 +20,31 @@ protocol FirebaseDiaryServicable {
 }
 
 struct FirebaseDiaryService: FirebaseDiaryServicable {
+    
+    
+    
+    func fetchDiaryEntries(completion: @escaping (Result<[Diary], FirebaseError>) -> Void) {
+        let firebaseRef = Firestore.firestore()
+        do {
+            let fetchUserID = UserDefaults.standard.string(forKey: "UserDocumentID")
+            let documentFetchRef = try
+            firebaseRef.collection(Constants.UserDetails.userDetailsCollectionPath).document(fetchUserID!).collection(Constants.Diary.diaryCollectionPath).getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err): ")
+                } else {
+                    if let documents = querySnapshot?.documents {
+                        let diaryGroup = DispatchGroup()
+                        for document in documents {
+                            
+                        }
+                    }
+                }
+            })
+        }
+        
+       
+    }
+    
  
     func saveDiary(userDiary: Diary, completion: @escaping (Result<String, FirebaseError>) -> Void) {
         let firebaseRef = Firestore.firestore()
@@ -26,9 +52,7 @@ struct FirebaseDiaryService: FirebaseDiaryServicable {
             let userDocID = UserDefaults.standard.string(forKey: "UserDocumentID")
             let documentFeelingsRef = try
             firebaseRef.collection(Constants.UserDetails.userDetailsCollectionPath).document(userDocID!).collection(Constants.Diary.diaryCollectionPath).addDocument(from: userDiary, completion: { _ in
-                
             })
-            
             completion(.success(documentFeelingsRef.documentID))
         } catch {
             print("Oh no, something went wrong with the saving the Diary", error.localizedDescription)
