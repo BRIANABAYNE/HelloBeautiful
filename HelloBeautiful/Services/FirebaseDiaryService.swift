@@ -18,21 +18,45 @@ protocol FirebaseDiaryServicable {
     func saveDiary(userDiary: Diary, completion: @escaping(Result<String, FirebaseError>) -> Void)
     func deleteDiary(userDeleteDiary: Diary, completion: @escaping(Result<Bool, FirebaseError>) -> Void)
 //    func fetchUserDetails(handler: @escaping (Result<[UserDetails], FirebaseError>) -> Void)
-//    func fetchDiary(handler: @escaping(Result<[Diary], FirebaseError>) -> Void)
+//     func fetchDiary(handler: @escaping(Result<[Diary], FirebaseError>) -> Void)
+    func fetchDiaryEntries(userID: String, completion: @escaping (Result<[Diary], FirebaseError>) -> Void)
     
 }
 
 struct FirebaseDiaryService: FirebaseDiaryServicable {
     
     
+    
+    
+//    func fetchAllBags(handler: @escaping (Result<[Diary], FirebaseError>) -> Void) {
+//        .getDocuments { snapshot, error in
+//            guard let documents = snapshot?.documents else {return}
+//            do {
+//                let bagsArray = try documents.compactMap({ try $0.data(as: Bag.self)})
+//                handler(.success(bagsArray))
+//            } catch {
+//                handler(.failure(.firebaseError(error)))
+//            }
+//        }
+//    }
+    
 
-//    func fetchDiaryEntries(completion: @escaping (Result<[Diary], FirebaseError>) -> Void) {
-//        let firebaseRef = Firestore.firestore()
-//        firebaseRef.collection("UserDetails").document(self.diary).collection("Diary").getDocuments() { snapshot,
-//            error in
-//            if let error = error {
-//                print("Error getting User Docs \(error)")
-//            } else {
+    func fetchDiaryEntries(userID: String, completion: @escaping (Result<[Diary], FirebaseError>) -> Void) {
+        let firebaseRef = Firestore.firestore()
+        firebaseRef.collection("UserDetails").document(userID).collection("Diary").getDocuments() { snapshot,
+            error in
+            if let error = error {
+                print("Error getting User Docs \(error)")
+            } else {
+                do {
+                    let arrayDiary = try (snapshot?.documents.compactMap({ document in
+                        try document.data(as: Diary.self )
+                    }))!
+                    completion(.success(arrayDiary))
+            } catch {
+                completion(.failure(.firebaseError(error)))
+                    }
+                }
 //                let currentUID: String = Auth.auth().currentUser!.uid
 //                let userRef = firebaseRef.collection("Diary").document(currentUID)
 //                userRef.getDocument { document, error in
@@ -41,10 +65,59 @@ struct FirebaseDiaryService: FirebaseDiaryServicable {
 //                    }
 //
 //                }
-//            }
+            }
+
+        }
+    
+//    func fetchDiary(documentId: String, completion: @escaping (Result<[Diary], FirebaseError>)-> Void) {
+//      let db = Firestore.firestore()
+//      let docRef = db.collection("Diary").document(documentId)
 //
+//      docRef.getDocument { document, error in
+//        if let error = error as NSError? {
+//            self.errorMessage = "Error getting document: \(error.localizedDescription)"
 //        }
+//        else {
+//          if let document = document {
+//            do {
+//              self.diary = try document.data(as: Diary.self)
+//            }
+//            catch {
+//              print(error)
+//            }
+//          }
+//        }
+//      }
+//    }
 //
+    
+//
+//      func fetchDiary(documentId: String, completion: @escaping(Result <[Diary], FirebaseError>) -> Void) {
+//        let db = Firestore.firestore()
+//      let docRef = db.collection("Diary").document(documentId)
+//
+//      docRef.getDocument(as: Diary.self) { result in
+//        switch result {
+//        case .success(let diary):
+//          // A diary value was successfully initialized from the DocumentSnapshot.
+////            self.diary = diary
+////            self.errorMessage = nil
+//        case .failure(let error):
+//          // A dairy value could not be initialized from the DocumentSnapshot.
+//          self.errorMessage = "Error decoding document: \(error.localizedDescription)"
+//        }
+//      }
+//    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     func fetchUserCycle(completion: @escaping(Result<[UserDetails], FirebaseError>) -> Void) {
@@ -94,18 +167,6 @@ struct FirebaseDiaryService: FirebaseDiaryServicable {
     
     
     
-    
-//    func fetchAllBags(handler: @escaping (Result<[Diary], FirebaseError>) -> Void) {
-//        .getDocuments { snapshot, error in
-//            guard let documents = snapshot?.documents else {return}
-//            do {
-//                let bagsArray = try documents.compactMap({ try $0.data(as: Bag.self)})
-//                handler(.success(bagsArray))
-//            } catch {
-//                handler(.failure(.firebaseError(error)))
-//            }
-//        }
-//    }
     
     
     

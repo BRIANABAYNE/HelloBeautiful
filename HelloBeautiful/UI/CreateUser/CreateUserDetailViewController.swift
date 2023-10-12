@@ -36,12 +36,12 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
     }
     
     
-
+//
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "helloBeautiful" {
 //            guard let destinationVC = segue.destination as? UserDetailsViewController? else { return }
 //            destinationVC.email = emailTextField.text,
-//            password.passwordTextField.text
+//            destinationVC.password.passwordTextField.text
 //
 //        }
 //    }

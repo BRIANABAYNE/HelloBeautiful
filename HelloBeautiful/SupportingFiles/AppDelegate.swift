@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         #warning("You are signing out each time the app launches")
-        FirebaseAuthService().signOut()
+//        FirebaseAuthService().signOut()
         return true
             
         }

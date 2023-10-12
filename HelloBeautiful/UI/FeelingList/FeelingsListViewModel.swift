@@ -19,18 +19,19 @@ class FeelingListViewModel  {
     var feelingsSOT: [Diary]?
     private let service: FirebaseDiaryServicable
     weak var delegate: FeelingsListViewModelDelegate?
-    
+    var userID: String
     // MARK: - Dependency Injection
     
-    init(injectedDelegate: FeelingsListViewModelDelegate, service: FirebaseDiaryServicable = FirebaseDiaryService()) {
+    init(userID: String, injectedDelegate: FeelingsListViewModelDelegate, service: FirebaseDiaryServicable = FirebaseDiaryService()) {
         self.delegate = injectedDelegate
         self.service = service
+        self.userID = userID
     }
     
     // MARK: - Functions
     
-    func fetchDiary() {
-        service.fetchDiary { result in
+    func fetchDiaryEntries() {
+        service.fetchDiaryEntries(userID: self.userID,  completion: { result in
             switch result {
             case .success(let fetchedDiary):
                 self.feelingsSOT = fetchedDiary
@@ -38,7 +39,7 @@ class FeelingListViewModel  {
             case .failure(let error):
                 self.delegate?.encountered(error)
             }
-        }
+        })
     }
    
 

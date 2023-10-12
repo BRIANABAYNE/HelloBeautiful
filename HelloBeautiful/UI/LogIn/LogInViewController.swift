@@ -190,7 +190,7 @@ extension LogInViewController: LogInViewModelDelegate {
         // TODO: - Present Alert
         showAlert(message: error.localizedDescription)
     }
-    func success() {
+    func success(userDetails: UserDetails) {
         
         self.hideActivityIndicator()
         

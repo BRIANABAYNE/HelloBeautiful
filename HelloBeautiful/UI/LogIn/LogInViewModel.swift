@@ -33,6 +33,7 @@ class LogInViewModel {
             switch result {
             case .success(_):
                 print("User logged in")
+//                self.delegate?.success(userDetails: userDetails)
                 #warning("Perhapes we should only change the screen if logging in was successful... Which means you'll need a way to communciate that it was successful to the VC")
             case .failure(let failure):
                 self.delegate?.encountered(failure)

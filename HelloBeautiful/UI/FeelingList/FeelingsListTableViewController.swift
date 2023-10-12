@@ -15,12 +15,20 @@ class FeelingsListTableViewController: UITableViewController, AlertPresentable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = FeelingListViewModel(injectedDelegate: self)
+        viewModel = FeelingListViewModel(userID: UserDefaults.standard.string(forKey: "UserDocumentID")!, injectedDelegate: self)
     }
     
+//    UserDefaults.standard.data(forKey: "UserDocumentID")
+//    (documentRef.documentID, forKey: "UserDocumentID")
+    
+    
+    
     override func viewWillAppear(_ animated: Bool) {
-        viewModel.fetchDiary()
+        viewModel.fetchDiaryEntries()
+        
     }
+    
+    
     
     
     // MARK: - Table view data source
@@ -35,7 +43,7 @@ class FeelingsListTableViewController: UITableViewController, AlertPresentable {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "feelinsgCell", for: indexPath) as! FeelingsListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "feelingsCell", for: indexPath) as! FeelingsListTableViewCell
         let feelings = viewModel.feelingsSOT?[indexPath.row]
         cell.configureCell(with: feelings)
         

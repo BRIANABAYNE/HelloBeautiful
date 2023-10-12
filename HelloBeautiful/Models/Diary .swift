@@ -14,9 +14,9 @@ import FirebaseFirestoreSwift
 //  var model: Diary
 //}
 
-struct Diary: Encodable  {
+struct Diary: Decodable, Encodable  {
  
-    @DocumentID var id: String?
+   @DocumentID var id: String?
     var flow: String = ""
     var cervicalMucus: String = ""
     var feels: String = ""
