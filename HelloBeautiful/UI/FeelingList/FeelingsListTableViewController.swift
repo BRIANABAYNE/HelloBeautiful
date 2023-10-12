@@ -18,6 +18,11 @@ class FeelingsListTableViewController: UITableViewController, AlertPresentable {
         viewModel = FeelingListViewModel(injectedDelegate: self)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.fetchDiary()
+    }
+    
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,11 +44,8 @@ class FeelingsListTableViewController: UITableViewController, AlertPresentable {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            
             viewModel.delete(indexPath: indexPath) {
                 DispatchQueue.main.async {
-                    
-                    
                     tableView.deleteRows(at: [indexPath], with: .fade)
                 }
             }

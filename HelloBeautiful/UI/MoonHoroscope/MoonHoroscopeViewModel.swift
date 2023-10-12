@@ -56,7 +56,7 @@ class MoonHoroscopeViewModel {
     }
     
 //    func fetchUserZodiacSign(){
-
+//
 //        let defaultStore = Firestore.firestore()
 //        defaultStore.collection("UserDetails").getDocuments { snapshot, error in
 //            if let error = error {
@@ -79,8 +79,8 @@ class MoonHoroscopeViewModel {
 //            }
 //
 //        }
-//    
-//
+    
+
 //    func fetchUserZodiacSign(){
 //
 //        let userID = UserDefaults.standard.value(forKey: "UserDocumentID") as! String

@@ -227,9 +227,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oxn-Fz-B4E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3821" y="-820"/>
+            <point key="canvasLocation" x="3877" y="-820"/>
         </scene>
-        <!--Feelings List Table View Controller-->
+        <!--Feelings-->
         <scene sceneID="4uj-Co-fLs">
             <objects>
                 <tableViewController id="f4n-SU-4VX" customClass="FeelingsListTableViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
@@ -291,6 +291,7 @@
                             <outlet property="delegate" destination="f4n-SU-4VX" id="NHK-QA-I3w"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Feelings" image="suit.heart.fill" catalog="system" id="ZD2-tK-cfq"/>
                     <navigationItem key="navigationItem" id="bjo-sH-FwV">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="AiN-it-yhp">
                             <connections>
@@ -298,6 +299,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PUf-uc-TdG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -568,6 +570,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
+        <image name="suit.heart.fill" catalog="system" width="128" height="107"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

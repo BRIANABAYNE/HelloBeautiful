@@ -17,6 +17,7 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
     // MARK: -  Properties
     
     var viewModel:CreateUserViewModel!
+    var userDetailsToSendInSegue: UserDetails? 
 
     // MARK: - LifeCycles
     override func viewDidLoad() {
@@ -34,13 +35,15 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
         
     }
     
-//
+    
+
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//       if segue.identifier == "helloBeautiful" {
-//           guard let destinationVC = segue.destination as? UserDetailsViewController? else { return }
-//           destinationVC.email = emailTextField.text,
-//           password.passwordTextField.text
-           
+//        if segue.identifier == "helloBeautiful" {
+//            guard let destinationVC = segue.destination as? UserDetailsViewController? else { return }
+//            destinationVC.email = emailTextField.text,
+//            password.passwordTextField.text
+//
+//        }
 //    }
     
 } // end of VC

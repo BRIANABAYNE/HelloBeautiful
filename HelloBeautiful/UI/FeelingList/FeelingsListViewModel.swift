@@ -29,16 +29,19 @@ class FeelingListViewModel  {
     
     // MARK: - Functions
     
-    
-    func fetchDiaryEntries() {
-        
+    func fetchDiary() {
+        service.fetchDiary { result in
+            switch result {
+            case .success(let fetchedDiary):
+                self.feelingsSOT = fetchedDiary
+                self.delegate?.successfullyLoadedData()
+            case .failure(let error):
+                self.delegate?.encountered(error)
+            }
+        }
     }
    
-    
-    
-    
-    
-    
+
     
     func delete(indexPath: IndexPath, completion: @escaping() -> Void) {
         guard let diary = feelingsSOT?[indexPath.row] else { return }

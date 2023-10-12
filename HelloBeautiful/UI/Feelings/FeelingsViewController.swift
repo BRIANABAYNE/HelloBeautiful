@@ -8,10 +8,8 @@
 import UIKit
 
 @IBDesignable // allows to show on the storyboard
-class FeelingsViewController: UIViewController  {
-//    func encountered(_ error: Error) {
-//
-//    }
+class FeelingsViewController: UIViewController, AlertPresentable  {
+
     
     // MARK: - Outlets
     
@@ -124,7 +122,7 @@ extension FeelingsViewController: FeelingsViewModelDelegate {
     }
     
     func encountered(_ error: Error) {
-        // present alert
+        presentAlert(message: error.localizedDescription, title: "Oh no!")
     }
     
     
