@@ -3,4 +3,192 @@
    uuid = "93B2844C-2C91-4BBF-8FA8-F66C387477EA"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B889E3AB-77D2-46A5-ABBA-3EC36AE382E0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/CreateUser/CreateUserDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "nextButtonTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B889E3AB-77D2-46A5-ABBA-3EC36AE382E0 - 758b8f9c62fe01bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.CreateUserDetailViewController.nextButtonTapped(Any) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/CreateUser/CreateUserDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "512">
+               </Location>
+               <Location
+                  uuid = "B889E3AB-77D2-46A5-ABBA-3EC36AE382E0 - 758b8f9c62fe01bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.CreateUserDetailViewController.nextButtonTapped(Any) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/CreateUser/CreateUserDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "724">
+               </Location>
+               <Location
+                  uuid = "B889E3AB-77D2-46A5-ABBA-3EC36AE382E0 - 758b8f9c62fe019a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.CreateUserDetailViewController.nextButtonTapped(Any) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/CreateUser/CreateUserDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "512">
+               </Location>
+               <Location
+                  uuid = "B889E3AB-77D2-46A5-ABBA-3EC36AE382E0 - 758b8f9c62fe019a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.CreateUserDetailViewController.nextButtonTapped(Any) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/CreateUser/CreateUserDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "724">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "23877B05-D9C8-4155-9C69-10828CFCF5BC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/CreateUser/CreateUserDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "nextButtonTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "23877B05-D9C8-4155-9C69-10828CFCF5BC - 758b8f9c62fe019a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.CreateUserDetailViewController.nextButtonTapped(Any) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/CreateUser/CreateUserDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "920">
+               </Location>
+               <Location
+                  uuid = "23877B05-D9C8-4155-9C69-10828CFCF5BC - 758b8f9c62fe019a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.CreateUserDetailViewController.nextButtonTapped(Any) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/CreateUser/CreateUserDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "1132">
+               </Location>
+               <Location
+                  uuid = "23877B05-D9C8-4155-9C69-10828CFCF5BC - 758b8f9c62fe019a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.CreateUserDetailViewController.nextButtonTapped(Any) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/CreateUser/CreateUserDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "1604">
+               </Location>
+               <Location
+                  uuid = "23877B05-D9C8-4155-9C69-10828CFCF5BC - 758b8f9c62fe017b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.CreateUserDetailViewController.nextButtonTapped(Any) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/CreateUser/CreateUserDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "920">
+               </Location>
+               <Location
+                  uuid = "23877B05-D9C8-4155-9C69-10828CFCF5BC - 758b8f9c62fe017b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.CreateUserDetailViewController.nextButtonTapped(Any) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/CreateUser/CreateUserDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "1132">
+               </Location>
+               <Location
+                  uuid = "23877B05-D9C8-4155-9C69-10828CFCF5BC - 758b8f9c62fe017b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.CreateUserDetailViewController.nextButtonTapped(Any) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/CreateUser/CreateUserDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "1604">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

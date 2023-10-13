@@ -33,6 +33,13 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
         // ^^^
         viewModel = FeelingsViewModel(injectedDelegate: self)
         
+        
+        
+        
+        
+        
+        
+        
         ////       flowSegmentControl.selectionViewFillType = .fillSegment
         ////        flowSegmentControl.titleDistribution = .equalSpacing
         //        segmentedControl.isDragEnabled = true

@@ -69,15 +69,46 @@ struct FirebaseDiaryService: FirebaseDiaryServicable {
     } // Update
     
 
+//    func deleteDiary(userDeleteDiary deleteDiary: Diary, completion: @escaping (Result<Bool, FirebaseError>) -> Void) {
+//        let firebaseRef = Firestore.firestore()
+//        firebaseRef.collection("UserDetails").document().collection("Diary")
+//        firebaseRef.document(deleteDiary.id!).delete() { error in
+//            if let error {
+//                completion(.failure(.firebaseError(error)))
+//            }
+//            completion(.success(true))
+//        }
+//    }
+    
+//    func deleteDiary(userDeleteDiary diary: Diary, completion: @escaping (Result<Bool, FirebaseError>) -> Void) {
+//        let firebaseRef = Firestore.firestore()
+//        let diaryID = diary.id
+//        firebaseRef.collection("UserDetails").document(diary.id!).collection("Diary").document(diaryID!).delete() { error in
+//            if let error {
+//                completion(.failure(.firebaseError(error)))
+//            }
+//            completion(.success(true))
+//        }
+//    }
+    
     func deleteDiary(userDeleteDiary deleteDiary: Diary, completion: @escaping (Result<Bool, FirebaseError>) -> Void) {
         let firebaseRef = Firestore.firestore()
-        firebaseRef.collection("UserDetails").document().collection("Diary")
-        firebaseRef.document(deleteDiary.id!).delete() { error in
+        let diaryID = deleteDiary.id
+        let userDocID = UserDefaults.standard.string(forKey: "UserDocumentID")
+        firebaseRef.collection("UserDetails").document(userDocID!).collection("Diary").document(diaryID!).delete() { error in
             if let error {
                 completion(.failure(.firebaseError(error)))
             }
             completion(.success(true))
         }
     }
+    
+    
+    
+    
+    
+    
+    
+    
 } //end of struct
 
