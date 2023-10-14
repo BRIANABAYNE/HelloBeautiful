@@ -17,7 +17,7 @@ struct Diary: Decodable, Encodable  {
     var feels: String = ""
     var cravings: String = ""
     var symptoms: String = ""
-    var notes: String = ""
+    var notes: String
     var date: Date = Date()
     var feelingsCollectionType: String?
 }

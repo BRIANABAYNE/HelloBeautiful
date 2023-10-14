@@ -57,6 +57,7 @@
 		3AB0869F2AB6099A00C7B9CC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0869E2AB6099A00C7B9CC /* CustomButton.swift */; };
 		3AB086A12AB609A600C7B9CC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB086A02AB609A600C7B9CC /* CustomTextField.swift */; };
 		3AB086A32AB61A8A00C7B9CC /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB086A22AB61A8A00C7B9CC /* GradientView.swift */; };
+		3ADE9B422ADB506700D0EAED /* BBSegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE9B412ADB506700D0EAED /* BBSegmentedView.swift */; };
 		3AEAA1132AD8EDAA00F4737B /* UserCycleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAA1122AD8EDAA00F4737B /* UserCycleService.swift */; };
 		3AF6E24C2A720F5A00461137 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF6E24B2A720F5A00461137 /* FirebaseFirestore */; };
 		3AF6E24E2A72BDFB00461137 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6E24D2A72BDFB00461137 /* GoogleService-Info.plist */; };
@@ -124,6 +125,7 @@
 		3AB0869E2AB6099A00C7B9CC /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		3AB086A02AB609A600C7B9CC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		3AB086A22AB61A8A00C7B9CC /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		3ADE9B412ADB506700D0EAED /* BBSegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBSegmentedView.swift; sourceTree = "<group>"; };
 		3AEAA1122AD8EDAA00F4737B /* UserCycleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCycleService.swift; sourceTree = "<group>"; };
 		3AF6E24D2A72BDFB00461137 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3AF6E2562A72D9E700461137 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 		3AB0869D2AB6098200C7B9CC /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
+				3ADE9B412ADB506700D0EAED /* BBSegmentedView.swift */,
 				3AB0869E2AB6099A00C7B9CC /* CustomButton.swift */,
 				3AB086A02AB609A600C7B9CC /* CustomTextField.swift */,
 				3AB086A22AB61A8A00C7B9CC /* GradientView.swift */,
@@ -477,6 +480,7 @@
 				3A5420DB2A796CCE0049FC4E /* UserDetails.swift in Sources */,
 				3A5892FF2A70704500E208BC /* NetworkError.swift in Sources */,
 				3A5892CC2A7019BE00E208BC /* Diary .swift in Sources */,
+				3ADE9B422ADB506700D0EAED /* BBSegmentedView.swift in Sources */,
 				3AAF72E72ACC76DA005C9C9A /* FeelingsListTableViewCell.swift in Sources */,
 				3A5420DD2A7984E90049FC4E /* DateExtension.swift in Sources */,
 				3AF6E2572A72D9E700461137 /* FirebaseAuthService.swift in Sources */,
