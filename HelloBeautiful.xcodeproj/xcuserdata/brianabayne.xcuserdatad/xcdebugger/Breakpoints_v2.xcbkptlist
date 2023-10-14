@@ -385,38 +385,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B88A2277-2226-4390-97CA-3F732DB979EB"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HelloBeautiful/UI/Feelings/FeelingsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "saveButtonTapped(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D7154D82-9F64-4BE3-9571-BE57FA956CD9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HelloBeautiful/UI/Feelings/FeelingsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "saveButtonTapped(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "807D7DD4-D3F5-4832-B646-1EF2B5DF2C8B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -428,6 +396,38 @@
             endingLineNumber = "58"
             landmarkName = "updateDiary(newFlow:newCervicalMucus:newFeels:newCravings:newSymptoms:newNotes:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "807D7DD4-D3F5-4832-B646-1EF2B5DF2C8B - 3c6bef08a71291cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.FeelingsViewModel.updateDiary(newFlow: Swift.String, newCervicalMucus: Swift.String, newFeels: Swift.String, newCravings: Swift.String, newSymptoms: Swift.String, newNotes: Swift.String) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/Feelings/FeelingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "572">
+               </Location>
+               <Location
+                  uuid = "807D7DD4-D3F5-4832-B646-1EF2B5DF2C8B - 4307a809b0e0aff7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.FeelingsViewModel.updateDiary(newFlow: Swift.Int, newCervicalMucus: Swift.Int, newFeels: Swift.Int, newCravings: Swift.Int, newSymptoms: Swift.Int, newNotes: Swift.String) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/Feelings/FeelingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "380">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -490,6 +490,51 @@
                   endingLineNumber = "59"
                   offsetFromSymbolStart = "1140">
                </Location>
+               <Location
+                  uuid = "6D0221D7-7DDA-4E1D-87F3-541FEDF6AA5B - 4307a809b0e0aff7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.FeelingsViewModel.updateDiary(newFlow: Swift.Int, newCervicalMucus: Swift.Int, newFeels: Swift.Int, newCravings: Swift.Int, newSymptoms: Swift.Int, newNotes: Swift.String) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/Feelings/FeelingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "380">
+               </Location>
+               <Location
+                  uuid = "6D0221D7-7DDA-4E1D-87F3-541FEDF6AA5B - 4307a809b0e0aff7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.FeelingsViewModel.updateDiary(newFlow: Swift.Int, newCervicalMucus: Swift.Int, newFeels: Swift.Int, newCravings: Swift.Int, newSymptoms: Swift.Int, newNotes: Swift.String) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/Feelings/FeelingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "444">
+               </Location>
+               <Location
+                  uuid = "6D0221D7-7DDA-4E1D-87F3-541FEDF6AA5B - 4307a809b0e0aff7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.FeelingsViewModel.updateDiary(newFlow: Swift.Int, newCervicalMucus: Swift.Int, newFeels: Swift.Int, newCravings: Swift.Int, newSymptoms: Swift.Int, newNotes: Swift.String) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/Feelings/FeelingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "792">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -507,38 +552,38 @@
             endingLineNumber = "60"
             landmarkName = "updateDiary(newFlow:newCervicalMucus:newFeels:newCravings:newSymptoms:newNotes:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E3315649-3F44-42D2-83D6-313C73254213"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HelloBeautiful/UI/Feelings/FeelingsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "saveButtonTapped(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7A3D330A-E74D-4A37-B3B6-C54C729BD14F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HelloBeautiful/UI/Feelings/FeelingsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "saveButtonTapped(_:)"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AACC45E4-CDB0-40D1-8BE3-4BD2C214DA2D - 3c6bef08a71291ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.FeelingsViewModel.updateDiary(newFlow: Swift.String, newCervicalMucus: Swift.String, newFeels: Swift.String, newCravings: Swift.String, newSymptoms: Swift.String, newNotes: Swift.String) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/Feelings/FeelingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "652">
+               </Location>
+               <Location
+                  uuid = "AACC45E4-CDB0-40D1-8BE3-4BD2C214DA2D - 4307a809b0e0afd6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.FeelingsViewModel.updateDiary(newFlow: Swift.Int, newCervicalMucus: Swift.Int, newFeels: Swift.Int, newCravings: Swift.Int, newSymptoms: Swift.Int, newNotes: Swift.String) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/Feelings/FeelingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "452">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -555,6 +600,38 @@
             endingLineNumber = "43"
             landmarkName = "createDiary(flow:cervicalMucus:feels:cravings:symptoms:notes:date:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8FB24A81-CEB6-4ACA-8AE0-8F396F1AC2C7 - 6968f736b4f462ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.FeelingsViewModel.createDiary(flow: Swift.String, cervicalMucus: Swift.String, feels: Swift.String, cravings: Swift.String, symptoms: Swift.String, notes: Swift.String, date: Foundation.Date) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/Feelings/FeelingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "472">
+               </Location>
+               <Location
+                  uuid = "8FB24A81-CEB6-4ACA-8AE0-8F396F1AC2C7 - 923ae5bc72d0a412"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.FeelingsViewModel.createDiary(flow: Swift.Int, cervicalMucus: Swift.Int, feels: Swift.Int, cravings: Swift.Int, symptoms: Swift.Int, notes: Swift.String, date: Foundation.Date) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/Feelings/FeelingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "308">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -569,6 +646,86 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
             endingLineNumber = "39"
+            landmarkName = "saveDiary(flow:cervicalMucus:feels:cravings:symptoms:notes:date:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7E453A38-F5A3-4D7B-BFA0-17E8CAFA58D7 - c677790bb26cdfad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.FeelingsViewModel.saveDiary(flow: Swift.String, cervicalMucus: Swift.String, feels: Swift.String, cravings: Swift.String, symptoms: Swift.String, notes: Swift.String, date: Foundation.Date) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/Feelings/FeelingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "644">
+               </Location>
+               <Location
+                  uuid = "7E453A38-F5A3-4D7B-BFA0-17E8CAFA58D7 - 4618494d36a9c7da"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.FeelingsViewModel.saveDiary(flow: Swift.Int, cervicalMucus: Swift.Int, feels: Swift.Int, cravings: Swift.Int, symptoms: Swift.Int, notes: Swift.String, date: Foundation.Date) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/Feelings/FeelingsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "456">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4F972BC6-7868-4D63-BACB-46DD0CD6C15E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/Feelings/FeelingsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "saveDiary(flow:cervicalMucus:feels:cravings:symptoms:notes:date:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5EB8B778-EE56-44BD-B314-C5C406FD824C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/Feelings/FeelingsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "saveDiary(flow:cervicalMucus:feels:cravings:symptoms:notes:date:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8818BE76-2739-45E7-963C-AC89ED0A5011"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/Feelings/FeelingsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "saveDiary(flow:cervicalMucus:feels:cravings:symptoms:notes:date:)"
             landmarkType = "7">
          </BreakpointContent>

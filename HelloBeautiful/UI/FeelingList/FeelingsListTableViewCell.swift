@@ -24,6 +24,6 @@ class FeelingsListTableViewCell: UITableViewCell {
         guard let diary else { return }
        // feelingDateLabel.text = diary.date.asString()
         feelingsNotesLabel.text = diary.notes
-        feelingSymptomsLabel.text = diary.symptoms
+//        feelingSymptomsLabel.text = "(\diary.symptoms")
     }
 }

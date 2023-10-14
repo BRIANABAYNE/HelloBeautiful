@@ -31,7 +31,7 @@ class FeelingsViewModel {
     }
     
     // MARK: - Function Crud
-    func saveDiary(flow: String, cervicalMucus: String, feels: String, cravings: String, symptoms: String, notes: String, date: Date) {
+    func saveDiary(flow: Int, cervicalMucus: Int, feels: Int, cravings: Int, symptoms: Int, notes: String, date: Date) {
         if userDiary != nil {
             updateDiary(newFlow: flow, newCervicalMucus: cervicalMucus, newFeels: feels, newCravings: cravings, newSymptoms: symptoms, newNotes: notes)
 
@@ -40,7 +40,7 @@ class FeelingsViewModel {
         }
     }
 
-    func createDiary(flow: String, cervicalMucus: String, feels: String, cravings: String, symptoms: String, notes: String, date: Date) {
+    func createDiary(flow: Int, cervicalMucus: Int, feels: Int, cravings: Int, symptoms: Int, notes: String, date: Date) {
         
         let diaryDetails = Diary(flow: flow, cervicalMucus: cervicalMucus, feels: feels, cravings: cravings, symptoms: symptoms, notes: notes, date: date, feelingsCollectionType: Constants.Diary.diaryCollectionPath)
         feelingsService.createDiary(userDiary: diaryDetails, completion: { [self] result in
@@ -55,7 +55,7 @@ class FeelingsViewModel {
         })
     }
     
-    func updateDiary(newFlow: String, newCervicalMucus: String, newFeels: String, newCravings: String, newSymptoms: String, newNotes: String) {
+    func updateDiary(newFlow: Int, newCervicalMucus: Int, newFeels: Int, newCravings: Int, newSymptoms: Int, newNotes: String) {
         guard let diaryToUpdate = self.userDiary else { return }
         let updatedDiary = Diary(id: diaryToUpdate.id, flow: newFlow, cervicalMucus: newCervicalMucus, feels: newFeels, cravings: newCravings, symptoms: newSymptoms, notes: newNotes,feelingsCollectionType: Constants.Diary.diaryCollectionPath)
         feelingsService.updateDiary(userDiary: updatedDiary) { result in

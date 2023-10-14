@@ -49,12 +49,18 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
 
     // MARK: - Methods
     
-//    private func configureView() {
-//        
-//        guard let diary = viewModel.userDiary else { return }
-//        flowSegmentControl.selectedSegmentIndex = "\(diary.flow)"
-//    }
-//    
+    private func configureView() {
+        guard let diary = viewModel.userDiary else { return }
+        flowSegmentControl.selectedSegmentIndex = diary.flow
+//        flowSegmentControl.numberOfSegments = diary.flow
+        mucusSegmentControl.selectedSegmentIndex = diary.cervicalMucus
+        feelingsSegmentControl.selectedSegmentIndex = diary.feels
+        cravingsSegmentControl.selectedSegmentIndex = diary.cravings
+        symptomsSegmentControl.selectedSegmentIndex = diary.symptoms
+        notesTextField.text = diary.notes
+//        feelingsDateLabel.text = diary.date.asString()
+    }
+
     
     
     // MARK: - Actions
@@ -68,21 +74,21 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
         notesTextField.text = ""
 
 
-        let flowString = flowSegmentControl.titleForSegment(at: flowSegmentControl.selectedSegmentIndex) ?? ""
+        let flowString = flowSegmentControl.titleForSegment(at: flowSegmentControl.selectedSegmentIndex) as? Int
 
-        let mucusString = mucusSegmentControl.titleForSegment(at: mucusSegmentControl.selectedSegmentIndex) ?? ""
+        let mucusString = mucusSegmentControl.titleForSegment(at: mucusSegmentControl.selectedSegmentIndex) as? Int
 
-        let feelingsString = feelingsSegmentControl.titleForSegment(at: feelingsSegmentControl.selectedSegmentIndex) ?? ""
+        let feelingsString = feelingsSegmentControl.titleForSegment(at: feelingsSegmentControl.selectedSegmentIndex) as? Int
 
-        let cravingsString = cravingsSegmentControl.titleForSegment(at: cravingsSegmentControl.selectedSegmentIndex) ?? ""
+        let cravingsString = cravingsSegmentControl.titleForSegment(at: cravingsSegmentControl.selectedSegmentIndex) as? Int
 
-        let symptomsString = symptomsSegmentControl.titleForSegment(at: symptomsSegmentControl.selectedSegmentIndex) ?? ""
+        let symptomsString = symptomsSegmentControl.titleForSegment(at: symptomsSegmentControl.selectedSegmentIndex) as? Int
         
         if viewModel.userDiary != nil {
-            viewModel.updateDiary(newFlow: flowString, newCervicalMucus: mucusString, newFeels: feelingsString, newCravings: cravingsString, newSymptoms: symptomsString, newNotes: notes)
+            viewModel.updateDiary(newFlow: flowString!, newCervicalMucus: mucusString!, newFeels: feelingsString!, newCravings: cravingsString!, newSymptoms: symptomsString!, newNotes: notes)
         } else if viewModel.userDiary == nil {
           
-            viewModel.createDiary(flow: flowString, cervicalMucus: mucusString, feels: feelingsString, cravings: cravingsString, symptoms: symptomsString, notes: notes, date: Date())
+            viewModel.createDiary(flow: flowString!, cervicalMucus: mucusString!, feels: feelingsString!, cravings: cravingsString!, symptoms: symptomsString!, notes: notes, date: Date())
         }
         
 //
@@ -90,25 +96,25 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
     }
     
     @IBAction func flowSegmentControlAction(_ sender: UISegmentedControl) {
-        let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
+        let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex)
     }
     
     @IBAction func mucusSegmentControlAction(_ sender: UISegmentedControl) {
-        let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
+        let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex)
 
     }
     
     @IBAction func feelsSegmentControlAction(_ sender: UISegmentedControl) {
-        let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
+        let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex)
     }
     
     @IBAction func cravingSegmentControlAction(_ sender: UISegmentedControl) {
-        let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
+        let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex)
 
     }
     
     @IBAction func symptomsSegmentControlAction(_ sender: UISegmentedControl) {
-        let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) ?? ""
+        let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) 
 
     }
     
