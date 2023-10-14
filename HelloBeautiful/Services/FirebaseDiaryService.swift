@@ -12,13 +12,26 @@ import FirebaseFirestoreSwift
 import FirebaseAuth
 
 protocol FirebaseDiaryServicable {
-    func updateDiary(userDiary: Diary, handler: @escaping (Result<Bool, FirebaseError>) -> Void)
-    func saveDiary(userDiary: Diary, completion: @escaping(Result<String, FirebaseError>) -> Void)
-    func deleteDiary(userDeleteDiary: Diary, completion: @escaping(Result<Bool, FirebaseError>) -> Void)
+    func createDiary(userDiary: Diary, completion: @escaping(Result<String, FirebaseError>) -> Void)
     func fetchDiaryEntries(userID: String, completion: @escaping (Result<[Diary], FirebaseError>) -> Void)
+    func updateDiary(userDiary: Diary, handler: @escaping (Result<Bool, FirebaseError>) -> Void)
+    func deleteDiary(userDeleteDiary: Diary, completion: @escaping(Result<Bool, FirebaseError>) -> Void)
 }
 struct FirebaseDiaryService: FirebaseDiaryServicable {
-
+    
+    func createDiary(userDiary: Diary, completion: @escaping (Result<String, FirebaseError>) -> Void) {
+        let firebaseRef = Firestore.firestore()
+        do {
+            let userDocID = UserDefaults.standard.string(forKey: "UserDocumentID")
+            let documentFeelingsRef = try
+            firebaseRef.collection(Constants.UserDetails.userDetailsCollectionPath).document(userDocID!).collection(Constants.Diary.diaryCollectionPath).addDocument(from: userDiary, completion: { _ in
+            })
+            completion(.success(documentFeelingsRef.documentID))
+        } catch {
+            print("Oh no, something went wrong with the saving the Diary", error.localizedDescription)
+            return
+        }
+    } // end of create
     func fetchDiaryEntries(userID: String, completion: @escaping (Result<[Diary], FirebaseError>) -> Void) {
         let firebaseRef = Firestore.firestore()
         firebaseRef.collection("UserDetails").document(userID).collection("Diary").getDocuments() { snapshot,
@@ -31,32 +44,18 @@ struct FirebaseDiaryService: FirebaseDiaryServicable {
                         try document.data(as: Diary.self )
                     }))!
                     completion(.success(arrayDiary))
-            } catch {
-                completion(.failure(.firebaseError(error)))
-                    }
+                } catch {
+                    completion(.failure(.firebaseError(error)))
                 }
-
             }
-
+            
         }
-    
-    func saveDiary(userDiary: Diary, completion: @escaping (Result<String, FirebaseError>) -> Void) {
-        let firebaseRef = Firestore.firestore()
-        do {
-            let userDocID = UserDefaults.standard.string(forKey: "UserDocumentID")
-            let documentFeelingsRef = try
-            firebaseRef.collection(Constants.UserDetails.userDetailsCollectionPath).document(userDocID!).collection(Constants.Diary.diaryCollectionPath).addDocument(from: userDiary, completion: { _ in
-            })
-            completion(.success(documentFeelingsRef.documentID))
-        } catch {
-            print("Oh no, something went wrong with the saving the Diary", error.localizedDescription)
-            return
-        }
-    } // end of save
+        
+    }
     
     func updateDiary(userDiary: Diary, handler: @escaping (Result<Bool, FirebaseError>) -> Void) {
         let firebaseRef = Firestore.firestore()
-          if let documentID = userDiary.id {
+        if let documentID = userDiary.id {
             let userDocID = UserDefaults.standard.string(forKey: "UserDocumentID")
             let docref = firebaseRef.collection(Constants.UserDetails.userDetailsCollectionPath).document(userDocID!).collection(Constants.Diary.diaryCollectionPath).document(documentID)
             do {
@@ -68,28 +67,28 @@ struct FirebaseDiaryService: FirebaseDiaryServicable {
         }
     } // Update
     
-
-//    func deleteDiary(userDeleteDiary deleteDiary: Diary, completion: @escaping (Result<Bool, FirebaseError>) -> Void) {
-//        let firebaseRef = Firestore.firestore()
-//        firebaseRef.collection("UserDetails").document().collection("Diary")
-//        firebaseRef.document(deleteDiary.id!).delete() { error in
-//            if let error {
-//                completion(.failure(.firebaseError(error)))
-//            }
-//            completion(.success(true))
-//        }
-//    }
     
-//    func deleteDiary(userDeleteDiary diary: Diary, completion: @escaping (Result<Bool, FirebaseError>) -> Void) {
-//        let firebaseRef = Firestore.firestore()
-//        let diaryID = diary.id
-//        firebaseRef.collection("UserDetails").document(diary.id!).collection("Diary").document(diaryID!).delete() { error in
-//            if let error {
-//                completion(.failure(.firebaseError(error)))
-//            }
-//            completion(.success(true))
-//        }
-//    }
+    //    func deleteDiary(userDeleteDiary deleteDiary: Diary, completion: @escaping (Result<Bool, FirebaseError>) -> Void) {
+    //        let firebaseRef = Firestore.firestore()
+    //        firebaseRef.collection("UserDetails").document().collection("Diary")
+    //        firebaseRef.document(deleteDiary.id!).delete() { error in
+    //            if let error {
+    //                completion(.failure(.firebaseError(error)))
+    //            }
+    //            completion(.success(true))
+    //        }
+    //    }
+    
+    //    func deleteDiary(userDeleteDiary diary: Diary, completion: @escaping (Result<Bool, FirebaseError>) -> Void) {
+    //        let firebaseRef = Firestore.firestore()
+    //        let diaryID = diary.id
+    //        firebaseRef.collection("UserDetails").document(diary.id!).collection("Diary").document(diaryID!).delete() { error in
+    //            if let error {
+    //                completion(.failure(.firebaseError(error)))
+    //            }
+    //            completion(.success(true))
+    //        }
+    //    }
     
     func deleteDiary(userDeleteDiary deleteDiary: Diary, completion: @escaping (Result<Bool, FirebaseError>) -> Void) {
         let firebaseRef = Firestore.firestore()
@@ -101,14 +100,7 @@ struct FirebaseDiaryService: FirebaseDiaryServicable {
             }
             completion(.success(true))
         }
-    }
-    
-    
-    
-    
-    
-    
-    
+    } // end of delete Diary
     
 } //end of struct
 

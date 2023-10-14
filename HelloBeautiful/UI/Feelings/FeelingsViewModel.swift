@@ -14,10 +14,10 @@ protocol FeelingsViewModelDelegate: FeelingsViewController {
     func encountered(_ error: Error)
 }
 
-struct FeelingsViewModel {
+class FeelingsViewModel {
     
     // MARK: - Properties
-//    var model = Diary()
+
     var userDiary: Diary?
     private let feelingsService: FirebaseDiaryServicable
     weak var feelingsDelegate: FeelingsViewModelDelegate?
@@ -43,7 +43,7 @@ struct FeelingsViewModel {
     func createDiary(flow: String, cervicalMucus: String, feels: String, cravings: String, symptoms: String, notes: String, date: Date) {
         
         let diaryDetails = Diary(flow: flow, cervicalMucus: cervicalMucus, feels: feels, cravings: cravings, symptoms: symptoms, notes: notes, date: date, feelingsCollectionType: Constants.Diary.diaryCollectionPath)
-        feelingsService.saveDiary(userDiary: diaryDetails, completion: { result in
+        feelingsService.createDiary(userDiary: diaryDetails, completion: { [self] result in
             switch result {
             case.success(_):
                 feelingsDelegate?.successfullyLoadedData()
@@ -62,6 +62,17 @@ struct FeelingsViewModel {
             //
         }
         
+    }
+    
+    private func update(updateDiary: Diary){
+        feelingsService.updateDiary(userDiary: updateDiary) { [weak self] result in
+            switch result {
+            case .success(_):
+                print("Diary updated successfully")
+            case .failure(let failure):
+                self?.feelingsDelegate?.encountered(failure)
+            }
+        }
     }
 
 
