@@ -40,7 +40,7 @@ class DateDateBase: NSObject {
 //                let index = userCycles.firstIndex(of: foo!)
 //                userCycles.remove(at: index!)
 //            }
-            let userCycle = UserCycle(dateComponent: date, cycleType: cycleType)
+            let userCycle = UserCycle(dateComponent: date, cycleType: cycleType.rawValue)
             userCycles.append(userCycle)
         }
         
@@ -48,7 +48,7 @@ class DateDateBase: NSObject {
         
         func createUserOvulation(to startDate: DateComponents) -> Date {
             let cycleCalendar = Calendar.current
-            var startDate = startDate.date!
+            let startDate = startDate.date!
             let futureDate = cycleCalendar.date(byAdding: .day, value: 14, to: startDate)
             print(futureDate!)
             return futureDate!
@@ -72,8 +72,8 @@ class DateDateBase: NSObject {
     }
     
     func deleteUserCycle(date: DateComponents) {
-        var foo = userCycles.first(where: {$0.dateComponent.date! == date.date})
-        let index = userCycles.firstIndex(of: foo!)
+        let userCycleInfo = userCycles.first(where: {$0.dateComponent.date! == date.date})
+        let index = userCycles.firstIndex(of: userCycleInfo!)
         userCycles.remove(at: index!)
     }
     

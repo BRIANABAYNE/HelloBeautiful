@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AlertPresentable {
 
     
     var calendarView: UICalendarView = {
@@ -19,6 +19,16 @@ class ViewController: UIViewController {
     
 //    var calendarDelegate: CalendarDelegate!
     let shared = DateDateBase.shared
+    
+    // MARK: - Properties
+    
+    var selectedDates: [DateComponents] = []
+    var userCycles: [UserCycle] = []
+    
+    var viewModel: UserCycleViewModel!
+    
+    var userCycle: UserCycle?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -27,17 +37,22 @@ class ViewController: UIViewController {
 //        calendarView.delegate = calendarDelegate
         calendarView.delegate = shared
         calendarView.tintColor = .systemPink
-        
     }
-    
-    
+
     // MARK: - Actions
     
     @IBAction func allTheFeelsButtonTapped(_ sender: Any) {
-        
+        let storyboard = UIStoryboard(name:"Feelings", bundle: nil)
+        let feelings = storyboard.instantiateViewController(identifier:"Symptoms")
+        self.view.window?.rootViewController = feelings
+#warning("THIS IS BUGGIE")
     }
     
     @IBAction func editCycleButtonTapped(_ sender: Any) {
+//        guard let cycleDate = calendarView.visibleDateComponents.date,
+//              let cycleType =
+//        else { return }
+//        viewModel.saveUserCycle(dateComponent: cycleDate, cycleType: cycleType)
     }
     
     func setupUI() {
@@ -60,11 +75,19 @@ class ViewController: UIViewController {
     }
 
     
-
-    
 } // end of vc
 
-extension ViewController: UICalendarSelectionMultiDateDelegate {
+extension ViewController: UserCycleViewModelDelegate {
+    func encountered(_ error: Error) {
+        presentAlert(message: error.localizedDescription, title: "Oh no!")
+    }
+    
+    func successfullyLoadedCycleData() {
+        #warning("Look at this")
+    }
+}
+
+  extension ViewController: UICalendarSelectionMultiDateDelegate {
     
     func multiDateSelection(_ selection: UICalendarSelectionMultiDate, didSelectDate dateComponents: DateComponents) {
         

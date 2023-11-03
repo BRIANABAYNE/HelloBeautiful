@@ -28,7 +28,7 @@ struct FirebaseDiaryService: FirebaseDiaryServicable {
             })
             completion(.success(documentFeelingsRef.documentID))
         } catch {
-            print("Oh no, something went wrong with the saving the Diary", error.localizedDescription)
+            print("Oh no, something went wrong with saving the Diary", error.localizedDescription)
             return
         }
     } // end of create
