@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, AlertPresentable {
+class UserCycleViewController: UIViewController, AlertPresentable {
 
     
     var calendarView: UICalendarView = {
@@ -39,6 +39,9 @@ class ViewController: UIViewController, AlertPresentable {
         calendarView.tintColor = .systemPink
     }
 
+//    let cycleType = CycleType(rawValue: <#String#>)
+
+
     // MARK: - Actions
     
     @IBAction func allTheFeelsButtonTapped(_ sender: Any) {
@@ -49,10 +52,10 @@ class ViewController: UIViewController, AlertPresentable {
     }
     
     @IBAction func editCycleButtonTapped(_ sender: Any) {
-//        guard let cycleDate = calendarView.visibleDateComponents.date,
-//              let cycleType =
+//        guard let cycleDate = calendarView.visibleDateComponents
+////              let userCycle = calendarView.availableDateRange.start
 //        else { return }
-//        viewModel.saveUserCycle(dateComponent: cycleDate, cycleType: cycleType)
+//        viewModel.saveUserCycle(dateComponent: cycleDate, cycleType: cycleType!)
     }
     
     func setupUI() {
@@ -77,7 +80,7 @@ class ViewController: UIViewController, AlertPresentable {
     
 } // end of vc
 
-extension ViewController: UserCycleViewModelDelegate {
+extension UserCycleViewController: UserCycleViewModelDelegate {
     func encountered(_ error: Error) {
         presentAlert(message: error.localizedDescription, title: "Oh no!")
     }
@@ -87,7 +90,7 @@ extension ViewController: UserCycleViewModelDelegate {
     }
 }
 
-  extension ViewController: UICalendarSelectionMultiDateDelegate {
+  extension UserCycleViewController: UICalendarSelectionMultiDateDelegate {
     
     func multiDateSelection(_ selection: UICalendarSelectionMultiDate, didSelectDate dateComponents: DateComponents) {
         

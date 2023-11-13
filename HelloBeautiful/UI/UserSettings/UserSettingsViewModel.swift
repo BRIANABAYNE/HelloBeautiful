@@ -37,7 +37,6 @@ struct UserSettingsViewModel {
     }
         
     func delete() {
-        #warning("Should we present an alert to confirm the user wants to delete their account and there is no going back?")
         authService.delete()
     }
 }

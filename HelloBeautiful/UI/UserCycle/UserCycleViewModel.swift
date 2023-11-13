@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol UserCycleViewModelDelegate: ViewController {
+protocol UserCycleViewModelDelegate: UserCycleViewController {
     func successfullyLoadedCycleData()
     func encountered(_ error: Error)
 }

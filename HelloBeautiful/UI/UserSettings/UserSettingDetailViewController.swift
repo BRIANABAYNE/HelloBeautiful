@@ -9,7 +9,6 @@ import UIKit
 
 class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDelegate {
     
-    
     // MARK: - Outlets
     
     @IBOutlet weak var zodiacSignLabel: UILabel!
@@ -19,49 +18,31 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
     
     // MARK: - Properties
     var viewModel: UserSettingsViewModel!
-      var text: String?
-//    var userEmail: String = ""
-//    var text: String = ""
     
-    //    var password: String = ""
     
+    // MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel = UserSettingsViewModel(delegate: self)
         
-        if text != nil {
-            userEmailLabel.text = text
-        }
-//        userEmailLabel?.text = userEmail
     }
-
-    @objc func didGetNotification( _ notification: Notification) {
-        let text = notification.object as! String?
-//        zodiacSignLabel.text = text
-//        userCycleLength.text = text
-        userPeriodLength.text = text
-    }
-
     
     // MARK: - Actions
     
     @IBAction func deleteAccountButtonTapped(_ sender: Any) {
-      presentDeleteAccountAlert()
+        presentDeleteAccountAlert()
     }
     
     @IBAction func logOutButtonTapped(_ sender: Any) {
         presentLogOutAlert()
     }
     
-    // Helper func
+    // MARK: - Helper Function
     func changeUI() {
         let storyboard = UIStoryboard(name:"LogIn", bundle: nil)
         let login = storyboard.instantiateViewController(identifier:"LogIn")
         self.view.window?.rootViewController = login
     }
-//    NotificationCenter.default.post(name: Notification.Name("text"), object: field.text)
-//    dismiss(animated: true, completion: nil)
-    
     
     // MARK: - Alert
     
@@ -75,11 +56,11 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
             self.changeUI()
             
         }
-            alertController.addAction(noAction)
-            alertController.addAction(yesAction)
-            self.present(alertController, animated: true)
-            
-        }
+        alertController.addAction(noAction)
+        alertController.addAction(yesAction)
+        self.present(alertController, animated: true)
+        
+    }
     
     func presentLogOutAlert() {
         let alertController = UIAlertController(title: "Log Out?" , message: "Are you sure you want to log out?", preferredStyle: .alert)
@@ -91,23 +72,9 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
             self.changeUI()
             
         }
-            alertController.addAction(noAction)
-            alertController.addAction(yesAction)
-            self.present(alertController, animated: true)
+        alertController.addAction(noAction)
+        alertController.addAction(yesAction)
+        self.present(alertController, animated: true)
         
-        }
-#warning("You are not calling this func at this time. Think through _when_ you should update the UI with the Users information")
-//    func updateUI() {
-//              let userDetails = viewModel.userDetails else { return }
-//        DispatchQueue.main.async {
-//            self.zodiacSignLabel.text = userDetails.zodiacSign
-//            self.userEmailLabel.text = user.email
-//            self.userCycleLength.text = userDetails.cycleLength
-//            self.userPeriodLength.text = userDetails.lastCycle
-//
-//        }
-//    }
-    
-    
-
+    }
 }

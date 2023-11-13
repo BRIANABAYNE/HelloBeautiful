@@ -7,7 +7,7 @@
 import UIKit
 
 class CreateUserDetailViewController: UIViewController, AlertPresentable {
- 
+    
     // MARK: - Outlets
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -17,8 +17,8 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
     // MARK: -  Properties
     
     var viewModel:CreateUserViewModel!
-    var userDetailsToSendInSegue: UserDetails? 
-
+    var userDetailsToSendInSegue: UserDetails?
+    
     // MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,26 +26,23 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
     }
     
     // MARK: - Actions
-
+    
     @IBAction func nextButtonTapped(_ sender: Any) {
         guard let email = emailTextField.text,!email.isEmpty,
               let password = passwordTextField.text,!password.isEmpty,
               let confirmPassword = confirmPasswordTextField.text,!confirmPassword.isEmpty else { return }
         viewModel.createAccount(with: email, password: password, confirmPassword: confirmPassword)
-        
-    }
-    
-    
 //
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "helloBeautiful" {
-//            guard let destinationVC = segue.destination as? UserDetailsViewController? else { return }
-//            destinationVC.email = emailTextField.text,
-//            destinationVC.password.passwordTextField.text
+//
+//        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//            guard segue.identifier == "helloBeautiful",
+//                  let destinationVC = segue.destination as? UserDetailsViewController?,
+//                  destinationVC?.email == emailTextField.text,
+//                  destinationVC?.password == passwordTextField.text else {return}
+//
 //
 //        }
-//    }
-    
+    }
 } // end of VC
 
 // MARK: - Extension
