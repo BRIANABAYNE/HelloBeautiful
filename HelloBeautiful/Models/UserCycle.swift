@@ -10,7 +10,7 @@ import FirebaseFirestoreSwift
 
 struct UserCycle: Encodable {
     
-   var dateComponent: DateComponents
+ var dateComponent: DateComponents
    var cycleType: String
    var cycleCollectionType: String?
 }

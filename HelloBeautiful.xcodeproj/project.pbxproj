@@ -31,7 +31,7 @@
 		3A5A897E2A71FBBA009169B5 /* CreateUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A897D2A71FBBA009169B5 /* CreateUserDetailViewController.swift */; };
 		3A6602E82AD5DDCA00D48A59 /* FeelingsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6602E72AD5DDCA00D48A59 /* FeelingsListViewModel.swift */; };
 		3A6B22E82AB7B9F500BCAA09 /* UserCycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B22E72AB7B9F500BCAA09 /* UserCycleViewController.swift */; };
-		3A6B22EA2AB7BA3900BCAA09 /* DateDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B22E92AB7BA3900BCAA09 /* DateDatabase.swift */; };
+		3A6B22EA2AB7BA3900BCAA09 /* UserCycleViewModel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B22E92AB7BA3900BCAA09 /* UserCycleViewModel1.swift */; };
 		3A6B22EC2AB7BA7C00BCAA09 /* UserCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B22EB2AB7BA7C00BCAA09 /* UserCycle.swift */; };
 		3A6B22EE2AB7BB0200BCAA09 /* CalendarDelegateCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B22ED2AB7BB0200BCAA09 /* CalendarDelegateCycle.swift */; };
 		3A6C1A6A2A79A97400F3513E /* UserSettingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C1A692A79A97400F3513E /* UserSettingDetailViewController.swift */; };
@@ -101,7 +101,7 @@
 		3A5A897D2A71FBBA009169B5 /* CreateUserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserDetailViewController.swift; sourceTree = "<group>"; };
 		3A6602E72AD5DDCA00D48A59 /* FeelingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsListViewModel.swift; sourceTree = "<group>"; };
 		3A6B22E72AB7B9F500BCAA09 /* UserCycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCycleViewController.swift; sourceTree = "<group>"; };
-		3A6B22E92AB7BA3900BCAA09 /* DateDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDatabase.swift; sourceTree = "<group>"; };
+		3A6B22E92AB7BA3900BCAA09 /* UserCycleViewModel1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCycleViewModel1.swift; sourceTree = "<group>"; };
 		3A6B22EB2AB7BA7C00BCAA09 /* UserCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCycle.swift; sourceTree = "<group>"; };
 		3A6B22ED2AB7BB0200BCAA09 /* CalendarDelegateCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDelegateCycle.swift; sourceTree = "<group>"; };
 		3A6C1A692A79A97400F3513E /* UserSettingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingDetailViewController.swift; sourceTree = "<group>"; };
@@ -300,7 +300,7 @@
 				3A6F28DF2A7820B20046AF14 /* UserCycle.storyboard */,
 				3AFFEE152AF57A6200A7CB1B /* UserCycleViewModel.swift */,
 				3A6B22E72AB7B9F500BCAA09 /* UserCycleViewController.swift */,
-				3A6B22E92AB7BA3900BCAA09 /* DateDatabase.swift */,
+				3A6B22E92AB7BA3900BCAA09 /* UserCycleViewModel1.swift */,
 				3A6B22ED2AB7BB0200BCAA09 /* CalendarDelegateCycle.swift */,
 			);
 			path = UserCycle;
@@ -476,7 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A5892CE2A701A6D00E208BC /* MoonPhase.swift in Sources */,
-				3A6B22EA2AB7BA3900BCAA09 /* DateDatabase.swift in Sources */,
+				3A6B22EA2AB7BA3900BCAA09 /* UserCycleViewModel1.swift in Sources */,
 				3AAF72EB2ACC80B7005C9C9A /* FeelingsDateHelper.swift in Sources */,
 				3A5A897A2A71850C009169B5 /* MoonHoroscopeService.swift in Sources */,
 				3AB086A32AB61A8A00C7B9CC /* GradientView.swift in Sources */,

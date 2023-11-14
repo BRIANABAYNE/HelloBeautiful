@@ -9,7 +9,7 @@ import UIKit
 
 class CalendarDelegateCycle: NSObject, UICalendarViewDelegate {
    
-    func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
-        return DateDateBase.shared.eventOneCalendar(date: dateComponents)
-    }
+//    func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
+//        return UserCycleViewModel.shared.eventOneCalendar(date: dateComponents)
+//    }
 }

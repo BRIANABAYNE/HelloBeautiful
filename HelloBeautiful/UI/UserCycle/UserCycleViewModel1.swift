@@ -7,42 +7,63 @@
 
 import UIKit
 
+// MARK: - Protocol
+
+protocol UserCycleViewModelDelegate: UserCycleViewController {
+      func successfullyLoadedCycleData()
+      func encountered(_ error: Error)
+}
+
+// MARK: - Enum
 enum CycleType: String  {
     case startedCycle, none, ovulation
 }
 
 #warning("Maybe this is a service OR a ViewModel")
-class DateDateBase: NSObject {
-    
-    public static let shared: DateDateBase = DateDateBase()
-    
-//    private init() {
-//
-//    }
+class UserCycleViewModel: NSObject {
     
     // MARK: - Properties
-    //    let userCycle: [UserCycle] = []
+//    public static let shared: UserCycleViewModel = UserCycleViewModel()
     var selectedDates: [DateComponents] = []
     var userCycles: [UserCycle] = []
-   // var userOvulations: [UserOvulation] = []
+     
+//
+    var userCycle: UserCycle?
+    private let userCycleService: FirebaseUserCycleServicable
+    weak var cycleDelegate: UserCycleViewModelDelegate?
+    
+//     MARK: - Dependency Injection
+    
+    init(userCycleService: FirebaseUserCycleService = FirebaseUserCycleService(), injectedDelegate: UserCycleViewModelDelegate)
+    
+    {
+//        self.userCycle = userCycle
+        self.userCycleService = userCycleService
+        self.cycleDelegate = injectedDelegate
+    }
+    
+    
+    
+    // MARK: - Functions
     
     func createUserCycle(cycleType: CycleType, dates: [DateComponents])  {
         
         
         for date in dates {
             // Compare the date to all the dates in the user cycle
-//            var foo = userCycles.first(where: {$0.dateComponent.date! == date.date})
-//            print(foo)
-//            if foo == nil {
-//                let userCycle = UserCycle(dateComponent: date, cycleType: .startedCycle)
-//                userCycles.append(userCycle)
-//            } else {
-//                let index = userCycles.firstIndex(of: foo!)
-//                userCycles.remove(at: index!)
-//            }
+            //            var foo = userCycles.first(where: {$0.dateComponent.date! == date.date})
+            //            print(foo)
+            //            if foo == nil {
+            //                let userCycle = UserCycle(dateComponent: date, cycleType: .startedCycle)
+            //                userCycles.append(userCycle)
+            //            } else {
+            //                let index = userCycles.firstIndex(of: foo!)
+            //                userCycles.remove(at: index!)
+            //            }
             let userCycle = UserCycle(dateComponent: date, cycleType: cycleType.rawValue)
             userCycles.append(userCycle)
         }
+    }
         
         // I would need this case to trigger once a user puts in their cycle to calculate when they will be ovulating.
         
@@ -50,15 +71,32 @@ class DateDateBase: NSObject {
             let cycleCalendar = Calendar.current
             let startDate = startDate.date!
             let futureDate = cycleCalendar.date(byAdding: .day, value: 14, to: startDate)
-            print(futureDate!)
+            print("This is the future date!!!!",futureDate!)
             return futureDate!
         }
         
         func removeCycle(date: DateComponents) {
             
         }
-//        let mockDate = DateComponents(calendar: .autoupdatingCurrent, year: 2023, month: 8, day:28)
-//        createUserOvulation(to: mockDate)
+        
+        
+        func saveUserCycle() {
+            //                let userCycle = UserCycle(dateComponent: dateComponent, cycleType: cycleType.rawValue,cycleCollectionType: Constants.UserCycle.userCycleCollectionPath)
+            
+            for cycle in userCycles {
+                
+                userCycleService.saveUserCycle(userCycle: cycle, completion: { result in
+                    switch result {
+                    case .success(_):
+                        //                            self.cycleDelegate?.successfullyLoadedCycleData()
+                        print("User Cycle was saved to FB")
+                    case .failure(let failure):
+                        print("There was an error saving the cycle to FB")
+                        self.cycleDelegate?.encountered(failure)
+                    }
+                })
+            }
+        
         
 
         // How to determin when a user will ovulate
@@ -77,9 +115,6 @@ class DateDateBase: NSObject {
         userCycles.remove(at: index!)
     }
     
-    func saveUserCycle(cycleType: CycleType, dates:[DateComponents] ) {
-        
-    }
     
     func editUserCycle() {
         
@@ -134,7 +169,8 @@ class DateDateBase: NSObject {
     
 } // end of class
 
-extension DateDateBase: UICalendarViewDelegate {
+// MARK: - Extension
+extension UserCycleViewModel: UICalendarViewDelegate {
    
     func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
         eventOneCalendar(date: dateComponents)

@@ -18,8 +18,7 @@ class UserCycleViewController: UIViewController, AlertPresentable {
     }()
     
 //    var calendarDelegate: CalendarDelegate!
-    let shared = DateDateBase.shared
-    
+
     // MARK: - Properties
     
     var selectedDates: [DateComponents] = []
@@ -35,15 +34,17 @@ class UserCycleViewController: UIViewController, AlertPresentable {
         setupCalendar()
 //        calendarDelegate = CalendarDelegate()
 //        calendarView.delegate = calendarDelegate
-        calendarView.delegate = shared
+        calendarView.delegate = self
         calendarView.tintColor = .systemPink
+        
+       viewModel = UserCycleViewModel(injectedDelegate: self)
     }
 
 //    let cycleType = CycleType(rawValue: <#String#>)
 
 
     // MARK: - Actions
-    
+
     @IBAction func allTheFeelsButtonTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name:"Feelings", bundle: nil)
         let feelings = storyboard.instantiateViewController(identifier:"Symptoms")
@@ -52,10 +53,9 @@ class UserCycleViewController: UIViewController, AlertPresentable {
     }
     
     @IBAction func editCycleButtonTapped(_ sender: Any) {
-//        guard let cycleDate = calendarView.visibleDateComponents
-////              let userCycle = calendarView.availableDateRange.start
-//        else { return }
-//        viewModel.saveUserCycle(dateComponent: cycleDate, cycleType: cycleType!)
+//        let cycleDate = selectedDates
+//        let userCycle = calendarView.availableDateRange.start
+        viewModel.saveUserCycle()
     }
     
     func setupUI() {
@@ -80,6 +80,13 @@ class UserCycleViewController: UIViewController, AlertPresentable {
     
 } // end of vc
 
+extension UserCycleViewController: UICalendarViewDelegate {
+    
+    func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
+        return viewModel.eventOneCalendar(date: dateComponents)
+    }
+}
+
 extension UserCycleViewController: UserCycleViewModelDelegate {
     func encountered(_ error: Error) {
         presentAlert(message: error.localizedDescription, title: "Oh no!")
@@ -97,13 +104,14 @@ extension UserCycleViewController: UserCycleViewModelDelegate {
         // If the user has a case that is not .noe.. make it .none.
         // We need to find out if this date has a case and if it is .none or somethign else.
         
-        DateDateBase.shared.createUserCycle(cycleType:   CycleType.startedCycle, dates: selection.selectedDates)
+        viewModel.createUserCycle(cycleType:   CycleType.startedCycle, dates: selection.selectedDates)
         calendarView.reloadDecorations(forDateComponents: selection.selectedDates, animated: true)
         //        DateDateBase.shared.selectedDates = selection.selectedDates
-        print(selection.selectedDates)
+        print("Is this correct", selection.selectedDates)
     }
+      
     func multiDateSelection(_ selection: UICalendarSelectionMultiDate, didDeselectDate dateComponents: DateComponents) {
-        shared.deleteUserCycle(date: dateComponents)
+        viewModel.deleteUserCycle(date: dateComponents)
         calendarView.reloadDecorations(forDateComponents: [dateComponents], animated: true)
     }
 //    func multiDateSelection(_ selection: UICalendarSelectionMultiDate, didDeselectDate dateComponents: DateComponents) {

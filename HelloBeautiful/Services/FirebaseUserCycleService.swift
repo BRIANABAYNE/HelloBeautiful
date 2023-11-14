@@ -19,8 +19,6 @@ protocol FirebaseUserCycleServicable {
 
 struct FirebaseUserCycleService: FirebaseUserCycleServicable {
     
-    
-    
     func saveUserCycle(userCycle: UserCycle, completion: @escaping(Result<String, FirebaseError>) -> Void) {
         let firebaseRef = Firestore.firestore()
         do {
