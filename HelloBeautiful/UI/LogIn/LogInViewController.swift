@@ -150,8 +150,12 @@ class LogInViewController: UIViewController {
               let password = logInPasswordTextField.text  else { return }
         if(!email.isEmpty && !password.isEmpty) {
             showActivityIndicator()
-            viewModel.signIn(with: email, password: password)
-            
+            viewModel.signIn(with: email, password: password) {
+            bool in
+                if bool == false {
+                    self.hideActivityIndicator()
+                }
+            }
         } else{
             showAlert(message:"Enter both Email and Password")
         }
@@ -171,6 +175,7 @@ class LogInViewController: UIViewController {
     
     func showActivityIndicator() {
         activityView = UIActivityIndicatorView(style: .large)
+        activityView?.hidesWhenStopped = true
         activityView?.center = self.view.center
         self.view.addSubview(activityView!)
         activityView?.startAnimating()
@@ -178,7 +183,7 @@ class LogInViewController: UIViewController {
     
     func hideActivityIndicator() {
         if (activityView != nil){
-            activityView?.startAnimating()
+            activityView?.stopAnimating()
         }
     }
     

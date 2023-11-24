@@ -34,7 +34,9 @@ struct FirebaseAuthService: FirebaseAuthServiceable {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if let error {
                 completion(.failure(.firebaseError(error)))
+                return
             }
+            
             let userAuthID = authResult?.user.uid
             UserDefaults.standard.set(userAuthID, forKey: "UserAuthID")
             completion(.success(true))
