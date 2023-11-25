@@ -24,7 +24,7 @@ struct FirebaseUerDetailsService: FirebaseUserDetailServiceable {
             let documentRef = try ref.collection(Constants.UserDetails.userDetailsCollectionPath).addDocument(from: userDetails, completion: { _ in
                 
             })
-            // How do I save this document ID to then use for other network calls.
+           
             UserDefaults.standard.set(documentRef.documentID, forKey: "UserDocumentID")
             completion(.success(documentRef.documentID))
         } catch {
@@ -35,8 +35,8 @@ struct FirebaseUerDetailsService: FirebaseUserDetailServiceable {
     
     func update(userDetails: UserDetails) {
         if let documentID = userDetails.id {
-            let ref = Firestore.firestore() // path to fireStore
-            let docRef = ref.collection(Constants.UserDetails.userDetailsCollectionPath).document(documentID) // collection, doc, collection, doc
+            let ref = Firestore.firestore()
+            let docRef = ref.collection(Constants.UserDetails.userDetailsCollectionPath).document(documentID)
             
             do {
                 try docRef.setData(from: userDetails)
@@ -44,6 +44,5 @@ struct FirebaseUerDetailsService: FirebaseUserDetailServiceable {
                 print(error)
             }
         }
-        
-    } // end of update
-} // end of struct
+    }
+} 
