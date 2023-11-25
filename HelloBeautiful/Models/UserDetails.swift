@@ -8,17 +8,13 @@
 import Foundation
 import FirebaseFirestoreSwift
 
-
-#warning("Combine this with USER")
 struct UserDetails: Codable {
     @DocumentID var id: String?
     let zodiacSign: String
     let cycleLength: String
     let lastCycle: String
+    var email: String
+    var password: String
     let collectionType: String
-
+    let userAuthID: String?
 }
-
-
-
-

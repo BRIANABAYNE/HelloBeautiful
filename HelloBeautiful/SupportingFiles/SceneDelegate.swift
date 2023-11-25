@@ -21,12 +21,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         handle = Auth.auth().addStateDidChangeListener( { auth, user in
             
             if Auth.auth().currentUser == nil {
-                //                let storyboard = UIStoryboard(name:"Main", bundle: nil)
-                //                let navigation = storyboard.instantiateViewController(identifier:"tabBar")
-                //                self.window?.rootViewController = navigation
+//                                let storyboard = UIStoryboard(name:"Moon", bundle: nil)
+//                                let storyboardVC = storyboard.instantiateViewController(identifier:"Moon")
+//                self.present(storyboardVC, animated: true, completion: nil)
+//                let storyboard = UIStoryboard(name: "Feelings", bundle: nil)
+//                let logIn = storyboard.instantiateViewController(identifier:"Symptoms")
+//                self.window?.rootViewController = logIn
+//                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                            let mainScreen = storyboard.instantiateViewController(identifier:"tabBar")
+//                            self.window?.rootViewController = mainScreen
+//
+                
+            
                 let storyboard = UIStoryboard(name: "LogIn", bundle: nil)
                 let logIn = storyboard.instantiateViewController(identifier:"LogIn")
                 self.window?.rootViewController = logIn
+            } else {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                let tabBar = storyboard.instantiateViewController(identifier:"tabBar")
+                                self.window?.rootViewController = tabBar
+                
             }
         })
     }

@@ -7,34 +7,35 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mainstay.ttf">
+            <string>Mainstay</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--User Details View Controller-->
         <scene sceneID="AZV-hO-lLX">
             <objects>
-                <viewController storyboardIdentifier="UIViewController-mfw-ps-f1K" id="mfw-ps-f1K" customClass="UserDetailsViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9DN-fJ-ZjL">
+                <viewController storyboardIdentifier="UIViewController-mfw-ps-f1K" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mfw-ps-f1K" customClass="UserDetailsViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9DN-fJ-ZjL" customClass="GradientView" customModule="HelloBeautiful" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Cycle Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkJ-nd-hpN">
-                                <rect key="frame" x="104" y="171" width="171" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Cycle Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkJ-nd-hpN">
+                                <rect key="frame" x="104" y="156" width="187" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="hfY-qG-h6S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
+                                <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Disclaimer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40E-8b-p7G">
-                                <rect key="frame" x="156" y="679" width="80" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6x-Jj-s3f" customClass="BBButton" customModule="HelloBeautiful" customModuleProvider="target">
+                                <rect key="frame" x="141" y="735" width="111" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6x-Jj-s3f">
-                                <rect key="frame" x="159" y="735" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.79607843140000001" green="0.25882352939999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Details"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="mfw-ps-f1K" eventType="touchUpInside" id="9E0-LI-UdT"/>
                                 </connections>
@@ -42,36 +43,80 @@
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ano-vo-1Lg">
                                 <rect key="frame" x="16" y="522" width="349" height="154"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.79607843140000001" green="0.25882352939999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pickerView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Period Length" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KiU-Lr-4hD">
-                                <rect key="frame" x="129" y="225" width="146" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Period Length" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KiU-Lr-4hD" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
+                                <rect key="frame" x="30" y="225" width="333" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KrY-LF-Puc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Cycle Dates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pda-zu-m7r">
-                                <rect key="frame" x="132" y="315" width="128" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Cycle Dates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pda-zu-m7r">
+                                <rect key="frame" x="132" y="315" width="137" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hXT-3T-p6Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
+                                <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zodiac Sign " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrG-LM-vRc">
-                                <rect key="frame" x="139" y="463" width="95" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iiq-0O-1Hd">
-                                <rect key="frame" x="139" y="352" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iiq-0O-1Hd" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
+                                <rect key="frame" x="30" y="405" width="333" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZRc-JQ-2fu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLi-YW-ORi">
+                                <rect key="frame" x="133" y="684" width="137" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.79607843140000001" green="0.25882352939999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="See Disclaimer"/>
+                                <connections>
+                                    <action selector="disclaimerButtonTapped:" destination="mfw-ps-f1K" eventType="touchUpInside" id="IL9-VD-wpe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zodiac Sign " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrG-LM-vRc">
+                                <rect key="frame" x="140" y="465" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="R10-tA-BVa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
+                                <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BP6-Q4-Q3a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KiU-Lr-4hD" firstAttribute="leading" secondItem="BP6-Q4-Q3a" secondAttribute="leading" constant="30" id="1Jq-qO-zik"/>
+                            <constraint firstItem="qkJ-nd-hpN" firstAttribute="top" secondItem="BP6-Q4-Q3a" secondAttribute="top" constant="97" id="2YQ-wR-4KV"/>
+                            <constraint firstItem="KiU-Lr-4hD" firstAttribute="top" secondItem="qkJ-nd-hpN" secondAttribute="bottom" constant="37" id="2be-U3-p3E"/>
+                            <constraint firstItem="Iiq-0O-1Hd" firstAttribute="top" secondItem="Pda-zu-m7r" secondAttribute="bottom" constant="50" id="38a-H9-6D2"/>
+                            <constraint firstItem="BP6-Q4-Q3a" firstAttribute="trailing" secondItem="Iiq-0O-1Hd" secondAttribute="trailing" constant="30" id="7cH-3L-7a7"/>
+                            <constraint firstItem="Pda-zu-m7r" firstAttribute="leading" secondItem="BP6-Q4-Q3a" secondAttribute="leading" constant="132" id="BuH-ce-qEa"/>
+                            <constraint firstItem="BP6-Q4-Q3a" firstAttribute="trailing" secondItem="Pda-zu-m7r" secondAttribute="trailing" constant="124" id="JKB-ia-Il3"/>
+                            <constraint firstItem="BP6-Q4-Q3a" firstAttribute="trailing" secondItem="qkJ-nd-hpN" secondAttribute="trailing" constant="102" id="OQA-I8-2NK"/>
+                            <constraint firstItem="Pda-zu-m7r" firstAttribute="top" secondItem="KiU-Lr-4hD" secondAttribute="bottom" constant="40" id="Rqm-oO-egc"/>
+                            <constraint firstItem="BP6-Q4-Q3a" firstAttribute="trailing" secondItem="DrG-LM-vRc" secondAttribute="trailing" constant="153" id="UOv-UN-PZO"/>
+                            <constraint firstItem="DrG-LM-vRc" firstAttribute="top" secondItem="Iiq-0O-1Hd" secondAttribute="bottom" constant="20" id="aQJ-pg-8Re"/>
+                            <constraint firstItem="DrG-LM-vRc" firstAttribute="leading" secondItem="BP6-Q4-Q3a" secondAttribute="leading" constant="140" id="ceB-Ub-eXW"/>
+                            <constraint firstItem="Iiq-0O-1Hd" firstAttribute="leading" secondItem="BP6-Q4-Q3a" secondAttribute="leading" constant="30" id="gZg-Gr-TEI"/>
+                            <constraint firstItem="qkJ-nd-hpN" firstAttribute="leading" secondItem="BP6-Q4-Q3a" secondAttribute="leading" constant="104" id="ha8-UC-OJA"/>
+                            <constraint firstItem="BP6-Q4-Q3a" firstAttribute="trailing" secondItem="KiU-Lr-4hD" secondAttribute="trailing" constant="30" id="pRQ-q3-bCk"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                <color key="value" red="0.81176470588235294" green="0.62352941176470589" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="300-1R-xmp"/>
                     <connections>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mainstay.ttf">
+            <string>Mainstay</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopUp" customModule="HelloBeautiful" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButtonTapped" destination="AD2-1t-myS" id="ukQ-Iq-5Td"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PopUp" customModule="HelloBeautiful" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NkR-2J-4Iq">
+                    <rect key="frame" x="-10" y="132" width="367" height="660"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Brianab" translatesAutoresizingMaskIntoConstraints="NO" id="eXl-Az-ICd">
+                            <rect key="frame" x="-81" y="0.0" width="575" height="660"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No matter where you are in the world, Hello Beautiful will never allow your private health data to be used against you." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" id="aMR-zQ-4SG">
+                            <rect key="frame" x="37" y="68" width="328" height="382"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AD2-1t-myS" customClass="BBButton" customModule="HelloBeautiful" customModuleProvider="target">
+                            <rect key="frame" x="150" y="562" width="67" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Ezd-CN-64T"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="AD2-1t-myS" secondAttribute="trailing" constant="150" id="dmx-x3-p6L"/>
+                        <constraint firstItem="AD2-1t-myS" firstAttribute="leading" secondItem="NkR-2J-4Iq" secondAttribute="leading" constant="150" id="kkX-xt-CWf"/>
+                        <constraint firstItem="AD2-1t-myS" firstAttribute="top" secondItem="aMR-zQ-4SG" secondAttribute="bottom" constant="112" id="tZa-2i-9Zp"/>
+                        <constraint firstAttribute="bottom" secondItem="AD2-1t-myS" secondAttribute="bottom" constant="58" id="xC1-G1-qlc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.81176470588235294" green="0.62352941176470589" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NkR-2J-4Iq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="-10" id="65r-6W-B2x"/>
+                <constraint firstItem="NkR-2J-4Iq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="73" id="GtH-cK-gHK"/>
+            </constraints>
+            <connections>
+                <outlet property="closeButtonTapped" destination="AD2-1t-myS" id="UXX-VS-LHG"/>
+            </connections>
+            <point key="canvasLocation" x="-83.206106870229007" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Brianab" width="575" height="862.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

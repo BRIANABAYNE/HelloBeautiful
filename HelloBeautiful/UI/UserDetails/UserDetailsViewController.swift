@@ -8,7 +8,9 @@
 import UIKit
 
 
-class UserDetailsViewController: UIViewController {
+class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate {
+    func encountered(_ error: Error) {
+    }
     
     // MARK: - Outlets
     @IBOutlet weak var lastCycleTextField: UITextField!
@@ -18,15 +20,34 @@ class UserDetailsViewController: UIViewController {
     // MARK: - Properties
     let datePicker = UIDatePicker()
     var viewModel: UserDetailsViewModel!
-    
+    var zodiacSignString: String?
+    static var completionHandler: ((String?) -> Void)?
+    var disclosurePopUP: PopUp!
+    var email: String = ""
+    var password: String = ""
+
     // MARK: - Lifecyles
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = UserDetailsViewModel()
+        viewModel = UserDetailsViewModel(injectedDelegate: self)
         sunSignPicker.dataSource = self
         sunSignPicker.delegate = self
         configureLastCycleDatePicker()
     }
+
+    // MARK: - Actions
+    
+    @IBAction func disclaimerButtonTapped(_ sender: Any) {
+        self.disclosurePopUP = PopUp(frame: self.view.frame)
+        self.disclosurePopUP.closeButtonTapped.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
+        self.view.addSubview(disclosurePopUP)
+        
+    }
+    
+    @objc func closeButtonTapped() {
+        self.disclosurePopUP.removeFromSuperview()
+    }
+
     
     // MARK: - Functions / Methods
     func configureLastCycleDatePicker() {
@@ -51,15 +72,22 @@ class UserDetailsViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+
     // MARK: - Actions
     
     @IBAction func buttonTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name:"Main", bundle: nil)
         let navigation = storyboard.instantiateViewController(identifier:"tabBar")
         self.view.window?.rootViewController = navigation
-    }
+        
+        guard let lastCycle = lastCycleTextField.text,
+              let zodiacSign = zodiacSignString,
+              let cycleLength = periodLengthTextField.text else { return }
+        viewModel.saveUser(zodiacSign: zodiacSign, cycleLength: cycleLength, lastCycle: lastCycle, email: email, password: password)
     
-} // end of ViewC
+        }
+ 
+    }// end of VC
 
 // MARK: - Extensions
 extension UserDetailsViewController: UIPickerViewDataSource {
@@ -69,6 +97,10 @@ extension UserDetailsViewController: UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return viewModel.data.count
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        zodiacSignString = viewModel.data[row]
+        
     }
     
 }

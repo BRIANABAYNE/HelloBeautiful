@@ -9,17 +9,13 @@ import Foundation
 import FirebaseAuth
 import UIKit
 
+// MARK: - Protocol
 protocol UserSettingsViewModelDelegate: UserSettingDetailViewController {
-    // TODO: - Finish this
 }
 
 struct UserSettingsViewModel {
     
-    
     // MARK: - Properties
-
-    var userDetails: UserDetails?
-    var user: User?
     private let authService: FirebaseAuthServiceable
     private let userDetailsService: FirebaseUserDetailServiceable
     weak var delegate: UserSettingsViewModelDelegate?
@@ -33,11 +29,10 @@ struct UserSettingsViewModel {
     
     func signOut() {
         authService.signOut()
-        #warning("Should we only change the UI if sigbning out was sucessful?")
+#warning("Should we only change the UI if sigbning out was sucessful?")
     }
-        
+    
     func delete() {
-        #warning("Should we present an alert to confirm the user wants to delete their account and there is no going back?")
         authService.delete()
     }
 }

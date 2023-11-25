@@ -6,10 +6,7 @@
 
 import UIKit
 
-class CreateUserDetailViewController: UIViewController, CreateUserViewModelDelegate {
-    func encountered(_ error: Error) {
-#warning("Rest of the Owl")
-    }
+class CreateUserDetailViewController: UIViewController, AlertPresentable {
     
     // MARK: - Outlets
     
@@ -28,12 +25,31 @@ class CreateUserDetailViewController: UIViewController, CreateUserViewModelDeleg
     }
     
     // MARK: - Actions
-
     @IBAction func nextButtonTapped(_ sender: Any) {
         guard let email = emailTextField.text,!email.isEmpty,
               let password = passwordTextField.text,!password.isEmpty,
               let confirmPassword = confirmPasswordTextField.text,!confirmPassword.isEmpty else { return }
         viewModel.createAccount(with: email, password: password, confirmPassword: confirmPassword)
+//
+//
+//        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//            guard segue.identifier == "helloBeautiful",
+//                  let destinationVC = segue.destination as? UserDetailsViewController?,
+//                  destinationVC?.email == emailTextField.text,
+//                  destinationVC?.password == passwordTextField.text else {return}
+//
+//
+//        }
+        
+        let storyboard = UIStoryboard(name:"UserDetails", bundle: nil)
+        let navigation = storyboard.instantiateViewController(identifier:"UIViewController-mfw-ps-f1K")
+        self.view.window?.rootViewController = navigation
     }
 }
 
+// MARK: - Extension
+extension CreateUserDetailViewController: CreateUserViewModelDelegate {
+    func encountered(_ error: Error) {
+        presentAlert(message: error.localizedDescription, title: "Oh no!")
+    }
+}

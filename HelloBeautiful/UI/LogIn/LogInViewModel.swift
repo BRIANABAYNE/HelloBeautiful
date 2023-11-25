@@ -8,18 +8,16 @@
 import Foundation
 import FirebaseAuth
 
-
 protocol LogInViewModelDelegate: LogInViewController {
-    func encountered(_ error: Error)
+    // Success and encountered error
 }
 
-struct LogInViewModel {
-    
+class LogInViewModel {
     
     // MARK: - Properties
     private let service: FirebaseAuthServiceable
     weak var delegate: LogInViewModelDelegate?
-    
+
     // MARK: - Dependency Injection
     init(service: FirebaseAuthServiceable = FirebaseAuthService(), delegate: LogInViewModelDelegate) {
         self.service = service
@@ -27,15 +25,17 @@ struct LogInViewModel {
     }
     
     // MARK: - Methods
-    func signIn(with email: String, password: String) {
-        
+    func signIn(with email: String, password: String, completion: @escaping(Bool) -> Void) {
         service.signIn(email: email, password: password) { result  in
             switch result {
             case .success(_):
                 print("User logged in")
+//                self.delegate?.success(userDetails: userDetails)
                 #warning("Perhapes we should only change the screen if logging in was successful... Which means you'll need a way to communciate that it was successful to the VC")
+                completion(true)
             case .failure(let failure):
-                delegate?.encountered(failure)
+                self.delegate?.encountered(failure)
+                completion(false)
             }
         }
         

@@ -6,14 +6,15 @@
 //
 
 import Foundation
+import FirebaseFirestore
+import FirebaseAuth
 
+// MARK: - Protocol
 protocol MoonHororscopeViewModelDelegate: MoonHoroscopeViewController {
     func updateUI ()
-    
 }
 
 class MoonHoroscopeViewModel {
-    
     
     // MARK: - Delegate
     weak var delegate: MoonHororscopeViewModelDelegate?
@@ -29,8 +30,8 @@ class MoonHoroscopeViewModel {
         self.delegate = injectedDelegate
         self.service = injectedMoonHoroscopeService
         fetchMoonDetails()
+        fetchHoroscope()
     }
-    
     
     // MARK: - Functions
     func fetchMoonDetails() {
@@ -48,11 +49,16 @@ class MoonHoroscopeViewModel {
         }
     }
     
-    func fetchHoroscope(userSign: String) {
+    func fetchHoroscope() {
+        
+        guard let userSign = UserDefaults.standard.string(forKey: "UserZodiacSign") else {print("SHOOT! SOMETHING WENT WRONG WITH THE USER DEFAULTS ZODIAK");return}
         service.fetchHoroscope(sunSign: userSign) { result in
             switch result {
             case .success(let horoscope):
                 self.horoscopeData = horoscope
+                DispatchQueue.main.async {
+                    self.delegate?.updateUI()
+                }
             case .failure(let failure):
                 print(failure.localizedDescription)
             }
