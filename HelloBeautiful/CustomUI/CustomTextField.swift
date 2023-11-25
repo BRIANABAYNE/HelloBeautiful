@@ -14,7 +14,6 @@ class BBTextField: UITextField {
         setUpField()
     }
     
-    
     required init?(coder aDecoder: NSCoder) {
         super.init( coder: aDecoder )
         setUpField()

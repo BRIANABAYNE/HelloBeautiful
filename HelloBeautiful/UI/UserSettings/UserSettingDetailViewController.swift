@@ -10,7 +10,6 @@ import UIKit
 class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDelegate {
     
     // MARK: - Outlets
-    
     @IBOutlet weak var zodiacSignLabel: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
     @IBOutlet weak var userCycleLength: UILabel!
@@ -24,11 +23,9 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel = UserSettingsViewModel(delegate: self)
-        
     }
     
     // MARK: - Actions
-    
     @IBAction func deleteAccountButtonTapped(_ sender: Any) {
         presentDeleteAccountAlert()
     }
@@ -54,27 +51,25 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
             print("Action Taken: Delete List")
             self.viewModel.delete()
             self.changeUI()
-            
         }
+        
         alertController.addAction(noAction)
         alertController.addAction(yesAction)
         self.present(alertController, animated: true)
-        
     }
     
     func presentLogOutAlert() {
         let alertController = UIAlertController(title: "Log Out?" , message: "Are you sure you want to log out?", preferredStyle: .alert)
         let noAction = UIAlertAction(title: "Dismiss", style: .default)
-        print("Action Taken: Dissmiss") // .default = blue // .destructive = red
+        print("Action Taken: Dissmiss") //
         let yesAction = UIAlertAction(title: "Log Out", style: .destructive) { [self] _ in
             print("Action Taken: Delete List")
             self.viewModel.signOut()
             self.changeUI()
-            
         }
+        
         alertController.addAction(noAction)
         alertController.addAction(yesAction)
         self.present(alertController, animated: true)
-        
     }
 }

@@ -17,7 +17,6 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
     // MARK: -  Properties
     
     var viewModel:CreateUserViewModel!
-    var userDetailsToSendInSegue: UserDetails?
     
     // MARK: - LifeCycles
     override func viewDidLoad() {
@@ -26,7 +25,6 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
     }
     
     // MARK: - Actions
-    
     @IBAction func nextButtonTapped(_ sender: Any) {
         guard let email = emailTextField.text,!email.isEmpty,
               let password = passwordTextField.text,!password.isEmpty,
@@ -42,11 +40,14 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
 //
 //
 //        }
+        
+        let storyboard = UIStoryboard(name:"UserDetails", bundle: nil)
+        let navigation = storyboard.instantiateViewController(identifier:"UIViewController-mfw-ps-f1K")
+        self.view.window?.rootViewController = navigation
     }
-} // end of VC
+}
 
 // MARK: - Extension
-
 extension CreateUserDetailViewController: CreateUserViewModelDelegate {
     func encountered(_ error: Error) {
         presentAlert(message: error.localizedDescription, title: "Oh no!")

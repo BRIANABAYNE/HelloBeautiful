@@ -24,25 +24,15 @@ class UserCycleViewModel: NSObject {
     // MARK: - Properties
     var selectedDates: [DateComponents] = []
     var userCycles: [UserCycle] = []
-     
-    var userCycle: UserCycle?
     private let userCycleService: FirebaseUserCycleServicable
     weak var cycleDelegate: UserCycleViewModelDelegate?
     
 //     MARK: - Dependency Injection
-    
-    init(userCycleService: FirebaseUserCycleService = FirebaseUserCycleService(), injectedDelegate: UserCycleViewModelDelegate)
-
-    {
-
+    init(userCycleService: FirebaseUserCycleService = FirebaseUserCycleService(), injectedDelegate: UserCycleViewModelDelegate) {
         self.userCycleService = userCycleService
         self.cycleDelegate = injectedDelegate
     }
-    
-    
-    
     // MARK: - Functions
-    
     func createUserCycle(cycleType: CycleType, dates: [DateComponents])  {
         
         for date in dates {

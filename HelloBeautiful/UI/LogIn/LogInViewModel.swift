@@ -14,12 +14,10 @@ protocol LogInViewModelDelegate: LogInViewController {
 
 class LogInViewModel {
     
-    
     // MARK: - Properties
     private let service: FirebaseAuthServiceable
     weak var delegate: LogInViewModelDelegate?
-//    var user: User?
-    
+
     // MARK: - Dependency Injection
     init(service: FirebaseAuthServiceable = FirebaseAuthService(), delegate: LogInViewModelDelegate) {
         self.service = service
@@ -28,10 +26,8 @@ class LogInViewModel {
     
     // MARK: - Methods
     func signIn(with email: String, password: String, completion: @escaping(Bool) -> Void) {
-    
         service.signIn(email: email, password: password) { result  in
             switch result {
-                
             case .success(_):
                 print("User logged in")
 //                self.delegate?.success(userDetails: userDetails)

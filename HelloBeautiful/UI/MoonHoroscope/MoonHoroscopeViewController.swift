@@ -28,8 +28,6 @@ class MoonHoroscopeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel = MoonHoroscopeViewModel(injectedDelegate: self)
-        
-        //view.backgroundColor = .white
     }
 
     // MARK: - ScrollView
@@ -42,21 +40,9 @@ class MoonHoroscopeViewController: UIViewController {
 //        view.addSubview(scrollView)
 //        scrollView.contentSize = CGSize(width: view.frame.size.width, height: 4000)
 //        view.sendSubviewToBack(scrollView)
-//
-//
 //    }
-
-    // MARK: - Functions
-    // set horocsope will need to access current user saved data from firebase and will update that when I get to that. This will always be dependant on the user create page, UI being finished.
-    //    func setHoroscope() {
-    //        guard let user = viewModel.userData,
-    //        viewModel.fetchHoroscope(userSign: user.zodiacSign)
-    //        DispatchQueue.main.async {
-    //            self.horoscopeLable.text = horoscope.horoscope
-    //        }
-    //    }
 }
-// MARK: - Extensions
+// MARK: - Extension
 extension MoonHoroscopeViewController: MoonHororscopeViewModelDelegate {
     func updateUI() {
         guard let tld = viewModel.tld,

@@ -176,7 +176,6 @@
 				3A5893002A70709000E208BC /* UI */,
 				3AB0869D2AB6098200C7B9CC /* CustomUI */,
 				3AB0869A2AB5FED700C7B9CC /* Fonts */,
-				3A5893012A70709700E208BC /* Moon */,
 				3A5892FD2A70700B00E208BC /* Services */,
 				3A2B1F682A6C688700CCA3FB /* SupportingFiles */,
 				3A5892C72A70185700E208BC /* Models */,
@@ -219,6 +218,7 @@
 		3A5892FD2A70700B00E208BC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3A5893022A7070CE00E208BC /* MoonService.swift */,
 				3A5A89792A71850C009169B5 /* MoonHoroscopeService.swift */,
 				3A5892FE2A70704500E208BC /* NetworkError.swift */,
 				3A5A89762A71840C009169B5 /* APIService.swift */,
@@ -250,14 +250,6 @@
 				3A5A897C2A71FB80009169B5 /* CreateUser */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		3A5893012A70709700E208BC /* Moon */ = {
-			isa = PBXGroup;
-			children = (
-				3A5893022A7070CE00E208BC /* MoonService.swift */,
-			);
-			path = Moon;
 			sourceTree = "<group>";
 		};
 		3A5A89782A7184DD009169B5 /* MoonHoroscope */ = {

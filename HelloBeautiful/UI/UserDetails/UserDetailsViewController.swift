@@ -12,7 +12,6 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
     func encountered(_ error: Error) {
     }
     
-    
     // MARK: - Outlets
     @IBOutlet weak var lastCycleTextField: UITextField!
     @IBOutlet weak var periodLengthTextField: UITextField!
@@ -26,8 +25,7 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
     var disclosurePopUP: PopUp!
     var email: String = ""
     var password: String = ""
-//    var confirmPassword: String
-  
+
     // MARK: - Lifecyles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +43,7 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
         self.view.addSubview(disclosurePopUP)
         
     }
+    
     @objc func closeButtonTapped() {
         self.disclosurePopUP.removeFromSuperview()
     }
@@ -80,8 +79,6 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
         let storyboard = UIStoryboard(name:"Main", bundle: nil)
         let navigation = storyboard.instantiateViewController(identifier:"tabBar")
         self.view.window?.rootViewController = navigation
-        
-        // reading the data
         
         guard let lastCycle = lastCycleTextField.text,
               let zodiacSign = zodiacSignString,

@@ -8,24 +8,18 @@
 import Foundation
 import UIKit
 
-// creating a job req
+// MARK: - Protocol
 protocol UserDetailsViewModelDelegate: UserDetailsViewController {
     func encountered(_ error: Error)
 }
 
 class UserDetailsViewModel {
     
-    
     // MARK: - Properties
     var userDetails: UserDetails?
-    
-  
     let data = ["Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capicorn","Aquarius","Pisces"]
-    
-    // created the position. This is their empolyee number when they are hired.
     private let service: FirebaseUserDetailServiceable
     weak var delegate: UserDetailsViewModelDelegate?
-    
     
     // MARK: -  Dependency Injection
     init(userDetails: UserDetails? = nil, service: FirebaseUerDetailsService = FirebaseUerDetailsService(), injectedDelegate: UserDetailsViewModelDelegate) {
@@ -34,7 +28,7 @@ class UserDetailsViewModel {
         self.delegate = injectedDelegate
     }
     
-    
+    // MARK: - Crud Functions
     func saveUser(zodiacSign: String, cycleLength: String, lastCycle: String, email: String, password: String) {
         if userDetails != nil {
             updateUser(newZodiacSign: zodiacSign, newCycleLength: cycleLength, newLastCycle: lastCycle, email: email, password: password)
@@ -63,10 +57,6 @@ class UserDetailsViewModel {
         guard let userToUpdate = self.userDetails else { return }
         let userAuthID = UserDefaults.standard.string(forKey: "UserAuthID")
         let updatedUser = UserDetails(id: userToUpdate.id, zodiacSign: newZodiacSign, cycleLength: newCycleLength, lastCycle: newLastCycle, email: email, password: password, collectionType: Constants.UserDetails.userDetailsCollectionPath, userAuthID: userAuthID)
-        
         service.update(userDetails: updatedUser)
     }
-
-} // end of ViewModel
-
-
+}

@@ -10,26 +10,16 @@ import UIKit
 class FeelingsListTableViewController: UITableViewController, AlertPresentable {
     
     // MARK: - Properties
-    
     var viewModel: FeelingListViewModel!
-    
+    // MARK: - Lifecyles
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = FeelingListViewModel(userID: UserDefaults.standard.string(forKey: "UserDocumentID")!, injectedDelegate: self)
     }
     
-//    UserDefaults.standard.data(forKey: "UserDocumentID")
-//    (documentRef.documentID, forKey: "UserDocumentID")
-    
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         viewModel.fetchDiaryEntries()
-        
     }
-    
-    
-    
     
     // MARK: - Table view data source
     
@@ -38,10 +28,9 @@ class FeelingsListTableViewController: UITableViewController, AlertPresentable {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return viewModel.feelingsSOT?.count ?? 0
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "feelingsCell", for: indexPath) as! FeelingsListTableViewCell
         let feelings = viewModel.feelingsSOT?[indexPath.row]
@@ -66,13 +55,11 @@ class FeelingsListTableViewController: UITableViewController, AlertPresentable {
         guard let destination = segue.destination as? FeelingsViewController else { return }
         if segue.identifier == "toDetailVC" {
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            
             let userDiary = viewModel.feelingsSOT?[indexPath.row]
-            
             destination.viewModel = FeelingsViewModel(userDiary: userDiary, injectedDelegate: destination)
         } else {
             destination.viewModel = FeelingsViewModel(injectedDelegate: destination)
-         }
+        }
     }
 }
 // MARK: - Extension

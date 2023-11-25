@@ -15,14 +15,14 @@ class FeelingsListTableViewCell: UITableViewCell {
     @IBOutlet weak var feelingsNotesLabel: UILabel!
     @IBOutlet weak var feelingSymptomsLabel: UILabel!
     
+    // MARK: - Lifecyles
     override func awakeFromNib() {
         super.awakeFromNib()
-       
     }
     
     func configureCell(with diary: Diary?) {
         guard let diary else { return }
-       // feelingDateLabel.text = diary.date.asString()
+        // feelingDateLabel.text = diary.date.asString()
         feelingsNotesLabel.text = diary.notes
         feelingSymptomsLabel.text = diary.symptoms
     }

@@ -7,21 +7,19 @@
 
 import Foundation
 
+// MARK: - Protocol
 protocol FeelingsListViewModelDelegate: FeelingsListTableViewController {
-    
 }
-
 
 class FeelingListViewModel  {
     
     // MARK: - Properties
-    
     var feelingsSOT: [Diary]?
     private let service: FirebaseDiaryServicable
     weak var delegate: FeelingsListViewModelDelegate?
     var userID: String
-    // MARK: - Dependency Injection
     
+    // MARK: - Dependency Injection
     init(userID: String, injectedDelegate: FeelingsListViewModelDelegate, service: FirebaseDiaryServicable = FirebaseDiaryService()) {
         self.delegate = injectedDelegate
         self.service = service
@@ -29,7 +27,6 @@ class FeelingListViewModel  {
     }
     
     // MARK: - Functions
-    
     func fetchDiaryEntries() {
         service.fetchDiaryEntries(userID: self.userID,  completion: { result in
             switch result {
@@ -41,8 +38,6 @@ class FeelingListViewModel  {
             }
         })
     }
-   
-
     
     func delete(indexPath: IndexPath, completion: @escaping() -> Void) {
         guard let diary = feelingsSOT?[indexPath.row] else { return }
@@ -57,11 +52,4 @@ class FeelingListViewModel  {
         }
         
     }
-    
-    
-    
-    
-    
-    
-    
 } // end of VC

@@ -17,13 +17,12 @@ protocol FeelingsViewModelDelegate: FeelingsViewController {
 class FeelingsViewModel {
     
     // MARK: - Properties
-
+    
     var userDiary: Diary?
     private let feelingsService: FirebaseDiaryServicable
     weak var feelingsDelegate: FeelingsViewModelDelegate?
     
     // MARK: - Dependency Injection
-    
     init(userDiary: Diary? = nil, feelingsService: FirebaseDiaryService = FirebaseDiaryService(), injectedDelegate: FeelingsViewModelDelegate) {
         self.userDiary = userDiary
         self.feelingsService = feelingsService
@@ -34,12 +33,11 @@ class FeelingsViewModel {
     func saveDiary(flow: String, cervicalMucus: String, feels: String, cravings: String, symptoms: String, notes: String, date: Date) {
         if userDiary != nil {
             updateDiary(newFlow: flow, newCervicalMucus: cervicalMucus, newFeels: feels, newCravings: cravings, newSymptoms: symptoms, newNotes: notes)
-
         } else {
             createDiary(flow: flow, cervicalMucus: cervicalMucus, feels: feels, cravings: cravings, symptoms: symptoms, notes: notes, date: date)
         }
     }
-
+    
     func createDiary(flow: String, cervicalMucus: String, feels: String, cravings: String, symptoms: String, notes: String, date: Date) {
         
         let diaryDetails = Diary(flow: flow, cervicalMucus: cervicalMucus, feels: feels, cravings: cravings, symptoms: symptoms, notes: notes, date: date, feelingsCollectionType: Constants.Diary.diaryCollectionPath)
@@ -59,7 +57,6 @@ class FeelingsViewModel {
         guard let diaryToUpdate = self.userDiary else { return }
         let updatedDiary = Diary(id: diaryToUpdate.id, flow: newFlow, cervicalMucus: newCervicalMucus, feels: newFeels, cravings: newCravings, symptoms: newSymptoms, notes: newNotes,feelingsCollectionType: Constants.Diary.diaryCollectionPath)
         feelingsService.updateDiary(userDiary: updatedDiary) { result in
-            //
         }
         
     }
@@ -74,6 +71,4 @@ class FeelingsViewModel {
             }
         }
     }
-
-
-} // end of VM
+}
