@@ -29,50 +29,6 @@
             </objects>
             <point key="canvasLocation" x="263" y="-782"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="oDc-qK-yX8">
-            <objects>
-                <navigationController storyboardIdentifier="Navigation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="G5u-K7-gBj" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SOX-Au-lPE">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="S1k-rg-3F9" kind="relationship" relationship="rootViewController" id="Na4-Fd-ub1"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cwu-F9-CCh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1797.709923664122" y="-61.267605633802823"/>
-        </scene>
-        <!--LogIn-->
-        <scene sceneID="AUB-j2-XLb">
-            <objects>
-                <viewControllerPlaceholder storyboardName="LogIn" id="S1k-rg-3F9" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="GcG-or-4JE"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pfz-Tk-pue" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2724.4274809160306" y="-61.267605633802823"/>
-        </scene>
-        <!--UIViewController-MYf-iT-R6P-->
-        <scene sceneID="p8u-Ff-9jf">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="UIViewController-MYf-iT-R6P" storyboardName="CreateUser" referencedIdentifier="UIViewController-MYf-iT-R6P" id="hUJ-sr-eUK" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vPG-KB-YQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3538" y="-61"/>
-        </scene>
-        <!--UIViewController-mfw-ps-f1K-->
-        <scene sceneID="38K-ax-2Jn">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="UIViewController-mfw-ps-f1K" storyboardName="UserDetails" referencedIdentifier="UIViewController-mfw-ps-f1K" id="qMr-K5-yip" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sh5-th-GfS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4376" y="-61"/>
-        </scene>
         <!--DetailMain-->
         <scene sceneID="hNV-Oe-Y6y">
             <objects>

@@ -17,7 +17,8 @@ struct CreateUserViewModel {
     // MARK: - Properties
     private let service: FirebaseAuthServiceable
     weak var delegate: CreateUserViewModelDelegate?
-    var userInfoToSendInSegue: UserDetails?
+    let newUserContainer = NewUser()
+
     
     // MARK: - Dependency Injection
     init(service: FirebaseAuthServiceable = FirebaseAuthService(), delegate: CreateUserViewModelDelegate) {

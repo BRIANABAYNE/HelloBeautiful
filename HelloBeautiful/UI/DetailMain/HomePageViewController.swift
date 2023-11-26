@@ -55,6 +55,7 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"CollectionViewCell", for: indexPath)
         
         let imageView = UIImageView(frame: cell.frame)
+        imageView.contentMode = .scaleAspectFill
         if (indexPath.item == 0) {
             imageView.image = UIImage(named: "Period Positivity")
         }

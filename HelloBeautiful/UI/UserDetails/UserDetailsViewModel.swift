@@ -17,7 +17,8 @@ class UserDetailsViewModel {
     
     // MARK: - Properties
     var userDetails: UserDetails?
-    let data = ["Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capicorn","Aquarius","Pisces"]
+//    let data = ["Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capicorn","Aquarius","Pisces"]
+    let zodiacSigns = ZodiacSign.allCases.map(\.title)
     private let service: FirebaseUserDetailServiceable
     weak var delegate: UserDetailsViewModelDelegate?
     
@@ -29,7 +30,7 @@ class UserDetailsViewModel {
     }
     
     // MARK: - Crud Functions
-    func saveUser(zodiacSign: String, cycleLength: String, lastCycle: String, email: String, password: String) {
+    func saveUser(zodiacSign: String, cycleLength: Int, lastCycle: String, email: String, password: String) {
         if userDetails != nil {
             updateUser(newZodiacSign: zodiacSign, newCycleLength: cycleLength, newLastCycle: lastCycle, email: email, password: password)
         } else {
@@ -37,8 +38,8 @@ class UserDetailsViewModel {
         }
     }
     
-    func createUser(zodiacSign: String, cycleLength:String, lastCycle: String, email: String, password: String) {
-        
+    func createUser(zodiacSign: String, cycleLength: Int, lastCycle: String, email: String, password: String) {
+         
        let userAuthID = UserDefaults.standard.string(forKey: "UserAuthID")
         UserDefaults.standard.set(zodiacSign, forKey: "UserZodiacSign")
         let details = UserDetails(zodiacSign: zodiacSign, cycleLength: cycleLength, lastCycle: lastCycle, email: email, password: password, collectionType: Constants.UserDetails.userDetailsCollectionPath, userAuthID: userAuthID)
@@ -53,7 +54,7 @@ class UserDetailsViewModel {
         })
     }
 
-    func updateUser(newZodiacSign: String, newCycleLength: String, newLastCycle: String, email: String, password: String) {
+    func updateUser(newZodiacSign: String, newCycleLength: Int, newLastCycle: String, email: String, password: String) {
         guard let userToUpdate = self.userDetails else { return }
         let userAuthID = UserDefaults.standard.string(forKey: "UserAuthID")
         let updatedUser = UserDetails(id: userToUpdate.id, zodiacSign: newZodiacSign, cycleLength: newCycleLength, lastCycle: newLastCycle, email: email, password: password, collectionType: Constants.UserDetails.userDetailsCollectionPath, userAuthID: userAuthID)

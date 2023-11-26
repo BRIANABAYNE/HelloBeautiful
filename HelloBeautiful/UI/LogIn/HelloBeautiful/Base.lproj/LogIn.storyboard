@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kTg-Uv-Ccv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d6B-1m-vpp">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email.." textAlignment="center" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ye5-7I-8e0" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="30" y="184" width="317" height="50"/>
+                                <rect key="frame" x="30" y="163" width="317" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="sf3-Fy-142"/>
                                 </constraints>
@@ -30,7 +30,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjG-i0-Whk" userLabel="Don't have an account?" customClass="BBButton" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="46" y="362" width="301" height="44"/>
+                                <rect key="frame" x="46" y="357" width="301" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="BB6-Yq-xPU"/>
                                 </constraints>
@@ -39,11 +39,11 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Don't have an account? "/>
                                 <connections>
                                     <action selector="createAccountButtonTapped:" destination="kTg-Uv-Ccv" eventType="touchUpInside" id="EC9-lq-WQg"/>
-                                    <segue destination="ynN-Qh-TbO" kind="show" identifier="CreateUser" id="ZX9-sP-peX"/>
+                                    <segue destination="kk1-2O-J60" kind="show" id="05K-wQ-o1W"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uw-Mj-RM3" customClass="BBButton" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="30" y="308" width="333" height="44"/>
+                                <rect key="frame" x="30" y="303" width="333" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="I6C-nU-rRx"/>
                                 </constraints>
@@ -55,7 +55,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password.." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uou-gW-kwc" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="30" y="244" width="317" height="34"/>
+                                <rect key="frame" x="30" y="223" width="317" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Aww-KX-dmC"/>
                                 </constraints>
@@ -63,7 +63,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Beautiful" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClK-OZ-83B">
-                                <rect key="frame" x="30" y="79" width="333" height="95"/>
+                                <rect key="frame" x="30" y="123" width="333" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="Ib6-ev-Wta"/>
                                 </constraints>
@@ -101,15 +101,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JUW-fO-lLE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="861.83206106870227" y="-37.323943661971832"/>
+            <point key="canvasLocation" x="1788.5496183206105" y="-37.323943661971832"/>
         </scene>
-        <!--UIViewController-MYf-iT-R6P-->
-        <scene sceneID="L88-97-WSB">
+        <!--CreateUser-->
+        <scene sceneID="uZX-yA-FaH">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UIViewController-MYf-iT-R6P" id="ynN-Qh-TbO" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Buh-45-74t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="CreateUserDetailViewController" storyboardName="CreateUser" id="kk1-2O-J60" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Nd5-Gd-Syi"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gqt-Yc-Yvu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3538" y="-61"/>
+            <point key="canvasLocation" x="2753.4351145038167" y="-37.323943661971832"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qiC-Ip-g7i">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d6B-1m-vpp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8fU-rV-U1z">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kTg-Uv-Ccv" kind="relationship" relationship="rootViewController" id="MIE-2G-OIL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZM6-re-QCa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861.83206106870227" y="-37.323943661971832"/>
         </scene>
     </scenes>
     <resources>

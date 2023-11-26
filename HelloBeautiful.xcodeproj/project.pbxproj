@@ -29,6 +29,8 @@
 		3A5A89772A71840C009169B5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A89762A71840C009169B5 /* APIService.swift */; };
 		3A5A897A2A71850C009169B5 /* MoonHoroscopeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A89792A71850C009169B5 /* MoonHoroscopeService.swift */; };
 		3A5A897E2A71FBBA009169B5 /* CreateUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A897D2A71FBBA009169B5 /* CreateUserDetailViewController.swift */; };
+		3A601BD32B12BF0600A59634 /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A601BD22B12BF0600A59634 /* NewUser.swift */; };
+		3A601BD52B12C80400A59634 /* ZodiacSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A601BD42B12C80400A59634 /* ZodiacSign.swift */; };
 		3A6602E82AD5DDCA00D48A59 /* FeelingsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6602E72AD5DDCA00D48A59 /* FeelingsListViewModel.swift */; };
 		3A6B22E82AB7B9F500BCAA09 /* UserCycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B22E72AB7B9F500BCAA09 /* UserCycleViewController.swift */; };
 		3A6B22EA2AB7BA3900BCAA09 /* UserCycleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6B22E92AB7BA3900BCAA09 /* UserCycleViewModel.swift */; };
@@ -97,6 +99,8 @@
 		3A5A89762A71840C009169B5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		3A5A89792A71850C009169B5 /* MoonHoroscopeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonHoroscopeService.swift; sourceTree = "<group>"; };
 		3A5A897D2A71FBBA009169B5 /* CreateUserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserDetailViewController.swift; sourceTree = "<group>"; };
+		3A601BD22B12BF0600A59634 /* NewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
+		3A601BD42B12C80400A59634 /* ZodiacSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacSign.swift; sourceTree = "<group>"; };
 		3A6602E72AD5DDCA00D48A59 /* FeelingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsListViewModel.swift; sourceTree = "<group>"; };
 		3A6B22E72AB7B9F500BCAA09 /* UserCycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCycleViewController.swift; sourceTree = "<group>"; };
 		3A6B22E92AB7BA3900BCAA09 /* UserCycleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCycleViewModel.swift; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 				3A5892CB2A7019BE00E208BC /* UserDiary .swift */,
 				3A5892CD2A701A6D00E208BC /* MoonPhase.swift */,
 				3A5892CF2A701E0F00E208BC /* Horoscope.swift */,
+				3A601BD22B12BF0600A59634 /* NewUser.swift */,
+				3A601BD42B12C80400A59634 /* ZodiacSign.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -491,6 +497,7 @@
 				3AAF72E52ACC76AC005C9C9A /* FeelingsListTableViewController.swift in Sources */,
 				3A84A19C2A743A6E00376FD0 /* CreateUserViewModel.swift in Sources */,
 				3A5420DF2A79A63F0049FC4E /* UserSettingsViewModel.swift in Sources */,
+				3A601BD52B12C80400A59634 /* ZodiacSign.swift in Sources */,
 				3AB086A12AB609A600C7B9CC /* CustomTextField.swift in Sources */,
 				3A6C1A6A2A79A97400F3513E /* UserSettingDetailViewController.swift in Sources */,
 				3A5A89752A7172D8009169B5 /* MoonHoroscopeViewModel.swift in Sources */,
@@ -501,6 +508,7 @@
 				3AEAA1132AD8EDAA00F4737B /* FirebaseUserCycleService.swift in Sources */,
 				3A5A897E2A71FBBA009169B5 /* CreateUserDetailViewController.swift in Sources */,
 				3AF6E25B2A72DCD700461137 /* CreateAccountError.swift in Sources */,
+				3A601BD32B12BF0600A59634 /* NewUser.swift in Sources */,
 				3AF6E2662A72EC5F00461137 /* LogInViewModel.swift in Sources */,
 				3AAF72ED2ACC96A8005C9C9A /* FirebaseDiaryService.swift in Sources */,
 				3AF6E2642A72EA0700461137 /* LogInViewController.swift in Sources */,
