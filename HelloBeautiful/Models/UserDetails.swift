@@ -11,7 +11,7 @@ import FirebaseFirestoreSwift
 struct UserDetails: Codable {
     @DocumentID var id: String?
     let zodiacSign: String
-    let cycleLength: String
+    let cycleLength: Int
     let lastCycle: String
     var email: String
     var password: String

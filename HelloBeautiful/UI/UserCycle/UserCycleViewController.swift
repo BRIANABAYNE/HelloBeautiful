@@ -49,10 +49,12 @@ class UserCycleViewController: UIViewController, AlertPresentable {
         
         view.addSubview(calendarView)
         calendarView.translatesAutoresizingMaskIntoConstraints = false
-        calendarView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        calendarView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20) .isActive = true
-        calendarView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
-        calendarView.heightAnchor.constraint(equalToConstant: 700).isActive = true
+        NSLayoutConstraint.activate([
+            calendarView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            calendarView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            calendarView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
+            calendarView.heightAnchor.constraint(equalToConstant: 700)
+        ])
     }
     
     func setupCalendar() {

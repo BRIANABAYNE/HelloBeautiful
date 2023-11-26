@@ -17,3 +17,5 @@ struct UserCycle: Encodable {
 extension UserCycle: Equatable {
     
 }
+// User -> cycles:periodCycle
+//diary[DiaryEntry] // text: String, Cravings: Int, 

@@ -26,24 +26,43 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
     
     // MARK: - Actions
     @IBAction func nextButtonTapped(_ sender: Any) {
-        guard let email = emailTextField.text,!email.isEmpty,
-              let password = passwordTextField.text,!password.isEmpty,
-              let confirmPassword = confirmPasswordTextField.text,!confirmPassword.isEmpty else { return }
-        viewModel.createAccount(with: email, password: password, confirmPassword: confirmPassword)
-//
-//
-//        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//            guard segue.identifier == "helloBeautiful",
-//                  let destinationVC = segue.destination as? UserDetailsViewController?,
-//                  destinationVC?.email == emailTextField.text,
-//                  destinationVC?.password == passwordTextField.text else {return}
-//
-//
-//        }
+        guard
+            let email = emailTextField.text,!email.isEmpty,
+            let password = passwordTextField.text,!password.isEmpty,
+            let confirmPassword = confirmPasswordTextField.text,!confirmPassword.isEmpty
+        else { return }
+        viewModel.newUserContainer.email = email
+        viewModel.newUserContainer.password = password
+        navigateToNextScreen(with: viewModel.newUserContainer)
         
-        let storyboard = UIStoryboard(name:"UserDetails", bundle: nil)
-        let navigation = storyboard.instantiateViewController(identifier:"UIViewController-mfw-ps-f1K")
-        self.view.window?.rootViewController = navigation
+        //        viewModel.createAccount(with: email, password: password, confirmPassword: confirmPassword)
+        //
+        //
+        //                func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //                    guard segue.identifier == "helloBeautiful",
+        //                          let destinationVC = segue.destination as? UserDetailsViewController?,
+        //                          destinationVC?.email == emailTextField.text,
+        //                          destinationVC?.password == passwordTextField.text else {return}
+        //
+        //
+        //                }
+        //      /  self.view.window?.rootViewController = navigation
+    }
+    
+    private func navigateToNextScreen(with newUser: NewUser) {
+        
+//        let storyboard = UIStoryboard(name:"UserDetails", bundle: nil)
+        guard let viewController = storyboard?.instantiateViewController(
+            identifier: "UserDetailsViewController",
+            creator: { coder in
+                UserDetailsViewController(newUserContainer: newUser, coder: coder)
+                
+            }) else {
+            fatalError("Failed to create user screen")
+        }
+        navigationController?.pushViewController(viewController, animated: true)
+//        let viewController = UserDetailsViewController(newUserContainer: newUser, coder: coder)
+        
     }
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MYf-iT-R6P">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -10,7 +10,7 @@
         <!--Create User Detail View Controller-->
         <scene sceneID="lCY-E5-ltc">
             <objects>
-                <viewController storyboardIdentifier="UIViewController-MYf-iT-R6P" id="MYf-iT-R6P" customClass="CreateUserDetailViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateUserDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MYf-iT-R6P" customClass="CreateUserDetailViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="qY8-j2-6pb" customClass="GradientView" customModule="HelloBeautiful" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="MYf-iT-R6P" eventType="touchUpInside" id="821-tZ-Pbw"/>
-                                    <segue destination="tjR-sH-PWn" kind="show" identifier="UserDetails" id="eqU-kf-3HT"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crS-zg-NHh" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
@@ -88,14 +87,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCm-qe-hJW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3536.6412213740455" y="-61.267605633802823"/>
-        </scene>
-        <!--UIViewController-mfw-ps-f1K-->
-        <scene sceneID="YxU-v9-mBn">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UIViewController-mfw-ps-f1K" id="tjR-sH-PWn" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fSV-G2-HYb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4376" y="-61"/>
         </scene>
     </scenes>
 </document>
