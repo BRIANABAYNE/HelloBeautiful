@@ -7,17 +7,97 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4724597C-31BF-4ACD-A281-712A91C78213"
+            uuid = "DE59F0AD-3DC5-4355-85BF-4073E074CE95"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HelloBeautiful/UI/UserDetails/UserDetailsViewModel.swift"
+            filePath = "HelloBeautiful/UI/CreateUser/CreateUserDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "UserDetailsViewModel"
-            landmarkType = "3">
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "navigateToNextScreen(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ECD4E09D-DAA1-46AB-A112-815297A6DC17"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/CreateUser/CreateUserDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "navigateToNextScreen(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ECD4E09D-DAA1-46AB-A112-815297A6DC17 - d16f6c7e2c497d8d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.CreateUserDetailViewController.navigateToNextScreen(with: HelloBeautiful.NewUser) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/CreateUser/CreateUserDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "224">
+               </Location>
+               <Location
+                  uuid = "ECD4E09D-DAA1-46AB-A112-815297A6DC17 - c48c7ca71699249a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.NSCoder) -&gt; Swift.Optional&lt;HelloBeautiful.UserDetailsViewController&gt; in HelloBeautiful.CreateUserDetailViewController.navigateToNextScreen(with: HelloBeautiful.NewUser) -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/CreateUser/CreateUserDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "85585F88-6977-479F-B803-329392F740AB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/CreateUser/CreateUserDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "navigateToNextScreen(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "85BED515-238C-4779-99ED-D1CFBDF84D04"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/CreateUser/CreateUserDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "navigateToNextScreen(with:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
