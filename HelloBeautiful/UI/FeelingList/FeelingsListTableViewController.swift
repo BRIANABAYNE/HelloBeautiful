@@ -10,13 +10,38 @@ import UIKit
 class FeelingsListTableViewController: UITableViewController, AlertPresentable {
     
     // MARK: - Properties
-    var viewModel: FeelingListViewModel!
+    var viewModel: FeelingListViewModel
+    
+//    init?(viewModel: FeelingListViewModel, coder: NSCoder) {
+//        self.viewModel = viewModel
+//        super.init(coder: coder)
+//    }
+//
+//    @available(*, unavailable, renamed: "init(viewModel:coder:)")
+    required init?(coder: NSCoder) {
+        viewModel = FeelingListViewModel(userID: UserDefaults.standard.string(forKey: "UserDocumentID")!)
+        super.init(coder: coder)
+//        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - Lifecyles
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = FeelingListViewModel(userID: UserDefaults.standard.string(forKey: "UserDocumentID")!, injectedDelegate: self)
+//        viewModel = FeelingListViewModel(userID: UserDefaults.standard.string(forKey: "UserDocumentID")!, injectedDelegate: self)
+        viewModel.serviceResultHandler = { [weak self] success, error in
+            if success {
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            } else {
+                if let error {
+                    self?.presentAlert(message: error.localizedDescription, title: "Oh no!")
+                }
+            }
+            
+        }
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         viewModel.fetchDiaryEntries()
     }
@@ -49,28 +74,42 @@ class FeelingsListTableViewController: UITableViewController, AlertPresentable {
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let entry = viewModel.feelingsSOT?[indexPath.row]
+      let viewModel = FeelingsViewModel(userDiary: entry)
+    }
+    
     //     MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destination = segue.destination as? FeelingsViewController else { return }
         if segue.identifier == "toDetailVC" {
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            let userDiary = viewModel.feelingsSOT?[indexPath.row]
-            destination.viewModel = FeelingsViewModel(userDiary: userDiary, injectedDelegate: destination)
+            let entry = viewModel.feelingsSOT?[indexPath.row]
+            destination.viewModel = FeelingsViewModel(userDiary: entry, injectedDelegate: destination)
         } else {
             destination.viewModel = FeelingsViewModel(injectedDelegate: destination)
         }
     }
 }
 // MARK: - Extension
-extension FeelingsListTableViewController: FeelingsListViewModelDelegate {
-    func successfullyLoadedData() {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
-    }
-    
-    func encountered(_ error: Error) {
-        presentAlert(message: error.localizedDescription, title: "Oh no!")
-    }
-}
+//extension FeelingsListTableViewController: FeelingsListViewModelDelegate {
+//    func successfullyLoadedData() {
+//        DispatchQueue.main.async {
+//            self.tableView.reloadData()
+//        }
+//    }
+//    
+//    func encountered(_ error: Error) {
+//        presentAlert(message: error.localizedDescription, title: "Oh no!")
+//    }
+//}
+
+//extension FeelingsListTableViewController {
+//    static func create(with viewModel: FeelingListViewModel) -> FeelingsListTableViewController {
+//        let storyboard = UIStoryboard(name: "UserDetails", bundle: nil)
+//        return storyboard.instantiateViewController(identifier: "UserDetailsViewController") { coder in
+//            FeelingsListTableViewController(viewModel: viewModel, coder: coder)
+//        }
+//    }
+//}

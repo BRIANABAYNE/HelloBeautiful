@@ -16,7 +16,7 @@
         <!--User Details View Controller-->
         <scene sceneID="AZV-hO-lLX">
             <objects>
-                <viewController storyboardIdentifier="UserDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mfw-ps-f1K" customClass="UserDetailsViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserDetails" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mfw-ps-f1K" customClass="UserDetailsViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9DN-fJ-ZjL" customClass="GradientView" customModule="HelloBeautiful" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -133,3 +133,12 @@ extension UserDetailsViewController: UIPickerViewDelegate {
         return viewModel.zodiacSigns[row]
     }
 }
+
+extension UserDetailsViewController {
+    static func create(with newUser: NewUser) -> UserDetailsViewController {
+        let storyboard = UIStoryboard(name: "UserDetails", bundle: nil)
+        return storyboard.instantiateViewController(identifier: "UserDetailsViewController") { coder in
+            UserDetailsViewController(newUserContainer: newUser, coder: coder)
+        }
+    }
+}

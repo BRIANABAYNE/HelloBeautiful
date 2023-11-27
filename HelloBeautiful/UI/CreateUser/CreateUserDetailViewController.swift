@@ -34,35 +34,12 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
         viewModel.newUserContainer.email = email
         viewModel.newUserContainer.password = password
         navigateToNextScreen(with: viewModel.newUserContainer)
-        
-        //        viewModel.createAccount(with: email, password: password, confirmPassword: confirmPassword)
-        //
-        //
-        //                func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //                    guard segue.identifier == "helloBeautiful",
-        //                          let destinationVC = segue.destination as? UserDetailsViewController?,
-        //                          destinationVC?.email == emailTextField.text,
-        //                          destinationVC?.password == passwordTextField.text else {return}
-        //
-        //
-        //                }
-        //      /  self.view.window?.rootViewController = navigation
     }
     
     private func navigateToNextScreen(with newUser: NewUser) {
-        
-//        let storyboard = UIStoryboard(name:"UserDetails", bundle: nil)
-        guard let viewController = storyboard?.instantiateViewController(
-            identifier: "UserDetailsViewController",
-            creator: { coder in
-                UserDetailsViewController(newUserContainer: newUser, coder: coder)
-                
-            }) else {
-            fatalError("Failed to create user screen")
-        }
+        let storyboard = UIStoryboard(name:"UserDetails", bundle: nil)
+        let viewController = UserDetailsViewController.create(with: newUser)
         navigationController?.pushViewController(viewController, animated: true)
-//        let viewController = UserDetailsViewController(newUserContainer: newUser, coder: coder)
-        
     }
 }
 

@@ -20,10 +20,10 @@ class FeelingsListTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func configureCell(with diary: Diary?) {
+    func configureCell(with diary: DiaryEntry?) {
         guard let diary else { return }
         // feelingDateLabel.text = diary.date.asString()
         feelingsNotesLabel.text = diary.notes
-        feelingSymptomsLabel.text = diary.symptoms
+        feelingSymptomsLabel.text = "\(diary.symptoms)"
     }
 }
