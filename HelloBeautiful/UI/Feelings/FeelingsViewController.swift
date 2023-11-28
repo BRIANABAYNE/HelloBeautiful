@@ -19,8 +19,9 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
     @IBOutlet weak var feelingsSegmentControl: UISegmentedControl!
     @IBOutlet weak var cravingsSegmentControl: UISegmentedControl!
     @IBOutlet weak var symptomsSegmentControl: UISegmentedControl!
-    @IBOutlet weak var notesTextField: UITextField!
+    @IBOutlet weak var notesTextView: UITextView!
     @IBOutlet weak var feelingsDateLabel: UILabel!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     
     // MARK: - Properties
@@ -41,10 +42,10 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
     // MARK: - Lifecyles
     override func viewDidLoad() {
         super.viewDidLoad()
-        // TODO: - Update this to use the date from FB if the user came via segue
-        feelingsDateLabel.text = Date().stringValue()
-        // ^^^
-        viewModel = FeelingsViewModel(injectedDelegate: self)
+        saveButton.title = (viewModel.entry == nil) ? "Save" : "Update"
+        feelingsDateLabel.text = viewModel.entryDate
+    
+//        viewModel = FeelingsViewModel(injectedDelegate: self)
         setupSegmentedControls()
     }
     
@@ -52,7 +53,7 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
     
     
     private func setupSegmentedControls() {
-        guard let diary = viewModel.userDiary else { return }
+        guard let diary = viewModel.entry else { return }
         
         for (index, flow) in Flow.allCases.enumerated() {
             flowSegmentControl.setTitle(flow.flowTitle, forSegmentAt: index)
@@ -82,58 +83,19 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
 
     // MARK: - Actions
     @IBAction func saveButtonTapped(_ sender: Any) {
-        if viewModel.userDiary != nil {
-            viewModel.updateDiary (
-                newFlow: flowSegmentControl.selectedSegmentIndex,
-                newCervicalMucus: mucusSegmentControl.selectedSegmentIndex,
-                newFeels: feelingsSegmentControl.selectedSegmentIndex,
-                newCravings: cravingsSegmentControl.selectedSegmentIndex,
-                newSymptoms: symptomsSegmentControl.selectedSegmentIndex,
-                newNotes: notesTextField.text ?? ""
-            )
-        } else if viewModel.userDiary == nil {
-            viewModel.createDiary(
-                flow: flowSegmentControl.selectedSegmentIndex,
-                cervicalMucus: mucusSegmentControl.selectedSegmentIndex,
-                feels: feelingsSegmentControl.selectedSegmentIndex,
-                cravings: cravingsSegmentControl.selectedSegmentIndex,
-                symptoms: symptomsSegmentControl.selectedSegmentIndex,
-                notes: notesTextField.text ?? "",
-                date: Date()
-            )
-        }
-    }
-    
-    @IBAction func flowSegmentControlAction(_ sender: UISegmentedControl) {
-        
-    }
-    
-    @IBAction func mucusSegmentControlAction(_ sender: UISegmentedControl) {
-        
-    }
-    
-    @IBAction func feelsSegmentControlAction(_ sender: UISegmentedControl) {
-    }
-    
-    @IBAction func cravingSegmentControlAction(_ sender: UISegmentedControl) {
-        
-    }
-    
-    @IBAction func symptomsSegmentControlAction(_ sender: UISegmentedControl) {
-        
+        viewModel.saveEntry(
+            flow: flowSegmentControl.selectedSegmentIndex,
+            cervicalMucus: mucusSegmentControl.selectedSegmentIndex,
+            feels: feelingsSegmentControl.selectedSegmentIndex,
+            cravings: cravingsSegmentControl.selectedSegmentIndex,
+            symptoms: symptomsSegmentControl.selectedSegmentIndex,
+            notes: notesTextView.text ?? "",
+            date: Date()
+        )
     }
 }
-// MARK: - Extension
 
-extension FeelingsViewController: FeelingsViewModelDelegate {
-    func successfullyLoadedData() {
-        navigationController?.popViewController(animated: true)
-    }
-    
-    func encountered(_ error: Error) {
-        presentAlert(message: error.localizedDescription, title: "Oh no!")
-    }
-}
+// MARK: - Extension
 
 extension FeelingsViewController {
     static func create(with viewModel: FeelingsViewModel) -> FeelingsViewController {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A0E4C712B15A14100314384 /* FeelingsTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0E4C702B15A14100314384 /* FeelingsTableCellViewModel.swift */; };
 		3A2B1F552A6C67FB00CCA3FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B1F542A6C67FB00CCA3FB /* AppDelegate.swift */; };
 		3A2B1F572A6C67FB00CCA3FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B1F562A6C67FB00CCA3FB /* SceneDelegate.swift */; };
 		3A2B1F5C2A6C67FB00CCA3FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2B1F5A2A6C67FB00CCA3FB /* Main.storyboard */; };
@@ -76,6 +77,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A0E4C702B15A14100314384 /* FeelingsTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsTableCellViewModel.swift; sourceTree = "<group>"; };
 		3A2B1F512A6C67FB00CCA3FB /* HelloBeautiful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloBeautiful.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2B1F542A6C67FB00CCA3FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A2B1F562A6C67FB00CCA3FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				3AAF72E62ACC76DA005C9C9A /* FeelingsListTableViewCell.swift */,
 				3AAF72E42ACC76AC005C9C9A /* FeelingsListTableViewController.swift */,
 				3A6602E72AD5DDCA00D48A59 /* FeelingsListViewModel.swift */,
+				3A0E4C702B15A14100314384 /* FeelingsTableCellViewModel.swift */,
 			);
 			path = FeelingList;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				3A6B22E82AB7B9F500BCAA09 /* UserCycleViewController.swift in Sources */,
 				3A5893032A7070CE00E208BC /* MoonService.swift in Sources */,
 				3AEAA1132AD8EDAA00F4737B /* FirebaseUserCycleService.swift in Sources */,
+				3A0E4C712B15A14100314384 /* FeelingsTableCellViewModel.swift in Sources */,
 				3A5A897E2A71FBBA009169B5 /* CreateUserDetailViewController.swift in Sources */,
 				3AF6E25B2A72DCD700461137 /* CreateAccountError.swift in Sources */,
 				3A601BD32B12BF0600A59634 /* NewUser.swift in Sources */,

@@ -8,10 +8,8 @@
 import Foundation
 
 extension Date {
-    func stringValue() -> String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .none
-        return formatter.string(from: self)
+    /// Formats date to look like this:  September 12, 2023
+    func formattedForEntry() -> String {
+        formatted(date: .long, time: .omitted)
     }
 }

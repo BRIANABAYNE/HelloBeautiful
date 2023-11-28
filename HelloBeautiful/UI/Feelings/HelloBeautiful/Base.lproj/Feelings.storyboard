@@ -22,182 +22,157 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dui-CO-2oq">
-                                <rect key="frame" x="20" y="113" width="353" height="426"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dui-CO-2oq">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Date)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ag-IQ-b6C">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="67.666666666666671"/>
+                                        <rect key="frame" x="20" y="20" width="353" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="hsi-HJ-CPo"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Zq0-xu-aRy">
-                                        <rect key="frame" x="0.0" y="71.666666666666657" width="353" height="67.666666666666657"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aK4-1g-9uB">
+                                        <rect key="frame" x="20" y="80" width="353" height="405"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flow" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCd-aI-GZe">
-                                                <rect key="frame" x="0.0" y="0.0" width="48" height="32"/>
-                                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
-                                                <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PUq-u7-Baf">
-                                                <rect key="frame" x="0.0" y="36" width="353" height="32.666666666666671"/>
-                                                <segments>
-                                                    <segment title="Light💧"/>
-                                                    <segment title="Medium 🩸"/>
-                                                    <segment title="Heavy🩸🩸"/>
-                                                    <segment title="Super 🌶️🌶️"/>
-                                                </segments>
-                                            </segmentedControl>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Zq0-xu-aRy">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="65"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flow" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCd-aI-GZe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="Agd-kP-pd1"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
+                                                        <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PUq-u7-Baf">
+                                                        <rect key="frame" x="0.0" y="34" width="353" height="32"/>
+                                                        <segments>
+                                                            <segment title="Light💧"/>
+                                                            <segment title="Medium 🩸"/>
+                                                            <segment title="Heavy🩸🩸"/>
+                                                            <segment title="Super 🌶️🌶️"/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Scf-7Y-keR">
+                                                <rect key="frame" x="0.0" y="85" width="353" height="65"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cervical Mucus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1a-en-IdL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="Rxb-bS-cdf"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
+                                                        <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TwP-xY-YSD">
+                                                        <rect key="frame" x="0.0" y="34" width="353" height="32"/>
+                                                        <segments>
+                                                            <segment title="Watery🔫"/>
+                                                            <segment title="Thick🥚"/>
+                                                            <segment title="Sticky 💦"/>
+                                                            <segment title="Dry🌵"/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="GKY-R3-9kC">
+                                                <rect key="frame" x="0.0" y="170" width="353" height="65"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHJ-tG-oeW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="nlr-lF-dVc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
+                                                        <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bHF-95-EMc">
+                                                        <rect key="frame" x="0.0" y="34" width="353" height="32"/>
+                                                        <segments>
+                                                            <segment title="Happy 😍"/>
+                                                            <segment title="Horney🫦"/>
+                                                            <segment title="Sad💔"/>
+                                                            <segment title="Lonely🎭"/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="gvy-zi-9jy">
+                                                <rect key="frame" x="0.0" y="255" width="353" height="65"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cravings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgw-Wv-F8o">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="3pf-X7-kQf"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
+                                                        <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sq6-78-OOF">
+                                                        <rect key="frame" x="0.0" y="34" width="353" height="32"/>
+                                                        <segments>
+                                                            <segment title="Sweets🧁"/>
+                                                            <segment title="Fats🍟"/>
+                                                            <segment title="Carbs🍝"/>
+                                                            <segment title="Greens🥦"/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dL3-hX-bSL">
+                                                <rect key="frame" x="0.0" y="340" width="353" height="65"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symptoms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOt-XX-MvJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="oq9-wg-ZG2"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
+                                                        <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="onW-UJ-Z2k">
+                                                        <rect key="frame" x="0.0" y="34" width="353" height="32"/>
+                                                        <segments>
+                                                            <segment title="Cramps🔪"/>
+                                                            <segment title="Tender 🍒"/>
+                                                            <segment title="Bloated🐋"/>
+                                                            <segment title="Fatigue💤"/>
+                                                        </segments>
+                                                        <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="PUq-u7-Baf" firstAttribute="leading" secondItem="Zq0-xu-aRy" secondAttribute="leading" id="lWp-4T-fQo"/>
-                                        </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Scf-7Y-keR">
-                                        <rect key="frame" x="0.0" y="143.33333333333331" width="353" height="67.666666666666686"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cervical Mucus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1a-en-IdL">
-                                                <rect key="frame" x="0.0" y="0.0" width="148" height="32"/>
-                                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
-                                                <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TwP-xY-YSD">
-                                                <rect key="frame" x="0.0" y="36" width="353" height="32.666666666666671"/>
-                                                <segments>
-                                                    <segment title="Watery🔫"/>
-                                                    <segment title="Thick🥚"/>
-                                                    <segment title="Sticky 💦"/>
-                                                    <segment title="Dry🌵"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="mucusSegmentControlAction:" destination="CuA-bp-sCH" eventType="valueChanged" id="6Uf-cn-paW"/>
-                                                </connections>
-                                            </segmentedControl>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="TwP-xY-YSD" secondAttribute="trailing" id="Y5P-wt-YHy"/>
-                                            <constraint firstItem="TwP-xY-YSD" firstAttribute="leading" secondItem="Scf-7Y-keR" secondAttribute="leading" id="uzR-oc-Ynz"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="GKY-R3-9kC">
-                                        <rect key="frame" x="0.0" y="215" width="353" height="67.666666666666686"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHJ-tG-oeW">
-                                                <rect key="frame" x="0.0" y="0.0" width="47.666666666666664" height="32"/>
-                                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
-                                                <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bHF-95-EMc">
-                                                <rect key="frame" x="0.0" y="36" width="353" height="32.666666666666671"/>
-                                                <segments>
-                                                    <segment title="Happy 😍"/>
-                                                    <segment title="Horney🫦"/>
-                                                    <segment title="Sad💔"/>
-                                                    <segment title="Lonely🎭"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="feelsSegmentControlAction:" destination="CuA-bp-sCH" eventType="valueChanged" id="Kf1-XZ-K0f"/>
-                                                </connections>
-                                            </segmentedControl>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="bHF-95-EMc" firstAttribute="leading" secondItem="GKY-R3-9kC" secondAttribute="leading" id="j3O-4B-Bf1"/>
-                                            <constraint firstAttribute="trailing" secondItem="bHF-95-EMc" secondAttribute="trailing" id="z5l-Fo-4af"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="gvy-zi-9jy">
-                                        <rect key="frame" x="0.0" y="286.66666666666669" width="353" height="67.666666666666686"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cravings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgw-Wv-F8o">
-                                                <rect key="frame" x="0.0" y="0.0" width="83.333333333333329" height="32"/>
-                                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
-                                                <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sq6-78-OOF">
-                                                <rect key="frame" x="0.0" y="36" width="353" height="32.666666666666671"/>
-                                                <segments>
-                                                    <segment title="Sweets🧁"/>
-                                                    <segment title="Fats🍟"/>
-                                                    <segment title="Carbs🍝"/>
-                                                    <segment title="Greens🥦"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="cravingSegmentControlAction:" destination="CuA-bp-sCH" eventType="valueChanged" id="xWZ-4W-FLF"/>
-                                                </connections>
-                                            </segmentedControl>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="sq6-78-OOF" firstAttribute="leading" secondItem="gvy-zi-9jy" secondAttribute="leading" id="ZhR-FM-Cu3"/>
-                                            <constraint firstAttribute="trailing" secondItem="sq6-78-OOF" secondAttribute="trailing" id="g30-LF-Uby"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dL3-hX-bSL">
-                                        <rect key="frame" x="0.0" y="358.33333333333331" width="353" height="67.666666666666686"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symptoms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOt-XX-MvJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="95.666666666666671" height="32"/>
-                                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="20"/>
-                                                <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="onW-UJ-Z2k">
-                                                <rect key="frame" x="0.0" y="36" width="353" height="32.666666666666671"/>
-                                                <segments>
-                                                    <segment title="Cramps🔪"/>
-                                                    <segment title="Tender 🍒"/>
-                                                    <segment title="Bloated🐋"/>
-                                                    <segment title="Fatigue💤"/>
-                                                </segments>
-                                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <connections>
-                                                    <action selector="symptomsSegmentControlAction:" destination="CuA-bp-sCH" eventType="valueChanged" id="83B-PA-P4e"/>
-                                                </connections>
-                                            </segmentedControl>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="onW-UJ-Z2k" secondAttribute="trailing" id="0m0-TL-SPB"/>
-                                            <constraint firstItem="onW-UJ-Z2k" firstAttribute="leading" secondItem="dL3-hX-bSL" secondAttribute="leading" id="78T-vT-Dbe"/>
-                                        </constraints>
-                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LZI-hB-WFl">
+                                        <rect key="frame" x="20" y="515" width="353" height="175"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="dL3-hX-bSL" firstAttribute="leading" secondItem="dui-CO-2oq" secondAttribute="leading" id="3dx-tC-Rna"/>
-                                    <constraint firstAttribute="trailing" secondItem="8ag-IQ-b6C" secondAttribute="trailing" id="6Nj-a9-gzS"/>
-                                    <constraint firstAttribute="trailing" secondItem="gvy-zi-9jy" secondAttribute="trailing" id="B8T-OT-3R1"/>
-                                    <constraint firstItem="Zq0-xu-aRy" firstAttribute="leading" secondItem="dui-CO-2oq" secondAttribute="leading" id="E9K-2K-ryq"/>
-                                    <constraint firstAttribute="trailing" secondItem="GKY-R3-9kC" secondAttribute="trailing" id="EtM-No-lDy"/>
-                                    <constraint firstAttribute="trailing" secondItem="Scf-7Y-keR" secondAttribute="trailing" id="WaQ-j5-f4j"/>
-                                    <constraint firstItem="8ag-IQ-b6C" firstAttribute="leading" secondItem="dui-CO-2oq" secondAttribute="leading" id="XaX-c2-cTC"/>
-                                    <constraint firstItem="8ag-IQ-b6C" firstAttribute="top" secondItem="dui-CO-2oq" secondAttribute="top" id="Xvl-Ra-iFG"/>
-                                    <constraint firstItem="Scf-7Y-keR" firstAttribute="leading" secondItem="dui-CO-2oq" secondAttribute="leading" id="meq-qs-neC"/>
-                                    <constraint firstItem="gvy-zi-9jy" firstAttribute="leading" secondItem="dui-CO-2oq" secondAttribute="leading" id="oLL-lm-zDn"/>
-                                    <constraint firstAttribute="trailing" secondItem="dL3-hX-bSL" secondAttribute="trailing" id="tBD-OE-XVh"/>
-                                    <constraint firstAttribute="trailing" secondItem="Zq0-xu-aRy" secondAttribute="trailing" id="yXP-pI-djk"/>
-                                    <constraint firstItem="GKY-R3-9kC" firstAttribute="leading" secondItem="dui-CO-2oq" secondAttribute="leading" id="zVJ-oB-2b7"/>
-                                </constraints>
+                                <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
                             </stackView>
-                            <textField clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Cycle Notes" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gXk-Lg-obM">
-                                <rect key="frame" x="25" y="549" width="343" height="210"/>
-                                <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9FQ-F4-uAH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gXk-Lg-obM" firstAttribute="top" secondItem="dui-CO-2oq" secondAttribute="bottom" constant="10" id="66a-Lg-txA"/>
-                            <constraint firstItem="dui-CO-2oq" firstAttribute="leading" secondItem="Fvb-Tb-n6n" secondAttribute="leading" constant="20" id="KMK-wp-ZAO"/>
-                            <constraint firstItem="dui-CO-2oq" firstAttribute="top" secondItem="9FQ-F4-uAH" secondAttribute="top" constant="10" id="Nup-Fs-uhj"/>
-                            <constraint firstItem="gXk-Lg-obM" firstAttribute="leading" secondItem="9FQ-F4-uAH" secondAttribute="leading" constant="25" id="QHz-Es-nw6"/>
-                            <constraint firstItem="9FQ-F4-uAH" firstAttribute="bottom" secondItem="gXk-Lg-obM" secondAttribute="bottom" constant="10" id="W78-u6-Z7A"/>
-                            <constraint firstItem="9FQ-F4-uAH" firstAttribute="trailing" secondItem="dui-CO-2oq" secondAttribute="trailing" constant="20" id="hHF-9u-ahQ"/>
-                            <constraint firstItem="9FQ-F4-uAH" firstAttribute="trailing" secondItem="gXk-Lg-obM" secondAttribute="trailing" constant="25" id="ium-b5-61s"/>
-                            <constraint firstItem="dui-CO-2oq" firstAttribute="height" secondItem="Fvb-Tb-n6n" secondAttribute="height" multiplier="0.5" id="r9P-6c-TwA"/>
+                            <constraint firstItem="9FQ-F4-uAH" firstAttribute="trailing" secondItem="dui-CO-2oq" secondAttribute="trailing" id="Hc2-KH-U6f"/>
+                            <constraint firstItem="dui-CO-2oq" firstAttribute="leading" secondItem="Fvb-Tb-n6n" secondAttribute="leading" id="NQo-yU-hap"/>
+                            <constraint firstItem="9FQ-F4-uAH" firstAttribute="bottom" secondItem="dui-CO-2oq" secondAttribute="bottom" id="XgF-Q5-rFA"/>
+                            <constraint firstItem="dui-CO-2oq" firstAttribute="top" secondItem="9FQ-F4-uAH" secondAttribute="top" id="oBx-dR-iXb"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
@@ -223,7 +198,8 @@
                         <outlet property="feelingsSegmentControl" destination="bHF-95-EMc" id="gaw-qZ-7e9"/>
                         <outlet property="flowSegmentControl" destination="PUq-u7-Baf" id="RY4-CX-F0U"/>
                         <outlet property="mucusSegmentControl" destination="TwP-xY-YSD" id="Zvw-JH-T5q"/>
-                        <outlet property="notesTextField" destination="gXk-Lg-obM" id="7l3-BL-qpA"/>
+                        <outlet property="notesTextView" destination="LZI-hB-WFl" id="cjR-7h-HZR"/>
+                        <outlet property="saveButton" destination="7Rk-Iq-ADd" id="61g-Hr-aPA"/>
                         <outlet property="symptomsSegmentControl" destination="onW-UJ-Z2k" id="i1v-sZ-Q4Q"/>
                     </connections>
                 </viewController>
@@ -240,52 +216,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="feelingsCell" rowHeight="112" id="S8n-4S-f2w" customClass="FeelingsListTableViewCell" customModule="HelloBeautiful" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="feelingsCell" textLabel="cHF-tV-WfH" detailTextLabel="XFk-fm-Fq7" rowHeight="112" style="IBUITableViewCellStyleSubtitle" id="S8n-4S-f2w">
                                 <rect key="frame" x="0.0" y="50" width="393" height="112"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S8n-4S-f2w" id="FUc-g6-9hq">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="112"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Symptoms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="976-4f-WRy">
-                                            <rect key="frame" x="234.66666666666663" y="27" width="81.333333333333371" height="28"/>
-                                            <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
-                                            <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cHF-tV-WfH">
+                                            <rect key="frame" x="20" y="40" width="25" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wr-M8-hjf">
-                                            <rect key="frame" x="36" y="27" width="37" height="37"/>
-                                            <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
-                                            <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Feelings Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfx-YW-5xp">
-                                            <rect key="frame" x="16" y="80" width="190" height="17"/>
-                                            <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
-                                            <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XFk-fm-Fq7">
+                                            <rect key="frame" x="19.999999999999996" y="56.333333333333336" width="43.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Xfx-YW-5xp" firstAttribute="top" secondItem="2wr-M8-hjf" secondAttribute="bottom" constant="16" id="0cO-Ss-bOZ"/>
-                                        <constraint firstItem="Xfx-YW-5xp" firstAttribute="leading" secondItem="FUc-g6-9hq" secondAttribute="leading" constant="16" id="JfQ-1N-ew3"/>
-                                        <constraint firstItem="2wr-M8-hjf" firstAttribute="leading" secondItem="FUc-g6-9hq" secondAttribute="leading" constant="16" id="Uai-Gm-mzQ"/>
-                                        <constraint firstAttribute="bottom" secondItem="976-4f-WRy" secondAttribute="bottom" constant="57" id="Ybx-S8-JKu"/>
-                                        <constraint firstAttribute="trailing" secondItem="976-4f-WRy" secondAttribute="trailing" constant="77" id="cIH-yP-dWl"/>
-                                        <constraint firstItem="2wr-M8-hjf" firstAttribute="top" secondItem="FUc-g6-9hq" secondAttribute="top" constant="16" id="f0P-Cp-SO1"/>
-                                        <constraint firstItem="976-4f-WRy" firstAttribute="leading" secondItem="2wr-M8-hjf" secondAttribute="trailing" constant="161.66999999999999" id="g1h-UN-de7"/>
-                                        <constraint firstAttribute="trailing" secondItem="Xfx-YW-5xp" secondAttribute="trailing" constant="187" id="lwH-5j-ytJ"/>
-                                        <constraint firstItem="Xfx-YW-5xp" firstAttribute="top" secondItem="2wr-M8-hjf" secondAttribute="bottom" constant="16" id="n1G-Uc-bRw"/>
-                                        <constraint firstAttribute="bottom" secondItem="Xfx-YW-5xp" secondAttribute="bottom" constant="15" id="o7T-ht-YSv"/>
-                                        <constraint firstItem="976-4f-WRy" firstAttribute="top" secondItem="FUc-g6-9hq" secondAttribute="top" constant="27" id="zne-kg-rBy"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="feelingDateLabel" destination="2wr-M8-hjf" id="vhO-KT-YRG"/>
-                                    <outlet property="feelingSymptomsLabel" destination="976-4f-WRy" id="74v-55-EVv"/>
-                                    <outlet property="feelingsNotesLabel" destination="Xfx-YW-5xp" id="rBs-zD-MIU"/>
-                                    <segue destination="CuA-bp-sCH" kind="show" identifier="toDetailVC" id="Pd4-BR-5Qh"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -306,7 +259,7 @@
                     <navigationItem key="navigationItem" id="bjo-sH-FwV">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="AiN-it-yhp">
                             <connections>
-                                <segue destination="CuA-bp-sCH" kind="show" id="BAO-ix-XMn"/>
+                                <action selector="addButtonTapped:" destination="f4n-SU-4VX" id="QlO-ct-UVg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -336,12 +289,12 @@
             <point key="canvasLocation" x="1974.8091603053435" y="-820.4225352112677"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="BAO-ix-XMn"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="suit.heart.fill" catalog="system" width="128" height="107"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

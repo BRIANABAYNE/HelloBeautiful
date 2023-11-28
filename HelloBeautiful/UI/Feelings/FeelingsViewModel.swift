@@ -9,32 +9,43 @@ import Foundation
 
 
 // MARK: - Protocol
-protocol FeelingsViewModelDelegate: FeelingsViewController {
-    func successfullyLoadedData()
-    func encountered(_ error: Error)
-}
+//protocol FeelingsViewModelDelegate: FeelingsViewController {
+//    func successfullyLoadedData()
+//    func encountered(_ error: Error)
+//}
 
 class FeelingsViewModel {
     
     // MARK: - Properties
     
-    var userDiary: DiaryEntry?
+    var entry: DiaryEntry? {
+        didSet {
+            print(entry?.notes)
+        }
+    }
     private let feelingsService: FirebaseDiaryServicable
-    weak var feelingsDelegate: FeelingsViewModelDelegate?
+    var serviceHandler: ((_ success: Bool, FirebaseError?) -> Void)?
+//    weak var feelingsDelegate: FeelingsViewModelDelegate?
     
     // MARK: - Dependency Injection
     init(
-        userDiary: DiaryEntry? = nil,
-        feelingsService: FirebaseDiaryService = FirebaseDiaryService(),
-        injectedDelegate: FeelingsViewModelDelegate
-    ){
-        self.userDiary = userDiary
+        entry: DiaryEntry?,
+        feelingsService: FirebaseDiaryService = FirebaseDiaryService()
+//        injectedDelegate: FeelingsViewModelDelegate
+    ) {
+        self.entry = entry
         self.feelingsService = feelingsService
-        self.feelingsDelegate = injectedDelegate
+//        self.feelingsDelegate = injectedDelegate
+    }
+    
+    // MARK: - Display Properties
+    
+    var entryDate: String {
+        entry?.date.formattedForEntry() ?? Date().formattedForEntry()
     }
     
     // MARK: - Function Crud
-    func saveDiary(
+    func saveEntry(
         flow: Int,
         cervicalMucus: Int,
         feels: Int,
@@ -43,7 +54,7 @@ class FeelingsViewModel {
         notes: String,
         date: Date
     ) {
-        if userDiary != nil {
+        if entry != nil {
             updateDiary(
                 newFlow: flow,
                 newCervicalMucus: cervicalMucus,
@@ -63,7 +74,7 @@ class FeelingsViewModel {
         }
     }
     
-    func createDiary(
+   private func createDiary(
         flow: Int,
         cervicalMucus: Int,
         feels: Int,
@@ -81,19 +92,21 @@ class FeelingsViewModel {
             feelingsCollectionType: Constants.Diary.diaryCollectionPath
         )
         
-        feelingsService.createDiary(userDiary: diaryDetails, completion: { result in
+        feelingsService.createDiary(userDiary: diaryDetails, completion: { [weak self] result in
             switch result {
             case.success(_):
-                self.feelingsDelegate?.successfullyLoadedData()
+                self?.serviceHandler?(true, nil)
+//                self.feelingsDelegate?.successfullyLoadedData()
                 print("User Diary was created")
-            case.failure(let failure):
+            case.failure(let error):
                 print("There was an error creating the Diary")
-                self.feelingsDelegate?.encountered(failure)
+                self?.serviceHandler?(false, error)
+//                self.feelingsDelegate?.encountered(failure)
             }
         })
     }
     
-    func updateDiary (
+    private func updateDiary (
         newFlow: Int,
         newCervicalMucus: Int,
         newFeels: Int,
@@ -103,7 +116,7 @@ class FeelingsViewModel {
         date: Date? = nil
     ) {
         
-        guard let diaryToUpdate = self.userDiary else { return }
+        guard let diaryToUpdate = self.entry else { return }
         
         let updatedDiary = DiaryEntry(
             id: diaryToUpdate.id,
@@ -128,7 +141,8 @@ class FeelingsViewModel {
             case .success(_):
                 print("Diary updated successfully")
             case .failure(let failure):
-                self.feelingsDelegate?.encountered(failure)
+                self.serviceHandler?(false, failure)
+//                self.feelingsDelegate?.encountered(failure)
             }
         }
     }

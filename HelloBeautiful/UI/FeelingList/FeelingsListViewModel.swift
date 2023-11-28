@@ -14,7 +14,7 @@ import Foundation
 class FeelingListViewModel  {
     
     // MARK: - Properties
-    var feelingsSOT: [DiaryEntry]?
+    var diaryEntries: [DiaryEntry]?
     private let service: FirebaseDiaryServicable
     var userID: String
     var serviceResultHandler: ((_ success: Bool, FirebaseError?) -> Void)?
@@ -25,13 +25,18 @@ class FeelingListViewModel  {
         self.userID = userID
     }
     
+//    init(userID: String, service: FirebaseDiaryServicable = FirebaseDiaryService()) {
+//        self.service = service
+//        self.userID = userID
+//    }
+    
     // MARK: - Functions
     func fetchDiaryEntries() {
         service.fetchDiaryEntries(userID: self.userID,  completion: { [weak self] result in
             guard let self else { return }
             switch result {
             case .success(let fetchedDiary):
-                self.feelingsSOT = fetchedDiary
+                self.diaryEntries = fetchedDiary
                self.serviceResultHandler?(true, nil)
             case .failure(let error):
                self.serviceResultHandler?(false, error)
@@ -40,11 +45,11 @@ class FeelingListViewModel  {
     }
     
     func delete(indexPath: IndexPath, completion: @escaping() -> Void) {
-        guard let diary = feelingsSOT?[indexPath.row] else { return }
+        guard let diary = diaryEntries?[indexPath.row] else { return }
         service.deleteDiary(userDeleteDiary: diary) { [weak self] result in
             switch result {
             case .success(_):
-                self?.feelingsSOT?.remove(at: indexPath.row)
+                self?.diaryEntries?.remove(at: indexPath.row)
                 completion()
             case .failure(let failure):
                 self?.serviceResultHandler?(false, failure)
