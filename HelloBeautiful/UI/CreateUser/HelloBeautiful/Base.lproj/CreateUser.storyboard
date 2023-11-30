@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MYf-iT-R6P">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OZf-tV-7E7">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -11,12 +11,12 @@
         <scene sceneID="lCY-E5-ltc">
             <objects>
                 <viewController storyboardIdentifier="CreateUserDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MYf-iT-R6P" customClass="CreateUserDetailViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="qY8-j2-6pb" customClass="GradientView" customModule="HelloBeautiful" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="qY8-j2-6pb" customClass="GradientView" customModule="HelloBeautiful" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRe-gH-gKU" customClass="BBButton" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="30" y="631" width="333" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRe-gH-gKU" customClass="BBButton" customModule="HelloBeautiful" customModuleProvider="target">
+                                <rect key="frame" x="30" y="675" width="333" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0mQ-h0-zrB"/>
                                 </constraints>
@@ -26,47 +26,43 @@
                                     <action selector="nextButtonTapped:" destination="MYf-iT-R6P" eventType="touchUpInside" id="821-tZ-Pbw"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crS-zg-NHh" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="30" y="241" width="333" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="WyG-7S-IrO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4WU-ez-grD" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="30" y="311" width="333" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Cvp-8V-vt4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAV-0b-c9i" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="30" y="381" width="333" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="35S-4Z-hSh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vmR-tR-IF5">
+                                <rect key="frame" x="30" y="103" width="313" height="190"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crS-zg-NHh" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="WyG-7S-IrO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4WU-ez-grD" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="70" width="313" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Cvp-8V-vt4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAV-0b-c9i" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="140" width="313" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="35S-4Z-hSh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zpd-ma-EMl"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="IAV-0b-c9i" firstAttribute="top" secondItem="4WU-ez-grD" secondAttribute="bottom" constant="20" id="0Bm-YJ-yJH"/>
-                            <constraint firstItem="zpd-ma-EMl" firstAttribute="trailing" secondItem="4WU-ez-grD" secondAttribute="trailing" constant="30" id="4ro-pJ-K9a"/>
-                            <constraint firstItem="crS-zg-NHh" firstAttribute="leading" secondItem="zpd-ma-EMl" secondAttribute="leading" constant="30" id="Bdw-dC-tf4"/>
-                            <constraint firstItem="crS-zg-NHh" firstAttribute="top" secondItem="zpd-ma-EMl" secondAttribute="top" constant="182" id="HUZ-PT-XS1"/>
-                            <constraint firstItem="4WU-ez-grD" firstAttribute="top" secondItem="crS-zg-NHh" secondAttribute="bottom" constant="20" id="PCm-oi-5GF"/>
-                            <constraint firstItem="zpd-ma-EMl" firstAttribute="trailing" secondItem="crS-zg-NHh" secondAttribute="trailing" constant="30" id="Pxz-0B-T8j"/>
-                            <constraint firstAttribute="trailing" secondItem="HRe-gH-gKU" secondAttribute="trailing" constant="30" id="TKa-ju-7YM"/>
-                            <constraint firstItem="zpd-ma-EMl" firstAttribute="trailing" secondItem="IAV-0b-c9i" secondAttribute="trailing" constant="30" id="Tkf-Rh-rz1"/>
-                            <constraint firstItem="HRe-gH-gKU" firstAttribute="top" secondItem="IAV-0b-c9i" secondAttribute="bottom" constant="200" id="VTH-Iw-Kj9"/>
-                            <constraint firstItem="HRe-gH-gKU" firstAttribute="leading" secondItem="qY8-j2-6pb" secondAttribute="leading" constant="30" id="cQi-t2-fC4"/>
-                            <constraint firstItem="4WU-ez-grD" firstAttribute="leading" secondItem="zpd-ma-EMl" secondAttribute="leading" constant="30" id="jrs-7E-Bld"/>
-                            <constraint firstAttribute="bottom" secondItem="HRe-gH-gKU" secondAttribute="bottom" constant="155" id="qzj-p3-s48"/>
-                            <constraint firstItem="IAV-0b-c9i" firstAttribute="leading" secondItem="zpd-ma-EMl" secondAttribute="leading" constant="30" id="vy2-NZ-OzD"/>
+                            <constraint firstItem="HRe-gH-gKU" firstAttribute="top" secondItem="vmR-tR-IF5" secondAttribute="bottom" constant="200" id="DI2-aa-r2o"/>
+                            <constraint firstItem="zpd-ma-EMl" firstAttribute="trailing" secondItem="vmR-tR-IF5" secondAttribute="trailing" constant="30" id="S6a-fK-8KP"/>
+                            <constraint firstItem="vmR-tR-IF5" firstAttribute="top" secondItem="zpd-ma-EMl" secondAttribute="top" constant="182" id="U1N-rj-jVN"/>
+                            <constraint firstItem="vmR-tR-IF5" firstAttribute="leading" secondItem="zpd-ma-EMl" secondAttribute="leading" constant="50" id="UcF-lH-a4R"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
@@ -85,6 +81,24 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCm-qe-hJW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4463.3587786259541" y="-61.267605633802823"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xOY-ej-rsL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OZf-tV-7E7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cme-CA-ghZ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MYf-iT-R6P" kind="relationship" relationship="rootViewController" id="mu2-xA-0sw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pzX-Nx-aOL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3536.6412213740455" y="-61.267605633802823"/>
         </scene>

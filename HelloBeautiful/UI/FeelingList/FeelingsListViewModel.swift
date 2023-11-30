@@ -8,48 +8,55 @@
 import Foundation
 
 // MARK: - Protocol
-protocol FeelingsListViewModelDelegate: FeelingsListTableViewController {
-}
+//protocol FeelingsListViewModelDelegate: FeelingsListTableViewController {
+//}
 
 class FeelingListViewModel  {
     
     // MARK: - Properties
-    var feelingsSOT: [Diary]?
+    var diaryEntries: [DiaryEntry] = []
     private let service: FirebaseDiaryServicable
-    weak var delegate: FeelingsListViewModelDelegate?
     var userID: String
+    var serviceResultHandler: ((_ success: Bool, FirebaseError?) -> Void)?
     
     // MARK: - Dependency Injection
-    init(userID: String, injectedDelegate: FeelingsListViewModelDelegate, service: FirebaseDiaryServicable = FirebaseDiaryService()) {
-        self.delegate = injectedDelegate
+    init(userID: String, service: FirebaseDiaryServicable = FirebaseDiaryService()) {
         self.service = service
         self.userID = userID
     }
     
+    
     // MARK: - Functions
+    
+    var entryCellViewModels: [FeelingsTableCellViewModel] {
+        diaryEntries.map { FeelingsTableCellViewModel(entry: $0) }
+    }
+    
     func fetchDiaryEntries() {
-        service.fetchDiaryEntries(userID: self.userID,  completion: { result in
+        service.fetchDiaryEntries(userID: self.userID,  completion: { [weak self] result in
+            guard let self else { return }
             switch result {
             case .success(let fetchedDiary):
-                self.feelingsSOT = fetchedDiary
-                self.delegate?.successfullyLoadedData()
+                self.diaryEntries = fetchedDiary
+               self.serviceResultHandler?(true, nil)
             case .failure(let error):
-                self.delegate?.encountered(error)
+               self.serviceResultHandler?(false, error)
             }
         })
     }
     
     func delete(indexPath: IndexPath, completion: @escaping() -> Void) {
-        guard let diary = feelingsSOT?[indexPath.row] else { return }
-        service.deleteDiary(userDeleteDiary: diary) { result in
+        let entry = diaryEntries[indexPath.row]
+        service.deleteDiary(userDeleteDiary: entry) { [weak self] result in
+            guard let self else { return }
             switch result {
             case .success(_):
-                self.feelingsSOT?.remove(at: indexPath.row)
+                self.diaryEntries.remove(at: indexPath.row)
                 completion()
             case .failure(let failure):
-                self.delegate?.encountered(failure)
+                self.serviceResultHandler?(false, failure)
+                // self.delegate?.encountered(failure)
             }
         }
-        
     }
 } // end of VC

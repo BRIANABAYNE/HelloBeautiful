@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
 
 struct User {
     
@@ -19,13 +20,40 @@ struct PeriodCycle {
     let diary: [DiaryEntry]
 }
 
-struct DiaryEntry {
+struct DiaryEntry: Decodable, Encodable {
+    @DocumentID var id: String?
     let flow: Int
     let cervicalMucus: Int
     let feels: Int
     let cravings: Int
     let symptoms: Int
+    let notes: String
+    let date: Date
+    var feelingsCollectionType: String?
 }
+
+extension DiaryEntry {
+    init(
+        flow: Int,
+        cervicalMucus: Int,
+        feels: Int,
+        cravings: Int,
+        symptoms: Int,
+        notes: String,
+        feelingsCollectionType: String?
+    ) {
+        self.id = nil 
+        self.flow = flow
+        self.cervicalMucus = cervicalMucus
+        self.feels = feels
+        self.cravings = cravings
+        self.symptoms = symptoms
+        self.notes = notes
+        self.date = .init()
+        self.feelingsCollectionType = feelingsCollectionType
+    }
+}
+
 
 enum Flow: Int, CaseIterable {
     case light
@@ -36,17 +64,17 @@ enum Flow: Int, CaseIterable {
     var flowTitle: String {
         switch self {
         case .light:
-            "Light 💧"
+            return "Light 💧"
         case .medium:
-            "Medium 🩸"
+            return "Medium 🩸"
         case .heavy:
-            "Heavy 🩸🩸"
+            return "Heavy 🩸🩸"
         case .superHeavy:
-            "Super 🌶️🌶️"
+            return "Super 🌶️🌶️"
         }
-        return ""
     }
 }
+
 enum CervicalMucus: Int, CaseIterable {
     case watery
     case thick
@@ -56,15 +84,14 @@ enum CervicalMucus: Int, CaseIterable {
     var mucusTitle: String {
         switch self {
         case .watery:
-            "Watery 🔫"
+            return "Watery 🔫"
         case .thick:
-            "Thick 🥚"
+            return "Thick 🥚"
         case .sticky:
-            "Sticky 💦"
+            return "Sticky 💦"
         case .dry:
-            "Dry 🌵"
+            return "Dry 🌵"
         }
-        return ""
     }
 }
 
@@ -77,15 +104,14 @@ enum Feels: Int, CaseIterable {
     var feelingsTitle: String {
         switch self {
         case .happy:
-            "Happy 😍"
+            return "Happy 😍"
         case .horney:
-            "Horney 🫦"
+            return "Horney 🫦"
         case .sad:
-            "Sad 💔"
+            return "Sad 💔"
         case .lonely:
-            "Lonely 🎭"
+            return "Lonely 🎭"
         }
-        return ""
     }
 }
 
@@ -98,15 +124,14 @@ enum Cravings: Int, CaseIterable {
     var cravingTitle: String {
         switch self {
         case .sweets:
-            "Sweets 🧁"
+            return "Sweets 🧁"
         case .fats:
-            "Fats 🍟"
+            return "Fats 🍟"
         case .carbs:
-            "Carbs 🍝"
+            return "Carbs 🍝"
         case .greens:
-            "Greens 🥦"
+            return "Greens 🥦"
         }
-        return ""
     }
 }
 
@@ -119,14 +144,26 @@ enum Symptoms: Int, CaseIterable {
     var symptomsTitle: String {
         switch self {
         case .cramps:
-            "Cramps 🔪"
+            return "Cramps 🔪"
         case .tender:
-            "Tender Breast 🍒"
+            return "Tender Breast 🍒"
         case .bloated:
-            "Bloated 🐋"
+            return "Bloated 🐋"
         case .fatigue:
-            "Fatigue 💤"
+            return "Fatigue 💤"
         }
-        return ""
     }
 }
+
+//let user = User(
+//    name: "Anne",
+//    cycles: [
+//        .init(
+//            startDate: .init(),
+//            duration: 7,
+//            diary: [
+//                .init(craving: Craving.sweets.rawValue, symptoms: 9)
+//            ]
+//        )
+//    ]
+//)

@@ -8,22 +8,17 @@
 import UIKit
 
 class FeelingsListTableViewCell: UITableViewCell {
+ 
+    private var viewModel: FeelingsTableCellViewModel!
     
-    // MARK: - Outlets
+    // MARK: - Methods
     
-    @IBOutlet weak var feelingDateLabel: UILabel!
-    @IBOutlet weak var feelingsNotesLabel: UILabel!
-    @IBOutlet weak var feelingSymptomsLabel: UILabel!
-    
-    // MARK: - Lifecyles
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    func configureCell(with diary: Diary?) {
-        guard let diary else { return }
-        // feelingDateLabel.text = diary.date.asString()
-        feelingsNotesLabel.text = diary.notes
-        feelingSymptomsLabel.text = diary.symptoms
+    func configureCell(with viewModel: FeelingsTableCellViewModel) {
+        self.viewModel = viewModel
+        var config = UIListContentConfiguration.subtitleCell()
+        config.text = viewModel.title
+        config.secondaryText = viewModel.subtitle
+        config.secondaryTextProperties.numberOfLines = 1
+        contentConfiguration = config
     }
 }

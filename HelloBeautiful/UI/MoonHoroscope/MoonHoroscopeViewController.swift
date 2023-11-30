@@ -22,7 +22,7 @@ class MoonHoroscopeViewController: UIViewController {
     
     // MARK: - Properties
     var viewModel: MoonHoroscopeViewModel!
-    var userDetails: UserDetails?
+//    var userDetails: UserDetails?
     
     // MARK: - Lifecycle
     override func viewDidLoad() {

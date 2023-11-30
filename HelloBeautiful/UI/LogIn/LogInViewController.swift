@@ -154,8 +154,6 @@ class LogInViewController: UIViewController {
             activityView?.stopAnimating()
         }
     }
-    
-    
 }
 // MARK: Extension
 extension LogInViewController: LogInViewModelDelegate {

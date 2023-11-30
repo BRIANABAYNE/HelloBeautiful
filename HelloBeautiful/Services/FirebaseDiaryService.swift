@@ -12,14 +12,14 @@ import FirebaseFirestoreSwift
 import FirebaseAuth
 
 protocol FirebaseDiaryServicable {
-    func createDiary(userDiary: Diary, completion: @escaping(Result<String, FirebaseError>) -> Void)
-    func fetchDiaryEntries(userID: String, completion: @escaping (Result<[Diary], FirebaseError>) -> Void)
-    func updateDiary(userDiary: Diary, handler: @escaping (Result<Bool, FirebaseError>) -> Void)
-    func deleteDiary(userDeleteDiary: Diary, completion: @escaping(Result<Bool, FirebaseError>) -> Void)
+    func createDiary(userDiary: DiaryEntry, completion: @escaping(Result<String, FirebaseError>) -> Void)
+    func fetchDiaryEntries(userID: String, completion: @escaping (Result<[DiaryEntry], FirebaseError>) -> Void)
+    func updateDiary(userDiary: DiaryEntry, handler: @escaping (Result<Bool, FirebaseError>) -> Void)
+    func deleteDiary(userDeleteDiary: DiaryEntry, completion: @escaping(Result<Bool, FirebaseError>) -> Void)
 }
 struct FirebaseDiaryService: FirebaseDiaryServicable {
     
-    func createDiary(userDiary: Diary, completion: @escaping (Result<String, FirebaseError>) -> Void) {
+    func createDiary(userDiary: DiaryEntry, completion: @escaping (Result<String, FirebaseError>) -> Void) {
         let firebaseRef = Firestore.firestore()
         do {
             let userDocID = UserDefaults.standard.string(forKey: "UserDocumentID")
@@ -32,7 +32,7 @@ struct FirebaseDiaryService: FirebaseDiaryServicable {
             return
         }
     } // end of create
-    func fetchDiaryEntries(userID: String, completion: @escaping (Result<[Diary], FirebaseError>) -> Void) {
+    func fetchDiaryEntries(userID: String, completion: @escaping (Result<[DiaryEntry], FirebaseError>) -> Void) {
         let firebaseRef = Firestore.firestore()
         firebaseRef.collection("UserDetails").document(userID).collection("Diary").getDocuments() { snapshot,
             error in
@@ -41,7 +41,7 @@ struct FirebaseDiaryService: FirebaseDiaryServicable {
             } else {
                 do {
                     let arrayDiary = try (snapshot?.documents.compactMap({ document in
-                        try document.data(as: Diary.self )
+                        try document.data(as: DiaryEntry.self )
                     }))!
                     completion(.success(arrayDiary))
                 } catch {
@@ -53,7 +53,7 @@ struct FirebaseDiaryService: FirebaseDiaryServicable {
         
     }
     
-    func updateDiary(userDiary: Diary, handler: @escaping (Result<Bool, FirebaseError>) -> Void) {
+    func updateDiary(userDiary: DiaryEntry, handler: @escaping (Result<Bool, FirebaseError>) -> Void) {
         let firebaseRef = Firestore.firestore()
         if let documentID = userDiary.id {
             let userDocID = UserDefaults.standard.string(forKey: "UserDocumentID")
@@ -90,7 +90,7 @@ struct FirebaseDiaryService: FirebaseDiaryServicable {
     //        }
     //    }
     
-    func deleteDiary(userDeleteDiary deleteDiary: Diary, completion: @escaping (Result<Bool, FirebaseError>) -> Void) {
+    func deleteDiary(userDeleteDiary deleteDiary: DiaryEntry, completion: @escaping (Result<Bool, FirebaseError>) -> Void) {
         let firebaseRef = Firestore.firestore()
         let diaryID = deleteDiary.id
         let userDocID = UserDefaults.standard.string(forKey: "UserDocumentID")

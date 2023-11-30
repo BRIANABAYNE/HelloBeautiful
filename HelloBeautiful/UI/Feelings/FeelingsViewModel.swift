@@ -9,65 +9,144 @@ import Foundation
 
 
 // MARK: - Protocol
-protocol FeelingsViewModelDelegate: FeelingsViewController {
-    func successfullyLoadedData()
-    func encountered(_ error: Error)
-}
+//protocol FeelingsViewModelDelegate: FeelingsViewController {
+//    func successfullyLoadedData()
+//    func encountered(_ error: Error)
+//}
 
 class FeelingsViewModel {
     
     // MARK: - Properties
     
-    var userDiary: Diary?
+    var entry: DiaryEntry? {
+        didSet {
+            print(entry?.notes)
+        }
+    }
     private let feelingsService: FirebaseDiaryServicable
-    weak var feelingsDelegate: FeelingsViewModelDelegate?
+    var serviceHandler: ((_ success: Bool, FirebaseError?) -> Void)?
+//    weak var feelingsDelegate: FeelingsViewModelDelegate?
     
     // MARK: - Dependency Injection
-    init(userDiary: Diary? = nil, feelingsService: FirebaseDiaryService = FirebaseDiaryService(), injectedDelegate: FeelingsViewModelDelegate) {
-        self.userDiary = userDiary
+    init(
+        entry: DiaryEntry?,
+        feelingsService: FirebaseDiaryService = FirebaseDiaryService()
+//        injectedDelegate: FeelingsViewModelDelegate
+    ) {
+        self.entry = entry
         self.feelingsService = feelingsService
-        self.feelingsDelegate = injectedDelegate
+//        self.feelingsDelegate = injectedDelegate
+    }
+    
+    // MARK: - Display Properties
+    
+    var barButtonTitle: String {
+        entry == nil ? "Save" : "Update"
+    }
+    
+    var entryDate: String {
+        entry?.date.formattedForEntry() ?? Date().formattedForEntry()
     }
     
     // MARK: - Function Crud
-    func saveDiary(flow: String, cervicalMucus: String, feels: String, cravings: String, symptoms: String, notes: String, date: Date) {
-        if userDiary != nil {
-            updateDiary(newFlow: flow, newCervicalMucus: cervicalMucus, newFeels: feels, newCravings: cravings, newSymptoms: symptoms, newNotes: notes)
+    func saveEntry(
+        flow: Int,
+        cervicalMucus: Int,
+        feels: Int,
+        cravings: Int,
+        symptoms: Int,
+        notes: String,
+        date: Date
+    ) {
+        if entry != nil {
+            updateDiary(
+                newFlow: flow,
+                newCervicalMucus: cervicalMucus,
+                newFeels: feels, newCravings: cravings,
+                newSymptoms: symptoms,
+                newNotes: notes
+            )
         } else {
-            createDiary(flow: flow, cervicalMucus: cervicalMucus, feels: feels, cravings: cravings, symptoms: symptoms, notes: notes, date: date)
+            createDiary(
+                flow: flow,
+                cervicalMucus: cervicalMucus,
+                feels: feels, cravings: cravings,
+                symptoms: symptoms,
+                notes: notes,
+                date: date
+            )
         }
     }
     
-    func createDiary(flow: String, cervicalMucus: String, feels: String, cravings: String, symptoms: String, notes: String, date: Date) {
+   private func createDiary(
+        flow: Int,
+        cervicalMucus: Int,
+        feels: Int,
+        cravings: Int,
+        symptoms: Int,
+        notes: String,
+        date: Date
+    ) {
+        let diaryDetails = DiaryEntry (
+            flow: flow,
+            cervicalMucus: cervicalMucus,
+            feels: feels, cravings: cravings,
+            symptoms: symptoms,
+            notes: notes,
+            feelingsCollectionType: Constants.Diary.diaryCollectionPath
+        )
         
-        let diaryDetails = Diary(flow: flow, cervicalMucus: cervicalMucus, feels: feels, cravings: cravings, symptoms: symptoms, notes: notes, date: date, feelingsCollectionType: Constants.Diary.diaryCollectionPath)
-        feelingsService.createDiary(userDiary: diaryDetails, completion: { [self] result in
+        feelingsService.createDiary(userDiary: diaryDetails, completion: { [weak self] result in
             switch result {
             case.success(_):
-                feelingsDelegate?.successfullyLoadedData()
+                self?.serviceHandler?(true, nil)
+//                self.feelingsDelegate?.successfullyLoadedData()
                 print("User Diary was created")
-            case.failure(let failure):
+            case.failure(let error):
                 print("There was an error creating the Diary")
-                self.feelingsDelegate?.encountered(failure)
+                self?.serviceHandler?(false, error)
+//                self.feelingsDelegate?.encountered(failure)
             }
         })
     }
     
-    func updateDiary(newFlow: String, newCervicalMucus: String, newFeels: String, newCravings: String, newSymptoms: String, newNotes: String) {
-        guard let diaryToUpdate = self.userDiary else { return }
-        let updatedDiary = Diary(id: diaryToUpdate.id, flow: newFlow, cervicalMucus: newCervicalMucus, feels: newFeels, cravings: newCravings, symptoms: newSymptoms, notes: newNotes,feelingsCollectionType: Constants.Diary.diaryCollectionPath)
-        feelingsService.updateDiary(userDiary: updatedDiary) { result in
-        }
+    private func updateDiary (
+        newFlow: Int,
+        newCervicalMucus: Int,
+        newFeels: Int,
+        newCravings: Int,
+        newSymptoms: Int,
+        newNotes: String,
+        date: Date? = nil
+    ) {
         
+        guard let diaryToUpdate = self.entry else { return }
+        
+        let updatedDiary = DiaryEntry(
+            id: diaryToUpdate.id,
+            flow: newFlow,
+            cervicalMucus: newCervicalMucus,
+            feels: newFeels,
+            cravings: newCravings,
+            symptoms: newSymptoms,
+            notes: newNotes,
+            date: date ?? diaryToUpdate.date,
+            feelingsCollectionType: Constants.Diary.diaryCollectionPath
+        )
+        
+        feelingsService.updateDiary(userDiary: updatedDiary) { result in
+            
+        }
     }
     
-    private func update(updateDiary: Diary){
-        feelingsService.updateDiary(userDiary: updateDiary) { [weak self] result in
+    private func update(updateDiary: DiaryEntry) {
+        feelingsService.updateDiary(userDiary: updateDiary) { result in
             switch result {
             case .success(_):
                 print("Diary updated successfully")
             case .failure(let failure):
-                self?.feelingsDelegate?.encountered(failure)
+                self.serviceHandler?(false, failure)
+//                self.feelingsDelegate?.encountered(failure)
             }
         }
     }

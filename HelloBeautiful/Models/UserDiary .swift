@@ -6,18 +6,18 @@
 //
 
 
-import UIKit
-import FirebaseFirestoreSwift
-
-struct Diary: Decodable, Encodable  {
- 
-   @DocumentID var id: String?
-    var flow: String = ""
-    var cervicalMucus: String = ""
-    var feels: String = ""
-    var cravings: String = ""
-    var symptoms: String = ""
-    var notes: String
-    var date: Date = Date()
-    var feelingsCollectionType: String?
-}
+//import UIKit
+//import FirebaseFirestoreSwift
+//
+//struct Diary: Decodable, Encodable  {
+// 
+//   @DocumentID var id: String?
+//    var flow: String = ""
+//    var cervicalMucus: String = ""
+//    var feels: String = ""
+//    var cravings: String = ""
+//    var symptoms: String = ""
+//    var notes: String
+//    var date: Date = Date()
+//    var feelingsCollectionType: String?
+//}
