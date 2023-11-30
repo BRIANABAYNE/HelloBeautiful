@@ -22,4 +22,8 @@ class FeelingsTableCellViewModel {
     var subtitle: String {
         entry.notes
     }
+    
+    var entryViewModel: FeelingsViewModel {
+        .init(entry: entry)
+    }
 }

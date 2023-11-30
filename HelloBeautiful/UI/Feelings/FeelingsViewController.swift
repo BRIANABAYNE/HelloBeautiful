@@ -42,15 +42,19 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
     // MARK: - Lifecyles
     override func viewDidLoad() {
         super.viewDidLoad()
-        saveButton.title = (viewModel.entry == nil) ? "Save" : "Update"
-        feelingsDateLabel.text = viewModel.entryDate
-    
-//        viewModel = FeelingsViewModel(injectedDelegate: self)
+        setupViews()
         setupSegmentedControls()
     }
     
     // MARK: - Methods
     
+    var entryCompletionHandler: (() -> Void)?
+    
+    private func setupViews() {
+        saveButton.title = viewModel.barButtonTitle
+        feelingsDateLabel.text = viewModel.entryDate
+        notesTextView.text = viewModel.entry?.notes ?? ""
+    }
     
     private func setupSegmentedControls() {
         guard let diary = viewModel.entry else { return }
@@ -92,6 +96,9 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
             notes: notesTextView.text ?? "",
             date: Date()
         )
+        
+        navigationController?.popViewController(animated: true)
+        entryCompletionHandler?()
     }
 }
 

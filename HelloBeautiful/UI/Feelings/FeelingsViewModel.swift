@@ -40,6 +40,10 @@ class FeelingsViewModel {
     
     // MARK: - Display Properties
     
+    var barButtonTitle: String {
+        entry == nil ? "Save" : "Update"
+    }
+    
     var entryDate: String {
         entry?.date.formattedForEntry() ?? Date().formattedForEntry()
     }

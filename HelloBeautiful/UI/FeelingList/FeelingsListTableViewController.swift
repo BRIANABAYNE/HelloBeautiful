@@ -15,26 +15,53 @@ class FeelingsListTableViewController: UITableViewController, AlertPresentable {
     required init?(coder: NSCoder) {
         viewModel = FeelingListViewModel(userID: UserDefaults.standard.string(forKey: "UserDocumentID")!)
         super.init(coder: coder)
-       
     }
     
-    
-    // MARK: - Lifecyles
+    // MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupLoadingIndicator()
+        startLoadingIndicator()
         tableView.estimatedRowHeight = 80
         viewModel.fetchDiaryEntries()
         viewModel.serviceResultHandler = { [weak self] success, error in
+            guard let self else { return }
             if success {
                 DispatchQueue.main.async {
-                    self?.tableView.reloadData()
+                    self.tableView.reloadData()
                 }
             } else {
                 if let error {
-                    self?.presentAlert(message: error.localizedDescription, title: "Oh no!")
+                    self.presentAlert(message: error.localizedDescription, title: "Oh no!")
                 }
             }
+            
+            self.stopLoadingIndicator()
         }
+    }
+    
+    private lazy var loadingIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .large)
+        return indicator
+    }()
+    
+    private func setupLoadingIndicator() {
+        view.addSubview(loadingIndicator)
+        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+    }
+    
+    private func startLoadingIndicator() {
+        loadingIndicator.alpha = 1
+        loadingIndicator.startAnimating()
+    }
+    
+    private func stopLoadingIndicator() {
+        loadingIndicator.alpha = 0
+        loadingIndicator.stopAnimating()
     }
     
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
@@ -49,17 +76,14 @@ class FeelingsListTableViewController: UITableViewController, AlertPresentable {
     override func numberOfSections(in tableView: UITableView) -> Int { 1 }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.diaryEntries?.count ?? 0
+        viewModel.entryCellViewModels.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: "feelingsCell", for: indexPath
         ) as! FeelingsListTableViewCell
-        let config = UIListContentConfiguration.subtitleCell()
-        cell.contentConfiguration = config
-        guard let entry = viewModel.diaryEntries?[indexPath.row] else { return UITableViewCell() }
-        let viewModel = FeelingsTableCellViewModel(entry: entry)
+        let viewModel =  viewModel.entryCellViewModels[indexPath.row]
         cell.configureCell(with: viewModel)
         
         return cell
@@ -80,9 +104,13 @@ class FeelingsListTableViewController: UITableViewController, AlertPresentable {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let entry = viewModel.diaryEntries?[indexPath.row]
-        let viewModel = FeelingsViewModel(entry: entry)
-        let viewController = FeelingsViewController.create(with: viewModel)
+        let entryCellViewModel = viewModel.entryCellViewModels[indexPath.row]
+        let viewController = FeelingsViewController.create(with: entryCellViewModel.entryViewModel)
+        viewController.entryCompletionHandler = { [weak self] in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
