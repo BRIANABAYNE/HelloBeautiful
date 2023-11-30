@@ -23,19 +23,19 @@ class FeelingsViewModel {
             print(entry?.notes)
         }
     }
-    private let feelingsService: FirebaseDiaryServicable
+    private let feelingsService: FirebaseDiaryServiceable
     var serviceHandler: ((_ success: Bool, FirebaseError?) -> Void)?
-//    weak var feelingsDelegate: FeelingsViewModelDelegate?
-    
+
     // MARK: - Dependency Injection
+    
     init(
         entry: DiaryEntry?,
         feelingsService: FirebaseDiaryService = FirebaseDiaryService()
-//        injectedDelegate: FeelingsViewModelDelegate
+
     ) {
         self.entry = entry
         self.feelingsService = feelingsService
-//        self.feelingsDelegate = injectedDelegate
+
     }
     
     // MARK: - Display Properties
@@ -49,6 +49,7 @@ class FeelingsViewModel {
     }
     
     // MARK: - Function Crud
+    
     func saveEntry(
         flow: Int,
         cervicalMucus: Int,

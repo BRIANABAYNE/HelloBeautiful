@@ -10,6 +10,7 @@ import UIKit
 class FeelingsListTableViewController: UITableViewController, AlertPresentable {
     
     // MARK: - Properties
+    
     var viewModel: FeelingListViewModel
     
     required init?(coder: NSCoder) {
@@ -18,6 +19,7 @@ class FeelingsListTableViewController: UITableViewController, AlertPresentable {
     }
     
     // MARK: - Lifecycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLoadingIndicator()

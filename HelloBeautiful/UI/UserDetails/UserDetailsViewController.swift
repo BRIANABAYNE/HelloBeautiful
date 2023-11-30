@@ -7,17 +7,19 @@
 
 import UIKit
 
-
 class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate {
     func encountered(_ error: Error) {
+        
     }
     
     // MARK: - Outlets
+    
     @IBOutlet weak var lastCycleTextField: UITextField!
     @IBOutlet weak var periodLengthTextField: UITextField!
     @IBOutlet weak var sunSignPicker: UIPickerView!
     
     // MARK: - Properties
+    
     let datePicker = UIDatePicker()
     var viewModel: UserDetailsViewModel!
     var zodiacSignString: String?
@@ -37,14 +39,8 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
         fatalError("init(coder:) has not been implemented")
     }
     
-
-//    let storyboard = UIStoryboard(name:"UserDetails", bundle: nil)
-//    let _ = storyboard.instantiateViewController(identifier: "UIViewController-mfw-ps-f1K") { coder in
-//        let viewController = UserDetailsViewController(coder: coder)
-//        return viewController
-//    }
+    // MARK: - Lifecycles
     
-    // MARK: - Lifecyles
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = UserDetailsViewModel(injectedDelegate: self)
@@ -62,22 +58,24 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
     
     @IBAction func disclaimerButtonTapped(_ sender: Any) {
         self.disclosurePopUP = PopUp(frame: self.view.frame)
-        self.disclosurePopUP.closeButtonTapped.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
+        self.disclosurePopUP.closeButtonTapped.addTarget(self, action: #selector(
+            closeButtonTapped), for: .touchUpInside)
         self.view.addSubview(disclosurePopUP)
-        
     }
     
     @objc func closeButtonTapped() {
         self.disclosurePopUP.removeFromSuperview()
     }
+
+    // MARK: - Methods
     
-    
-    // MARK: - Functions / Methods
     func configureLastCycleDatePicker() {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneButtonPressed))
+        let doneButton = UIBarButtonItem(
+            barButtonSystemItem: .done,
+            target: nil, action: #selector(doneButtonPressed))
         toolbar.setItems([doneButton], animated: true)
         lastCycleTextField.inputView = datePicker
         lastCycleTextField.inputAccessoryView = toolbar
@@ -95,7 +93,6 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
         self.view.endEditing(true)
     }
     
-    
     // MARK: - Actions
     
     @IBAction func buttonTapped(_ sender: Any) {
@@ -109,27 +106,42 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
             let text = periodLengthTextField.text,
             let cycleLength = Int(text)
         else { return }
-        viewModel.saveUser(zodiacSign: zodiacSign, cycleLength: cycleLength, lastCycle: lastCycle, email: email, password: password)
+        viewModel.saveUser(
+            zodiacSign: zodiacSign,
+            cycleLength: cycleLength,
+            lastCycle: lastCycle,
+            email: email,
+            password: password)
     }
-    
-}// end of VC
+}
 
 // MARK: - Extensions
+
 extension UserDetailsViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(
+        _ pickerView: UIPickerView,
+        numberOfRowsInComponent component: Int) -> Int {
         return viewModel.zodiacSigns.count
     }
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    
+    func pickerView(
+        _ pickerView: UIPickerView,
+        didSelectRow row: Int,
+        inComponent component: Int)
+    {
         zodiacSignString = viewModel.zodiacSigns[row]
-
     }
 }
 extension UserDetailsViewController: UIPickerViewDelegate {
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(
+        _ pickerView: UIPickerView,
+        titleForRow row: Int,
+        forComponent component: Int) -> String?
+    {
         return viewModel.zodiacSigns[row]
     }
 }

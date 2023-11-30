@@ -14,18 +14,5 @@ class NewUser {
     var zodiacSign: String = ""
     var lastCycleStartDate: Date = .init()
     var cycleLength: Int = 0
-
-//    init(
-//        email: String,
-//        password: String,
-//        zodiacSign: String,
-//        lastCycleStartDate: Date,
-//        cycleLength: Int
-//    ) {
-//        self.email = email
-//        self.password = password
-//        self.zodiacSign = zodiacSign
-//        self.lastCycleStartDate = lastCycleStartDate
-//        self.cycleLength = cycleLength
-//    }
+    
 }

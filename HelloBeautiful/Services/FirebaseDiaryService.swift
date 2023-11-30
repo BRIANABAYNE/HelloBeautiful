@@ -11,13 +11,13 @@ import FirebaseStorage
 import FirebaseFirestoreSwift
 import FirebaseAuth
 
-protocol FirebaseDiaryServicable {
+protocol FirebaseDiaryServiceable {
     func createDiary(userDiary: DiaryEntry, completion: @escaping(Result<String, FirebaseError>) -> Void)
     func fetchDiaryEntries(userID: String, completion: @escaping (Result<[DiaryEntry], FirebaseError>) -> Void)
     func updateDiary(userDiary: DiaryEntry, handler: @escaping (Result<Bool, FirebaseError>) -> Void)
     func deleteDiary(userDeleteDiary: DiaryEntry, completion: @escaping(Result<Bool, FirebaseError>) -> Void)
 }
-struct FirebaseDiaryService: FirebaseDiaryServicable {
+struct FirebaseDiaryService: FirebaseDiaryServiceable {
     
     func createDiary(userDiary: DiaryEntry, completion: @escaping (Result<String, FirebaseError>) -> Void) {
         let firebaseRef = Firestore.firestore()
@@ -57,9 +57,9 @@ struct FirebaseDiaryService: FirebaseDiaryServicable {
         let firebaseRef = Firestore.firestore()
         if let documentID = userDiary.id {
             let userDocID = UserDefaults.standard.string(forKey: "UserDocumentID")
-            let docref = firebaseRef.collection(Constants.UserDetails.userDetailsCollectionPath).document(userDocID!).collection(Constants.Diary.diaryCollectionPath).document(documentID)
+            let documentReference = firebaseRef.collection(Constants.UserDetails.userDetailsCollectionPath).document(userDocID!).collection(Constants.Diary.diaryCollectionPath).document(documentID)
             do {
-                try docref.setData(from: userDiary)
+                try documentReference.setData(from: userDiary)
                 handler(.success(true))
             } catch {
                 handler(.failure(.firebaseError(error)))

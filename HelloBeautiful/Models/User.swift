@@ -54,7 +54,6 @@ extension DiaryEntry {
     }
 }
 
-
 enum Flow: Int, CaseIterable {
     case light
     case medium
@@ -154,16 +153,3 @@ enum Symptoms: Int, CaseIterable {
         }
     }
 }
-
-//let user = User(
-//    name: "Anne",
-//    cycles: [
-//        .init(
-//            startDate: .init(),
-//            duration: 7,
-//            diary: [
-//                .init(craving: Craving.sweets.rawValue, symptoms: 9)
-//            ]
-//        )
-//    ]
-//)

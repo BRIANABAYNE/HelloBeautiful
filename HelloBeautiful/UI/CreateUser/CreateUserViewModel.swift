@@ -15,18 +15,27 @@ protocol CreateUserViewModelDelegate: CreateUserDetailViewController {
 struct CreateUserViewModel {
     
     // MARK: - Properties
+    
     private let service: FirebaseAuthServiceable
     weak var delegate: CreateUserViewModelDelegate?
     let newUserContainer = NewUser()
 
-    
     // MARK: - Dependency Injection
-    init(service: FirebaseAuthServiceable = FirebaseAuthService(), delegate: CreateUserViewModelDelegate) {
+    
+    init(
+        service: FirebaseAuthServiceable = FirebaseAuthService(),
+        delegate: CreateUserViewModelDelegate)
+    {
         self.service = service
         self.delegate = delegate
     }
     // MARK: - Functions
-    func createAccount(with email: String, password: String, confirmPassword: String) {
+    
+    func createAccount(
+        with email: String,
+        password: String,
+        confirmPassword: String
+    ) {
         if password == confirmPassword {
             service.createAccount(with: email, password: password, confirmPassword: confirmPassword) { result in
                 switch result {

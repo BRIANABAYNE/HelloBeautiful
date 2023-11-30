@@ -191,7 +191,7 @@
                     </tabBarItem>
                     <size key="freeformSize" width="393" height="1300"/>
                     <connections>
-                        <outlet property="horoscopeLable" destination="CAu-7p-vnw" id="cUB-vZ-l3u"/>
+                        <outlet property="horoscopeLabel" destination="CAu-7p-vnw" id="o2F-Nq-CnG"/>
                         <outlet property="illuminationLabel" destination="fxS-qo-5Jp" id="GWU-SJ-Efc"/>
                         <outlet property="moonDistanceLabel" destination="PbI-Ru-eHA" id="cFm-Ai-pDQ"/>
                         <outlet property="moonImage" destination="F9X-bo-NmZ" id="yN0-q4-rv4"/>

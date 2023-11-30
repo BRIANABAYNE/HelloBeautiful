@@ -9,6 +9,8 @@ import UIKit
 
 class FeelingsListTableViewCell: UITableViewCell {
  
+    // MARK: - Properties
+    
     private var viewModel: FeelingsTableCellViewModel!
     
     // MARK: - Methods

@@ -20,7 +20,6 @@
 		3A5420DF2A79A63F0049FC4E /* UserSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5420DE2A79A63F0049FC4E /* UserSettingsViewModel.swift */; };
 		3A55A0A02AC089A80033D2CE /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A55A09F2AC089A80033D2CE /* HomePageViewController.swift */; };
 		3A5649C92AAE48CB002071AB /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5649C82AAE48CB002071AB /* AlertPresentable.swift */; };
-		3A5892CC2A7019BE00E208BC /* UserDiary .swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892CB2A7019BE00E208BC /* UserDiary .swift */; };
 		3A5892CE2A701A6D00E208BC /* MoonPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892CD2A701A6D00E208BC /* MoonPhase.swift */; };
 		3A5892D02A701E0F00E208BC /* Horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892CF2A701E0F00E208BC /* Horoscope.swift */; };
 		3A5892FF2A70704500E208BC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892FE2A70704500E208BC /* NetworkError.swift */; };
@@ -53,7 +52,6 @@
 		3A8FBA4A2A78247400CCBDF6 /* Moon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8FBA482A78247400CCBDF6 /* Moon.storyboard */; };
 		3AAF72E52ACC76AC005C9C9A /* FeelingsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF72E42ACC76AC005C9C9A /* FeelingsListTableViewController.swift */; };
 		3AAF72E72ACC76DA005C9C9A /* FeelingsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF72E62ACC76DA005C9C9A /* FeelingsListTableViewCell.swift */; };
-		3AAF72EB2ACC80B7005C9C9A /* FeelingsDateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF72EA2ACC80B7005C9C9A /* FeelingsDateHelper.swift */; };
 		3AAF72ED2ACC96A8005C9C9A /* FirebaseDiaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF72EC2ACC96A8005C9C9A /* FirebaseDiaryService.swift */; };
 		3AB0869C2AB5FF4900C7B9CC /* Mainstay.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3AB0869B2AB5FF4900C7B9CC /* Mainstay.ttf */; };
 		3AB0869F2AB6099A00C7B9CC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0869E2AB6099A00C7B9CC /* CustomButton.swift */; };
@@ -92,7 +90,6 @@
 		3A5420DE2A79A63F0049FC4E /* UserSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewModel.swift; sourceTree = "<group>"; };
 		3A55A09F2AC089A80033D2CE /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		3A5649C82AAE48CB002071AB /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
-		3A5892CB2A7019BE00E208BC /* UserDiary .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDiary .swift"; sourceTree = "<group>"; };
 		3A5892CD2A701A6D00E208BC /* MoonPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonPhase.swift; sourceTree = "<group>"; };
 		3A5892CF2A701E0F00E208BC /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
 		3A5892FE2A70704500E208BC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -124,7 +121,6 @@
 		3A8FBA492A78247400CCBDF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HelloBeautiful/Base.lproj/Moon.storyboard; sourceTree = "<group>"; };
 		3AAF72E42ACC76AC005C9C9A /* FeelingsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsListTableViewController.swift; sourceTree = "<group>"; };
 		3AAF72E62ACC76DA005C9C9A /* FeelingsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsListTableViewCell.swift; sourceTree = "<group>"; };
-		3AAF72EA2ACC80B7005C9C9A /* FeelingsDateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsDateHelper.swift; sourceTree = "<group>"; };
 		3AAF72EC2ACC96A8005C9C9A /* FirebaseDiaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDiaryService.swift; sourceTree = "<group>"; };
 		3AB0869B2AB5FF4900C7B9CC /* Mainstay.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mainstay.ttf; sourceTree = "<group>"; };
 		3AB0869E2AB6099A00C7B9CC /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -207,7 +203,6 @@
 			children = (
 				3A6B22EB2AB7BA7C00BCAA09 /* UserCycle.swift */,
 				3A5420DA2A796CCE0049FC4E /* UserDetails.swift */,
-				3A5892CB2A7019BE00E208BC /* UserDiary .swift */,
 				3A5892CD2A701A6D00E208BC /* MoonPhase.swift */,
 				3A5892CF2A701E0F00E208BC /* Horoscope.swift */,
 				3A601BD22B12BF0600A59634 /* NewUser.swift */,
@@ -239,7 +234,6 @@
 				3AF6E25E2A72E47900461137 /* Constants.swift */,
 				3AF6E2672A73553B00461137 /* FirebaseUserDetailsService.swift */,
 				3A5420DC2A7984E90049FC4E /* DateExtension.swift */,
-				3AAF72EA2ACC80B7005C9C9A /* FeelingsDateHelper.swift */,
 				3A5649C82AAE48CB002071AB /* AlertPresentable.swift */,
 				3AAF72EC2ACC96A8005C9C9A /* FirebaseDiaryService.swift */,
 				3AEAA1122AD8EDAA00F4737B /* FirebaseUserCycleService.swift */,
@@ -476,12 +470,10 @@
 				3A5892CE2A701A6D00E208BC /* MoonPhase.swift in Sources */,
 				3A6B22EA2AB7BA3900BCAA09 /* UserCycleViewModel.swift in Sources */,
 				3AB4C4112B1381B300A37BFB /* User.swift in Sources */,
-				3AAF72EB2ACC80B7005C9C9A /* FeelingsDateHelper.swift in Sources */,
 				3A5A897A2A71850C009169B5 /* MoonHoroscopeService.swift in Sources */,
 				3AB086A32AB61A8A00C7B9CC /* GradientView.swift in Sources */,
 				3A5420DB2A796CCE0049FC4E /* UserDetails.swift in Sources */,
 				3A5892FF2A70704500E208BC /* NetworkError.swift in Sources */,
-				3A5892CC2A7019BE00E208BC /* UserDiary .swift in Sources */,
 				3ADE9B422ADB506700D0EAED /* BBSegmentedView.swift in Sources */,
 				3AAF72E72ACC76DA005C9C9A /* FeelingsListTableViewCell.swift in Sources */,
 				3A5420DD2A7984E90049FC4E /* DateExtension.swift in Sources */,

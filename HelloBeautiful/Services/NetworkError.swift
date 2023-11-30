@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 enum NetworkingError: LocalizedError {
 
     case invalidURL
@@ -15,6 +16,7 @@ enum NetworkingError: LocalizedError {
     case invalidStatusCode
 
     var errorDescription: String? {
+        
         switch self {
         case .invalidURL:
             return "Invalid URL. Check your endpoint."

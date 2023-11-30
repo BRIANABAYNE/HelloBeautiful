@@ -12,30 +12,34 @@ import FirebaseAuth
 
 class LogInViewController: UIViewController {
     
+    // MARK: - Outlets
     
-    // MARK: - Outles
-    @IBOutlet weak var logInEmaiTextField: UITextField!
+    @IBOutlet weak var logInEmailTextField: UITextField!
     @IBOutlet weak var logInPasswordTextField: UITextField!
     
-    
     // MARK: - Properties
+    
     var viewModel:LogInViewModel!
     var activityView: UIActivityIndicatorView?
     let backgroundImageView = UIImageView()
     fileprivate var currentNonce: String?
     
     // MARK: - Lifecycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = LogInViewModel(delegate: self)
         signInWithApple()
-        setBackGround()
-        NotificationCenter.default.addObserver(self, selector: #selector(appleIDStateRevoked), name: ASAuthorizationAppleIDProvider.credentialRevokedNotification, object: nil)
+        setBackground()
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(appleIDStateRevoked),
+            name: ASAuthorizationAppleIDProvider.credentialRevokedNotification,
+            object: nil)
     }
     
-    
     // MARK: - Methods
-    func setBackGround() {
+    
+    func setBackground() {
         view.addSubview(backgroundImageView)
         backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
         backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
@@ -47,11 +51,8 @@ class LogInViewController: UIViewController {
     
     func signInWithApple() {
         let siwaButton = ASAuthorizationAppleIDButton()
-        
         siwaButton.translatesAutoresizingMaskIntoConstraints = false
-        
         self.view.addSubview(siwaButton)
-        
         NSLayoutConstraint.activate([
             siwaButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50.0),
             siwaButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50.0),
@@ -60,17 +61,15 @@ class LogInViewController: UIViewController {
         ])
         
         siwaButton.addTarget(self, action: #selector(appleSignInTapped), for: .touchUpInside)
-        
     }
+    
     @objc func appleSignInTapped() {
-        
         let nonce = randomNonceString()
         currentNonce = nonce
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
         request.requestedScopes = [.fullName, .email]
         request.nonce = sha256(nonce)
-        
         let authorizationController = ASAuthorizationController(authorizationRequests: [request])
         authorizationController.delegate = self
         authorizationController.presentationContextProvider = self
@@ -82,6 +81,7 @@ class LogInViewController: UIViewController {
     }
     
     // MARK: - Function SignInWithApple
+    
     private func randomNonceString(length: Int = 32) -> String {
         precondition(length > 0)
         var randomBytes = [UInt8](repeating: 0, count: length)
@@ -94,7 +94,6 @@ class LogInViewController: UIViewController {
         
         let charset: [Character] =
         Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
-        
         let nonce = randomBytes.map { byte in
             charset[Int(byte) % charset.count]
         }
@@ -115,7 +114,7 @@ class LogInViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func logInButtonTapped(_ sender: Any) {
-        guard let email = logInEmaiTextField.text,
+        guard let email = logInEmailTextField.text,
               let password = logInPasswordTextField.text  else { return }
         if(!email.isEmpty && !password.isEmpty) {
             showActivityIndicator()
@@ -125,7 +124,7 @@ class LogInViewController: UIViewController {
                     self.hideActivityIndicator()
                 }
             }
-        } else{
+        } else {
             showAlert(message:"Enter both Email and Password")
         }
     }
@@ -134,10 +133,18 @@ class LogInViewController: UIViewController {
         //TODO: - FINISH THIS
         
     }
+    
     // MARK: - Functions
+    
     func showAlert(message: String) {
-        let alert = UIAlertController(title: "Warning!", message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        let alert = UIAlertController(
+            title: "Warning!",
+            message: message,
+            preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(
+            UIAlertAction(title: "Ok",
+                          style: UIAlertAction.Style.default,
+                          handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -155,36 +162,35 @@ class LogInViewController: UIViewController {
         }
     }
 }
-// MARK: Extension
+
+// MARK: Extensions
+
 extension LogInViewController: LogInViewModelDelegate {
     func encountered(_ error: Error) {
         showAlert(message: error.localizedDescription)
     }
     
     func success(userDetails: UserDetails) {
-        
         self.hideActivityIndicator()
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let logIn = storyboard.instantiateViewController(identifier:"tabBar")
         self.view.window?.rootViewController = logIn
-        
     }
 }
-// MARK: - Extension
+
 extension LogInViewController : ASAuthorizationControllerPresentationContextProviding {
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return self.view.window!
     }
 }
 
-// MARK: - Extension
 extension LogInViewController: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         print("authorization error")
         guard let error = error as? ASAuthorizationError else {
             return
         }
+        
         switch error.code {
         case .canceled:
             print("Canceled")
@@ -201,28 +207,32 @@ extension LogInViewController: ASAuthorizationControllerDelegate {
         }
     }
     
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-        
+    func authorizationController(
+        controller: ASAuthorizationController,
+        didCompleteWithAuthorization authorization: ASAuthorization
+    ) {
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
             let userID = appleIDCredential.user
-            
             guard let nonce = currentNonce else {
                 fatalError("Invalid state: A login callback was received, but no login request was sent.")
             }
+            
             guard let appleIDToken = appleIDCredential.identityToken else {
                 print("Unable to fetch identity token")
                 return
             }
+            
             guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
                 print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
                 return
             }
             
             UserDefaults.standard.set(appleIDCredential.user, forKey: "userID")
-            
-            let credential = OAuthProvider.appleCredential(withIDToken: idTokenString,
-                                                           rawNonce: nonce,
-                                                           fullName: appleIDCredential.fullName)
+            let credential = OAuthProvider.appleCredential(
+                withIDToken: idTokenString,
+                rawNonce: nonce,
+                fullName: appleIDCredential.fullName
+            )
             
             Auth.auth().signIn(with: credential) { (authResult, error) in
                 if let error = error {

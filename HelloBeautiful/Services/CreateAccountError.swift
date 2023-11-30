@@ -6,10 +6,12 @@
 //
 
 import Foundation
+
 enum CreateAccountError: LocalizedError {
+    
     case firebaseError(Error)
     case passwordMismatch
-   
+    
     var errorDescription: String? {
         switch self {
         case .firebaseError(let error):

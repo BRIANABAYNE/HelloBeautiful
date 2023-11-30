@@ -7,10 +7,8 @@
 
 import UIKit
 
-
 @IBDesignable // allows to show on the storyboard
 class FeelingsViewController: UIViewController, AlertPresentable  {
-    
     
     // MARK: - Outlets
     
@@ -22,7 +20,6 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
     @IBOutlet weak var notesTextView: UITextView!
     @IBOutlet weak var feelingsDateLabel: UILabel!
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    
     
     // MARK: - Properties
     
@@ -38,8 +35,8 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Lifecycles
     
-    // MARK: - Lifecyles
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -86,6 +83,7 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
     }
 
     // MARK: - Actions
+    
     @IBAction func saveButtonTapped(_ sender: Any) {
         viewModel.saveEntry(
             flow: flowSegmentControl.selectedSegmentIndex,

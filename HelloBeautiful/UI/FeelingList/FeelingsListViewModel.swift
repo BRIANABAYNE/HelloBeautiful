@@ -7,24 +7,24 @@
 
 import Foundation
 
-// MARK: - Protocol
-//protocol FeelingsListViewModelDelegate: FeelingsListTableViewController {
-//}
-
 class FeelingListViewModel  {
     
     // MARK: - Properties
+    
     var diaryEntries: [DiaryEntry] = []
-    private let service: FirebaseDiaryServicable
+    private let service: FirebaseDiaryServiceable
     var userID: String
     var serviceResultHandler: ((_ success: Bool, FirebaseError?) -> Void)?
     
     // MARK: - Dependency Injection
-    init(userID: String, service: FirebaseDiaryServicable = FirebaseDiaryService()) {
+    
+    init(
+        userID: String,
+        service: FirebaseDiaryServiceable = FirebaseDiaryService())
+    {
         self.service = service
         self.userID = userID
     }
-    
     
     // MARK: - Functions
     
@@ -55,8 +55,7 @@ class FeelingListViewModel  {
                 completion()
             case .failure(let failure):
                 self.serviceResultHandler?(false, failure)
-                // self.delegate?.encountered(failure)
             }
         }
     }
-} // end of VC
+}

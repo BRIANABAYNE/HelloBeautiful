@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 protocol APIDataProvidable {
     func perform(_ request: URLRequest, completion: @escaping (Result<Data, NetworkingError>) -> Void)
 }
@@ -17,12 +18,15 @@ extension APIDataProvidable {
             if let error {
                 completion(.failure(.thrownError(error)))
             }
+            
             if let response = response as? HTTPURLResponse {
                 print("Completed with a response of", response.statusCode)
             }
+            
             guard let data else {
                 completion(.failure(.noData)); return
             }
+            
             completion(.success(data))
         }.resume()
     }

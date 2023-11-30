@@ -16,6 +16,7 @@ class GradientView: UIView {
             updateView()
         }
     }
+    
     @IBInspectable var SecondColor: UIColor = UIColor.clear {
         didSet {
             updateView()

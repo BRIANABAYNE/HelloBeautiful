@@ -25,6 +25,7 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
     }
     
     // MARK: - Actions
+    
     @IBAction func nextButtonTapped(_ sender: Any) {
         guard
             let email = emailTextField.text,!email.isEmpty,
@@ -44,6 +45,7 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
 }
 
 // MARK: - Extension
+
 extension CreateUserDetailViewController: CreateUserViewModelDelegate {
     func encountered(_ error: Error) {
         presentAlert(message: error.localizedDescription, title: "Oh no!")

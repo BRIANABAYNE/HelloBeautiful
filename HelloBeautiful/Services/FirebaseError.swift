@@ -6,7 +6,9 @@
 //
 
 import Foundation
+
 enum FirebaseError: LocalizedError {
+    
     case firebaseError(Error)
     case failedToUnwrapData
     case noDataFound

@@ -16,22 +16,25 @@ protocol FirebaseUserDetailServiceable {
 
 }
 
-struct FirebaseUerDetailsService: FirebaseUserDetailServiceable {
+struct FirebaseUserDetailsService: FirebaseUserDetailServiceable {
     
-    func save(userDetails: UserDetails, completion: @escaping(Result<String, FirebaseError>) -> Void ) {
+    func save(
+        userDetails: UserDetails,
+        completion: @escaping(Result<String, FirebaseError>) -> Void ) {
         let ref = Firestore.firestore()
         do {
-            let documentRef = try ref.collection(Constants.UserDetails.userDetailsCollectionPath).addDocument(from: userDetails, completion: { _ in
-                
+            let documentRef = try ref
+                .collection(Constants.UserDetails.userDetailsCollectionPath)
+                .addDocument(from: userDetails, completion: { _ in
             })
-           
+            
             UserDefaults.standard.set(documentRef.documentID, forKey: "UserDocumentID")
             completion(.success(documentRef.documentID))
         } catch {
             print("Oh no, something went wrong with the save", error.localizedDescription)
             return
         }
-    } // end of save
+    }
     
     func update(userDetails: UserDetails) {
         if let documentID = userDetails.id {

@@ -19,13 +19,21 @@ class LogInViewModel {
     weak var delegate: LogInViewModelDelegate?
 
     // MARK: - Dependency Injection
-    init(service: FirebaseAuthServiceable = FirebaseAuthService(), delegate: LogInViewModelDelegate) {
+    init(
+        service: FirebaseAuthServiceable = FirebaseAuthService(),
+        delegate: LogInViewModelDelegate
+    ) {
         self.service = service
         self.delegate = delegate
     }
     
     // MARK: - Methods
-    func signIn(with email: String, password: String, completion: @escaping(Bool) -> Void) {
+    
+    func signIn(
+        with email: String,
+        password: String,
+        completion: @escaping(Bool) -> Void
+    ) {
         service.signIn(email: email, password: password) { result  in
             switch result {
             case .success(_):
@@ -36,9 +44,8 @@ class LogInViewModel {
             case .failure(let failure):
                 self.delegate?.encountered(failure)
                 completion(false)
+                
             }
         }
-        
-    } // sign in
-    
-} // log in
+    }
+}

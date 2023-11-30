@@ -11,26 +11,35 @@ import FirebaseStorage
 import FirebaseFirestoreSwift
 import FirebaseAuth
 
-protocol FirebaseUserCycleServicable {
+protocol FirebaseUserCycleServiceable {
+    
     func saveUserCycle(userCycle: UserCycle, completion: @escaping(Result<String, FirebaseError>) -> Void)
     func fetchUserCycle(completion: @escaping(Result<[UserDetails], FirebaseError>) -> Void)
 }
 
-struct FirebaseUserCycleService: FirebaseUserCycleServicable {
+struct FirebaseUserCycleService: FirebaseUserCycleServiceable {
     
-    func saveUserCycle(userCycle: UserCycle, completion: @escaping(Result<String, FirebaseError>) -> Void) {
+    func saveUserCycle(
+        userCycle: UserCycle,
+        completion: @escaping(Result<String, FirebaseError>) -> Void) {
         let firebaseRef = Firestore.firestore()
         do {
             let userDocID = UserDefaults.standard.string(forKey: "UserDocumentID")
             let documentCycleRef = try
-            firebaseRef.collection(Constants.UserDetails.userDetailsCollectionPath).document(userDocID!).collection(Constants.UserCycle.userCycleCollectionPath).addDocument(from: userCycle, completion: { _ in
-            })
+            firebaseRef
+                .collection(Constants.UserDetails
+                    .userDetailsCollectionPath)
+                .document(userDocID!)
+                .collection(Constants.UserCycle.userCycleCollectionPath)
+                .addDocument(from: userCycle, completion: { _ in
+                })
             completion(.success(documentCycleRef.documentID))
         } catch {
             print("Oh no, something went wrong with saving the cycle", error.localizedDescription)
+            
             return
         }
-    } // end of save 
+    }
         
     func fetchUserCycle(completion: @escaping(Result<[UserDetails], FirebaseError>) -> Void) {
         let db = Firestore.firestore()

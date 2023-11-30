@@ -17,13 +17,15 @@ class PopUp: UIView {
         super.init(coder: coder)
     }
     
-    // MARK: - Lifecyles
+    // MARK: - Lifecycles
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         xibSetup(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
     }
     
     // MARK: - Functions
+    
     func xibSetup(frame: CGRect) {
         let view = loadxib()
         view.frame = frame
@@ -36,5 +38,4 @@ class PopUp: UIView {
         let view = nib.instantiate(withOwner: self, options: nil).first as? UIView
         return view!
     }
-
 }
