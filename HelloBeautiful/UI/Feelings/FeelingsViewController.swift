@@ -25,7 +25,10 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
     
     var viewModel: FeelingsViewModel
     
-    init?(viewModel: FeelingsViewModel, coder: NSCoder) {
+    init?(
+        viewModel: FeelingsViewModel,
+        coder: NSCoder
+    ) {
         self.viewModel = viewModel
         super.init(coder: coder)
     }
@@ -44,8 +47,12 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
     }
     
     // MARK: - Methods
-    
-    var entryCompletionHandler: (() -> Void)?
+    typealias EntryCompletionHandler = (() -> Void)
+    var entryCompletionHandler: EntryCompletionHandler? {
+        didSet {
+            print("entryCompletionHandler")
+        }
+    }
     
     private func setupViews() {
         saveButton.title = viewModel.barButtonTitle
@@ -95,8 +102,8 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
             date: Date()
         )
         
-        navigationController?.popViewController(animated: true)
         entryCompletionHandler?()
+        navigationController?.popViewController(animated: true)
     }
 }
 
