@@ -119,8 +119,8 @@ class LogInViewController: UIViewController {
         if(!email.isEmpty && !password.isEmpty) {
             showActivityIndicator()
             viewModel.signIn(with: email, password: password) {
-                bool in
-                if bool == false {
+                success in
+                if success == false {
                     self.hideActivityIndicator()
                 }
             }

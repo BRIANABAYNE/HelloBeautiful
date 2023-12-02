@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email.." textAlignment="center" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ye5-7I-8e0" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="30" y="163" width="317" height="50"/>
+                                <rect key="frame" x="30" y="228" width="317" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="sf3-Fy-142"/>
                                 </constraints>
@@ -30,7 +30,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjG-i0-Whk" userLabel="Don't have an account?" customClass="BBButton" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="46" y="357" width="301" height="44"/>
+                                <rect key="frame" x="46" y="406" width="301" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="BB6-Yq-xPU"/>
                                 </constraints>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uw-Mj-RM3" customClass="BBButton" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="30" y="303" width="333" height="44"/>
+                                <rect key="frame" x="30" y="352" width="333" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="I6C-nU-rRx"/>
                                 </constraints>
@@ -55,7 +55,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password.." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uou-gW-kwc" customClass="BBTextField" customModule="HelloBeautiful" customModuleProvider="target">
-                                <rect key="frame" x="30" y="223" width="317" height="50"/>
+                                <rect key="frame" x="30" y="288" width="317" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Aww-KX-dmC"/>
                                 </constraints>
@@ -63,7 +63,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Beautiful" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClK-OZ-83B">
-                                <rect key="frame" x="30" y="123" width="333" height="30"/>
+                                <rect key="frame" x="30" y="123" width="333" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="Ib6-ev-Wta"/>
                                 </constraints>
@@ -95,7 +95,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="nib-kl-lcS"/>
                     <connections>
-                        <outlet property="logInEmaiTextField" destination="ye5-7I-8e0" id="Ruy-fU-3GE"/>
+                        <outlet property="logInEmailTextField" destination="ye5-7I-8e0" id="LXc-kt-tQr"/>
                         <outlet property="logInPasswordTextField" destination="Uou-gW-kwc" id="BVM-8m-SLC"/>
                     </connections>
                 </viewController>

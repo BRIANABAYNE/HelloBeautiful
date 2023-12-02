@@ -13,13 +13,13 @@ class FeelingListViewModel  {
     
     var diaryEntries: [DiaryEntry] = []
     private let service: FirebaseDiaryServiceable
-    var userID: String
+    var userID: String?
     var serviceResultHandler: ((_ success: Bool, FirebaseError?) -> Void)?
     
     // MARK: - Dependency Injection
     
     init(
-        userID: String,
+        userID: String?,
         service: FirebaseDiaryServiceable = FirebaseDiaryService())
     {
         self.service = service
@@ -33,16 +33,18 @@ class FeelingListViewModel  {
     }
     
     func fetchDiaryEntries() {
-        service.fetchDiaryEntries(userID: self.userID,  completion: { [weak self] result in
-            guard let self else { return }
-            switch result {
-            case .success(let fetchedDiary):
-                self.diaryEntries = fetchedDiary
-               self.serviceResultHandler?(true, nil)
-            case .failure(let error):
-               self.serviceResultHandler?(false, error)
-            }
-        })
+        if let userID {
+            service.fetchDiaryEntries(userID: userID,  completion: { [weak self] result in
+                guard let self else { return }
+                switch result {
+                case .success(let fetchedDiary):
+                    self.diaryEntries = fetchedDiary
+                    self.serviceResultHandler?(true, nil)
+                case .failure(let error):
+                    self.serviceResultHandler?(false, error)
+                }
+            })
+        }
     }
     
     func delete(indexPath: IndexPath, completion: @escaping() -> Void) {

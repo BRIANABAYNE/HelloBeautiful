@@ -40,7 +40,9 @@ class LogInViewModel {
                 print("User logged in")
 //                self.delegate?.success(userDetails: userDetails)
                 #warning("Perhapes we should only change the screen if logging in was successful... Which means you'll need a way to communciate that it was successful to the VC")
-                completion(true)
+                DispatchQueue.main.async {
+                    completion(true)
+                }
             case .failure(let failure):
                 self.delegate?.encountered(failure)
                 completion(false)

@@ -14,7 +14,8 @@ class FeelingsListTableViewController: UITableViewController, AlertPresentable {
     var viewModel: FeelingListViewModel
     
     required init?(coder: NSCoder) {
-        viewModel = FeelingListViewModel(userID: UserDefaults.standard.string(forKey: "UserDocumentID")!)
+        let userID = UserDefaults.standard.string(forKey: "UserDocumentID")
+        viewModel = FeelingListViewModel(userID: userID)
         super.init(coder: coder)
     }
     

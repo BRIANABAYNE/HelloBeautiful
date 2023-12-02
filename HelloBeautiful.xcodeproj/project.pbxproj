@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A0E4C712B15A14100314384 /* FeelingsTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0E4C702B15A14100314384 /* FeelingsTableCellViewModel.swift */; };
+		3A0E4C732B1AFB1400314384 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0E4C722B1AFB1400314384 /* UserManager.swift */; };
 		3A2B1F552A6C67FB00CCA3FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B1F542A6C67FB00CCA3FB /* AppDelegate.swift */; };
 		3A2B1F572A6C67FB00CCA3FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B1F562A6C67FB00CCA3FB /* SceneDelegate.swift */; };
 		3A2B1F5C2A6C67FB00CCA3FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2B1F5A2A6C67FB00CCA3FB /* Main.storyboard */; };
@@ -76,6 +77,7 @@
 
 /* Begin PBXFileReference section */
 		3A0E4C702B15A14100314384 /* FeelingsTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsTableCellViewModel.swift; sourceTree = "<group>"; };
+		3A0E4C722B1AFB1400314384 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		3A2B1F512A6C67FB00CCA3FB /* HelloBeautiful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloBeautiful.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2B1F542A6C67FB00CCA3FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A2B1F562A6C67FB00CCA3FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				3A5649C82AAE48CB002071AB /* AlertPresentable.swift */,
 				3AAF72EC2ACC96A8005C9C9A /* FirebaseDiaryService.swift */,
 				3AEAA1122AD8EDAA00F4737B /* FirebaseUserCycleService.swift */,
+				3A0E4C722B1AFB1400314384 /* UserManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				3AAF72ED2ACC96A8005C9C9A /* FirebaseDiaryService.swift in Sources */,
 				3AF6E2642A72EA0700461137 /* LogInViewController.swift in Sources */,
 				3AF6E25F2A72E47900461137 /* Constants.swift in Sources */,
+				3A0E4C732B1AFB1400314384 /* UserManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
