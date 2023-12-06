@@ -50,17 +50,18 @@ class LogInViewController: UIViewController {
     }
     
     func signInWithApple() {
-        let siwaButton = ASAuthorizationAppleIDButton()
-        siwaButton.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(siwaButton)
+        let signInAppleButton = ASAuthorizationAppleIDButton()
+        signInAppleButton.cornerRadius = 20
+        signInAppleButton.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(signInAppleButton)
         NSLayoutConstraint.activate([
-            siwaButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50.0),
-            siwaButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50.0),
-            siwaButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -130.0),
-            siwaButton.heightAnchor.constraint(equalToConstant: 50.0)
+            signInAppleButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 40.0),
+            signInAppleButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -40.0),
+            signInAppleButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -140.0),
+            signInAppleButton.heightAnchor.constraint(equalToConstant: 50.0)
         ])
         
-        siwaButton.addTarget(self, action: #selector(appleSignInTapped), for: .touchUpInside)
+        signInAppleButton.addTarget(self, action: #selector(appleSignInTapped), for: .touchUpInside)
     }
     
     @objc func appleSignInTapped() {
@@ -239,6 +240,7 @@ extension LogInViewController: ASAuthorizationControllerDelegate {
                     print(error.localizedDescription)
                     return
                 }
+                print("User Signed In With Apple To Firebase.")
             }
         }
     }
