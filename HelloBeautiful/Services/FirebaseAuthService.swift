@@ -12,7 +12,6 @@ protocol FirebaseAuthServiceable {
     func createAccount(
         with email: String,
         password: String,
-        confirmPassword: String,
         completion: @escaping(Result<Bool, CreateAccountError>) -> Void)
     func signIn(
         email: String,
@@ -27,19 +26,16 @@ struct FirebaseAuthService: FirebaseAuthServiceable {
     func createAccount(
         with email: String,
         password: String,
-        confirmPassword: String,
         completion: @escaping(Result<Bool, CreateAccountError>) -> Void)
     {
-        if password == confirmPassword {
-            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                if let error {
-                    completion(.failure(.firebaseError(error)))
-                }
-                
-                let userAuthID = authResult?.user.uid
-                UserDefaults.standard.set(userAuthID, forKey: "UserAuthID")
-                completion(.success(true))
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            if let error {
+                completion(.failure(.firebaseError(error)))
             }
+            
+            let userAuthID = authResult?.user.uid
+            UserDefaults.standard.set(userAuthID, forKey: "UserAuthID")
+            completion(.success(true))
         }
     }
     

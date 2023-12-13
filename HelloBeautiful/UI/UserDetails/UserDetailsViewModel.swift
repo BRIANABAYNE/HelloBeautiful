@@ -40,7 +40,7 @@ class UserDetailsViewModel {
     func saveUser(
         zodiacSign: String,
         cycleLength: Int,
-        lastCycle: String,
+        lastCycle: Date,
         email: String,
         password: String
     ) {
@@ -64,15 +64,13 @@ class UserDetailsViewModel {
     func createUser(
         zodiacSign: String,
         cycleLength: Int,
-        lastCycle: String,
+        lastCycle: Date,
         email: String,
         password: String
     ) {
         
-        let userAuthID = UserDefaults.standard.string(
-            forKey: "UserAuthID")
-        UserDefaults.standard.set(
-            zodiacSign, forKey: "UserZodiacSign")
+        let userAuthID = UserDefaults.standard.string(forKey: "UserAuthID")
+        UserDefaults.standard.set(zodiacSign, forKey: "UserZodiacSign")
         let details = UserDetails(
             zodiacSign: zodiacSign,
             cycleLength: cycleLength,
@@ -95,7 +93,7 @@ class UserDetailsViewModel {
     func updateUser(
         newZodiacSign: String,
         newCycleLength: Int,
-        newLastCycle: String,
+        newLastCycle: Date,
         email: String,
         password: String
     ) {

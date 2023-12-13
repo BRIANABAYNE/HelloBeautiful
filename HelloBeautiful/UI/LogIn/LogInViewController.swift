@@ -19,7 +19,27 @@ class LogInViewController: UIViewController {
     
     // MARK: - Properties
     
-    var viewModel:LogInViewModel!
+    var viewModel: LogInViewModel!
+    
+    
+//    init?(
+//        viewModel: LogInViewModel,
+//          coder: NSCoder
+//    ) {
+//        self.viewModel = viewModel
+//        super.init(coder: coder)
+//    }
+//    
+//    @available(*, unavailable, renamed:
+//            "init(viewModel:coder:)")
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+    
+    
+    
+    var appleViewModel:SignInWithAppleViewModel!
+//    var viewModel:LogInViewModel!
     var activityView: UIActivityIndicatorView?
     let backgroundImageView = UIImageView()
     fileprivate var currentNonce: String?
@@ -245,3 +265,13 @@ extension LogInViewController: ASAuthorizationControllerDelegate {
         }
     }
 }
+
+//extension LogInViewController {
+//    static func create(with viewModel: LogInViewModel) -> LogInViewController {
+//        let storyboard = UIStoryboard(name: "CreateUser", bundle: nil)
+//        return storyboard.instantiateViewController(identifier: "LogInViewController") { coder in
+//            LogInViewController(viewModel: viewModel, coder: coder)
+//            
+//        }
+//    }
+//}

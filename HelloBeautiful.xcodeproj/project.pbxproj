@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3A0E4C712B15A14100314384 /* FeelingsTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0E4C702B15A14100314384 /* FeelingsTableCellViewModel.swift */; };
 		3A0E4C732B1AFB1400314384 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0E4C722B1AFB1400314384 /* UserManager.swift */; };
+		3A1DF18C2B295A7100183F96 /* HBTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1DF18B2B295A7100183F96 /* HBTextField.xib */; };
+		3A1DF18E2B295FC200183F96 /* HBTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1DF18D2B295FC200183F96 /* HBTextFieldView.swift */; };
 		3A2B1F552A6C67FB00CCA3FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B1F542A6C67FB00CCA3FB /* AppDelegate.swift */; };
 		3A2B1F572A6C67FB00CCA3FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B1F562A6C67FB00CCA3FB /* SceneDelegate.swift */; };
 		3A2B1F5C2A6C67FB00CCA3FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2B1F5A2A6C67FB00CCA3FB /* Main.storyboard */; };
@@ -25,6 +27,7 @@
 		3A5892D02A701E0F00E208BC /* Horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892CF2A701E0F00E208BC /* Horoscope.swift */; };
 		3A5892FF2A70704500E208BC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892FE2A70704500E208BC /* NetworkError.swift */; };
 		3A5893032A7070CE00E208BC /* MoonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5893022A7070CE00E208BC /* MoonService.swift */; };
+		3A5A86C82B201D9D005D8221 /* SignInWithAppleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A86C72B201D9D005D8221 /* SignInWithAppleViewModel.swift */; };
 		3A5A89732A716E8F009169B5 /* MoonHoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A89722A716E8F009169B5 /* MoonHoroscopeViewController.swift */; };
 		3A5A89752A7172D8009169B5 /* MoonHoroscopeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A89742A7172D8009169B5 /* MoonHoroscopeViewModel.swift */; };
 		3A5A89772A71840C009169B5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A89762A71840C009169B5 /* APIService.swift */; };
@@ -78,6 +81,8 @@
 /* Begin PBXFileReference section */
 		3A0E4C702B15A14100314384 /* FeelingsTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsTableCellViewModel.swift; sourceTree = "<group>"; };
 		3A0E4C722B1AFB1400314384 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		3A1DF18B2B295A7100183F96 /* HBTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HBTextField.xib; sourceTree = "<group>"; };
+		3A1DF18D2B295FC200183F96 /* HBTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBTextFieldView.swift; sourceTree = "<group>"; };
 		3A2B1F512A6C67FB00CCA3FB /* HelloBeautiful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloBeautiful.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2B1F542A6C67FB00CCA3FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A2B1F562A6C67FB00CCA3FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +101,7 @@
 		3A5892CF2A701E0F00E208BC /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
 		3A5892FE2A70704500E208BC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		3A5893022A7070CE00E208BC /* MoonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonService.swift; sourceTree = "<group>"; };
+		3A5A86C72B201D9D005D8221 /* SignInWithAppleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleViewModel.swift; sourceTree = "<group>"; };
 		3A5A89722A716E8F009169B5 /* MoonHoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonHoroscopeViewController.swift; sourceTree = "<group>"; };
 		3A5A89742A7172D8009169B5 /* MoonHoroscopeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonHoroscopeViewModel.swift; sourceTree = "<group>"; };
 		3A5A89762A71840C009169B5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -240,6 +246,7 @@
 				3AAF72EC2ACC96A8005C9C9A /* FirebaseDiaryService.swift */,
 				3AEAA1122AD8EDAA00F4737B /* FirebaseUserCycleService.swift */,
 				3A0E4C722B1AFB1400314384 /* UserManager.swift */,
+				3A5A86C72B201D9D005D8221 /* SignInWithAppleViewModel.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -357,6 +364,8 @@
 				3AB0869E2AB6099A00C7B9CC /* CustomButton.swift */,
 				3AB086A02AB609A600C7B9CC /* CustomTextField.swift */,
 				3AB086A22AB61A8A00C7B9CC /* GradientView.swift */,
+				3A1DF18B2B295A7100183F96 /* HBTextField.xib */,
+				3A1DF18D2B295FC200183F96 /* HBTextFieldView.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -458,6 +467,7 @@
 				3A2B1F5C2A6C67FB00CCA3FB /* Main.storyboard in Resources */,
 				3A84A1D32A781DF900376FD0 /* LogIn.storyboard in Resources */,
 				3A6F28DD2A7820400046AF14 /* Feelings.storyboard in Resources */,
+				3A1DF18C2B295A7100183F96 /* HBTextField.xib in Resources */,
 				3A84A1DC2A781EB100376FD0 /* UserSettings.storyboard in Resources */,
 				3A84A1D92A781E7700376FD0 /* UserDetails.storyboard in Resources */,
 			);
@@ -474,6 +484,7 @@
 				3A6B22EA2AB7BA3900BCAA09 /* UserCycleViewModel.swift in Sources */,
 				3AB4C4112B1381B300A37BFB /* User.swift in Sources */,
 				3A5A897A2A71850C009169B5 /* MoonHoroscopeService.swift in Sources */,
+				3A1DF18E2B295FC200183F96 /* HBTextFieldView.swift in Sources */,
 				3AB086A32AB61A8A00C7B9CC /* GradientView.swift in Sources */,
 				3A5420DB2A796CCE0049FC4E /* UserDetails.swift in Sources */,
 				3A5892FF2A70704500E208BC /* NetworkError.swift in Sources */,
@@ -484,6 +495,7 @@
 				3A5892D02A701E0F00E208BC /* Horoscope.swift in Sources */,
 				3A5A89772A71840C009169B5 /* APIService.swift in Sources */,
 				3AF6E2682A73553B00461137 /* FirebaseUserDetailsService.swift in Sources */,
+				3A5A86C82B201D9D005D8221 /* SignInWithAppleViewModel.swift in Sources */,
 				3A84A1A02A7444F300376FD0 /* UserDetailsViewModel.swift in Sources */,
 				3A2B1F552A6C67FB00CCA3FB /* AppDelegate.swift in Sources */,
 				3A6B22EC2AB7BA7C00BCAA09 /* UserCycle.swift in Sources */,

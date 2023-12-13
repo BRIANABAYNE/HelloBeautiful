@@ -14,13 +14,13 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
     
     // MARK: - Outlets
     
-    @IBOutlet weak var lastCycleTextField: UITextField!
-    @IBOutlet weak var periodLengthTextField: UITextField!
+    @IBOutlet weak var lastCycleTextField: HBTextFieldView!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var periodLengthTextField: HBTextFieldView!
     @IBOutlet weak var sunSignPicker: UIPickerView!
     
     // MARK: - Properties
     
-    let datePicker = UIDatePicker()
     var viewModel: UserDetailsViewModel!
     var zodiacSignString: String?
     static var completionHandler: ((String?) -> Void)?
@@ -46,12 +46,12 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
         viewModel = UserDetailsViewModel(injectedDelegate: self)
         sunSignPicker.dataSource = self
         sunSignPicker.delegate = self
-        configureLastCycleDatePicker()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print(newUserContainer)
+        lastCycleTextField.makeFirstResponder()
     }
     
     // MARK: - Actions
@@ -67,32 +67,6 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
         self.disclosurePopUP.removeFromSuperview()
     }
 
-    // MARK: - Methods
-    
-    func configureLastCycleDatePicker() {
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        
-        let doneButton = UIBarButtonItem(
-            barButtonSystemItem: .done,
-            target: nil, action: #selector(doneButtonPressed))
-        toolbar.setItems([doneButton], animated: true)
-        lastCycleTextField.inputView = datePicker
-        lastCycleTextField.inputAccessoryView = toolbar
-        datePicker.locale = .current
-        datePicker.datePickerMode = .date
-        datePicker.preferredDatePickerStyle = .wheels
-        datePicker.tintColor = .systemPink
-    }
-    
-    @objc func doneButtonPressed() {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .none
-        lastCycleTextField.text = formatter.string(from: datePicker.date)
-        self.view.endEditing(true)
-    }
-    
     // MARK: - Actions
     
     @IBAction func buttonTapped(_ sender: Any) {
@@ -101,15 +75,14 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
         self.view.window?.rootViewController = navigation
         
         guard
-            let lastCycle = lastCycleTextField.text,
             let zodiacSign = zodiacSignString,
-            let text = periodLengthTextField.text,
-            let cycleLength = Int(text)
+            let length = periodLengthTextField.text,
+            let cycleLength = Int(length)
         else { return }
         viewModel.saveUser(
             zodiacSign: zodiacSign,
             cycleLength: cycleLength,
-            lastCycle: lastCycle,
+            lastCycle: datePicker.date,
             email: email,
             password: password)
     }
@@ -149,7 +122,7 @@ extension UserDetailsViewController: UIPickerViewDelegate {
 extension UserDetailsViewController {
     static func create(with newUser: NewUser) -> UserDetailsViewController {
         let storyboard = UIStoryboard(name: "UserDetails", bundle: nil)
-        return storyboard.instantiateViewController(identifier: "UserDetailsViewController") { coder in
+        return storyboard.instantiateViewController(identifier: "UserDetails") { coder in
             UserDetailsViewController(newUserContainer: newUser, coder: coder)
         }
     }

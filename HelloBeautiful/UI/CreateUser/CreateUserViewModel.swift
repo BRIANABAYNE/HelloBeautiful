@@ -33,22 +33,17 @@ struct CreateUserViewModel {
     
     func createAccount(
         with email: String,
-        password: String,
-        confirmPassword: String
+        password: String
     ) {
-        if password == confirmPassword {
-            service.createAccount(with: email, password: password, confirmPassword: confirmPassword) { result in
-                switch result {
-                case .success(_):
-                    print("User was created successfully")
+        service.createAccount(with: email, password: password) { result in
+            switch result {
+            case .success(_):
+                print("User was created successfully")
 #warning("Should we only change the UI if signing in was successful??")
-                case .failure(let failure):
-                    print("User was not created")
-                    delegate?.encountered(failure)
-                }
+            case .failure(let failure):
+                print("User was not created")
+                delegate?.encountered(failure)
             }
-        } else {
-            delegate?.encountered(CreateAccountError.passwordMismatch)
         }
     }
 }

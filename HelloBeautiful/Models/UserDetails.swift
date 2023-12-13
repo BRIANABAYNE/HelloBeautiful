@@ -12,7 +12,7 @@ struct UserDetails: Codable {
     @DocumentID var id: String?
     let zodiacSign: String
     let cycleLength: Int
-    let lastCycle: String
+    let lastCycle: Date
     var email: String
     var password: String
     let collectionType: String

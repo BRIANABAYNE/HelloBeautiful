@@ -42,7 +42,7 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
         presentLogOutAlert()
     }
     
-    // MARK: - Delete Account Apple
+   //  MARK: - Delete Account Apple
     
 //    typealias ActionWithNewCredentials = (OAuthCredential) -> Void
 //    var pendingAction: ActionWithNewCredentials?
