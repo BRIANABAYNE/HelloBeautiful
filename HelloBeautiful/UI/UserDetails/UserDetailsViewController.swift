@@ -17,16 +17,15 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
     @IBOutlet weak var lastCycleTextField: HBTextFieldView!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var periodLengthTextField: HBTextFieldView!
-    @IBOutlet weak var sunSignPicker: UIPickerView!
+    @IBOutlet weak var zodiacSignPicker: UIButton!
     
     // MARK: - Properties
     
     var viewModel: UserDetailsViewModel!
-    var zodiacSignString: String?
     static var completionHandler: ((String?) -> Void)?
     var disclosurePopUP: PopUp!
-    var email: String = ""
-    var password: String = ""
+//    var email: String = ""
+//    var password: String = ""
     private let newUserContainer: NewUser
     
     init?(newUserContainer: NewUser, coder: NSCoder) {
@@ -44,14 +43,22 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = UserDetailsViewModel(injectedDelegate: self)
-        sunSignPicker.dataSource = self
-        sunSignPicker.delegate = self
+        setupSignPicker()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print(newUserContainer)
         lastCycleTextField.makeFirstResponder()
+    }
+    
+    // MARK: - Setup
+    
+    private func setupSignPicker() {
+        zodiacSignPicker.changesSelectionAsPrimaryAction = true
+        zodiacSignPicker.showsMenuAsPrimaryAction = true
+        zodiacSignPicker.menu = zodiacSignMenu
+        zodiacSignPicker.preferredMenuElementOrder = .fixed
     }
     
     // MARK: - Actions
@@ -67,57 +74,47 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
         self.disclosurePopUP.removeFromSuperview()
     }
 
-    // MARK: - Actions
-    
     @IBAction func buttonTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name:"Main", bundle: nil)
-        let navigation = storyboard.instantiateViewController(identifier:"tabBar")
-        self.view.window?.rootViewController = navigation
-        
         guard
             let zodiacSign = zodiacSignString,
             let length = periodLengthTextField.text,
             let cycleLength = Int(length)
         else { return }
+        
         viewModel.saveUser(
             zodiacSign: zodiacSign,
             cycleLength: cycleLength,
             lastCycle: datePicker.date,
             email: email,
-            password: password)
+            password: password
+        )
+        
+        let storyboard = UIStoryboard(name:"Main", bundle: nil)
+        let navigation = storyboard.instantiateViewController(identifier:"tabBar")
+        self.view.window?.rootViewController = navigation
     }
+    
+    // MARK: - View Properties
+    
+    private lazy var zodiacSignMenu: UIMenu = {
+        UIMenu(
+            title: "Zodiac Sign",
+            options: .singleSelection,
+            children: zodiacSignActions
+        )
+        
+    }()
+    
+    private lazy var zodiacSignActions: [UIAction] = {
+        ZodiacSign.allCases.map { sign in
+            UIAction(title: sign.title) { _ in
+                print("\(sign.title) tapped")
+            }
+        }
+    }()
 }
 
 // MARK: - Extensions
-
-extension UserDetailsViewController: UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(
-        _ pickerView: UIPickerView,
-        numberOfRowsInComponent component: Int) -> Int {
-        return viewModel.zodiacSigns.count
-    }
-    
-    func pickerView(
-        _ pickerView: UIPickerView,
-        didSelectRow row: Int,
-        inComponent component: Int)
-    {
-        zodiacSignString = viewModel.zodiacSigns[row]
-    }
-}
-extension UserDetailsViewController: UIPickerViewDelegate {
-    func pickerView(
-        _ pickerView: UIPickerView,
-        titleForRow row: Int,
-        forComponent component: Int) -> String?
-    {
-        return viewModel.zodiacSigns[row]
-    }
-}
 
 extension UserDetailsViewController {
     static func create(with newUser: NewUser) -> UserDetailsViewController {

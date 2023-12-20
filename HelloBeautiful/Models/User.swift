@@ -14,7 +14,7 @@ struct User {
     let cycle: [PeriodCycle]
 }
 
-struct PeriodCycle {
+struct PeriodCycle: Codable {
     let startDate: Date
     let duration : Int
     let diary: [DiaryEntry]
