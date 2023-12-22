@@ -24,8 +24,8 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
     var viewModel: UserDetailsViewModel!
     static var completionHandler: ((String?) -> Void)?
     var disclosurePopUP: PopUp!
-//    var email: String = ""
-//    var password: String = ""
+    var email: String = ""
+    var password: String = ""
     private let newUserContainer: NewUser
     
     init?(newUserContainer: NewUser, coder: NSCoder) {
@@ -44,6 +44,7 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
         super.viewDidLoad()
         viewModel = UserDetailsViewModel(injectedDelegate: self)
         setupSignPicker()
+        periodLengthTextField.set(placeholder: "Typical Cycle Length")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -76,18 +77,19 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
 
     @IBAction func buttonTapped(_ sender: Any) {
         guard
-            let zodiacSign = zodiacSignString,
+            let zodiacSign = zodiacSignPicker,
+//            let zodiacSignAsInt = Int(zodiacSign),
             let length = periodLengthTextField.text,
             let cycleLength = Int(length)
         else { return }
         
-        viewModel.saveUser(
-            zodiacSign: zodiacSign,
-            cycleLength: cycleLength,
-            lastCycle: datePicker.date,
-            email: email,
-            password: password
-        )
+//        viewModel.saveUser(
+//            email: email,
+//            password: password,
+//            zodiacSign: zodiacSign,
+//            typicalCycleLength: cycleLength,
+//            lastCycleDate: datePicker.date
+//        )
         
         let storyboard = UIStoryboard(name:"Main", bundle: nil)
         let navigation = storyboard.instantiateViewController(identifier:"tabBar")

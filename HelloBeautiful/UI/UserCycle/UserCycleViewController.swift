@@ -18,7 +18,7 @@ class UserCycleViewController: UIViewController, AlertPresentable {
     // MARK: - Properties
     
     var selectedDates: [DateComponents] = []
-    var userCycles: [UserCycle] = []
+    var userCycles: [PeriodCycle] = []
     var viewModel: UserCycleViewModel!
 
     // MARK: - Lifecycles

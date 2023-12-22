@@ -18,7 +18,7 @@ class UserDetailsViewModel {
     
     // MARK: - Properties
     
-    var userDetails: UserDetails?
+    var userDetails: User?
     let zodiacSigns = ZodiacSign.allCases.map(\.title)
     private let service: FirebaseUserDetailServiceable
     weak var delegate: UserDetailsViewModelDelegate?
@@ -26,7 +26,7 @@ class UserDetailsViewModel {
     // MARK: -  Dependency Injection
     
     init(
-        userDetails: UserDetails? = nil,
+        userDetails: User? = nil,
         service: FirebaseUserDetailsService = FirebaseUserDetailsService(),
         injectedDelegate: UserDetailsViewModelDelegate
     ) {
@@ -38,45 +38,45 @@ class UserDetailsViewModel {
     // MARK: - Crud Functions
     
     func saveUser(
-        zodiacSign: String,
-        cycleLength: Int,
-        lastCycle: Date,
         email: String,
-        password: String
+        password: String,
+        zodiacSign: Int,
+        typicalCycleLength: Int,
+        lastCycleDate: Date
     ) {
         if userDetails != nil {
             updateUser(
-                newZodiacSign: zodiacSign,
-                newCycleLength: cycleLength,
-                newLastCycle: lastCycle,
                 email: email,
-                password: password)
+                password: password,
+                newZodiacSign: zodiacSign,
+                newTypicalCycleLength: typicalCycleLength,
+                newLastCycleDate: lastCycleDate)
         } else {
             createUser(
-                zodiacSign: zodiacSign,
-                cycleLength: cycleLength,
-                lastCycle: lastCycle,
                 email: email,
-                password: password)
+                password: password,
+                zodiacSign: zodiacSign,
+                typicalCycleLength:typicalCycleLength,
+                lastCycleDate: lastCycleDate)
         }
     }
     
     func createUser(
-        zodiacSign: String,
-        cycleLength: Int,
-        lastCycle: Date,
         email: String,
-        password: String
+        password: String,
+        zodiacSign: Int,
+        typicalCycleLength: Int,
+        lastCycleDate: Date
     ) {
         
         let userAuthID = UserDefaults.standard.string(forKey: "UserAuthID")
         UserDefaults.standard.set(zodiacSign, forKey: "UserZodiacSign")
-        let details = UserDetails(
-            zodiacSign: zodiacSign,
-            cycleLength: cycleLength,
-            lastCycle: lastCycle,
+        let details = User(
             email: email,
             password: password,
+            zodiacSign: zodiacSign,
+            lastCycleDate: lastCycleDate,
+            typicalCycleLength: typicalCycleLength,
             collectionType: Constants.UserDetails.userDetailsCollectionPath,
             userAuthID: userAuthID)
         service.save(userDetails: details, completion: { result in
@@ -91,21 +91,21 @@ class UserDetailsViewModel {
     }
 
     func updateUser(
-        newZodiacSign: String,
-        newCycleLength: Int,
-        newLastCycle: Date,
         email: String,
-        password: String
+        password: String,
+        newZodiacSign: Int,
+        newTypicalCycleLength: Int,
+        newLastCycleDate: Date
     ) {
         guard let userToUpdate = self.userDetails else { return }
         let userAuthID = UserDefaults.standard.string(forKey: "UserAuthID")
-        let updatedUser = UserDetails(
+        let updatedUser = User(
             id: userToUpdate.id,
-            zodiacSign: newZodiacSign,
-            cycleLength: newCycleLength,
-            lastCycle: newLastCycle,
             email: email,
             password: password,
+            zodiacSign: newZodiacSign,
+            lastCycleDate: newLastCycleDate,
+            typicalCycleLength: newTypicalCycleLength,
             collectionType: Constants.UserDetails.userDetailsCollectionPath,
             userAuthID: userAuthID)
         service.update(userDetails: updatedUser)

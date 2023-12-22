@@ -7,32 +7,382 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "87D5EAB0-E94A-49B0-A879-5F96879BCFEB"
+            uuid = "AE053B80-C228-43E4-9F35-E054BD858E8C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HelloBeautiful/UI/UserDetails/UserDetailsViewController.swift"
+            filePath = "HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "buttonTapped(_:)"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "fetchMoonDetails()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "883E84DD-4B67-496C-ABFA-9E1EF60D3ECE"
+            uuid = "7C8904C7-8B43-4260-A575-FB6AB19CAF0A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HelloBeautiful/UI/UserDetails/UserDetailsViewController.swift"
+            filePath = "HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "buttonTapped(_:)"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "fetchMoonDetails()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7C8904C7-8B43-4260-A575-FB6AB19CAF0A - 45e34b329ef2b46"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HelloBeautiful.MoonHoroscopeViewModel.fetchMoonDetails() -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "7C8904C7-8B43-4260-A575-FB6AB19CAF0A - 39cdc903d35683e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;HelloBeautiful.TopLevelDictionary, HelloBeautiful.NetworkingError&gt;) -&gt; () in HelloBeautiful.MoonHoroscopeViewModel.fetchMoonDetails() -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "216">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0DDE497E-95D7-40CE-B871-7D3FBD2A83CF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "fetchMoonDetails()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0DDE497E-95D7-40CE-B871-7D3FBD2A83CF - 39cdc903d35683e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;HelloBeautiful.TopLevelDictionary, HelloBeautiful.NetworkingError&gt;) -&gt; () in HelloBeautiful.MoonHoroscopeViewModel.fetchMoonDetails() -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "0DDE497E-95D7-40CE-B871-7D3FBD2A83CF - 39cdc903d35683e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;HelloBeautiful.TopLevelDictionary, HelloBeautiful.NetworkingError&gt;) -&gt; () in HelloBeautiful.MoonHoroscopeViewModel.fetchMoonDetails() -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "236">
+               </Location>
+               <Location
+                  uuid = "0DDE497E-95D7-40CE-B871-7D3FBD2A83CF - 39cdc903d35683e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;HelloBeautiful.TopLevelDictionary, HelloBeautiful.NetworkingError&gt;) -&gt; () in HelloBeautiful.MoonHoroscopeViewModel.fetchMoonDetails() -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "984">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C1DD70D7-95FC-4CAF-AA20-3A03DD0817DE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "fetchMoonDetails()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C1DD70D7-95FC-4CAF-AA20-3A03DD0817DE - 39cdc903d35683e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;HelloBeautiful.TopLevelDictionary, HelloBeautiful.NetworkingError&gt;) -&gt; () in HelloBeautiful.MoonHoroscopeViewModel.fetchMoonDetails() -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "C1DD70D7-95FC-4CAF-AA20-3A03DD0817DE - 39cdc903d35683e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;HelloBeautiful.TopLevelDictionary, HelloBeautiful.NetworkingError&gt;) -&gt; () in HelloBeautiful.MoonHoroscopeViewModel.fetchMoonDetails() -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "236">
+               </Location>
+               <Location
+                  uuid = "C1DD70D7-95FC-4CAF-AA20-3A03DD0817DE - 39cdc903d35683e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;HelloBeautiful.TopLevelDictionary, HelloBeautiful.NetworkingError&gt;) -&gt; () in HelloBeautiful.MoonHoroscopeViewModel.fetchMoonDetails() -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "984">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BF4CAB39-BE61-4D32-9A65-85D42FFE5130"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "fetchMoonDetails()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E50BDBD-FD80-4C4F-B6F3-A32B0E632109"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "fetchMoonDetails()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9E50BDBD-FD80-4C4F-B6F3-A32B0E632109 - 39cdc903d356838c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;HelloBeautiful.TopLevelDictionary, HelloBeautiful.NetworkingError&gt;) -&gt; () in HelloBeautiful.MoonHoroscopeViewModel.fetchMoonDetails() -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "720">
+               </Location>
+               <Location
+                  uuid = "9E50BDBD-FD80-4C4F-B6F3-A32B0E632109 - 88fa5cea7967295e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;HelloBeautiful.TopLevelDictionary, HelloBeautiful.NetworkingError&gt;) -&gt; () in HelloBeautiful.MoonHoroscopeViewModel.fetchMoonDetails() -&gt; ()"
+                  moduleName = "HelloBeautiful"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A4DAE75A-E7BB-4B32-9AB8-95E5E3441E67"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "fetchMoonDetails()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73F9F631-EFB9-4D05-B806-611A5292FD8F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "fetchMoonDetails()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BEFA1C1C-318C-48C4-9B2E-CA8CA0393872"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "fetchMoonDetails()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A37F5BEE-4D3A-4604-A725-EC1677DD22CC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "fetchMoonDetails()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3D1ADE9E-EF23-40B0-9858-541ACD3DACDC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "fetchMoonDetails()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F473CF28-E2ED-42C0-9F2E-2F5B4BDC400C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "fetchHoroscope()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F7647F67-F65D-4A15-AFDB-BFE104D4766E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "fetchHoroscope()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "35194EA2-8E1F-4A4A-9D4D-D6DD287FA808"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBeautiful/UI/MoonHoroscope/MoonHoroscopeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "fetchHoroscope()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

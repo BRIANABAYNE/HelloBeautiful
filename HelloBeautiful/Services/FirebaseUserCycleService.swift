@@ -14,7 +14,7 @@ import FirebaseAuth
 protocol FirebaseUserCycleServiceable {
     
     func saveUserCycle(userCycle: UserCycle, completion: @escaping(Result<String, FirebaseError>) -> Void)
-    func fetchUserCycle(completion: @escaping(Result<[UserDetails], FirebaseError>) -> Void)
+    func fetchUserCycle(completion: @escaping(Result<[UserCycle], FirebaseError>) -> Void)
 }
 
 struct FirebaseUserCycleService: FirebaseUserCycleServiceable {
@@ -41,7 +41,7 @@ struct FirebaseUserCycleService: FirebaseUserCycleServiceable {
         }
     }
         
-    func fetchUserCycle(completion: @escaping(Result<[UserDetails], FirebaseError>) -> Void) {
+    func fetchUserCycle(completion: @escaping(Result<[UserCycle], FirebaseError>) -> Void) {
         let db = Firestore.firestore()
         db.collection("UserDetails").getDocuments() { (querySnapshot, err) in
             if let err = err {

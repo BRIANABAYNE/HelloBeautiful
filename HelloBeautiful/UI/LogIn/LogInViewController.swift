@@ -14,8 +14,9 @@ class LogInViewController: UIViewController {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var logInEmailTextField: UITextField!
-    @IBOutlet weak var logInPasswordTextField: UITextField!
+    @IBOutlet weak var emailView: HBTextFieldView!
+    @IBOutlet weak var passwordView: HBTextFieldView!
+    
     
     // MARK: - Properties
     
@@ -55,6 +56,8 @@ class LogInViewController: UIViewController {
             self, selector: #selector(appleIDStateRevoked),
             name: ASAuthorizationAppleIDProvider.credentialRevokedNotification,
             object: nil)
+        emailView.set(placeholder: "Email")
+        passwordView.set(placeholder: "Password")
     }
     
     // MARK: - Methods
@@ -135,8 +138,8 @@ class LogInViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func logInButtonTapped(_ sender: Any) {
-        guard let email = logInEmailTextField.text,
-              let password = logInPasswordTextField.text  else { return }
+        guard let email = emailView.text,
+              let password = passwordView.text  else { return }
         if(!email.isEmpty && !password.isEmpty) {
             showActivityIndicator()
             viewModel.signIn(with: email, password: password) {
@@ -191,7 +194,7 @@ extension LogInViewController: LogInViewModelDelegate {
         showAlert(message: error.localizedDescription)
     }
     
-    func success(userDetails: UserDetails) {
+    func success(userDetails: User) {
         self.hideActivityIndicator()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let logIn = storyboard.instantiateViewController(identifier:"tabBar")

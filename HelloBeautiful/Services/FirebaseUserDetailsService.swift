@@ -11,15 +11,15 @@ import FirebaseStorage
 import FirebaseFirestoreSwift
 
 protocol FirebaseUserDetailServiceable {
-    func update(userDetails: UserDetails)
-    func save(userDetails: UserDetails, completion: @escaping(Result<String, FirebaseError>) -> Void)
+    func update(userDetails: User)
+    func save(userDetails: User, completion: @escaping(Result<String, FirebaseError>) -> Void)
 
 }
 
 struct FirebaseUserDetailsService: FirebaseUserDetailServiceable {
     
     func save(
-        userDetails: UserDetails,
+        userDetails: User,
         completion: @escaping(Result<String, FirebaseError>) -> Void ) {
         let ref = Firestore.firestore()
         do {
@@ -36,7 +36,7 @@ struct FirebaseUserDetailsService: FirebaseUserDetailServiceable {
         }
     }
     
-    func update(userDetails: UserDetails) {
+    func update(userDetails: User) {
         if let documentID = userDetails.id {
             let ref = Firestore.firestore()
             let docRef = ref.collection(Constants.UserDetails.userDetailsCollectionPath).document(documentID)

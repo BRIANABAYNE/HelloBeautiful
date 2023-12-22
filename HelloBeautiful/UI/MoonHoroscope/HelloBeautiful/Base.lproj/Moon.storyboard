@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YZA-id-qbk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YZA-id-qbk">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -28,31 +29,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w78-0H-iRI" userLabel="FirstView">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1300"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Illumination Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxS-qo-5Jp">
-                                                <rect key="frame" x="164" y="1139" width="93" height="17"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Current Moon llumination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcF-Zt-VB3">
-                                                <rect key="frame" x="100" y="1093" width="221" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="25" id="Rlp-P9-Dv6"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="MoonriseLabel " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns8-nb-S8u">
-                                                <rect key="frame" x="226" y="1004" width="126.66666666666666" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="SjR-gC-mQe"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbI-Ru-eHA">
                                                 <rect key="frame" x="37" y="1002" width="115.66666666666669" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -93,7 +69,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Current Moonrise " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIT-yO-TTZ">
-                                                <rect key="frame" x="214" y="934" width="150.33333333333337" height="25"/>
+                                                <rect key="frame" x="242" y="406" width="150.33333333333337" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="2pt-j1-YZo"/>
                                                 </constraints>
@@ -101,9 +77,33 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="“In astrology, the moon represents our emotions, intuition, and subconscious.” " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wby-wK-ghR">
-                                                <rect key="frame" x="-28" y="30" width="579.33333333333337" height="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="“In astrology, the moon represents our emotions, intuition, and subconscious.” " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wby-wK-ghR">
+                                                <rect key="frame" x="-28" y="10" width="579.33333333333337" height="17"/>
+                                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Current Moon llumination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcF-Zt-VB3">
+                                                <rect key="frame" x="90" y="456" width="221" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="Rlp-P9-Dv6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Illumination Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxS-qo-5Jp">
+                                                <rect key="frame" x="59" y="410" width="93" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MoonriseLabel " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns8-nb-S8u">
+                                                <rect key="frame" x="241.99999999999997" y="358" width="126.66666666666666" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="SjR-gC-mQe"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -111,10 +111,14 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="linkColor"/>
                                         <constraints>
+                                            <constraint firstItem="Ns8-nb-S8u" firstAttribute="leading" secondItem="w78-0H-iRI" secondAttribute="leading" constant="242" id="C5X-c7-8C8"/>
+                                            <constraint firstItem="CAu-7p-vnw" firstAttribute="top" secondItem="Ns8-nb-S8u" secondAttribute="bottom" constant="8" symbolic="YES" id="D62-St-tTP"/>
                                             <constraint firstAttribute="trailing" secondItem="CAu-7p-vnw" secondAttribute="trailing" constant="17" id="FL1-tw-T5W"/>
                                             <constraint firstItem="CAu-7p-vnw" firstAttribute="top" secondItem="w78-0H-iRI" secondAttribute="top" constant="386" id="KGc-tP-lWb"/>
+                                            <constraint firstItem="Ns8-nb-S8u" firstAttribute="top" secondItem="Wby-wK-ghR" secondAttribute="bottom" constant="331" id="dqK-OV-e68"/>
                                             <constraint firstItem="CAu-7p-vnw" firstAttribute="leading" secondItem="w78-0H-iRI" secondAttribute="leading" constant="25" id="eyz-tY-EW3"/>
                                             <constraint firstItem="DA3-HK-v4z" firstAttribute="top" secondItem="CAu-7p-vnw" secondAttribute="bottom" constant="34" id="ijh-Av-aMS"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ns8-nb-S8u" secondAttribute="trailing" constant="24.329999999999998" id="yAT-ie-o6z"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -209,16 +213,16 @@
         <image name="Moon 1" width="400" height="408"/>
         <image name="moon.stars.fill" catalog="system" width="125" height="128"/>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
