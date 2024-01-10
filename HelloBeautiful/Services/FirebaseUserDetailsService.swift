@@ -11,29 +11,32 @@ import FirebaseStorage
 import FirebaseFirestoreSwift
 
 protocol FirebaseUserDetailServiceable {
-    func update(userDetails: UserDetails)
-    func save(userDetails: UserDetails, completion: @escaping(Result<String, FirebaseError>) -> Void)
+    func update(userDetails: User)
+    func save(userDetails: User, completion: @escaping(Result<String, FirebaseError>) -> Void)
 
 }
 
-struct FirebaseUerDetailsService: FirebaseUserDetailServiceable {
+struct FirebaseUserDetailsService: FirebaseUserDetailServiceable {
     
-    func save(userDetails: UserDetails, completion: @escaping(Result<String, FirebaseError>) -> Void ) {
+    func save(
+        userDetails: User,
+        completion: @escaping(Result<String, FirebaseError>) -> Void ) {
         let ref = Firestore.firestore()
         do {
-            let documentRef = try ref.collection(Constants.UserDetails.userDetailsCollectionPath).addDocument(from: userDetails, completion: { _ in
-                
+            let documentRef = try ref
+                .collection(Constants.UserDetails.userDetailsCollectionPath)
+                .addDocument(from: userDetails, completion: { _ in
             })
-           
+            
             UserDefaults.standard.set(documentRef.documentID, forKey: "UserDocumentID")
             completion(.success(documentRef.documentID))
         } catch {
             print("Oh no, something went wrong with the save", error.localizedDescription)
             return
         }
-    } // end of save
+    }
     
-    func update(userDetails: UserDetails) {
+    func update(userDetails: User) {
         if let documentID = userDetails.id {
             let ref = Firestore.firestore()
             let docRef = ref.collection(Constants.UserDetails.userDetailsCollectionPath).document(documentID)

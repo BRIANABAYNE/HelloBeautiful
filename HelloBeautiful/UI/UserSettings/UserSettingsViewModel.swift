@@ -10,18 +10,24 @@ import FirebaseAuth
 import UIKit
 
 // MARK: - Protocol
+
 protocol UserSettingsViewModelDelegate: UserSettingDetailViewController {
+    
 }
 
 struct UserSettingsViewModel {
     
     // MARK: - Properties
+    
     private let authService: FirebaseAuthServiceable
     private let userDetailsService: FirebaseUserDetailServiceable
     weak var delegate: UserSettingsViewModelDelegate?
     
-    // MARK: - Dependenct Injections
-    init(authService:FirebaseAuthServiceable = FirebaseAuthService(), userDetailsService:FirebaseUserDetailServiceable = FirebaseUerDetailsService(), delegate: UserSettingsViewModelDelegate) {
+    // MARK: - Dependency Injection
+    init(
+        authService:FirebaseAuthServiceable = FirebaseAuthService(),
+        userDetailsService:FirebaseUserDetailServiceable = FirebaseUserDetailsService(),
+        delegate: UserSettingsViewModelDelegate) {
         self.authService = authService
         self.userDetailsService = userDetailsService
         self.delegate = delegate

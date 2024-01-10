@@ -23,9 +23,9 @@ struct Constants {
     
     struct Colors {
         static let customPink = UIColor(red: 203, green: 66, blue: 170, alpha: 1)
-
+        
     }
-
+    
     struct Fonts {
         static let mainstay = "Mainstay"
     }

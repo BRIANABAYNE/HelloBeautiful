@@ -12,38 +12,26 @@ import FirebaseAuth
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    var handle: AuthStateDidChangeListenerHandle?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        handle = Auth.auth().addStateDidChangeListener( { auth, user in
+        UserManager.shared.userStateDidChange = { [weak self] user in
+            guard let self else { return }
             
-            if Auth.auth().currentUser == nil {
-//                                let storyboard = UIStoryboard(name:"Moon", bundle: nil)
-//                                let storyboardVC = storyboard.instantiateViewController(identifier:"Moon")
-//                self.present(storyboardVC, animated: true, completion: nil)
-//                let storyboard = UIStoryboard(name: "Feelings", bundle: nil)
-//                let logIn = storyboard.instantiateViewController(identifier:"Symptoms")
-//                self.window?.rootViewController = logIn
-//                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                            let mainScreen = storyboard.instantiateViewController(identifier:"tabBar")
-//                            self.window?.rootViewController = mainScreen
-//
-                
-            
+            if user == nil {
                 let storyboard = UIStoryboard(name: "LogIn", bundle: nil)
                 let logIn = storyboard.instantiateViewController(identifier:"LogIn")
                 self.window?.rootViewController = logIn
             } else {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                                let tabBar = storyboard.instantiateViewController(identifier:"tabBar")
-                                self.window?.rootViewController = tabBar
-                
+                let tabBar = storyboard.instantiateViewController(identifier:"tabBar")
+                self.window?.rootViewController = tabBar
             }
-        })
+        }
     }
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

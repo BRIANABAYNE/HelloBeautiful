@@ -7,10 +7,8 @@
 
 import UIKit
 
-
 @IBDesignable // allows to show on the storyboard
 class FeelingsViewController: UIViewController, AlertPresentable  {
-    
     
     // MARK: - Outlets
     
@@ -23,12 +21,14 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
     @IBOutlet weak var feelingsDateLabel: UILabel!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
-    
     // MARK: - Properties
     
     var viewModel: FeelingsViewModel
     
-    init?(viewModel: FeelingsViewModel, coder: NSCoder) {
+    init?(
+        viewModel: FeelingsViewModel,
+        coder: NSCoder
+    ) {
         self.viewModel = viewModel
         super.init(coder: coder)
     }
@@ -38,8 +38,8 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Lifecycles
     
-    // MARK: - Lifecyles
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -47,8 +47,12 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
     }
     
     // MARK: - Methods
-    
-    var entryCompletionHandler: (() -> Void)?
+    typealias EntryCompletionHandler = (() -> Void)
+    var entryCompletionHandler: EntryCompletionHandler? {
+        didSet {
+            print("entryCompletionHandler")
+        }
+    }
     
     private func setupViews() {
         saveButton.title = viewModel.barButtonTitle
@@ -86,6 +90,7 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
     }
 
     // MARK: - Actions
+    
     @IBAction func saveButtonTapped(_ sender: Any) {
         viewModel.saveEntry(
             flow: flowSegmentControl.selectedSegmentIndex,
@@ -97,8 +102,8 @@ class FeelingsViewController: UIViewController, AlertPresentable  {
             date: Date()
         )
         
-        navigationController?.popViewController(animated: true)
         entryCompletionHandler?()
+        navigationController?.popViewController(animated: true)
     }
 }
 

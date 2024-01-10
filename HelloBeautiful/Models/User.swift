@@ -8,16 +8,26 @@
 import Foundation
 import FirebaseFirestoreSwift
 
-struct User {
-    
+struct User: Codable {
+    @DocumentID var id: String?
     let email: String
-    let cycle: [PeriodCycle]
+    let password: String
+    let zodiacSign: String
+    let lastCycleDate: Date
+    let typicalCycleLength: Int
+    let collectionType: String
+    let userAuthID: String?
+//    let dairy: [DiaryEntry]
+//    let cycle: [PeriodCycle]
 }
 
-struct PeriodCycle {
+struct PeriodCycle: Codable {
     let startDate: Date
     let duration : Int
-    let diary: [DiaryEntry]
+    var dateComponent: DateComponents
+//    var cycleType: String?
+//    var cycleCollectionType: String?
+    var diary: [DiaryEntry]
 }
 
 struct DiaryEntry: Decodable, Encodable {
@@ -53,7 +63,6 @@ extension DiaryEntry {
         self.feelingsCollectionType = feelingsCollectionType
     }
 }
-
 
 enum Flow: Int, CaseIterable {
     case light
@@ -155,15 +164,10 @@ enum Symptoms: Int, CaseIterable {
     }
 }
 
-//let user = User(
-//    name: "Anne",
-//    cycles: [
-//        .init(
-//            startDate: .init(),
-//            duration: 7,
-//            diary: [
-//                .init(craving: Craving.sweets.rawValue, symptoms: 9)
-//            ]
-//        )
-//    ]
-//)
+//extension PeriodCycle: Equatable {
+////    static func == (lhs: PeriodCycle, rhs: PeriodCycle) -> Bool {
+////        <#code#>
+////    }
+//
+//
+//}

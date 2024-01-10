@@ -7,12 +7,14 @@
 
 import Foundation
 
+
 struct Horoscope: Decodable {
     private enum CodingKeys: String, CodingKey {
         case horoscope
         case sunSign = "sunsign"
         case week
     }
+    
     let horoscope: String
     let sunSign: String
     let week: String

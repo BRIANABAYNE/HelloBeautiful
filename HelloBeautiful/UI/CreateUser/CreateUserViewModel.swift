@@ -15,31 +15,35 @@ protocol CreateUserViewModelDelegate: CreateUserDetailViewController {
 struct CreateUserViewModel {
     
     // MARK: - Properties
+    
     private let service: FirebaseAuthServiceable
     weak var delegate: CreateUserViewModelDelegate?
     let newUserContainer = NewUser()
 
-    
     // MARK: - Dependency Injection
-    init(service: FirebaseAuthServiceable = FirebaseAuthService(), delegate: CreateUserViewModelDelegate) {
+    
+    init(
+        service: FirebaseAuthServiceable = FirebaseAuthService(),
+        delegate: CreateUserViewModelDelegate)
+    {
         self.service = service
         self.delegate = delegate
     }
     // MARK: - Functions
-    func createAccount(with email: String, password: String, confirmPassword: String) {
-        if password == confirmPassword {
-            service.createAccount(with: email, password: password, confirmPassword: confirmPassword) { result in
-                switch result {
-                case .success(_):
-                    print("User was created successfully")
+    
+    func createAccount(
+        with email: String,
+        password: String
+    ) {
+        service.createAccount(with: email, password: password) { result in
+            switch result {
+            case .success(_):
+                print("User was created successfully")
 #warning("Should we only change the UI if signing in was successful??")
-                case .failure(let failure):
-                    print("User was not created")
-                    delegate?.encountered(failure)
-                }
+            case .failure(let failure):
+                print("User was not created")
+                delegate?.encountered(failure)
             }
-        } else {
-            delegate?.encountered(CreateAccountError.passwordMismatch)
         }
     }
 }

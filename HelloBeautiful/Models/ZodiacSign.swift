@@ -8,6 +8,7 @@
 import Foundation
 
 enum ZodiacSign: String, CaseIterable {
+    
     case aries
     case taurus
     case gemini

@@ -10,16 +10,20 @@ import UIKit
 class FeelingsListTableViewController: UITableViewController, AlertPresentable {
     
     // MARK: - Properties
+    
     var viewModel: FeelingListViewModel
     
     required init?(coder: NSCoder) {
-        viewModel = FeelingListViewModel(userID: UserDefaults.standard.string(forKey: "UserDocumentID")!)
+        let userID = UserDefaults.standard.string(forKey: "UserDocumentID")
+        viewModel = FeelingListViewModel(userID: userID)
         super.init(coder: coder)
     }
     
     // MARK: - Lifecycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Diary"
         setupLoadingIndicator()
         startLoadingIndicator()
         tableView.estimatedRowHeight = 80
@@ -67,6 +71,11 @@ class FeelingsListTableViewController: UITableViewController, AlertPresentable {
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
         let viewModel = FeelingsViewModel(entry: nil)
         let viewController = FeelingsViewController.create(with: viewModel)
+        viewController.entryCompletionHandler = {
+            DispatchQueue.main.async { [weak self] in
+                self?.viewModel.fetchDiaryEntries()
+            }
+        }
         navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -102,13 +111,13 @@ class FeelingsListTableViewController: UITableViewController, AlertPresentable {
             }
         }
     }
-    
+ 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let entryCellViewModel = viewModel.entryCellViewModels[indexPath.row]
         let viewController = FeelingsViewController.create(with: entryCellViewModel.entryViewModel)
         viewController.entryCompletionHandler = { [weak self] in
             DispatchQueue.main.async {
-                self?.tableView.reloadData()
+                self?.viewModel.fetchDiaryEntries()
             }
         }
         navigationController?.pushViewController(viewController, animated: true)
