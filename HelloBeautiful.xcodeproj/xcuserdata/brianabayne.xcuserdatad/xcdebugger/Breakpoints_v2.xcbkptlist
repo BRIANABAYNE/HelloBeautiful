@@ -672,53 +672,5 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B4FEA3D5-4E50-44CC-97E9-B2D64222EF1B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HelloBeautiful/UI/UserDetails/UserDetailsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "buttonTapped(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B4FEA3D5-4E50-44CC-97E9-B2D64222EF1B - 87b82840fb1de3c1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HelloBeautiful.UserDetailsViewController.buttonTapped(Any) -&gt; ()"
-                  moduleName = "HelloBeautiful"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/UserDetails/UserDetailsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "85"
-                  endingLineNumber = "85"
-                  offsetFromSymbolStart = "968">
-               </Location>
-               <Location
-                  uuid = "B4FEA3D5-4E50-44CC-97E9-B2D64222EF1B - 87b82840fb1de3c1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HelloBeautiful.UserDetailsViewController.buttonTapped(Any) -&gt; ()"
-                  moduleName = "HelloBeautiful"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/brianabayne/Developer/Stateful/Personal%20Capstone/HelloBeautiful/HelloBeautiful/UI/UserDetails/UserDetailsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "85"
-                  endingLineNumber = "85"
-                  offsetFromSymbolStart = "672">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
