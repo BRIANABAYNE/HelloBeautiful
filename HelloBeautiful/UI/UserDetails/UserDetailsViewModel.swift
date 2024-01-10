@@ -21,7 +21,7 @@ class UserDetailsViewModel {
     var userDetails: User?
     let zodiacSigns = ZodiacSign.allCases.map(\.title)
     private let service: FirebaseUserDetailServiceable
-//    private let serviceOne: FirebaseAuthServiceable
+  //  let serviceOne: FirebaseAuthServiceable
     weak var delegate: UserDetailsViewModelDelegate?
     
     // MARK: -  Dependency Injection
@@ -30,12 +30,12 @@ class UserDetailsViewModel {
         userDetails: User? = nil,
         service: FirebaseUserDetailsService = FirebaseUserDetailsService(),
         injectedDelegate: UserDetailsViewModelDelegate
-//        serviceOne: FirebaseAuthService = FirebaseAuthService()
+       // serviceOne: FirebaseAuthService = FirebaseAuthService()
     ) {
         self.userDetails = userDetails
         self.service = service
         self.delegate = injectedDelegate
-//        self.serviceOne = serviceOne
+      //  self.serviceOne = serviceOne
     }
     
     // MARK: - Crud Functions

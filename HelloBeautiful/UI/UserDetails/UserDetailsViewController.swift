@@ -22,7 +22,7 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
     // MARK: - Properties
     
     var viewModel: UserDetailsViewModel!
-//    var viewModelCreateUser: CreateUserViewModel!
+   // var viewModelCreateUser: CreateUserViewModel!
     static var completionHandler: ((String?) -> Void)?
     var disclosurePopUP: PopUp!
     private let newUserContainer: NewUser
@@ -81,8 +81,7 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
             let length = periodLengthTextField.text,
             let cycleLength = Int(length)
         else { return }
-//        viewModelCreateUser.createAccount(with: newUserContainer.email,
-//                                          password: newUserContainer.password)
+        
         viewModel.saveUser(
             email: newUserContainer.email,
             password: newUserContainer.password,

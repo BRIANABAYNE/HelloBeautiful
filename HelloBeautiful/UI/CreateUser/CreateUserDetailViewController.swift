@@ -53,7 +53,7 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
             !confirmPassword.isEmpty
         else { return }
         guard password == confirmPassword else { return }
-        
+    
         viewModel.newUserContainer.email = email
         viewModel.newUserContainer.password = password
         navigateToNextScreen(with: viewModel.newUserContainer)

@@ -20,10 +20,24 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
     @IBOutlet weak var userPeriodLength: UILabel!
     
     // MARK: - Properties
-    
+    private let stringUserContainer: NewUser
     var viewModel: UserSettingsViewModel!
     fileprivate var currentNonce: String?
     #warning("Should I create a new string here??")
+    
+    init?(secondUserContainer: NewUser, coder: NSCoder) {
+        self.stringUserContainer = secondUserContainer
+        super.init(coder: coder)
+    }
+    
+    @available(*, unavailable, renamed:"init(secondUserContainer:coder:)")
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    
+    
     
     // MARK: - LifeCycles
     
