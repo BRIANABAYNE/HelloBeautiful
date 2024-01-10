@@ -22,10 +22,9 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
     // MARK: - Properties
     
     var viewModel: UserDetailsViewModel!
+//    var viewModelCreateUser: CreateUserViewModel!
     static var completionHandler: ((String?) -> Void)?
     var disclosurePopUP: PopUp!
-    var email: String = ""
-    var password: String = ""
     private let newUserContainer: NewUser
     
     init?(newUserContainer: NewUser, coder: NSCoder) {
@@ -78,18 +77,19 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
     @IBAction func buttonTapped(_ sender: Any) {
         guard
             let zodiacSign = zodiacSignPicker,
-//            let zodiacSignAsInt = Int(zodiacSign),
+          //  let zodiacSignAsString = String(zodiacSign),
             let length = periodLengthTextField.text,
             let cycleLength = Int(length)
         else { return }
-        
-//        viewModel.saveUser(
-//            email: email,
-//            password: password,
-//            zodiacSign: zodiacSign,
-//            typicalCycleLength: cycleLength,
-//            lastCycleDate: datePicker.date
-//        )
+//        viewModelCreateUser.createAccount(with: newUserContainer.email,
+//                                          password: newUserContainer.password)
+        viewModel.saveUser(
+            email: newUserContainer.email,
+            password: newUserContainer.password,
+            zodiacSign: newUserContainer.zodiacSign,
+            typicalCycleLength: cycleLength,
+            lastCycleDate: datePicker.date
+        )
         
         let storyboard = UIStoryboard(name:"Main", bundle: nil)
         let navigation = storyboard.instantiateViewController(identifier:"tabBar")

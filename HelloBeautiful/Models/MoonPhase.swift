@@ -8,6 +8,7 @@
 import Foundation
 
 struct TopLevelDictionary: Decodable {
+//    let timestamp: Int
     let datestamp: String
     let moon: Moon
 }

@@ -21,6 +21,7 @@ class UserDetailsViewModel {
     var userDetails: User?
     let zodiacSigns = ZodiacSign.allCases.map(\.title)
     private let service: FirebaseUserDetailServiceable
+//    private let serviceOne: FirebaseAuthServiceable
     weak var delegate: UserDetailsViewModelDelegate?
     
     // MARK: -  Dependency Injection
@@ -29,10 +30,12 @@ class UserDetailsViewModel {
         userDetails: User? = nil,
         service: FirebaseUserDetailsService = FirebaseUserDetailsService(),
         injectedDelegate: UserDetailsViewModelDelegate
+//        serviceOne: FirebaseAuthService = FirebaseAuthService()
     ) {
         self.userDetails = userDetails
         self.service = service
         self.delegate = injectedDelegate
+//        self.serviceOne = serviceOne
     }
     
     // MARK: - Crud Functions
@@ -40,7 +43,7 @@ class UserDetailsViewModel {
     func saveUser(
         email: String,
         password: String,
-        zodiacSign: Int,
+        zodiacSign: String,
         typicalCycleLength: Int,
         lastCycleDate: Date
     ) {
@@ -64,7 +67,7 @@ class UserDetailsViewModel {
     func createUser(
         email: String,
         password: String,
-        zodiacSign: Int,
+        zodiacSign: String,
         typicalCycleLength: Int,
         lastCycleDate: Date
     ) {
@@ -93,7 +96,7 @@ class UserDetailsViewModel {
     func updateUser(
         email: String,
         password: String,
-        newZodiacSign: Int,
+        newZodiacSign: String,
         newTypicalCycleLength: Int,
         newLastCycleDate: Date
     ) {
