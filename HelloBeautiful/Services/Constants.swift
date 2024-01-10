@@ -9,7 +9,7 @@ import UIKit
 
 struct Constants {
     
-    struct UserDetails {
+    struct User {
         static let userDetailsCollectionPath = "UserDetails"
     }
     
