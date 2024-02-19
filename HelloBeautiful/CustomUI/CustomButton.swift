@@ -20,10 +20,22 @@ class BBButton: UIButton {
         setupButton()
     }
     
-    private func setupButton() {
-        backgroundColor     = Constants.Colors.customPink
-        titleLabel?.font    = UIFont(name: Constants.Fonts.mainstay, size: 22)
-        layer.cornerRadius  = frame.size.height/2
-        setTitleColor(.white, for: .normal)
+    convenience init(color: UIColor, title: String, systemImageName: String) {
+        self.init(frame: .zero)
+        set(color:color, title: title, systemImageName: systemImageName)
     }
-}
+    
+    private func setupButton() {
+        configuration = .tinted()
+        configuration?.cornerStyle = .medium
+    }
+    
+        func set(color: UIColor, title: String, systemImageName: String) {
+            configuration?.baseBackgroundColor = color
+            configuration?.baseForegroundColor = color
+            configuration?.title = title
+            configuration?.image = UIImage(systemName: systemImageName)
+            configuration?.imagePadding = 6
+            configuration?.imagePlacement = .leading
+        }
+    }

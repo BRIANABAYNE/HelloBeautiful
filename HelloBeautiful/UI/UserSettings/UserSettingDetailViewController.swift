@@ -14,16 +14,38 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
     
     // MARK: - Outlets
     
-    @IBOutlet weak var zodiacSignLabel: UILabel!
+//    @IBOutlet weak var zodiacSignLabel: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
     @IBOutlet weak var userCycleLength: UILabel!
     @IBOutlet weak var userPeriodLength: UILabel!
     
     // MARK: - Properties
     
+   // private let newUserContainer: NewUser?
     var viewModel: UserSettingsViewModel!
     fileprivate var currentNonce: String?
     #warning("Should I create a new string here??")
+    
+//    
+//    init?(newUserContainer: NewUser, coder: NSCoder) {
+//        self.newUserContainer = newUserContainer
+//        super.init(coder: coder)
+//    }
+//    
+//    @available(*, unavailable, renamed: "init(newUserContainer:coder:)")
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+    
+    // MARK: - Function
+    
+//    private func configureView() {
+//        guard let newContainer = newUserContainer else {return}
+//        userEmailLabel.text = newContainer.email
+//        userCycleLength.text = "\(newContainer.cycleLength)"
+//        userPeriodLength.text =  "\(newContainer.lastCycleStartDate)"
+//    }
+    
     
     
     // MARK: - LifeCycles
@@ -31,6 +53,7 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel = UserSettingsViewModel(delegate: self)
+        //configureView()
     }
     
     // MARK: - Actions
@@ -151,20 +174,6 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
 //    }
 //    
     
-
-  
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     // MARK: - Helper Function
     
     func changeUI() {
@@ -217,4 +226,18 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
         alertController.addAction(yesAction)
         self.present(alertController, animated: true)
     }
+    
 }
+
+// MARK: - Extension
+
+//extension UserSettingDetailViewController {
+//    static func create(with newUser: NewUser) ->
+//    UserSettingDetailViewController {
+//        let storyboard = UIStoryboard(name: "UserSettings", bundle: nil)
+//        return
+//        storyboard.instantiateViewController(identifier: "UserSetting") { coder in
+//            UserSettingDetailViewController(newUserContainer: newUser, coder: coder)
+//        }
+//    }
+//}

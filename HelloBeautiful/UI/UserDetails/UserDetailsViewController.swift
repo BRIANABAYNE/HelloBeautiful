@@ -90,10 +90,19 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
             lastCycleDate: datePicker.date
         )
         
+        
+        
         let storyboard = UIStoryboard(name:"Main", bundle: nil)
         let navigation = storyboard.instantiateViewController(identifier:"tabBar")
         self.view.window?.rootViewController = navigation
     }
+    
+//    private func navigateToUserSettings(with newUser: NewUser) {
+//        let VC = UserSettingDetailViewController.create(with: newUser)
+//         navigationController?
+//            .pushViewController(VC, animated: true)
+//        
+//    }
     
     // MARK: - View Properties
     

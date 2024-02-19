@@ -21,9 +21,9 @@
                     <connections>
                         <segue destination="mbr-KY-cNh" kind="relationship" relationship="viewControllers" id="Xcp-2b-fdu"/>
                         <segue destination="rcT-Y2-iVp" kind="relationship" relationship="viewControllers" id="9JK-0j-d6e"/>
-                        <segue destination="JcA-Rp-saP" kind="relationship" relationship="viewControllers" id="QwJ-kL-2gY"/>
                         <segue destination="VB9-1W-Ysl" kind="relationship" relationship="viewControllers" id="X4g-ly-sZw"/>
                         <segue destination="i2i-zu-h1i" kind="relationship" relationship="viewControllers" id="qmv-qX-vs6"/>
+                        <segue destination="JcA-Rp-saP" kind="relationship" relationship="viewControllers" id="wPI-MJ-IMk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e3S-qg-4PQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -55,10 +55,11 @@
             <objects>
                 <viewControllerPlaceholder storyboardName="UserSettings" id="JcA-Rp-saP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="fpw-Tr-i0x"/>
+                    <navigationItem key="navigationItem" id="i4L-pF-hSc"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qDw-do-ofe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="261" y="-291"/>
+            <point key="canvasLocation" x="261" y="-364"/>
         </scene>
         <!--Feelings-->
         <scene sceneID="Xed-5t-zqN">
