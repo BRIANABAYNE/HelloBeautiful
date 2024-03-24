@@ -17,6 +17,10 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var emailView: HBTextFieldView!
     @IBOutlet weak var passwordView: HBTextFieldView!
     
+//    let logInButton = BBButton(color: .systemPink, title: "LOGIN", systemImageName: "person.crop.circle.fill")
+    
+    
+    
     
     // MARK: - Properties
     
@@ -38,6 +42,11 @@ class LogInViewController: UIViewController {
 //    }
     
     
+//    func viewButton() {
+//        view.addSubview(logInButton)
+//    }
+//    
+    
     
     var appleViewModel:SignInWithAppleViewModel!
 //    var viewModel:LogInViewModel!
@@ -58,6 +67,7 @@ class LogInViewController: UIViewController {
             object: nil)
         emailView.set(placeholder: "Email")
         passwordView.set(placeholder: "Password")
+  //   viewButton()
     }
     
     // MARK: - Methods

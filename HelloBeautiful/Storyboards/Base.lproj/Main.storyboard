@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bp3-Pp-1he">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bp3-Pp-1he">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +19,6 @@
                         <color key="tintColor" red="0.80392156862745101" green="0.58039215686274503" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="mbr-KY-cNh" kind="relationship" relationship="viewControllers" id="Xcp-2b-fdu"/>
                         <segue destination="rcT-Y2-iVp" kind="relationship" relationship="viewControllers" id="9JK-0j-d6e"/>
                         <segue destination="VB9-1W-Ysl" kind="relationship" relationship="viewControllers" id="X4g-ly-sZw"/>
                         <segue destination="i2i-zu-h1i" kind="relationship" relationship="viewControllers" id="qmv-qX-vs6"/>
@@ -29,16 +28,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e3S-qg-4PQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="263" y="-782"/>
-        </scene>
-        <!--DetailMain-->
-        <scene sceneID="hNV-Oe-Y6y">
-            <objects>
-                <viewControllerPlaceholder storyboardName="DetailMain" id="mbr-KY-cNh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="6RD-Nc-Q3S"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mnX-sr-AKA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1273" y="-558"/>
         </scene>
         <!--UserCycle-->
         <scene sceneID="m9f-Gz-jxP">
@@ -85,7 +74,7 @@
     <color key="tintColor" name="AccentColor"/>
     <resources>
         <namedColor name="AccentColor">
-            <color red="1" green="0.40784313725490196" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

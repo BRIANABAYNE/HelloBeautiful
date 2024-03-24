@@ -14,7 +14,7 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
     
     // MARK: - Outlets
     
-//    @IBOutlet weak var zodiacSignLabel: UILabel!
+//   @IBOutlet weak var zodiacSignLabel: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
     @IBOutlet weak var userCycleLength: UILabel!
     @IBOutlet weak var userPeriodLength: UILabel!
@@ -25,6 +25,11 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
     var viewModel: UserSettingsViewModel!
     fileprivate var currentNonce: String?
     #warning("Should I create a new string here??")
+    var zodiacSign: String!
+    var userEmail: String!
+    var cycleLength: Int!
+    var lastCycleDate: Date!
+    
     
 //    
 //    init?(newUserContainer: NewUser, coder: NSCoder) {
