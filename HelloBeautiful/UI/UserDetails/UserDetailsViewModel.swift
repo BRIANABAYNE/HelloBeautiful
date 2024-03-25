@@ -20,7 +20,7 @@ class UserDetailsViewModel {
     
     var userDetails: User?
     let zodiacSigns = ZodiacSign.allCases.map(\.title)
-    private let service: FirebaseUserDetailServiceable
+    private let service: FirebaseAuthService
   //  let serviceOne: FirebaseAuthServiceable
     weak var delegate: UserDetailsViewModelDelegate?
     
@@ -28,7 +28,7 @@ class UserDetailsViewModel {
     
     init(
         userDetails: User? = nil,
-        service: FirebaseUserDetailsService = FirebaseUserDetailsService(),
+        service: FirebaseAuthService = FirebaseAuthService(),
         injectedDelegate: UserDetailsViewModelDelegate
        // serviceOne: FirebaseAuthService = FirebaseAuthService()
     ) {
@@ -50,7 +50,7 @@ class UserDetailsViewModel {
         if userDetails != nil {
             updateUser(
                 email: email,
-                password: password,
+               password: password,
                 newZodiacSign: zodiacSign,
                 newTypicalCycleLength: typicalCycleLength,
                 newLastCycleDate: lastCycleDate)
@@ -80,12 +80,15 @@ class UserDetailsViewModel {
             zodiacSign: zodiacSign,
             lastCycleDate: lastCycleDate,
             typicalCycleLength: typicalCycleLength,
-            collectionType: Constants.UserDetails.userDetailsCollectionPath,
+            collectionType: Constants.User.userDetailsCollectionPath,
             userAuthID: userAuthID)
         service.save(userDetails: details, completion: { result in
             switch result {
             case .success(_):
-                print("User Details Were Created")
+                print("User was created")
+                self.service.createAccount(with: email, password: password) { result in
+                    //
+                }
             case .failure(let failure):
                 print("There was an error creating the user.")
                 self.delegate?.encountered(failure)
@@ -109,8 +112,24 @@ class UserDetailsViewModel {
             zodiacSign: newZodiacSign,
             lastCycleDate: newLastCycleDate,
             typicalCycleLength: newTypicalCycleLength,
-            collectionType: Constants.UserDetails.userDetailsCollectionPath,
+            collectionType: Constants.User.userDetailsCollectionPath,
             userAuthID: userAuthID)
         service.update(userDetails: updatedUser)
+    }
+    
+    func createAccount(
+        with email: String,
+        password: String
+    ) {
+        service.createAccount(with: email, password: password) { result in
+            switch result {
+            case .success(_):
+                print("User was created successfully")
+#warning("Should we only change the UI if signing in was successful??")
+            case .failure(let failure):
+                print("User was not created")
+                self.delegate?.encountered(failure)
+            }
+        }
     }
 }

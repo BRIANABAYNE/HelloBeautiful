@@ -43,6 +43,7 @@ class UserCycleViewController: UIViewController, AlertPresentable {
     
     @IBAction func editCycleButtonTapped(_ sender: Any) {
         viewModel.saveUserCycle()
+        viewModel.fetchUserCycle()
     }
     
     func setupUI() {

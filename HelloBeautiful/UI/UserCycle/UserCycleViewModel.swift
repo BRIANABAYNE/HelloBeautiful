@@ -76,11 +76,27 @@ class UserCycleViewModel: NSObject {
                         print("User Cycle was saved to FB")
                     case .failure(let failure):
                         print("There was an error saving the cycle to FB")
-                        self.cycleDelegate?.encountered(failure)
+                         self.cycleDelegate?.encountered(failure)
                     }
                 } )
             }
             
+    }
+    
+    
+    
+    
+    func fetchUserCycle() {
+        // This is fetching information but it's not the correct user. // Looks like maybe it's pulling all the users.
+        userCycleService.fetchUserCycle { result in
+            switch result {
+            case .success(_):
+                print("Fetched User Cycle from Firebase")
+            case .failure(let failure):
+                print("There was an error retrieving the cycle information from FB")
+                self.cycleDelegate?.encountered(failure)
+            }
+        }
     }
     
     func deleteUserCycle(date: DateComponents) {

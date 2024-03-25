@@ -27,7 +27,7 @@ struct FirebaseUserCycleService: FirebaseUserCycleServiceable {
             let userDocID = UserDefaults.standard.string(forKey: "UserDocumentID")
             let documentCycleRef = try
             firebaseRef
-                .collection(Constants.UserDetails
+                .collection(Constants.User
                     .userDetailsCollectionPath)
                 .document(userDocID!)
                 .collection(Constants.UserCycle.userCycleCollectionPath)

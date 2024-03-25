@@ -20,16 +20,16 @@ struct UserSettingsViewModel {
     // MARK: - Properties
     
     private let authService: FirebaseAuthServiceable
-    private let userDetailsService: FirebaseUserDetailServiceable
+//    private let userDetailsService: FirebaseUserDetailServiceable
     weak var delegate: UserSettingsViewModelDelegate?
     
     // MARK: - Dependency Injection
     init(
         authService:FirebaseAuthServiceable = FirebaseAuthService(),
-        userDetailsService:FirebaseUserDetailServiceable = FirebaseUserDetailsService(),
+//        userDetailsService:FirebaseUserDetailServiceable = FirebaseUserDetailsService(),
         delegate: UserSettingsViewModelDelegate) {
         self.authService = authService
-        self.userDetailsService = userDetailsService
+//        self.userDetailsService = userDetailsService
         self.delegate = delegate
     }
     

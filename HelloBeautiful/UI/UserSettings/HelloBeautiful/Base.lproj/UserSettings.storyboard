@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y68-KU-d4z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y68-KU-d4z">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,7 +18,7 @@
         <!--Settings-->
         <scene sceneID="vdn-qX-dD6">
             <objects>
-                <viewController storyboardIdentifier="UserSettingDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y68-KU-d4z" customClass="UserSettingDetailViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserSetting" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y68-KU-d4z" customClass="UserSettingDetailViewController" customModule="HelloBeautiful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wg4-WC-FyD" customClass="GradientView" customModule="HelloBeautiful" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,13 +27,7 @@
                                 <rect key="frame" x="10" y="178" width="323.66666666666669" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zodiac Sign" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOE-bC-Xbb">
-                                        <rect key="frame" x="0.0" y="0.0" width="94" height="50"/>
-                                        <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
-                                        <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zodiacSign" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOw-se-Kkc">
-                                        <rect key="frame" x="239.99999999999997" y="0.0" width="83.666666666666657" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="323.66666666666669" height="50"/>
                                         <fontDescription key="fontDescription" name="Mainstay" family="Mainstay" pointSize="17"/>
                                         <color key="textColor" red="0.79607843137254897" green="0.25882352941176467" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -40,7 +35,6 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="eKp-Hs-X2h"/>
-                                    <constraint firstAttribute="trailing" secondItem="VOw-se-Kkc" secondAttribute="trailing" id="lxn-Ib-zJl"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vXR-zK-NdU">
@@ -194,7 +188,6 @@
                         <outlet property="userCycleLength" destination="Tev-4c-aQg" id="zud-cK-Dh4"/>
                         <outlet property="userEmailLabel" destination="aiG-x4-zd2" id="9CB-bz-QHx"/>
                         <outlet property="userPeriodLength" destination="DaY-Wc-SQT" id="1qk-o7-a9h"/>
-                        <outlet property="zodiacSignLabel" destination="VOw-se-Kkc" id="8tK-gX-jYb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vmd-1Y-YPk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

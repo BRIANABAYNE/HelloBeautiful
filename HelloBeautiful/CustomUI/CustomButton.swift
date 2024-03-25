@@ -14,16 +14,33 @@ class BBButton: UIButton {
         super.init(frame: frame)
         setupButton()
     }
+    
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupButton()
     }
     
-    private func setupButton() {
-        backgroundColor     = Constants.Colors.customPink
-        titleLabel?.font    = UIFont(name: Constants.Fonts.mainstay, size: 22)
-        layer.cornerRadius  = frame.size.height/2
-        setTitleColor(.white, for: .normal)
+    convenience init(color: UIColor) {
+        self.init(frame: .zero)
+        set(color: color)
     }
-}
+    
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+    
+    private func setupButton() {
+        configuration = .tinted()
+        configuration?.cornerStyle = .medium
+//        translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+        func set(color: UIColor) {
+            configuration?.baseBackgroundColor = color
+            configuration?.baseForegroundColor = color
+//            configuration?.image = UIImage(systemName: systemImageName)
+//            configuration?.imagePadding = 6
+            configuration?.imagePlacement = .leading
+        }
+    }

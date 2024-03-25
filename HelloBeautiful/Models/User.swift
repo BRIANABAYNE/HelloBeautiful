@@ -163,11 +163,3 @@ enum Symptoms: Int, CaseIterable {
         }
     }
 }
-
-//extension PeriodCycle: Equatable {
-////    static func == (lhs: PeriodCycle, rhs: PeriodCycle) -> Bool {
-////        <#code#>
-////    }
-//
-//
-//}

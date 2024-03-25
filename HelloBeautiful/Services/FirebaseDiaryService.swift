@@ -24,7 +24,7 @@ struct FirebaseDiaryService: FirebaseDiaryServiceable {
         do {
             let userDocID = UserDefaults.standard.string(forKey: "UserDocumentID")
             let documentFeelingsRef = try
-            firebaseRef.collection(Constants.UserDetails.userDetailsCollectionPath).document(userDocID!).collection(Constants.Diary.diaryCollectionPath).addDocument(from: userDiary, completion: { _ in
+            firebaseRef.collection(Constants.User.userDetailsCollectionPath).document(userDocID!).collection(Constants.Diary.diaryCollectionPath).addDocument(from: userDiary, completion: { _ in
             })
             completion(.success(documentFeelingsRef.documentID))
         } catch {
@@ -57,7 +57,7 @@ struct FirebaseDiaryService: FirebaseDiaryServiceable {
         let firebaseRef = Firestore.firestore()
         if let documentID = userDiary.id {
             let userDocID = UserDefaults.standard.string(forKey: "UserDocumentID")
-            let documentReference = firebaseRef.collection(Constants.UserDetails.userDetailsCollectionPath).document(userDocID!).collection(Constants.Diary.diaryCollectionPath).document(documentID)
+            let documentReference = firebaseRef.collection(Constants.User.userDetailsCollectionPath).document(userDocID!).collection(Constants.Diary.diaryCollectionPath).document(documentID)
             do {
                 try documentReference.setData(from: userDiary)
                 handler(.success(true))
