@@ -48,7 +48,7 @@ class LogInViewController: UIViewController {
 //    
     
     
-    var appleViewModel:SignInWithAppleViewModel!
+   
 //    var viewModel:LogInViewModel!
     var activityView: UIActivityIndicatorView?
     let backgroundImageView = UIImageView()

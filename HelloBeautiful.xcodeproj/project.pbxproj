@@ -26,7 +26,6 @@
 		3A5892D02A701E0F00E208BC /* Horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892CF2A701E0F00E208BC /* Horoscope.swift */; };
 		3A5892FF2A70704500E208BC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5892FE2A70704500E208BC /* NetworkError.swift */; };
 		3A5893032A7070CE00E208BC /* MoonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5893022A7070CE00E208BC /* MoonService.swift */; };
-		3A5A86C82B201D9D005D8221 /* SignInWithAppleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A86C72B201D9D005D8221 /* SignInWithAppleViewModel.swift */; };
 		3A5A89732A716E8F009169B5 /* MoonHoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A89722A716E8F009169B5 /* MoonHoroscopeViewController.swift */; };
 		3A5A89752A7172D8009169B5 /* MoonHoroscopeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A89742A7172D8009169B5 /* MoonHoroscopeViewModel.swift */; };
 		3A5A89772A71840C009169B5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A89762A71840C009169B5 /* APIService.swift */; };
@@ -97,7 +96,6 @@
 		3A5892CF2A701E0F00E208BC /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
 		3A5892FE2A70704500E208BC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		3A5893022A7070CE00E208BC /* MoonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonService.swift; sourceTree = "<group>"; };
-		3A5A86C72B201D9D005D8221 /* SignInWithAppleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleViewModel.swift; sourceTree = "<group>"; };
 		3A5A89722A716E8F009169B5 /* MoonHoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonHoroscopeViewController.swift; sourceTree = "<group>"; };
 		3A5A89742A7172D8009169B5 /* MoonHoroscopeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonHoroscopeViewModel.swift; sourceTree = "<group>"; };
 		3A5A89762A71840C009169B5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -240,7 +238,6 @@
 				3AAF72EC2ACC96A8005C9C9A /* FirebaseDiaryService.swift */,
 				3AEAA1122AD8EDAA00F4737B /* FirebaseUserCycleService.swift */,
 				3A0E4C722B1AFB1400314384 /* UserManager.swift */,
-				3A5A86C72B201D9D005D8221 /* SignInWithAppleViewModel.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -477,7 +474,6 @@
 				3A5892D02A701E0F00E208BC /* Horoscope.swift in Sources */,
 				3A5A89772A71840C009169B5 /* APIService.swift in Sources */,
 				3AF6E2682A73553B00461137 /* FirebaseUserDetailsService.swift in Sources */,
-				3A5A86C82B201D9D005D8221 /* SignInWithAppleViewModel.swift in Sources */,
 				3A84A1A02A7444F300376FD0 /* UserDetailsViewModel.swift in Sources */,
 				3A2B1F552A6C67FB00CCA3FB /* AppDelegate.swift in Sources */,
 				3A6B22EC2AB7BA7C00BCAA09 /* UserCycle.swift in Sources */,

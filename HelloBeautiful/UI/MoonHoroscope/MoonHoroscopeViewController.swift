@@ -53,14 +53,14 @@ class MoonHoroscopeViewController: UIViewController {
 extension MoonHoroscopeViewController: MoonHoroscopeViewModelDelegate {
     func updateUI() {
         guard let topLevelDictionary = viewModel.topLevelDictionary,
-          let moon = viewModel.moonData else { return }
-        let horoscope = viewModel.horoscopeData /*else { return }*/
+        let moon = viewModel.moonData, /*else { return }*/
+        let horoscope = viewModel.horoscopeData else { return }
         self.stageLabel.text = moon.stage
         self.moonPhaseLabel.text = moon.moonPhase
         self.moonDistanceLabel.text = "\(moon.moonDistance)"
         self.moonriseLabel.text = moon.moonrise
         self.illuminationLabel.text = moon.illumination
-//        self.horoscopeLabel.text = horoscope.horoscope
-//    self.horoscopeLabel.text = horoscope?.sunSign
+        self.horoscopeLabel.text = horoscope.horoscope
+        self.horoscopeLabel.text = horoscope.sunSign
     }
 }

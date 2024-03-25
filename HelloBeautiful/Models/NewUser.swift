@@ -7,11 +7,12 @@
 
 import Foundation
 
+
 class NewUser {
     
     var email: String = ""
     var password: String = ""
-    var zodiacSign: String = ""
+    var zodiacSign: Int = 0
     var lastCycleStartDate: Date = .init()
     var cycleLength: Int = 0
     

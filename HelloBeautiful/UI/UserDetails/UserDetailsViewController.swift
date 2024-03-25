@@ -22,15 +22,17 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
     // MARK: - Properties
     
     var viewModel: UserDetailsViewModel!
-   // var viewModelCreateUser: CreateUserViewModel!
     static var completionHandler: ((String?) -> Void)?
     var disclosurePopUP: PopUp!
     private let newUserContainer: NewUser
+    
+  
     
     init?(newUserContainer: NewUser, coder: NSCoder) {
         self.newUserContainer = newUserContainer
         super.init(coder: coder)
     }
+    
     
     @available(*, unavailable, renamed: "init(newUserContainer:coder:)")
     required init?(coder: NSCoder) {
@@ -73,36 +75,7 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
     @objc func closeButtonTapped() {
         self.disclosurePopUP.removeFromSuperview()
     }
-
-    @IBAction func buttonTapped(_ sender: Any) {
-        guard
-            let zodiacSign = zodiacSignPicker,
-          //  let zodiacSignAsString = String(zodiacSign),
-            let length = periodLengthTextField.text,
-            let cycleLength = Int(length)
-        else { return }
-        
-        viewModel.saveUser(
-            email: newUserContainer.email,
-            password: newUserContainer.password,
-            zodiacSign: newUserContainer.zodiacSign,
-            typicalCycleLength: cycleLength,
-            lastCycleDate: datePicker.date
-        )
-        
-        
-        
-        let storyboard = UIStoryboard(name:"Main", bundle: nil)
-        let navigation = storyboard.instantiateViewController(identifier:"tabBar")
-        self.view.window?.rootViewController = navigation
-    }
     
-//    private func navigateToUserSettings(with newUser: NewUser) {
-//        let VC = UserSettingDetailViewController.create(with: newUser)
-//         navigationController?
-//            .pushViewController(VC, animated: true)
-//        
-//    }
     
     // MARK: - View Properties
     
@@ -122,6 +95,30 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
             }
         }
     }()
+
+
+    @IBAction func buttonTapped(_ sender: Any) {
+        guard
+            let zodiacSign = zodiacSignPicker.currentTitle,
+//            let zodiacAsInt = Int(zodiacSign),
+            let length = periodLengthTextField.text,
+            let cycleLength = Int(length)
+        else { return }
+        
+        viewModel.saveUser(
+            email: newUserContainer.email,
+            password: newUserContainer.password,
+            zodiacSign: "\(zodiacSign)",
+            typicalCycleLength: cycleLength,
+            lastCycleDate: datePicker.date
+        )
+        
+
+        let storyboard = UIStoryboard(name:"Main", bundle: nil)
+        let navigation = storyboard.instantiateViewController(identifier:"tabBar")
+        self.view.window?.rootViewController = navigation
+    }
+    
 }
 
 // MARK: - Extensions
