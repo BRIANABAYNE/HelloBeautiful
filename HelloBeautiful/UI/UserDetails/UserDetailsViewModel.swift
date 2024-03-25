@@ -50,7 +50,7 @@ class UserDetailsViewModel {
         if userDetails != nil {
             updateUser(
                 email: email,
-                password: password,
+               password: password,
                 newZodiacSign: zodiacSign,
                 newTypicalCycleLength: typicalCycleLength,
                 newLastCycleDate: lastCycleDate)

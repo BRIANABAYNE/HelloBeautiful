@@ -16,13 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-    
+      // Prints the path to user defaults
+        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! as String)
         
         FirebaseApp.configure()
 //        FirebaseAuthService().signOut()
         return true
-            
+                
         }
     }
 
