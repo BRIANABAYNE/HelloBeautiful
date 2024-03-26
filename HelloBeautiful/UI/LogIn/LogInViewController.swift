@@ -17,42 +17,15 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var emailView: HBTextFieldView!
     @IBOutlet weak var passwordView: HBTextFieldView!
     
-//    let logInButton = BBButton(color: .systemPink, title: "LOGIN", systemImageName: "person.crop.circle.fill")
-    
-    
-    
     
     // MARK: - Properties
     
     var viewModel: LogInViewModel!
     
-    
-//    init?(
-//        viewModel: LogInViewModel,
-//          coder: NSCoder
-//    ) {
-//        self.viewModel = viewModel
-//        super.init(coder: coder)
-//    }
-//    
-//    @available(*, unavailable, renamed:
-//            "init(viewModel:coder:)")
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-    
-    
-//    func viewButton() {
-//        view.addSubview(logInButton)
-//    }
-//    
-    
-    
-   
-//    var viewModel:LogInViewModel!
     var activityView: UIActivityIndicatorView?
     let backgroundImageView = UIImageView()
     fileprivate var currentNonce: String?
+    
     
     // MARK: - Lifecycles
     
@@ -67,9 +40,18 @@ class LogInViewController: UIViewController {
             object: nil)
         emailView.set(placeholder: "Email")
         passwordView.set(placeholder: "Password")
-  //   viewButton()
+        createDismissKeyboardTapGesture()
     }
     
+    // MARK: - Dissmiss Keyboard
+  
+    
+    func createDismissKeyboardTapGesture() {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
+    }
+    
+
     // MARK: - Methods
     
     func setBackground() {
@@ -279,12 +261,6 @@ extension LogInViewController: ASAuthorizationControllerDelegate {
     }
 }
 
-//extension LogInViewController {
-//    static func create(with viewModel: LogInViewModel) -> LogInViewController {
-//        let storyboard = UIStoryboard(name: "CreateUser", bundle: nil)
-//        return storyboard.instantiateViewController(identifier: "LogInViewController") { coder in
-//            LogInViewController(viewModel: viewModel, coder: coder)
-//            
-//        }
-//    }
+//extension LogInViewController: UITextFieldDelegate {
+//    
 //}

@@ -20,6 +20,7 @@ class HBTextFieldView: UIView {
     private func setupViews() {
         layer.cornerRadius = 25
         clipsToBounds = true
+//        UIReturnKeyType = .go
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: 50).isActive = true
         addSubview(textField)
@@ -41,6 +42,9 @@ class HBTextFieldView: UIView {
         textField.tintColor = .accentColor
         textField.borderStyle = .none
         textField.autocorrectionType = .no
+        textField.keyboardType = .emailAddress
+        textField.returnKeyType = .go
+        textField.delegate = self
         return textField
     }()
   
@@ -68,5 +72,13 @@ class HBTextFieldView: UIView {
 private extension UIColor {
     static var accentColor: UIColor {
         UIColor(named: "accentColor") ?? .systemBlue
+    }
+}
+
+#warning("Come back to this")
+extension HBTextFieldView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+       print("Did tap return")
+        return true
     }
 }
