@@ -75,7 +75,6 @@ private extension UIColor {
     }
 }
 
-#warning("Come back to this")
 extension HBTextFieldView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
        print("Did tap return")

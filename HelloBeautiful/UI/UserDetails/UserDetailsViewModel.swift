@@ -24,6 +24,11 @@ class UserDetailsViewModel {
   //  let serviceOne: FirebaseAuthServiceable
     weak var delegate: UserDetailsViewModelDelegate?
     
+    
+    let userContainer = NewUser()
+    
+    
+    
     // MARK: -  Dependency Injection
     
     init(

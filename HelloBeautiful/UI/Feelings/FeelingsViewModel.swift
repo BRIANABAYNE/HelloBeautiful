@@ -8,12 +8,6 @@
 import Foundation
 
 
-// MARK: - Protocol
-//protocol FeelingsViewModelDelegate: FeelingsViewController {
-//    func successfullyLoadedData()
-//    func encountered(_ error: Error)
-//}
-
 class FeelingsViewModel {
     
     // MARK: - Properties

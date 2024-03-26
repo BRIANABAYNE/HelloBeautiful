@@ -23,10 +23,10 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
     
     var viewModel: UserDetailsViewModel!
     static var completionHandler: ((String?) -> Void)?
-    var disclosurePopUP: PopUp!
+//    var disclosurePopUP: PopUp!
+   
     private let newUserContainer: NewUser
     
-  
     
     init?(newUserContainer: NewUser, coder: NSCoder) {
         self.newUserContainer = newUserContainer
@@ -46,6 +46,8 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
         viewModel = UserDetailsViewModel(injectedDelegate: self)
         setupSignPicker()
         periodLengthTextField.set(placeholder: "Typical Cycle Length")
+        createDismissKeyboardTapGesture()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,6 +55,25 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
         print(newUserContainer)
         lastCycleTextField.makeFirstResponder()
     }
+    
+    // MARK: - Keyboard Dissmiss
+    
+    private func createDismissKeyboardTapGesture() {
+        let tapKeyboard = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tapKeyboard)
+    }
+    
+    // MARK: - Function Pass Data
+    #warning("This code works kind of")
+//    @objc func pushUserDetailsVC() {
+//        let userSettingsVC = UserSettingDetailViewController()
+//        userSettingsVC.zodiacSign = zodiacSignPicker.currentTitle
+//        userSettingsVC.userEmail = newUserContainer.email
+//        userSettingsVC.cycleLength = newUserContainer.cycleLength
+//        userSettingsVC.lastCycleDate = newUserContainer.lastCycleStartDate
+//
+//    }
+    
     
     // MARK: - Setup
     
@@ -65,16 +86,16 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
     
     // MARK: - Actions
     
-    @IBAction func disclaimerButtonTapped(_ sender: Any) {
-        self.disclosurePopUP = PopUp(frame: self.view.frame)
-        self.disclosurePopUP.closeButtonTapped.addTarget(self, action: #selector(
-            closeButtonTapped), for: .touchUpInside)
-        self.view.addSubview(disclosurePopUP)
-    }
-    
-    @objc func closeButtonTapped() {
-        self.disclosurePopUP.removeFromSuperview()
-    }
+//    @IBAction func disclaimerButtonTapped(_ sender: Any) {
+//        self.disclosurePopUP = PopUp(frame: self.view.frame)
+//        self.disclosurePopUP.closeButtonTapped.addTarget(self, action: #selector(
+//            closeButtonTapped), for: .touchUpInside)
+//        self.view.addSubview(disclosurePopUP)
+//    }
+//    
+//    @objc func closeButtonTapped() {
+//        self.disclosurePopUP.removeFromSuperview()
+//    }
     
     
     // MARK: - View Properties
@@ -98,9 +119,9 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
 
 
     @IBAction func buttonTapped(_ sender: Any) {
+        
         guard
             let zodiacSign = zodiacSignPicker.currentTitle,
-//            let zodiacAsInt = Int(zodiacSign),
             let length = periodLengthTextField.text,
             let cycleLength = Int(length)
         else { return }
@@ -113,12 +134,10 @@ class UserDetailsViewController: UIViewController, UserDetailsViewModelDelegate 
             lastCycleDate: datePicker.date
         )
         
-
         let storyboard = UIStoryboard(name:"Main", bundle: nil)
         let navigation = storyboard.instantiateViewController(identifier:"tabBar")
         self.view.window?.rootViewController = navigation
     }
-    
 }
 
 // MARK: - Extensions
@@ -129,5 +148,13 @@ extension UserDetailsViewController {
         return storyboard.instantiateViewController(identifier: "UserDetails") { coder in
             UserDetailsViewController(newUserContainer: newUser, coder: coder)
         }
+    }
+}
+
+extension UserDetailsViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        pushUserDetailsVC()
+        print("Tap was created - working on sending data")
+        return true
     }
 }

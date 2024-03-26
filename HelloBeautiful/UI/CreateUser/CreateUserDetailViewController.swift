@@ -39,7 +39,16 @@ class CreateUserDetailViewController: UIViewController, AlertPresentable {
         emailTextField.set(placeholder: "Email")
         passwordTextField.set(placeholder: "Password")
         confirmPasswordTextField.set(placeholder: "Confirm Password")
+        createDismissKeyboardTapGesture()
     }
+    
+    // MARK: - Keyboard Dismiss
+    private func createDismissKeyboardTapGesture() {
+        let tapKeyboard = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tapKeyboard)
+    }
+    
+    
     
     // MARK: - Actions
     

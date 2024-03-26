@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A9E3247C-9DD1-4255-8C46-CEEDEE39E658"
-            shouldBeEnabled = "Yes"
+            uuid = "E7D9FF43-E71B-4578-BF88-EEC1149B4A08"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HelloBeautiful/UI/UserDetails/UserDetailsViewModel.swift"
+            filePath = "HelloBeautiful/UI/CreateUser/CreateUserDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "updateUser(email:password:newZodiacSign:newTypicalCycleLength:newLastCycleDate:)"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "nextButtonTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

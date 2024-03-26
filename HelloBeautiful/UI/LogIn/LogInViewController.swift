@@ -16,6 +16,8 @@ class LogInViewController: UIViewController {
     
     @IBOutlet weak var emailView: HBTextFieldView!
     @IBOutlet weak var passwordView: HBTextFieldView!
+    @IBOutlet weak var loginButton: BBButton!
+    @IBOutlet weak var createAccountButton: BBButton!
     
     
     // MARK: - Properties
@@ -25,6 +27,8 @@ class LogInViewController: UIViewController {
     var activityView: UIActivityIndicatorView?
     let backgroundImageView = UIImageView()
     fileprivate var currentNonce: String?
+    
+  
     
     
     // MARK: - Lifecycles
@@ -40,6 +44,9 @@ class LogInViewController: UIViewController {
             object: nil)
         emailView.set(placeholder: "Email")
         passwordView.set(placeholder: "Password")
+        loginButton.set(title: "Login", systemImageName: "laser.burst")
+        createAccountButton.set(title: "Create Account", systemImageName: "laser.burst")
+        
         createDismissKeyboardTapGesture()
     }
     
@@ -130,6 +137,7 @@ class LogInViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func logInButtonTapped(_ sender: Any) {
+    
         guard let email = emailView.text,
               let password = passwordView.text  else { return }
         if(!email.isEmpty && !password.isEmpty) {
@@ -260,7 +268,3 @@ extension LogInViewController: ASAuthorizationControllerDelegate {
         }
     }
 }
-
-//extension LogInViewController: UITextFieldDelegate {
-//    
-//}

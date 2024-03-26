@@ -15,11 +15,20 @@ class UserCycleViewController: UIViewController, AlertPresentable {
         return calendarObject
     }()
     
+    
+    
+    
     // MARK: - Properties
     
     var selectedDates: [DateComponents] = []
     var userCycles: [PeriodCycle] = []
     var viewModel: UserCycleViewModel!
+
+    
+    
+    @IBOutlet weak var editCycleButton: BBButton!
+    @IBOutlet weak var diaryButton: BBButton!
+    
 
     // MARK: - Lifecycles
     
@@ -30,6 +39,9 @@ class UserCycleViewController: UIViewController, AlertPresentable {
         calendarView.delegate = self
         calendarView.tintColor = .systemPink
         viewModel = UserCycleViewModel(injectedDelegate: self)
+        editCycleButton.set(title: "Edit Cycle", systemImageName: "")
+        diaryButton.set(title: "Log Diary", systemImageName: "")
+        
     }
 
     // MARK: - Actions

@@ -14,24 +14,32 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
     
     // MARK: - Outlets
     
-//   @IBOutlet weak var zodiacSignLabel: UILabel!
+    @IBOutlet weak var zodiacSignLabel: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
     @IBOutlet weak var userCycleLength: UILabel!
     @IBOutlet weak var userPeriodLength: UILabel!
+    @IBOutlet weak var logOutButon: BBButton!
+    @IBOutlet weak var deleteAccountButton: BBButton!
+    
     
     // MARK: - Properties
     
-   // private let newUserContainer: NewUser?
     var viewModel: UserSettingsViewModel!
+//    private let newUserContainer: NewUser?
+   
+    
     fileprivate var currentNonce: String?
     #warning("Should I create a new string here??")
+   
+    
+    
     var zodiacSign: String!
     var userEmail: String!
     var cycleLength: Int!
     var lastCycleDate: Date!
     
     
-//    
+    
 //    init?(newUserContainer: NewUser, coder: NSCoder) {
 //        self.newUserContainer = newUserContainer
 //        super.init(coder: coder)
@@ -42,7 +50,7 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
 //        fatalError("init(coder:) has not been implemented")
 //    }
     
-    // MARK: - Function
+//     MARK: - Function
     
 //    private func configureView() {
 //        guard let newContainer = newUserContainer else {return}
@@ -58,7 +66,9 @@ class UserSettingDetailViewController: UIViewController, UserSettingsViewModelDe
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel = UserSettingsViewModel(delegate: self)
-        //configureView()
+//        configureView()
+        logOutButon.set(title: "Log Out", systemImageName: "")
+        deleteAccountButton.set(title: "Delete Account", systemImageName: "")
     }
     
     // MARK: - Actions
